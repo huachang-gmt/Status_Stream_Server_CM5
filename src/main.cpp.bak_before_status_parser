@@ -1,0 +1,177 @@
+#include <cerrno>
+#include <csignal>
+#include <cstdio>
+#include <cstring>
+
+#include <fcntl.h>
+#include <poll.h>
+#include <termios.h>
+#include <unistd.h>
+
+namespace
+{
+volatile std::sig_atomic_t g_running = 1;
+
+void SignalHandler(int)
+{
+    g_running = 0;
+}
+
+bool ConfigureUart(int fd)
+{
+    struct termios tty {};
+
+    if (tcgetattr(fd, &tty) != 0)
+    {
+        std::perror("tcgetattr");
+        return false;
+    }
+
+    cfmakeraw(&tty);
+
+    if (cfsetispeed(&tty, B115200) != 0 ||
+        cfsetospeed(&tty, B115200) != 0)
+    {
+        std::perror("cfsetspeed");
+        return false;
+    }
+
+    tty.c_cflag &= ~CSIZE;
+    tty.c_cflag |= CS8;
+    tty.c_cflag &= ~PARENB;
+    tty.c_cflag &= ~CSTOPB;
+    tty.c_cflag &= ~CRTSCTS;
+    tty.c_cflag |= CLOCAL | CREAD;
+
+    tty.c_cc[VMIN] = 1;
+    tty.c_cc[VTIME] = 0;
+
+    if (tcsetattr(fd, TCSANOW, &tty) != 0)
+    {
+        std::perror("tcsetattr");
+        return false;
+    }
+
+    return true;
+}
+}
+
+int main()
+{
+    std::signal(SIGINT, SignalHandler);
+    std::signal(SIGTERM, SignalHandler);
+
+    constexpr const char *UART_DEVICE = "/dev/ttyAMA0";
+
+    const int uart_fd = open(UART_DEVICE, O_RDONLY | O_NOCTTY | O_NONBLOCK);
+
+    if (uart_fd < 0)
+    {
+        std::perror("open UART");
+        return 1;
+    }
+
+    if (!ConfigureUart(uart_fd))
+    {
+        close(uart_fd);
+        return 1;
+    }
+
+    std::printf("UART device : %s\n", UART_DEVICE);
+    std::printf("UART format : 115200 baud, 8N1\n");
+    std::printf("Waiting for UART data... Press Ctrl+C to exit.\n");
+    std::fflush(stdout);
+
+    struct pollfd pfd {};
+    pfd.fd = uart_fd;
+    pfd.events = POLLIN;
+
+    unsigned char buffer[256];
+
+    while (g_running)
+    {
+        const int poll_result = poll(&pfd, 1, 500);
+
+        if (poll_result < 0)
+        {
+            if (errno == EINTR)
+            {
+                continue;
+            }
+
+            std::perror("poll");
+            break;
+        }
+
+        if (poll_result == 0)
+        {
+            continue;
+        }
+
+        if (pfd.revents & POLLNVAL)
+        {
+            std::fprintf(stderr, "UART file descriptor is invalid.\n");
+            break;
+        }
+
+        if (pfd.revents & POLLIN)
+        {
+            const ssize_t bytes_read =
+                read(uart_fd, buffer, sizeof(buffer));
+
+            if (bytes_read > 0)
+            {
+                std::printf("RX (%zd bytes): ", bytes_read);
+
+                for (ssize_t i = 0; i < bytes_read; ++i)
+                {
+                    const unsigned char ch = buffer[i];
+
+                    if (ch >= 0x20 && ch <= 0x7E)
+                    {
+                        std::putchar(ch);
+                    }
+                    else if (ch == '\r')
+                    {
+                        std::printf("\\r");
+                    }
+                    else if (ch == '\n')
+                    {
+                        std::printf("\\n");
+                    }
+                    else if (ch == '\t')
+                    {
+                        std::printf("\\t");
+                    }
+                    else
+                    {
+                        std::printf("\\x%02X", ch);
+                    }
+                }
+
+                std::putchar('\n');
+                std::fflush(stdout);
+            }
+            else if (bytes_read < 0 &&
+                     errno != EAGAIN &&
+                     errno != EWOULDBLOCK &&
+                     errno != EINTR)
+            {
+                std::perror("read UART");
+                break;
+            }
+        }
+
+        if (pfd.revents & (POLLERR | POLLHUP))
+        {
+            std::fprintf(stderr, "UART reported an error or hangup.\n");
+            break;
+        }
+    }
+
+    close(uart_fd);
+
+    std::printf("\nUART receiver stopped.\n");
+    return 0;
+}
+
