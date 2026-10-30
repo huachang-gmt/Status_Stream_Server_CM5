@@ -6,8 +6,10 @@
 #include <cstdio>
 #include <cstring>
 
+#include <arpa/inet.h>
 #include <fcntl.h>
 #include <poll.h>
+#include <sys/socket.h>
 #include <termios.h>
 #include <unistd.h>
 
@@ -16,7 +18,7 @@ namespace
 volatile std::sig_atomic_t g_running = 1;
 
 constexpr const char *UART_DEVICE = "/dev/ttyAMA0";
-
+constexpr std::uint16_t TCP_SERVER_PORT = 8888U;
 constexpr std::size_t PACKET_SIZE = 151U;
 constexpr std::chrono::milliseconds PACKET_IDLE_TIMEOUT{50};// 50ms 當作封包接收計時時間
 constexpr std::size_t HEADER_SIZE = 10U;
@@ -74,6 +76,63 @@ bool ConfigureUart(int fd)
     return true;
 }
 
+int CreateTcpServerSocket()
+{
+    const int server_fd =
+        socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK | SOCK_CLOEXEC, 0);
+
+    if (server_fd < 0)
+    {
+        std::perror("create TCP socket");
+        return -1;
+    }
+
+    const int reuse_addr = 1;
+
+    if (setsockopt(
+            server_fd,
+            SOL_SOCKET,
+            SO_REUSEADDR,
+            &reuse_addr,
+            sizeof(reuse_addr)) < 0)
+    {
+        std::perror("setsockopt SO_REUSEADDR");
+        close(server_fd);
+        return -1;
+    }
+
+    struct sockaddr_in server_addr {};
+
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_port = htons(TCP_SERVER_PORT);
+    server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+
+    if (bind(
+            server_fd,
+            reinterpret_cast<struct sockaddr *>(&server_addr),
+            sizeof(server_addr)) < 0)
+    {
+        std::perror("bind TCP socket");
+        close(server_fd);
+        return -1;
+    }
+
+    if (listen(server_fd, 1) < 0)
+    {
+        std::perror("listen TCP socket");
+        close(server_fd);
+        return -1;
+    }
+
+    std::printf(
+        "TCP Server listening on port %u\n",
+        static_cast<unsigned int>(TCP_SERVER_PORT)
+    );
+    std::fflush(stdout);
+
+    return server_fd;
+}
+
 std::uint16_t ReadLE16(const std::uint8_t *data)
 {
     return static_cast<std::uint16_t>(
@@ -125,6 +184,13 @@ struct Statistics
     std::uint64_t invalid_headers = 0U;
     std::uint64_t crc_errors = 0U;
     std::uint64_t payload_errors = 0U;
+};
+
+struct TcpTransmitState
+{
+    std::array<std::uint8_t, PACKET_SIZE> buffer {};
+    std::size_t offset = 0U;
+    bool pending = false;
 };
 
 bool ValidatePacket(
@@ -203,12 +269,65 @@ void PrintPacket(
     std::fflush(stdout);
 }
 
+void SendPendingTcpPacket(
+    int &client_fd,
+    TcpTransmitState &tx_state)
+{
+    if (client_fd < 0 || !tx_state.pending)
+    {
+        return;
+    }
+
+    const std::size_t remaining =
+        PACKET_SIZE - tx_state.offset;
+
+    const ssize_t sent =
+        send(
+            client_fd,
+            tx_state.buffer.data() + tx_state.offset,
+            remaining,
+            MSG_DONTWAIT | MSG_NOSIGNAL
+        );
+
+    if (sent > 0)
+    {
+        tx_state.offset += static_cast<std::size_t>(sent);
+
+        if (tx_state.offset == PACKET_SIZE)
+        {
+            tx_state.offset = 0U;
+            tx_state.pending = false;
+        }
+
+        return;
+    }
+
+    if (sent < 0 &&
+        (errno == EAGAIN ||
+         errno == EWOULDBLOCK ||
+         errno == EINTR))
+    {
+        return;
+    }
+
+    std::printf("TCP Client send failed or disconnected.\n");
+    std::fflush(stdout);
+
+    close(client_fd);
+    client_fd = -1;
+
+    tx_state.offset = 0U;
+    tx_state.pending = false;
+}
+
 void ProcessReceivedData(
     std::array<std::uint8_t, 4096U> &buffer,
     std::size_t &buffer_size,
     const std::uint8_t *data,
     std::size_t length,
-    Statistics &stats)
+    Statistics &stats,
+    int tcp_client_fd,
+    TcpTransmitState &tx_state)
 {
     for (std::size_t i = 0; i < length; ++i)
     {
@@ -287,6 +406,23 @@ void ProcessReceivedData(
             ++stats.valid_packets;
             PrintPacket(buffer.data(), stats);
 
+            // Forward the newest valid packet when a TCP client is connected.
+            if (tcp_client_fd >= 0)
+            {
+                // Do not replace a packet after partial transmission.
+                if (!tx_state.pending || tx_state.offset == 0U)
+                {
+                    std::memcpy(
+                        tx_state.buffer.data(),
+                        buffer.data(),
+                        PACKET_SIZE
+                    );
+
+                    tx_state.offset = 0U;
+                    tx_state.pending = true;
+                }
+            }
+
             const std::size_t remaining =
                 buffer_size - PACKET_SIZE;
 
@@ -303,7 +439,7 @@ void ProcessReceivedData(
         }
     }
 }
-}
+} // namespace
 
 int main()
 {
@@ -325,17 +461,22 @@ int main()
         return 1;
     }
 
+    const int tcp_server_fd = CreateTcpServerSocket();
+
+    if (tcp_server_fd < 0)
+    {
+        close(uart_fd);
+        return 1;
+    }
+
     std::printf("UART device : %s\n", UART_DEVICE);
     std::printf("UART format : 115200 baud, 8N1\n");
     std::printf("Packet size : %zu bytes\n", PACKET_SIZE);
     std::printf("Waiting for Status Stream packets... Press Ctrl+C to exit.\n");
     std::fflush(stdout);
 
-    struct pollfd pfd {};
-    pfd.fd = uart_fd;
-    pfd.events = POLLIN;
-
-
+    int tcp_client_fd = -1;
+    TcpTransmitState tcp_tx {};
     std::array<std::uint8_t, 4096U> packet_buffer {};
     std::size_t packet_buffer_size = 0U;
 
@@ -347,6 +488,9 @@ int main()
 
     while (g_running)
     {
+        // Try to send any pending TCP packet without blocking UART reception.
+        SendPendingTcpPacket(tcp_client_fd, tcp_tx);
+
         int poll_timeout_ms = 500;
 
         if (packet_timeout_active)
@@ -377,7 +521,31 @@ int main()
             }
         }
 
-        const int poll_result = poll(&pfd, 1, poll_timeout_ms);
+        struct pollfd poll_fds[3] {};
+
+        poll_fds[0].fd = uart_fd;
+        poll_fds[0].events = POLLIN;
+
+        poll_fds[1].fd = tcp_server_fd;
+        poll_fds[1].events = POLLIN;
+
+        nfds_t poll_count = 2U;
+
+        if (tcp_client_fd >= 0)
+        {
+            poll_fds[2].fd = tcp_client_fd;
+            poll_fds[2].events = POLLIN;
+
+            if (tcp_tx.pending)
+            {
+                poll_fds[2].events |= POLLOUT;
+            }
+
+            poll_count = 3U;
+        }
+
+        const int poll_result =
+            poll(poll_fds, poll_count, poll_timeout_ms);
 
         if (poll_result < 0)
         {
@@ -410,13 +578,120 @@ int main()
             continue;
         }
 
-        if (pfd.revents & POLLNVAL)
+        // Accept a new TCP client connection.
+        if (poll_fds[1].revents & POLLIN)
+        {
+            const int new_client_fd =
+                accept4(
+                    tcp_server_fd,
+                    nullptr,
+                    nullptr,
+                    SOCK_NONBLOCK | SOCK_CLOEXEC
+                );
+
+            if (new_client_fd >= 0)
+            {
+                if (tcp_client_fd < 0)
+                {
+                    tcp_client_fd = new_client_fd;
+
+                    std::printf("TCP Client connected.\n");
+                    std::fflush(stdout);
+                }
+                else
+                {
+                    std::printf(
+                        "TCP Client rejected: another client is connected.\n"
+                    );
+                    std::fflush(stdout);
+
+                    close(new_client_fd);
+                }
+            }
+            else if (errno != EAGAIN &&
+                     errno != EWOULDBLOCK &&
+                     errno != EINTR)
+            {
+                std::perror("accept TCP client");
+            }
+        }
+
+        // Detect TCP client disconnection or unexpected incoming data.
+        if (tcp_client_fd >= 0 && poll_count == 3U)
+        {
+            const short client_events = poll_fds[2].revents;
+
+            if (client_events & POLLIN)
+            {
+                std::uint8_t unexpected_data = 0U;
+
+                const ssize_t received =
+                    recv(
+                        tcp_client_fd,
+                        &unexpected_data,
+                        sizeof(unexpected_data),
+                        MSG_PEEK | MSG_DONTWAIT
+                    );
+
+                if (received == 0)
+                {
+                    std::printf("TCP Client disconnected.\n");
+                    close(tcp_client_fd);
+                    tcp_client_fd = -1;
+                    tcp_tx.offset = 0U;
+                    tcp_tx.pending = false;
+                }
+                else if (received > 0)
+                {
+                    std::printf(
+                        "TCP Client sent unexpected data. Closing connection.\n"
+                    );
+
+                    close(tcp_client_fd);
+                    tcp_client_fd = -1;
+                    tcp_tx.offset = 0U;
+                    tcp_tx.pending = false;
+                }
+                else if (errno != EAGAIN &&
+                         errno != EWOULDBLOCK &&
+                         errno != EINTR)
+                {
+                    std::perror("recv TCP client");
+
+                    close(tcp_client_fd);
+                    tcp_client_fd = -1;
+                    tcp_tx.offset = 0U;
+                    tcp_tx.pending = false;
+                }
+            }
+
+            if (tcp_client_fd >= 0 &&
+                (client_events & (POLLERR | POLLHUP | POLLNVAL)))
+            {
+                std::printf("TCP Client connection error or hangup.\n");
+
+                close(tcp_client_fd);
+                tcp_client_fd = -1;
+                tcp_tx.offset = 0U;
+                tcp_tx.pending = false;
+            }
+        }
+
+        // Continue sending the remaining bytes when TCP socket is writable.
+        if (tcp_client_fd >= 0 &&
+            poll_count == 3U &&
+            (poll_fds[2].revents & POLLOUT))
+        {
+            SendPendingTcpPacket(tcp_client_fd, tcp_tx);
+        }
+
+        if (poll_fds[0].revents & POLLNVAL)
         {
             std::fprintf(stderr, "UART file descriptor is invalid.\n");
             break;
         }
 
-        if (pfd.revents & POLLIN)
+        if (poll_fds[0].revents & POLLIN)
         {
             const ssize_t bytes_read =
                 read(uart_fd, rx_buffer, sizeof(rx_buffer));
@@ -428,7 +703,9 @@ int main()
                     packet_buffer_size,
                     rx_buffer,
                     static_cast<std::size_t>(bytes_read),
-                    stats
+                    stats,
+                    tcp_client_fd,
+                    tcp_tx
                 );
 
                 // Restart the idle timer whenever new UART data arrives
@@ -457,7 +734,7 @@ int main()
             }
         }
 
-        if (pfd.revents & (POLLERR | POLLHUP))
+        if (poll_fds[0].revents & (POLLERR | POLLHUP))
         {
             std::fprintf(stderr, "UART reported an error or hangup.\n");
             break;
@@ -478,6 +755,12 @@ int main()
         static_cast<unsigned long long>(stats.crc_errors)
     );
 
+    if (tcp_client_fd >= 0)
+    {
+        close(tcp_client_fd);
+    }
+
+    close(tcp_server_fd);
     close(uart_fd);
     return 0;
 }
