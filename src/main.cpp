@@ -1,5 +1,6 @@
 #include <array>
 #include <cerrno>
+#include <chrono>
 #include <csignal>
 #include <cstdint>
 #include <cstdio>
@@ -17,6 +18,7 @@ volatile std::sig_atomic_t g_running = 1;
 constexpr const char *UART_DEVICE = "/dev/ttyAMA0";
 
 constexpr std::size_t PACKET_SIZE = 151U;
+constexpr std::chrono::milliseconds PACKET_IDLE_TIMEOUT{50};// 50ms 當作封包接收計時時間
 constexpr std::size_t HEADER_SIZE = 10U;
 constexpr std::size_t PAYLOAD_SIZE = 139U;
 constexpr std::size_t CRC_OFFSET = 149U;
@@ -333,15 +335,49 @@ int main()
     pfd.fd = uart_fd;
     pfd.events = POLLIN;
 
+
     std::array<std::uint8_t, 4096U> packet_buffer {};
     std::size_t packet_buffer_size = 0U;
 
     std::uint8_t rx_buffer[256U] {};
     Statistics stats {};
 
+    bool packet_timeout_active = false;
+    std::chrono::steady_clock::time_point last_packet_byte_time {};
+
     while (g_running)
     {
-        const int poll_result = poll(&pfd, 1, 500);
+        int poll_timeout_ms = 500;
+
+        if (packet_timeout_active)
+        {
+            const auto elapsed =
+                std::chrono::steady_clock::now() - last_packet_byte_time;
+
+            const auto remaining = PACKET_IDLE_TIMEOUT - elapsed;
+
+            if (remaining <= std::chrono::steady_clock::duration::zero())
+            {
+                poll_timeout_ms = 0;
+            }
+            else
+            {
+                const auto remaining_ms =
+                    std::chrono::duration_cast<std::chrono::milliseconds>(
+                        remaining
+                    );
+
+                poll_timeout_ms =
+                    static_cast<int>(remaining_ms.count());
+
+                if (remaining_ms < remaining)
+                {
+                    ++poll_timeout_ms;
+                }
+            }
+        }
+
+        const int poll_result = poll(&pfd, 1, poll_timeout_ms);
 
         if (poll_result < 0)
         {
@@ -352,6 +388,21 @@ int main()
 
             std::perror("poll");
             break;
+        }
+
+        // Check whether an incomplete packet has timed out.
+        if (packet_timeout_active &&
+            std::chrono::steady_clock::now() - last_packet_byte_time >=
+                PACKET_IDLE_TIMEOUT)
+        {
+            std::printf(
+                "Incomplete packet timeout: discarded %zu bytes.\n",
+                packet_buffer_size
+            );
+            std::fflush(stdout);
+
+            packet_buffer_size = 0U;
+            packet_timeout_active = false;
         }
 
         if (poll_result == 0)
@@ -379,6 +430,22 @@ int main()
                     static_cast<std::size_t>(bytes_read),
                     stats
                 );
+
+                // Restart the idle timer whenever new UART data arrives
+                // and an incomplete packet is still being buffered.
+                if (packet_buffer_size >= 2U &&
+                    packet_buffer[0] == MAGIC0 &&
+                    packet_buffer[1] == MAGIC1 &&
+                    packet_buffer_size < PACKET_SIZE)
+                {
+                    packet_timeout_active = true;
+                    last_packet_byte_time =
+                        std::chrono::steady_clock::now();
+                }
+                else
+                {
+                    packet_timeout_active = false;
+                }
             }
             else if (bytes_read < 0 &&
                      errno != EAGAIN &&
