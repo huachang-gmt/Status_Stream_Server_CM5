@@ -237,7 +237,7 @@ void PrintPacket(
     const std::uint32_t sequence = ReadLE32(&packet[4]);
     const std::uint16_t payload_length = ReadLE16(&packet[8]);
     const std::uint16_t received_crc = ReadLE16(&packet[CRC_OFFSET]);
-
+/*  關閉逐行列印
     std::printf(
         "VALID packet #%llu: seq=%u, payload=%u, "
         "CRC=0x%04X, total_bytes=%llu\n",
@@ -247,8 +247,9 @@ void PrintPacket(
         static_cast<unsigned int>(received_crc),
         static_cast<unsigned long long>(stats.total_bytes)
     );
-
+*/
     // Print a short payload preview for troubleshooting.
+/* 關閉逐行列印
     std::printf("  Payload preview: ");
 
     for (std::size_t i = 0; i < 17U; ++i)
@@ -267,6 +268,7 @@ void PrintPacket(
 
     std::printf("...\n");
     std::fflush(stdout);
+*/
 }
 
 void SendPendingTcpPacket(
