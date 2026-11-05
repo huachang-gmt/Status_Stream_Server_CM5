@@ -11875,7 +11875,7 @@ Optical Power = -10 dBm
              滑台
                 │
                 ▼
-          Lens / PIC 對位
+          Lens / PIC PIC（Photonic Integrated Circuit，光子積體電路,光子晶片）對位
                 │
                 ▼
            光功率量測
@@ -22693,33 +22693,3111 @@ C. 只移動 X 軸，因為 XY 和 Z 軸會互相影響。
 
 ---
 
+正確！答案是 **B**。這也是精密定位設備非常重要的控制策略。
+
+你已經開始理解為什麼精密設備不能只追求「快速到達目標」，還必須控制接近目標時的運動方式。
+
+今天我們就進一步認識這兩個概念。
+
+# 一、粗定位（Coarse Positioning）與精密定位（Fine Positioning）
+
+想像相機要對準一個光纖接頭。
+
+假設目標位置是：
+
+```text
+X = 20.000 mm
+Y = 15.000 mm
+Z = 8.000 mm
+```
+
+但是目前相機位於：
+
+```text
+X = 0 mm
+Y = 0 mm
+Z = 0 mm
+```
+
+如果一開始就使用非常慢的速度移動，雖然精準，但會花很多時間。
+
+因此可以分成兩個階段。
+
+## 第一階段：粗定位
+
+先讓 XYZ 三軸快速移動到接近目標的位置。
+
+例如：
+
+```text
+目標位置：
+X = 20.000 mm
+Y = 15.000 mm
+Z = 8.000 mm
+
+粗定位完成：
+X = 19.000 mm
+Y = 14.000 mm
+Z = 7.000 mm
+```
+
+此時距離目標還有一段距離，但已經接近了。
+
+![Image](https://images.openai.com/static-rsc-4/6XeqPAptfofO6qFWh9nVUS8yeB6ZejBRhYEzMiDSqmZyMmmjuJO0QGFCaPuCQZOCPUkPoanmZaowNcTJ2fjXiG2hqoQJ1EJO8ZBBRNWggkyWiDYyZbEWXvAH1BQAhHI0nKnZha7x_8x9DFNmAqWN5EByicdW0yQiHEyB2R0fyjuojpkxourm6HfT68SweICK?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/hDMtlrNkmXquFM4XW6OD2xtUjEO0zJHiKs-2n_j0QAOx1rXPdPynICoWy9Ch6GBmeDUcNwnBU97QmmL9EtJaaEGvQ1iwuBkPWL_rgsRtlbHDkgTM1CiwTEL0wzdwykXSw2nCtsd8Tp5LdwIIb7IqgQYhv-vBCCl_RD4_gkfl-9zTKKsW0OkcjWhhMvQePKGo?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/zpZr5NfOd7TBM_w3H1T2Qs7X60fkigf05UZ5ZRiTAZ9W7qt-NhH9jLVTcJVZo3CCmOXDyTCyCF5McHo07WRJ1kJUxx6-z0EoUFKvFgLFkTbrO0X0qzK17746HAx1Ycldkuyr_BNtraiW4Zd97zTlNjtlXI9nvobMDM4xnMNQ3F6gHGHsT-qqU69V7-v1K5k9?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Cno8f3-9ykKUqE5OsOO0OTCSPBny3QTwYp0eAZLoU7LEWlISYsxkAFyRoB5evJgb50pJZ3k_IqlU94mMpxQ846_Y8pBsBOBXYkooM-n4iJQLI9_2MTjrrFaokorceKIxyHhwyowSs5nFm8hFS6kMTR2EqKrxI9adCHYSMZinr0T3iyUrQwMYop6UtvRG4ViQ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/xO0qITPi7sbsROANTcnHO1ciG2qENRvTzr72tdE0J5tC0Dn2ezoMEGmgJVPzJV_QKBM3O_-0vTNJhk4zJDLEH3IcrE_V9BH1oETfZK2tfmexJ0E6EfAaNhG9lh50MPkNPZ4T_HE30qfynj6ZOQsA6efcHYcx99t0VLF_OMOkhnn6vANQ1TbohKEtPxLwNj-z?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/9QGpPs63l7Uwmjl9KP7vpb9LWYrB6dxCZY7bq-vb_4yYZmqcoKc50E0J_62gbe9QmDNMtnOGaYR3G7yFmcER8l_o5JJQ1G0QsG6776I1l2-trvQQNygxizrV0dS7CFwtaZ_g52CxweymWH6mhK8_FsAcOrti_7On9XrjAyfamjl3VvcgDWyni-Y02lshXov3?purpose=fullsize)
+
+## 第二階段：精密定位
+
+接近目標後，降低移動速度，進行更細微的調整。
+
+例如：
+
+```text
+最終目標：
+X = 20.000 mm
+Y = 15.000 mm
+Z = 8.000 mm
+```
+
+此時可能需要非常小的位移，甚至以微米（µm）為單位調整。
+
+這樣可以降低接近時的衝擊，也能讓設備更容易找到最佳對位位置。
+
+---
+
+# 二、為什麼光纖耦合特別需要精密定位？
+
+這裡舉一個與你未來學習矽光子有關的例子。
+
+![Image](https://images.openai.com/static-rsc-4/Gb-zmcaJ9W6uDCD13HJPmZP1UAYMFymjIOromN2GpGMHxysbFPWTDHHQCyHsIrOclX_hXp9ZpeHots79lnjXewA7NAynJ9so2fi0mWHlp64_6DctGx3aqzbeM2TA238pY9ngz_kzzAySK9QXj29N4g57UkoebeCwW474iFB86FNW17FVhDamd9Bq27hi4WcV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/913_LGROsgwWk0C1H_PnLQv6m_qvxM296uMpL_NlX4cIp_c0oPUeQoJVgwHxVC3lybcsuJFwU2xhE5mWgY0BA9MfwTjSfFYmbSN3MIkJTzcStYzM_0xHBwXWP9c4I5HJD0_eXXoFcpQ6nH3Y8c37asoYEe-CtuxlCi4nZZRA-Q91ZbhvBPICchg0_AMY9x99?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/nSpg1lW1BThy47sBsvsbfIUU0VX6aYrMobdHajX4N5GN1UsYUbzmPvehJpymyLRxqu6OdfRwlANpfKWE5HngIV61BEiu9jcUvyPnoy7uR7Qy8nqOTVa3VsdjNK1h6Szn7TyHX2W9yx152CUOtFAVOwbnutq82FSHf3o1zhWiXcV9OAOioqQU37mZQrFE-bZD?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ZgGFvU4g8tWaMaERt6-1Adumd03noSQOZUBENN60fjuhiVMs7h0RldTqTZak9ogZxhfsSEhz58_eNkQfMIiDvezChD0KmMe0M8TMOZA6JHTPTi1_IVqovEWn9Tx9tHR1HNWGxnPJWalE-OPZFtqc3caR5uU2DXYVsUscnEwj67gCt7zIDRJSuHH3JlINzYo3?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Dm2UajGG_dEypiAtFuBTeEohJPVypYVewTuXqa9EFmGwPDg0BeRev7WOBlJrZZmCivGxTkRzg4LTRchhUJinqxHn8A8-JckiYOzJipGxmqxlYhHYNpYqgkSv7JVcSzGglkVcpKBHxvSKl3mlm9mOSnFqfetQTY_dLYe8x7tDOR_RzZ1ZfEeaSQuWy5B-gBfs?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/1gCY56SHk-6_pBzMF-WYXlHx5O6BDxmTlMLLIt6iDS0LGePeVQfbgKhmt5UtRPypvJ8te3Kpg-neoNMuw3rThDpcrGn9UkWHJTCXmm6-ac3M82oBz8QohxGTbmWZP389Aq6oZ-t2oeqgmlJa4JZ9LbSAGT4UirN-MIjcqTeUfUJUu3acJIeZovZHIAVBGYS5?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8QtjfqvEoYcwKaMMP3EScJ95meD5PFeF2ug2cYlkPu-ik21zM7ZNYD2Z52O_Im3SU-iNzE7PPdPJFSnEZ2LgwDXE08UlrFd1y2phmLHy8UsmuOxGUXLxqUVJmkwbvd52pA4Y_ng_S6FezP2_9J6d7B0689-dbPWpKv1-V_BB6v5T2eQTnYuWrtoHiXSuD3TL?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/E8r1HdLe5GgXXPltO931wxShHWkagVSmdAWDENonZ0V5KPculCil8z3OaVVdxQR4E-zqc_dfi3o6Ae0dooWhr026SABwGGakOsv8u3xPaKVPt6DqH2KAeRWi5oZD1nl7_dtFFv8Y4dwYDNUIBOCBDpu1T_cmFGsJmf_dxu3ctvML1ivnAECQ3omMcRGGRerl?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/CDpLYp7t2wHPGmzFbxbK1EfMbm57FDDBLz6loBocHXxqAqxHjrExqjj9J3cY9tPXLuE74ecSGhkYq9j6sSE5ScJ9C3lszPAeIclZwRXd_fk6B3v-Ur6vJyWxkAZS67nZp-T7AmKVrOwdBCMn_oUcmFHrCdIvmrsrGoxYrSJ8FChDHDn1ZonCW2S71AQKvn6z?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/GdenXCcO2MObiXURQINwSeaclSQrS3cplg5X12jPA4Dhrd0jULf_AfAOnjWdZE7j7KKq6eejWhazcHbJ-sV397fT9j7vEYDqI8_Z1lMtSL1QNqGyeus3SwEg9LnMxNG8CIriMnF2J8qiqk1Uu-DjOQGsoz_MI9gseZbHqvLdkdTPrHFgMhzCCExEtv4HKIfa?purpose=fullsize)
+
+假設一條光纖要把光傳進矽光子晶片上的光波導。
+
+光纖的出光位置必須與晶片上的光學入口對準。
+
+如果位置偏差太大，可能造成：
+
+* 光纖與光波導中心不一致。
+* 光線無法有效進入波導。
+* 光耦合效率下降。
+* 光功率損失增加。
+
+因此，設備可能先用 XYZ 平台將光纖移動到接近的位置，再透過精密調整找到最佳耦合位置。
+
+這裡要特別注意：**最佳光耦合位置不一定只靠幾何中心決定。** 實際設備通常還需要量測光功率，透過回授尋找最佳位置。
+
+---
+
+# 三、從韌體角度理解：位置控制與量測回授
+
+這個流程就能連接到你的 STM32H755 專案。
+
+假設設備具有：
+
+* STM32H755：設備控制。
+* EtherCAT：通訊。
+* Servo Drive：馬達控制。
+* XYZ 滑台：機械定位。
+* 光功率計：量測光耦合效果。
+
+可能的流程如下：
+
+1. STM32 命令 XYZ 移動到粗定位位置。
+2. 驅動器控制馬達完成移動。
+3. STM32 確認各軸到位。
+4. STM32 開始精密搜尋。
+5. 每次微調 XYZ 位置。
+6. 讀取光功率計回報的光功率。
+7. 比較不同位置的光功率。
+8. 找到光耦合效果最佳的位置。
+
+這裡會出現一個新的概念：
+
+**閉迴路不一定只有馬達編碼器的位置回授，也可以有設備工作結果的量測回授。**
+
+例如：
+
+* Encoder 回授：馬達或平台實際移動多少。
+* 光功率回授：目前光耦合效果如何。
+
+兩者用途不同，但都能幫助設備完成精密工作。
+
+---
+
+# 四、今天先記住這三件事
+
+| 概念   | 目的                 |
+| ---- | ------------------ |
+| 粗定位  | 快速接近目標             |
+| 精密定位 | 小幅度調整到理想位置         |
+| 量測回授 | 確認實際工作效果，例如光功率是否最佳 |
+
+這三件事結合起來，就是許多精密光學對位設備的基本工作方式。
+
+**下一步，我建議開始學習六軸平台中的 RX、RY、RZ。** 因為光纖對準矽光子晶片時，有時候即使 XYZ 位置正確，只要角度稍微偏差，光耦合效果仍然可能很差。這正是旋轉軸存在的原因。
 
 
+---
+
+很好！我們正式進入六軸平台的第二階段。
+
+這一階段會學習 **RX、RY、RZ 三個旋轉自由度**。它們對你未來理解 GMT 的光纖耦合、矽光子對位、Camera Alignment 特別重要。
+
+先建立一個觀念：
+
+**XYZ 負責把物體移動到正確的位置；RX、RY、RZ 負責把物體調整到正確的角度。**
+
+即使 XYZ 三個位置完全正確，如果角度不對，光纖也可能無法與晶片上的光學入口正確對準。
+
+# 第一課：認識 RX、RY、RZ
+
+## 一、先看三個旋轉軸的空間關係
+
+![Image](https://images.openai.com/static-rsc-4/TfWq7L8Hfo1NtxDDTPd6kL3ypwFgG1JzdghNRMo0S96JVYovfM9yXoQEHVIGynCRcLVaaehCj8JKcntmBkp35xvl45HSLIB5o9Kuxsj44FQIj6j8hk8DZzRs_XRlcxM5MwMXQvA_J07I3-OF6_QOcnJYu5HXqW8S3MmTagj4QSi2nzGSByNRloibYK-nMuW4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Z3uLskDzlFWVs3MxLa0T0hNBNm0R9_quPx1PUlSY3yxLzotDCwuHHyyxXzuSN5pFDRoblAzotME66Fuv5casH3xzcsQk02RDzWs1GduhuRv3Fa1zMmizLJj8Q5E4LySn_zotUeg5c5sVCl2psaClPKgFJSD3-oVjOOUrBlkA0nuOofTyxQny_qdaiCA0MC8M?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ELuIPPeOMfnGKGywSnLQgEXs2CQZ-LkOQB8ky3YrO7VRvqWtRnfnPc7UtdX36Hhvgkga_k1Z-_u-sXUBtSZ7S210M2aL8ngKxk4VX0mPas_utnjD3bpaRSjw3OQ0BL2UnlvS6_18I1ncRL45KUHWpgiAgE2dkYuzzoBLVDOYnLuf6_9Y1FETSCxQpomzXCLb?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ZhAcOmRW5jXBeW1lq2BmkN4KhM6737z1Ds858j7ICjCIzrafvN8mVM-qHl-898qHinm9wDEexBj_nW-0AWNiB8OzwcasOR2c4_nd4QQK8BqxDOnyeOaIzqYcBwbzzA_mQdxA4OYl6NTCWVby1Avo5-H0cMovc3xFBUvz1nhuUHzzx2wDFEd8o2DW3bCKonP4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/FrQMzOFRtq3Wrz0Hp_Hb6RTuDth3xRVzpxFDuXvFlb8ACFnoYmDt-OIe5aLV1w4uOYENMPi1EuFftbiSbRLDodUNPLRvy5dPf1TZ4t0BQQgwS82H1X8JSQpNUHBxSmZ2m08hQ_nM5pzO4OOLV9gjxVZvjsFLlONwuGEEsIPqVzeMZQKF3ELG5Oj7Xl7MO1Zp?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/zuF7CZ5L_fkLvUJHnIEhOax67a3BLcrYxn21I7TjYg5sfRfvya1S7O4R3gNciDmDwtICk0h5qBk1VMXPJhwOZJRIMAa2EG5mINV46KU8IfTKfVcNwxFlFCYxQjYQYZVjTZVREOYUwc_sswhl3eFxyLPkBYSM7CCjDODln1FZMTyj5xPUykrvAf7CQVmIFsf0?purpose=fullsize)
+
+先看這張概念圖。
+
+我們有三個直線方向：
+
+* X：左右移動
+* Y：前後移動
+* Z：上下移動
+
+現在假設有一個物體放在 XYZ 平台上。
+
+我們不移動它的位置，而是讓它繞著某個軸旋轉。
+
+這就是 RX、RY、RZ。
+
+| 名稱 | 意義         | 旋轉方式    |
+| -- | ---------- | ------- |
+| RX | Rotation X | 繞 X 軸旋轉 |
+| RY | Rotation Y | 繞 Y 軸旋轉 |
+| RZ | Rotation Z | 繞 Z 軸旋轉 |
+
+注意：這裡的 X、Y、Z 是旋轉所依據的軸，不是物體移動的方向。
+
+---
+
+# 二、RX：繞 X 軸旋轉
+
+假設我們有一個相機，放在平台上。
+
+現在讓相機繞著 X 軸旋轉。
+
+![Image](https://images.openai.com/static-rsc-4/eIQgGWjinSmR0P7knr1TA0lnZ1PCV16GFjRqGYitANGSRcijFdwhTAeWETL4bjB37gdpOe7b-6nAEQlioS3Ac5CHEPL9EnF0yrRTX41cO42NKGnfW7lnLvvT5Xk1dRtQcMb9JU3HVUb49jqfYKtxhkdRYjkzXU_V0m2deJvJUd7MrYRm5liM0GA2Wnz7K7mE?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/S73E1fBlu_XoBTXW_-lJgf3L00ktxoHRTFe2shw_4zNS3LcmkcBRv-cFheqSRF93CqNVzeOnoMwZyG9nYmjUDahSp0qlOUr8WymqxDfIfJWhbQwmhZ0BKWCUqcCHbgU4Aml6qfjRggyVCGmOPgYGlOUROHSvvYRTNEhZHIamZl-TixpDia3A8PIfp7kZ8ZmH?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/zS335BbMzdFVeHx3hrHnlkYCcFKJwaivH0ykcKjWOytzv5v77SJE5V6j8cPO6lyaE8LERORL5poHfNl-ewYP-NmZQKy2nH7Uf5qG01byKs13lFTis3ZS-WafllxAXtK2ySqlRvpcauOz-AH9FltTjdZ7Hu1iWebYJlRacxSKhibT4Gtw4_0D_hKNKr-EV3Wc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/zi_tI00q_q4pToBkgy9yaJDPdRnwC6nHfQ_dXjshnVVF7wHSLM2_lSsBP4Xb-qOwmT3yqgGm0ifEAwl_spywZ_B2xeAL-no5yRMB0i-2TVjdwMa9kZ5OTqy9hpDmnEmMe2hx9kGl74nrnpgkdk-Cdb5YHfbtLGSXbo5vp9xUcPEJ_bYBeI8UBTWJ6qz2dpCU?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/wi-YDRg-9odxeJWybBz7Iv48kGw2OwepY2I6YMnC7wcXjWR65p5aRF9N7iaHPz_beCIaBp6YPR8UyxuxvJv2Y15JfstBHLPuTrwmw4osjLDIq25FNzoVUdn4LGENhQ3eIhh1M_Tz8rMp0o9Qau_i-p-iEg_pOZIv1tj9dEB__l_Tkxk-wW2JnunAP70k6mfg?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/7_Og9s7uwoOroFKbZh4f_lMpcnxfzh96QOlqxHC1rgaBjpRtaq7epSybLYHXBDwS1n-PUyQdyH-ibEomB9ul8znw64MtxfUDbDu60CNq7rOjTz5Lr67wE-DMU9eFiS_VQDT0saeNR1JNmje7oCmEBxRWXn_pYixJAv0L3apjRu6xV8CQp37tp8kQzEuJpfdD?purpose=fullsize)
+
+你可以把它想像成：
+
+相機沿著 X 軸方向當作旋轉軸，讓相機產生翻滾或側傾的動作。
+
+例如：
+
+* RX = 0°：原始角度。
+* RX = +1°：朝某個方向旋轉 1°。
+* RX = -1°：朝相反方向旋轉 1°。
+
+這裡的正負方向依照設備定義的座標系及右手定則決定。
+
+**RX 的作用：修正物體繞 X 方向的角度偏差。**
+
+# 三、RY：繞 Y 軸旋轉
+
+接著讓相機繞 Y 軸旋轉。
+
+![Image](https://images.openai.com/static-rsc-4/h0EePLdv0ol2bWNkscBvGAStTwmLmd69meGpBdKUiprYzTQNdQulvPRyyTPM5ClVdd4RWIKCku5rOiNso1s62hcF1VN1dk3YMmb_f7IQJnJGVgFo9lW2ZtB82F2C4vXFQ9aC2Z2FCfFRTg8IUjjUSof4-LT5C9Ed9SSQoLdmYnsdxl9ym2RF_22Z9bqhrXWE?purpose=fullsize)
+
+這次旋轉軸換成 Y。
+
+你可以想像相機的前端往上或往下傾斜。
+
+例如：
+
+* RY = 0°：原始角度。
+* RY = +1°：朝某個方向傾斜 1°。
+* RY = -1°：朝相反方向傾斜 1°。
+
+**RY 的作用：修正物體繞 Y 方向的角度偏差。**
+
+# 四、RZ：繞 Z 軸旋轉
+
+最後是 RZ。
+
+![Image](https://images.openai.com/static-rsc-4/1EqF4meH3arDNh8unkcLrnqenCKDeLms5ZPuleedDVEmrcGLcAcdXKqMzAKxOJLwpKIXycVLdU-klkm-08kWoKjK0-r7wM62JdtN_Via6X1Ie-sb7tDqhTjAZeGQxJaon4Ydr90qKxIM8KYFO5aPyvQD2soQDTp8x9HQV7wMqI0B1_Pyd21f22RCIH7KaIxX?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/SlwoMtIkIDTIROFTAVGGULLPslYkwRVjAVONDsMpbzv0K08fkYlog6BggVsTxrJv8ArQC8Wu0IVteF0FjA54N735hWODjNOdNiG7ttOzFsDCbw2lRoyQo7fI7At5RIG_wX3HEI9IitockI1lNvln7vArlF90AoAKl50oB4lwMrwk8LQYvY7D_HIVcSsetyqL?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/uRH11xnG0JbuGwg0Pkpx_MfYEDxRnsznp-lMGHgm7wCmAqhHYB1CnCDYf_pTiEcebn-mlKZIFi2kgUtvImBAT0kRl2VKzfEVXnRm3xW0uXGAHpiFKFnhR1wq6biQoW8VJPkil3FnMkSh4mqdpQC4ZO6SjhQ62p9muApB1nV8iiSmJsw54MdVKlh9t7hFYNUX?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/_DnUVBIffHTmD6972npfYzCV7atAihj5WcOZBvMFyLDsBHBkn1sDZJoBBM4-PynrkLJWFQHYnSXN-yNmZLQ8CrnzJQzqWX5B7lQSsS63yR580SeJKjX4Nf27mw3nUXAVmlzmGllSXyaI-DkM_cGteYjrKu0JF7iMkNx5s-qtfxjqVhu9sFaTTwWV4HSHzA7i?purpose=fullsize)
+
+這個比較容易理解。
+
+假設平台是水平的，Z 軸垂直向上。
+
+讓物體繞 Z 軸旋轉，就像轉動桌面上的一個圓盤。
+
+例如：
+
+* RZ = 0°：原始方向。
+* RZ = +5°：從上方看，依照約定的正方向旋轉 5°。
+* RZ = -5°：反方向旋轉 5°。
+
+**RZ 的作用：修正物體在水平面內的旋轉角度。**
+
+這種旋轉在光纖接頭、相機模組和晶片方向對準時很常見。
+
+---
+
+# 五、三個旋轉軸放在一起比較
+
+| 自由度 | 旋轉軸 | 可以想像成      |
+| --- | --- | ---------- |
+| RX  | X 軸 | 相機側傾、翻滾    |
+| RY  | Y 軸 | 相機前後俯仰     |
+| RZ  | Z 軸 | 相機在水平面內轉方向 |
+
+這裡有一個容易混淆的地方：
+
+RX、RY、RZ 並不是三個固定的「左、右、上、下」方向。
+
+它們描述的是**繞哪一條軸旋轉**。
+
+而且，當多個旋轉軸連續旋轉時，旋轉順序及座標系定義可能影響最後姿態。因此在精密設備中，控制器必須清楚知道旋轉軸的定義。
+
+---
+
+# 六、GMT 實際產品中有這些旋轉機構嗎？
+
+有，而且 GMT 有不同的機械方式實現旋轉與角度調整。
+
+### 1. Rotary Stage（旋轉平台）
+
+![Image](https://images.openai.com/static-rsc-4/B5vVLZFtXt1vdB_Z7mxKa8fEVXL6EyLtZ2IBlonBfaTqp91KlH2_XNAFmc3b3j19LUAY5os2F10nI7Sd-AwQUy27Ywl7CGOXB7n-4VJRWS2pcKdk0C8YAPK9wN-JwiZlhLN7WijgBnsP7f3TmIha_e_J1uEb_sZFNw-OZKG7Za0od4rTitAsf0w65rurHZTb?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/gsyJ6yTStDzqSd-hyHEttVcNpc8Sa1cqj8s4YhVFGSmgPiOej9umOzMdfy75m1o7O_h7u7kZBPyiP0kks9gmiRR8KiUVUejAAqYEMGLiipam4I1YZARwd-cP1V9uCwqbJkfOp1HEpGw7ncaYhpcPIbr-KJjQnr7kSriW3oAVK-neXrN6ecQonAXkvY2T8T2n?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/3qwY6T3kehh7pSCNCTBNCBiY1d7wEFzPhkZFa2Jq_RUxWdmcSGXLOokJAFmPmJodmDMDmKYxbiaU1pRkWSHE7FtZ8SqjSJ0K8fAGbnsXKt0eScvhb5NkhEbPKAWF3mkct3B5YGuFFwQDMVsjFTIsVI_k7y5ESsldA_wPZTITTxP9Np6WQvvqdA0icDdmUFvA?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/TlNK9ugcBJbVHdd0Ar3kKhj9N6oJif5IZqGvbcs8Pkato5Xozi1V1nBjDYNf05yHAS0WYadV7voMgQPoBMRGaJpralWdBgatWGucHAcfGH-0ZuJXGkGix6-0D8K6jAVDF91z8b2uGGsrQHQh0OfcCFWkXGtByBLoGGuJBYAFqnbq0T6RNc9tV4cBMMrIvS2G?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/vVqfe7iMNzuWQs4H-wpXDabg8otw9X0isfmMulS9zWsi2wwcJhyEY4Ht7YGM3x5siVQTZd58HL42kp_6IzJRk8oeyqBLiO_ywR7Gm7KzXs3rmkU7Nl_lqlG-qCPE3mC4Yw6EX3dEjgu5o6aP8FMXiZd9DsbScndoPwpT-Ky7gQWs8zv4ByCXkaIYpM65fEHh?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/u6B43E0mgdQ5IyzOzdjmYYfBK7_GbjeYg4UuvczEwgyCOH9mR5X89kbudKHWFBL-tsihGY1ah1SaYvNiV3P004nqQsfURTrki7JOS363ltiTkGPfilpP5B6NH5qq2yKVst9983FUWYYWnlOLb9qWL8XQlDmvnHlXqDYr52cxEyXchBdaG7e-zC2pKTaxPo5R?purpose=fullsize)
+
+GMT 的 Rotary Stage 主要用於 θ 方向的旋轉。
+
+例如官方的 MR38-AR 精密旋轉平台，使用測微頭調整旋轉角度。
+
+這種平台可以讓上方的物體在平面內旋轉。
+
+官方產品資料：[GMT Rotary Stage](https://www.gmt.tw/en/rotation-stage?utm_source=chatgpt.com)
+
+### 2. Goniometer Stage（測角平台）
+
+![Image](https://images.openai.com/static-rsc-4/KInpkinKscYyEnSHwrJxAUKww_mL-epZP0bfgWTcXgiuE-_uX-3W6eCMsoLUTROWAh0p8BRXHrxyOk9t7mxS9HUu6nBecjYLwe5hUZl6nkamYx3-gPrluNJq2nsI8QkX3CxLn2ZoeIdBFdMz6_9zOtjaeLsYwqARVJMWi6ZY8Ye9qHLBNEYYmrrZ7rFlLyx8?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/uyJbMerXbOumFUnb0yi4moF2jJz0bKcZEfjm9Y1GRX2JOrzPKkDNfz5FAYuyJnlYcXsAK7A5iuyHUdctX_4OcI0UR8sL50TnaNsrnGIMJcVyxw-FeP0XQ0gg3DjOujoOnZpuG-Xmf5frE1ZSr5Hl7orumYYQlCGRsmKgSZ9hZbPIiyYn5p9z229EKA-vAApw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/KwDcbg60_kB7JmAhp7lcZVVL76K6LrhzPD7CPcZftiyYx_bi0lBOz5M-Pqx1APrby_979jhbi3xTEVwTn934C-mEcKtGDeSS_nZou0YQTADnpfL1OKQECh2F49wEZyYVIe49_vrHXUhSU8q1ir67mn11GQ4qp6ITsyMTzL910omFvTSuyISNvlersVoHEfP7?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/qaO3KeluG2hibfMF-LRl0itWeSYyXNCshyodLXMq8i96MbA1Sr8I35CX0IGmz6h7EUb6sSAXP5fQxSl96r1viGNl7Z5xwDWlKWmbll3dCN0x3aG5mBVfA2kzqUhG4D1zTyt4C18l6kVz0mbO0DOBEsA1Vpud-9mBoS6nCFqMW-KnkQzoVQgCcXGPuWu9G4X2?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/DitBBHSn0XkQDzPshWapu04pONWA53YAb9h_M_0K9cl0RZQyDRsioaOPNRRv8z20Z5MYWjWl5rQQYmgeOg5BcAIAvqeMUZUrjlQW-S6cs3vy0g7QBPbdmE8C98VThMdMFpo3f7mlDIXW9U_zxbKzLNxnLIhZhITCUwr561bGG5GgCKo_S9gfjG90dcW18H4M?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/42YlHVJMCE-4GScAMD_RdTVpRefOA3PNcRc5ePVsWiwe84IZJanG1imVCGUQUgFkO0gHDo0NkJoq3BGGaSqHSVr5XUVXKgtFJsqXrZEz0EQdSA00DEDtzsb24yuGhigOGt7D8N0Akzt04TQ_YxE5KJ9Av0v9Glws3KnJrtD11YlsT0vXRs39dTN88eX058fW?purpose=fullsize)
+
+這類平台可以讓物體產生角度傾斜。
+
+例如：
+
+* α 軸：一個方向的角度調整。
+* β 軸：另一個方向的角度調整。
+
+GMT 官方產品系列就有 α 軸與 αβ 雙軸 Goniometer Stage。
+
+官方資料：[GMT Goniometer Stage](https://www.gmtglobalinc.com/en/manual-stage?utm_source=chatgpt.com)
+
+### 3. Hexapod（六足並聯平台）
+
+![Image](https://images.openai.com/static-rsc-4/pgh0o9BWDoqKOc5TU79kNCXxcUJyUmcl2JQFEOVLwX5NKcF9v9DFDPjMd2HgMNKqpJUPwQw1fxxtzM0eOjx5uBR3LSO92yrKk7S7EWLl0K8wxEBXYkq6HHJk7uULS0gx4GILKyA9GX0Wbxh46M_4RFi-ZPiFs7mzi2-9IRp2Xfrf9iObhwRh20dbHVQpPfNw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-LbpTHVW2TJoi04ARanEcVx1ETiUn8pEMlCn86pg-QDcl_nKB1R5egZNK_ZKVhCl_szqHDZ0Qsyslm83x60L7i69LMtNoJuvApymrh2TXdgzxuGk3qArKPMvrA950wRuPg5t-2w2-rsKEaIh2qranE4zv4Jlbf_2no7YjiJG2cK612HTrkHJ3zql0vPljKHu?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/iYY6eim7_2g7esRnd9jdYfzDF3EyVmWYTUFcELP7SdZFkEopcHJ9fcSXwRazaGohpk8JFosZFKii6-TnrM_GdRU7EXVHPPXpO-brBOWzpp4xbIKYQB_JiQv6iShswsFdqpKuXnShsjk3onzftE8PW2qTKpi4qOXaCiu7f1y-_hDbRJTqPI8E3wQ7pQDxc5qs?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4p9ZqBxXWub5NJ8l-llSBQALCSgSb6aaD-yjYCzWiFJHgrmwcIhebmUqqcwk3svB59ofByfzAoW-zHKeflboxeb1LW6rrv5Ij9pQ5n3pEC-SFO_WDpv33GGWqQCgOmqZ8VbdFBcpW4XCSCiWvnrETqusUyhyc6_EWU48J7Cyg1EskHQRUllyZNfCPPb9TC50?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/XPAc45b9Wh2QcygudHaCcGahANqoGoNCY-pyeERar7-crgta-boLKeY0JUwlJRTC1svANhJu56iQjgK3qO4BCZ3BJ1hewWXuNxd1gTdZIx2BXQzAk8-3y8_tBPNKc3Y3V4lPq9o8-iPPetUVmFCZcUR_Ow6QLTWZ0OPk3rirJ7V0NDFRUQcj4gl9rLyrqfDn?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/X2wZjiCupSf_HWKNdqygJDMl1DA5BS2zm8QHXyKmIuHOSROczDV-dryIYjt8acOlVmesUc77BFT_F9NcsOVFKVW_DdM8s3VkgjwEbKbMHu49mHDqZc0D9o5-IbugmitIqRweKKqFUATZsc8APtksWtzUUJjhSuRzVjC8AqjOJm4F1Qu0zXcsE9W9rd8GrSqD?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ET54TEhNftgu8SVyW9FwXUrxMvsKa9NKbxXpJq0PV3w0h6JiQHh7Ie_gDoRg-_2pWTqONC_TUQ1vFSs1ePuSFplSWqifs52FaqLue4sEsyUCYIg69907An7yDupCVIiC0sUtRGLKuPaNjW3EN-n_AG1NDQDZkHgu0wVH1O1q8hFWUm57HZNkbzAPYR--GfTQ?purpose=fullsize)
+
+這是更進階的六軸機構。
+
+GMT 官方的 Hexapod Platform 是六自由度並聯平台，可以同時實現：
+
+* X、Y、Z 直線移動。
+* RX、RY、RZ 姿態旋轉。
+
+它不是把六個單軸滑台簡單疊在一起，而是透過六支可改變長度的支柱，共同控制上方平台的位置和角度。
+
+這類機構應用於光學耦合、矽光子波導對位等工作。
+
+官方型錄：[GMT GSS-100-D Hexapod Platform 型錄](https://www.gmtglobalinc.com/upload-files/catalogue/display-information/EN/GMT-Hexapod_Platform_GSS-100-d_-EN_P.pdf?utm_source=chatgpt.com)
+
+---
+
+# 七、最重要的實際案例：光纖對準矽光子晶片
+
+![Image](https://images.openai.com/static-rsc-4/Gb-zmcaJ9W6uDCD13HJPmZP1UAYMFymjIOromN2GpGMHxysbFPWTDHHQCyHsIrOclX_hXp9ZpeHots79lnjXewA7NAynJ9so2fi0mWHlp64_6DctGx3aqzbeM2TA238pY9ngz_kzzAySK9QXj29N4g57UkoebeCwW474iFB86FNW17FVhDamd9Bq27hi4WcV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/bsgyV2xLQ5pBx8GkabVefY6WJZoAsABTLcRAjzbB1sdcwIEymaXVlDfv5-HjrRSgwnt6OVMNt927JOLiOYJ_f6vclvDvKFhJ4O4UN09vwz6EcoaF_vHXZwyK3D5U8bBDyjOEviX4uJvPOAnUbzomFyegHdiTmoIU8DjG-aRaW9QQIQ2Xd1hSfXDxyIsHvHTE?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/CDpLYp7t2wHPGmzFbxbK1EfMbm57FDDBLz6loBocHXxqAqxHjrExqjj9J3cY9tPXLuE74ecSGhkYq9j6sSE5ScJ9C3lszPAeIclZwRXd_fk6B3v-Ur6vJyWxkAZS67nZp-T7AmKVrOwdBCMn_oUcmFHrCdIvmrsrGoxYrSJ8FChDHDn1ZonCW2S71AQKvn6z?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ZgGFvU4g8tWaMaERt6-1Adumd03noSQOZUBENN60fjuhiVMs7h0RldTqTZak9ogZxhfsSEhz58_eNkQfMIiDvezChD0KmMe0M8TMOZA6JHTPTi1_IVqovEWn9Tx9tHR1HNWGxnPJWalE-OPZFtqc3caR5uU2DXYVsUscnEwj67gCt7zIDRJSuHH3JlINzYo3?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Cno8f3-9ykKUqE5OsOO0OTCSPBny3QTwYp0eAZLoU7LEWlISYsxkAFyRoB5evJgb50pJZ3k_IqlU94mMpxQ846_Y8pBsBOBXYkooM-n4iJQLI9_2MTjrrFaokorceKIxyHhwyowSs5nFm8hFS6kMTR2EqKrxI9adCHYSMZinr0T3iyUrQwMYop6UtvRG4ViQ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/78Jp-V4KGjieEQki3UPLeug2EX1w3MSDBW4Oskv4DYKEJM5v3ZMS6zWXgSAYxNM1OltF14G2lZnq3KT7Y5gRIECgWJBZH55rUPMXMgLD39Tarv-vMcKXspH0ISDf2XAWK-4962aCwmGG_TwgCsD_IRbOMMfArUa-JzrOmbNZrQB_vcfduA3J8sv_Yr2P-wvl?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/28gOY-grMqZ0SeDNVb_h2dwOZs7LYNE5yRu_CP_ZVtx_zQMvfWj2gpvOMUyBB9CmehO_SfnVbB_hevKjSZBKpUXxje5AkSrMPTWzjsDUQxE98oq77gRDcnuivu_hBsxklwny5lDjMPe7lqV-4tMFGhBk7sArPL32raHG9Pv1pgoOkhR9AIHMcI3cJyc7WSyV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/913_LGROsgwWk0C1H_PnLQv6m_qvxM296uMpL_NlX4cIp_c0oPUeQoJVgwHxVC3lybcsuJFwU2xhE5mWgY0BA9MfwTjSfFYmbSN3MIkJTzcStYzM_0xHBwXWP9c4I5HJD0_eXXoFcpQ6nH3Y8c37asoYEe-CtuxlCi4nZZRA-Q91ZbhvBPICchg0_AMY9x99?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/J2VoQn9shDFEyk7-buCWJyXnIRtAKvoqCaphlEh0Wrz8Dg6CsHVNTvIijVmOusTucaZXbwlXMKEJna3rDTrFDNeWd_Xs0Wa5xT7e4bVH1zqHh6tza0pYH2xT0oGiDZ4MATgNqtYHCbW1hammhytrMtDNK23kHdayHDEpl3X08y0Euhg3JAgjdlk9HYEgybGR?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/vFIZNyB1HdqZj5DyArbyWaSzy3Nbl-qEpr-H0riFY8FTea-_2Z2y6QUaSpy5olzdwsWTtbaQIoAz5lhxyZJ6NZqTbw3G10KGwJV34718hM2mRfkPHdrPCemf8aUowRrblwhRw3vDCOX-Qu8CDnFtsS3JC38a1kMpGDJVFmJRBZun83w7s9vqBns-nhs5Jq4Z?purpose=fullsize)
+
+假設有一條光纖，要把光送進矽光子晶片。
+
+這時候需要考慮六個方向：
+
+| 軸  | 對位工作         |
+| -- | ------------ |
+| X  | 調整光纖左右位置     |
+| Y  | 調整光纖前後位置     |
+| Z  | 調整光纖高度       |
+| RX | 修正光纖繞 X 軸的傾斜 |
+| RY | 修正光纖繞 Y 軸的傾斜 |
+| RZ | 修正光纖在水平面內的角度 |
+
+為什麼角度也重要？
+
+假設光纖的中心已經對準晶片入口，但光纖方向稍微歪斜。
+
+這時候，即使 XYZ 座標正確，光仍可能無法有效進入波導。
+
+因此需要利用旋轉自由度修正角度。
+
+這就是六自由度精密對位的價值。
+
+---
+
+# 八、今天先記住一件事
+
+**XYZ 解決位置問題，RX、RY、RZ 解決姿態問題。**
+
+而且這六個自由度必須一起考慮，才能完整描述一個物體在三維空間中的位置與方向。
+
+下一課我們會進一步研究一個非常重要的問題：
+
+**RX、RY、RZ 到底是怎麼透過機械結構實現的？**
+
+例如，馬達如何讓平台傾斜 0.01°？旋轉中心在哪裡？為什麼有些平台會使用交叉滾柱、弧形導軌或多支電動推桿？
+
+這會讓你從「知道有六個自由度」進一步變成「看得懂六軸平台內部的機械構造」。
 
 
+---
+
+這一課正好可以把你已經學過的 XYZ 直線運動，延伸到 RX、RY、RZ 旋轉運動。
+
+你已經知道直線滑台的運動鏈：
+
+**馬達 → 聯軸器 → 滾珠螺桿 → 螺帽 → 滑台沿導軌移動**
+
+那麼旋轉平台呢？
+
+答案是：**旋轉軸也有馬達、編碼器和傳動機構，但不一定需要滾珠螺桿、螺帽、直線導軌。**
+
+我們先認識最常見的三種旋轉驅動方式。
+
+# 第一課：旋轉平台是如何被驅動的？
+
+## 一、第一種：馬達直接驅動旋轉平台
+
+![Image](https://images.openai.com/static-rsc-4/RrBGm03QneOu2FCxD5OW3yBIuGaFb-syGYNXWfIdtrwwT6LSRlZDxg1bVpIyfToeoljK-bG8Ao_Ab0FA62OePETU4plhWFo73mRXDNXFaGXYEApSfQPIDR1_BnaQxWBs7gSlgOpqRUNXikwrtPymW1nMyG06pHfivb25BMkuCQeKqqqLIe0XOffGExWY4G7k?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Y4UJY2M_sj8G44BT9UROiFU-wPNKS790_RYzgMnK2ac-dHexcbeW6ViMb5fLrloO7VGrkyYcbTKhItdbHAcvYPyTBfSZFHUcW3B8UEz-eMi2zGO1bBIWpPjfBrDnHiXFaQ64fYMrb7csHAoJWZ7JXFJXXIIyioWZhTkfmjvxZTCcoAhI8XvKCDw_NpsDX2_f?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QPgcvadAv9sTeQT1Ao5iMH4qTBLQqHiiAmUxKxsCxpg5F6KBceoHHK5d3jrPc23KoOj8CbW62LSdzshw271wmIkGajvpwKZk4UaA7m9ZcfXwhBLrFoKVEI02dkh4MmtJ6b9GOawJ2AZWkYxNtjuZjitr7b1y5D_XnFsuzeyOnDm5lHdrjW7IvHVIP0eeew7_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/nsuUu8qM3t5IkmxzZZFJntN6_FXefKV4U5wJlO1sAFACMU5nGsLHT1CZ8Xb30Ka8J_DZmHfRfSS-ztuQ0iXxkiU7UhWLiId3GOLqL4dZ4VgcM2bdz2wGT7p23I1N8HLrqMGzgyJCty6_UJ7QFBuqjJ4odkUqyESUk1a6AeRpeBQ9JXAlYUoa-VjT3BGPEBNN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/1TMvYRtT0fdQ-xE-DNZm6SWNNcA2DlB4pkALGWmXsjg6Jud3o7cvqVhZ2lQ_nmB1RphXlwu80rMsNkgnXTJImHgelfaYDCXtAEyQv61qj-zfDpidk066HxNIFpT_Ih-MDiQyZt3jYR0TGi7B6UHwemkX27DQb5GVh-bVLX1q-FJ1k9DKM4dTG74p7SX-CJu1?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/VRZd2AkpYhXAk55hRbLGuuh4W7PT11gscWIbBba9WSfV9i4ABFmXrr_mbAUUpe5eDPZOpqlZYUdQ8wIOcGq7JRLKjMHJkcUOH_bVZti3ROU75z53rmDJxaaU27v-bOwKjZxxlehLN3LSl2w3MpaYq4xpR0j64mstS1SY_fjJjnt5Wi0VpjhlDChwjvMTkyIm?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/TgxnsyeKR1VN6M2fFSVBdTLYf2BvbITcnNGA_cGYs4orhb__Y1SjP0UDT2Ork1xhOZHdqq7PmsnOzPI7KLQ3Tf6SbxtSphJ-xarM2LAjZQNefkuuKJXQhFA1Y32f8BvYoWpfwTNea2g-KKLA7sA1ev1ve33pFNSks-qkZZFYtuZ3s7HihGVw4TaIwFDGm7I5?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/dpVBgW-Y5JJPpiqHAnuLVoYj1KsGZwN1N7bQ4XTEu2jdWhjx8a9aAEvrvyl8NX_74V1ii9_P83bCR0cCLTyuB8eLYmme1v1PHB-q_L4RK2gMhv7uz69WqQkIDYb8p6KXJY5_RwxOX7s7IKUZKYWui0N9baG_o7hUUFu3rS7rbD2Iq-TQ6xTx4ZnexzQ-Nzei?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/oVhdF2NQGSeUbueis35voXZlJ4HJrhBE2U82ebNEhTqUsiF414vJsuq76LM_bcn7sSAMgJniUbxVSWrdAdfAa6Kb_Jr3kt-zcRDye1b8DidKnX6zugHB8nP0FdUxBTswvubVoCz6iDKI45txSQkaD7b8DSfTXGxUVENcK6xSosN9XQVRu4yGcqItckC6lVX4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/CYI0ncCFh1Xu6Hb5hsTjugSHg4DtYoti5EQjikaJVMfrDl-3CLZoeKGVoCoHEnpiu7q0ktw62SwfryF9kyEOHOB7wQwceO0NLCbM0pdWQLWh7sN-HuLDQDGTA3ccz3XE15_rU9m7JYHSx7m55UAsPUiuUd3bk5KmDbrUxCutHe0jJLFJBWOx_4dckaTRjRAX?purpose=fullsize)
+
+這種方式稱為 **Direct Drive（直接驅動）**。
+
+它的結構概念是：
+
+1. 馬達定子固定在底座。
+2. 馬達轉子與旋轉平台連接。
+3. 馬達通電後，轉子直接帶動平台旋轉。
+4. 軸承支撐旋轉平台，讓平台能平順轉動。
+5. 編碼器量測旋轉角度，提供位置回授。
+
+你可以把它想成：
+
+**馬達轉一圈，平台也跟著轉一圈。**
+
+它不需要聯軸器、滾珠螺桿或螺帽。
+
+### 這裡出現了一個新元件：軸承（Bearing）
+
+你之前認識的直線滑台有：
+
+* Linear Rail（直線滑軌）
+* Linear Block（滑塊）
+
+旋轉平台則通常需要旋轉軸承，例如：
+
+* Crossed Roller Bearing（交叉滾柱軸承）
+* Angular Contact Bearing（角接觸軸承）
+* Precision Rotary Bearing（精密旋轉軸承）
+
+它們的主要工作是：
+
+**支撐旋轉平台的重量，同時允許平台繞著指定軸心旋轉。**
+
+這跟直線滑軌有點類似：滑軌負責支撐與導引直線運動，旋轉軸承則負責支撐與導引旋轉運動。
+
+---
+
+## 二、第二種：馬達透過齒輪減速，驅動旋轉平台
+
+![Image](https://images.openai.com/static-rsc-4/QPgcvadAv9sTeQT1Ao5iMH4qTBLQqHiiAmUxKxsCxpg5F6KBceoHHK5d3jrPc23KoOj8CbW62LSdzshw271wmIkGajvpwKZk4UaA7m9ZcfXwhBLrFoKVEI02dkh4MmtJ6b9GOawJ2AZWkYxNtjuZjitr7b1y5D_XnFsuzeyOnDm5lHdrjW7IvHVIP0eeew7_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/BET-DNCLXGecn6aw9mTK4CdDK-LeGm5nI7BbLDAe0doIEMyLOTYUYPpKTnw4DZrqX6FOMC8cmFmTXEw8cR3bHKdMzH_n4hrMS_jI-7THthPbORZ3gqaK7p5m6YhNgEe3PNd5W9Hige3umbeuBhDksIg1qj5-SWc8HYSE6RELnd6aSrP6E3ZDZfAaeNGHmrHS?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Q5enZ__zeWK86go_LHHNWeLHvkDaOSA4HvK5oOF7wHW-0mFaM_EqF0H0setwz0l2Z-zFclJAbPaGCL-3hbDeSDwUNTxBi3uuxFUXAnjlDZQlQcp4dPcCOqMJ6P8T5lL3XiqU1xJXPSRanh_g60Q9NTdCYLmaz559z1q_bdSy6dn0QaNH6BACa-58h0PpImsh?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0I2wHMAU4SoLpBylyd38irbOBFQeXhuJSazHYCUyQmyIYaOz9uWpY1aBuMY0M92oJDx1FFwKwrCDRwcqzAofyKpbna-lEJCmcFHsrsnwB0ffSNBz8_KxnCtpFHuOdP91xvw9iFgDG5GkiKOhwsnMHto2zgl1vEuKrXh06GSLZ5A1cQ2Pin9ieAkYx-Rk1dBc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/iW1TnsR99gxG5Ty7x-ODYY7NTSvkCftWysl7qqiwgu4nKIYEMZ40BdJxhhLxHB-auQ7GHkm_A2cxpwbVJowkZ4oSHLxlPq46kfHxpFdHCNQTEE5sK110qhdCC5fvaQJddTL0a1s1uU7hWT5smkZws7Mr1-hwREzNui2FNpa0Mbh5P0YD3-YXWZ7MVlsb-51y?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2kU9eW7o4vPpGfvwW4Y4SQrWxVqe-8ya9QC1ABWeX6KLL0whlPVaj_ZLegKnz6MXkD-jDHATjXItgl4AERuzIV_YR2MdvDoyr-7ld_QRRz7b0iEvcIvFFXnvKPxuwOl35zSrXw5gQal4xbakC2K4W9L1BI88eiU3QkiNJZrSwJQo9JfFWqlKHh6INYSp7ioZ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/KtWiML8_FlE5vyG31WgSAdTjvm01j9DKI8Muby8NuQaVlTrxLHrUu6fGfmgcckazZjo9caABA33nLYOQ4irj686TX0ESY17rbWtC6liYZQykDCsbP_rD4jbJULMOZdG3s-hrzc3fSj8o9TXW-zGyvJqj9pizHLFbFdsYv4F4lfStkOZd3c1e5F7MDftw5U-u?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ZR5iYYfNnDS-Myw_Hf9WP-AkZb8Vpre3nQgZ3rcyXjv2_fNTyKiKJ4h1JT2J5MvpQ46lIQ3xdNIV9Aojyd1c0CMDFcxKWvfT0qGrxlwi-2PPDpNlN3VKKvtZv_Zzoe5l8hCcRZzZqHh5F-acjz1aiBYOYS9ooILVDhCTIIqU2fvcw-t5TDST3_QCcuRubzFC?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ebMAm8T62Zq9Tl2d3xlPnU4yoknp7zfbH-0hgPbmbw-WkRJmSei23Xhtsj3jxluC4QLUuA635tNLBAWcDPx-C8fRn7uSEGY1hS92vuGsOfCvpsuZln8r1m-x7eRVqqA-66W-AMgGQVIShV2FYeyCPmI_Sdm6B3oPxOIHcY1XPlAs7g4aZPhLrp5d9w05zqV5?purpose=fullsize)
+
+這種方式稱為 **Worm Gear（蝸桿與蝸輪）驅動**。
+
+這是很值得你認識的一種機構，因為 GMT 的旋轉平台產品中就有這種設計。
+
+它的傳動方式：
+
+1. 馬達旋轉。
+2. 馬達帶動蝸桿。
+3. 蝸桿推動蝸輪旋轉。
+4. 蝸輪帶動上方旋轉平台。
+5. 編碼器或其他位置回授元件提供角度資訊。
+
+### 為什麼要使用齒輪減速？
+
+假設：
+
+* 馬達轉 150 圈。
+* 蝸桿與蝸輪的減速比是 1:150。
+
+那麼：
+
+**馬達轉 150 圈，旋轉平台才轉 1 圈。**
+
+這樣可以讓平台的角度調整變得更細緻，也能提高輸出扭矩。
+
+GMT 官方型錄中的 ARS 系列，就是一個實際例子：
+
+* 使用蝸桿與蝸輪。
+* 減速比 1:150。
+* 使用交叉滾柱導引。
+* 搭配五相步進馬達。
+
+資料來源：[GMT ARS 旋轉平台型錄](https://www.gmt.tw/Images/uploaded/Catalogue/EN/Precision-Rotary-Stages-EN.pdf?utm_source=chatgpt.com)
+
+### 這裡有一個重要觀念
+
+旋轉平台的齒輪減速，某種程度上扮演了直線滑台中「螺桿導程」的角色。
+
+但兩者不是同一種東西：
+
+| 直線滑台        | 旋轉平台                |
+| ----------- | ------------------- |
+| 螺桿導程        | 齒輪減速比               |
+| 控制直線位移      | 控制旋轉角度              |
+| 例如每圈移動 1 mm | 例如馬達轉 150 圈，平台轉 1 圈 |
+
+---
+
+## 三、第三種：馬達透過皮帶或齒輪驅動
+
+![Image](https://images.openai.com/static-rsc-4/nsuUu8qM3t5IkmxzZZFJntN6_FXefKV4U5wJlO1sAFACMU5nGsLHT1CZ8Xb30Ka8J_DZmHfRfSS-ztuQ0iXxkiU7UhWLiId3GOLqL4dZ4VgcM2bdz2wGT7p23I1N8HLrqMGzgyJCty6_UJ7QFBuqjJ4odkUqyESUk1a6AeRpeBQ9JXAlYUoa-VjT3BGPEBNN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/kCQoPKvkajMK7274_lWuurXL_NzJ_sQlhIqC1qD9_mySlZNp8zIcWV04RUWsCgdCiy8ab4wrV4FGVMCju4R6mRgGN56Uu1lPzu55IMQr1mlabgMM8YmOObFZ6HqzGYXYhRdSxjiRA4N7nmzFU3msMLYA_sNpKlgc7uOLxvZ5w1TCCm5R6HszbjE4N9z5rzyl?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-SWMS4MLh64LTfymL5JwNSrqDrd4C0R1AsLCx8MzQbuzcPsbhm32v_pEeBcDOnhaf4H4lQt8xktHmhmsXOQamI87XeL22A0tvnBa7JX2JD2Hwjyu65TF5T8QzE8FEJ2Ux8as_TC0IWOy1yuWm0efBv32pe-xsWZscshJJoVMct98vIUBfayQgi-y8PP4d_oc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/X00szICgRW34fbtyltw3rK6YgElOAq0OU7yy_kEO25qrAQftgnxamki6uKy3qt-46YUeS0DXJ_14Atc1q0PyW6qcW8yVeWIPXCWgCGWH2pYR1kqaiATpqb7B40o7Gig9J9mMQqreZeK95UtsdVSMlxfN-AJx5sx0ODpnwAwqRBe_wNopQEAdUftTBlswsQTm?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/P_SFsF72b_tGemRsRbF3l4cO3e55Z6pSfMmL5yJxzX1Fmwk5urZyClnuS4KKtefgM07sDDO5eqCH0eqIjNVpclGgYJiHGW0-egDd2-IWpLTPWTfBiiIhu77ymlfIDwdGhnJ5U1kHXjB2JJ02zHElggDqg2SZnO9aScq0CAB5bdKHlLB6xwKRbnBqkj38IJ3Q?purpose=fullsize)
+
+這種方式是：
+
+1. 馬達轉動。
+2. 馬達軸上的皮帶輪轉動。
+3. 皮帶帶動另一個皮帶輪。
+4. 另一個皮帶輪帶動旋轉平台。
+
+這樣也可以讓馬達安裝在平台側邊，不一定要放在旋轉中心下方。
+
+GMT 官方也有皮帶與齒輪驅動的旋轉平台產品。([GMT][1])
+
+---
+
+# 四、旋轉平台和 XYZ 滑台，元件有什麼不同？
+
+我們先整理一下。
+
+| 元件    | XYZ 直線滑台 | 旋轉平台    |
+| ----- | -------- | ------- |
+| 馬達    | 有        | 有       |
+| 編碼器   | 視架構而定    | 視架構而定   |
+| 聯軸器   | 常見       | 視傳動方式而定 |
+| 滾珠螺桿  | 常見       | 不一定需要   |
+| 螺帽    | 常見       | 不需要     |
+| 直線滑軌  | 常見       | 不一定需要   |
+| 滑塊    | 常見       | 不一定需要   |
+| 旋轉軸承  | 不一定需要    | 常見      |
+| 齒輪    | 不一定需要    | 視傳動方式而定 |
+| 原點感測器 | 視產品而定    | 視產品而定   |
+| 極限感測器 | 視產品而定    | 視產品而定   |
+
+所以你可以先建立一個概念：
+
+**XYZ 是把馬達的旋轉轉換成直線位移；旋轉軸則是直接讓平台繞著某個軸心轉動，或透過齒輪、皮帶等機構傳遞旋轉動力。**
+
+---
+
+# 五、那 RX、RY 是怎麼讓平台傾斜的？
+
+這是下一個很重要的機械結構。
+
+RZ 比較容易理解：讓平台在水平面上旋轉。
+
+但是 RX、RY 不一樣。
+
+例如你要讓平台向前傾斜 5°，機構就必須讓平台的一側升高、另一側降低，或繞著指定的旋轉中心傾斜。
+
+![Image](https://images.openai.com/static-rsc-4/-J4_Ects6zh5uZjIihitgVuOdDXJoClMOzfihhYTx5u953gnwRmbW6KWoKG0xqlIAKD-UM8Zk4DOTadX3dpXyo7aYB5pfbe8bfSJ1_FUWPi-iSL2ejRyAVWHoB1EFWKNkO7by92YCp69gB02AgblqR9F5-3IB-E4Up6GsBejy06SNMptSUGfQeZJMuh5mY3e?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/jB-fsysF7-G4Aflzqo9GY_xaZUXX9SQ1I8aA6oBfECT3cGydv6iZBkY5Z8kQin1CkrEaR-tuThslEg82ZJfib2_RAgCIjEYp8rFo6T6IkESy-YWdt4Em8skLeeB06njp7ZnMDq7I06_W2ve4iVyFBG89uuiNu0Lx_yyKp_-HYp90mi6ldpalefX04B4qPKC4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QUKm2yd6cK5xI6WrX1p4JcuhIztBEtCABtNEf-g0PxnBjwRJgbTOE8dOQyr-yOYYqu86BcxF-mH1ZJt8Jt15ZdVlUZS8qui54Q4noU_Th_uegYqWfNjn426VFezTz3mCqtIuq53HN0dudWBrc_T-skrNmKGnrcOqcseB_Bec7lX0U31c1PtURtDOsu9STP1W?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/IyeFtYsfav18ktOlfRYeB0yKEhoT8XaJRYUAMnOKcJkKT1Rfq_pWVgHThxuf3dEZubSRMA3weN12MVAYWCL65Yj1OCvLE3H1eVvpspu01kHjUBxJnokuE_yEXi4SnSi8lB7fl8tJmFHRM0PnTwSOoDyiROWBKgpDqSKWXSJ-6UyBaHsaaPKN-G8acyML8Ao1?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4peCL7kFrFtWKmnpOlNRNoVxwJswlHcpojc-Q1ZR2qnedzayBef-ESAP8ubAWe4seRt0uf74SGkM87PKz1j712rRw1DqQx1UGVJGO1KqODc3s4DuaUY8aGL7nhLPhI3pUEMGSkHAM4KlziuyjDNI8aLg7191hicCtCTpfB8taJWqdF6RCt6qvmpNWrq0uA98?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/oOUF8siXTs5ICUXUQIlb4Rb0espsUHFSKy0IkQ_7NdQcoBGbNQT5KMaR_Y5uUmQsEYIpxvZ_FV3WoaDrve2Fgw_LBBAFIVxHhnzRRAFXMuSSXpIahchq2SfkMSq5_UIVNfUymsivFWnbwrV1xKFvPcCEPhh6yaAPPGBwOH5v-Z902LnxYQiCRIXJEqArLsjl?purpose=fullsize)
+
+這類機構常見的名稱是：
+
+**Goniometer Stage（測角平台）**
+
+它通常具有：
+
+* 固定底座
+* 弧形導引機構
+* 移動平台
+* 馬達或螺桿驅動機構
+* 角度位置回授（依產品設計）
+
+### 為什麼要用弧形導引？
+
+因為平台不是沿著直線移動，而是繞著一個旋轉中心轉動。
+
+想像一下：
+
+你用手拿著一本書，讓書本繞著某個位置傾斜。
+
+書本上的每個點都會沿著圓弧移動，而不是沿直線移動。
+
+弧形導引機構就是用來約束這種圓弧運動的。
+
+---
+
+# 六、還有一種特殊結構：六足平台（Hexapod）
+
+這個非常值得你認識，因為它跟 GMT 的光纖耦合、矽光子對位應用有關。
+
+![Image](https://images.openai.com/static-rsc-4/HnW3Gbzk26ql0ciSiXPceuz1YJbIw7352B7vfZ6ZcOa9braQw0ckQ2oBxykpYwxVUsfgMWFuZRbx9LZJNlX6Mv8NFSmdPcv7gw7XgRJF5m3FN8-0cmeoUi3wYljwd0rkH5Zu4UUk71hMAz-zTnDeq68-qDjQKCSfqKcKCQ8ndJHSLXkj_CgmpfbmEjN5IAr_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/SCE6iqq_SmanUaGKvj_oDE8ArqtYBgmQ-a9e2GwW8uXsFZIOHh00QZ2XPdnhV6tLqg4Nkx_axyz_e3QPUOji3UC6KZSAZuRqOdXPNRt7DFJldSU9ZpzSlpBiJ312xRWuA5RJMYgslsQvFmP_YleVnjw6hbifljKHtADNG6e38S6p_1HB_hlDd3jxlJgxmw0O?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/pgh0o9BWDoqKOc5TU79kNCXxcUJyUmcl2JQFEOVLwX5NKcF9v9DFDPjMd2HgMNKqpJUPwQw1fxxtzM0eOjx5uBR3LSO92yrKk7S7EWLl0K8wxEBXYkq6HHJk7uULS0gx4GILKyA9GX0Wbxh46M_4RFi-ZPiFs7mzi2-9IRp2Xfrf9iObhwRh20dbHVQpPfNw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/tPQawAXEpGV5Dikm3Qv7CAoAdxMB271D7g2k0CwShrEyIS4yWbIVybEpX6JA6vS9LP1RQ2vyP6CROT_Aq3jXZs8guU2lE-T1ErbMncbRe5JnpjPJrhRpSAP6GN5yo5LeH4-RSACEuz198J13MzqDJ8Zpkn4M6DO62fNDh-1n1hgq9vsttwlImEFtqkss-WAi?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Di8yfdeNDuOIF1_zO5kXvTe9SsWQgXgA5ng7Jmj4cqHMXlHZMTxrQgPZMql055DKsOmH9Ai9m_G7nCOpy5ltP1OFCDTc3Zdzrzex24TciXLyrXrJVZt2DzTHSJlhe3kU-z5R5-Gk876oExn7rLugDoTjIDfqf0u9JO_FLta2e3M-wxOl2qN9Oqz_ZXOntoq-?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/VEz9cDVeNb5gajyjfY0KeK1m8tRMJwBwT-kYUSnqFvDrlej-GVPH8oPWHPdlZrxc1nzNo1hwywfrYvGHe_C7FSPXaN3FJgJ16rAvf2Rf1bt_AJbOYCFPHLv_8vGHDOlzIBAf6Xw1cdkuXkEBxoirD3Tuk2wh5d7tA2DOnJ5bhWlWle4hyQDfKM0GqCj5skHK?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/XPAc45b9Wh2QcygudHaCcGahANqoGoNCY-pyeERar7-crgta-boLKeY0JUwlJRTC1svANhJu56iQjgK3qO4BCZ3BJ1hewWXuNxd1gTdZIx2BXQzAk8-3y8_tBPNKc3Y3V4lPq9o8-iPPetUVmFCZcUR_Ow6QLTWZ0OPk3rirJ7V0NDFRUQcj4gl9rLyrqfDn?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/9mdtzzwZuDgsLnNU1jzZWZgWgGDrSVPhVLViCo5DWy-u5JZO3etmuerjrFCZQBWLjPRs6PlfjrdUnlJjNXW486Jxk9vq09Jg25uCqOA1AZ8ZTk6EErBEvY3K1PQ1Tv7KrDaTCYzCC7tTRJn88Nlg9TGdDYDjazKWCz2cpWH-bl0xy4F5EouvLLgUo-01yDAh?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0emfItX-YY7I_cBO9WbKkzSEDgMhbaBiFlLZiQezHMyBJuRaZowA7EEnxQP_R6vrFe3t7zzP6AWRc5gXCnhvdqPqVAwEbXkMBavuA3aOMf2uQAsImtZRqJXopWkz1EGd_jn-0uJ8uvkoivN6DUZNfEZBSdsQsC64MW0ZgYjg2hOrCucYHrejqKYsY0LAYMIF?purpose=fullsize)
+
+GMT 的 GSS100D 就是這類產品。
+
+它跟前面介紹的 XYZ 堆疊式平台完全不同。
+
+它不是：
+
+X 軸上面裝 Y 軸，Y 軸上面再裝 Z 軸。
+
+而是：
+
+**底座與上平台之間，使用六支可改變長度的致動器連接。**
+
+六支致動器分別伸長或縮短，六支一起協調，就能讓上平台產生：
+
+* X：左右移動
+* Y：前後移動
+* Z：上下移動
+* RX：繞 X 軸旋轉
+* RY：繞 Y 軸旋轉
+* RZ：繞 Z 軸旋轉
+
+這代表一個很有趣的事情：
+
+**六足平台並不是使用三個直線軸加三個旋轉軸，而是透過六支直線致動器的協調運動，同時產生六個自由度。**
+
+GMT 官方 GSS100D 資料也明確列出六個運動軸，以及旋轉中心可以透過軟體設定。([高明鐵 GMT][2])
+
+---
+
+# 七、今天先記住這三個重點
+
+1. **RZ 旋轉：**可以透過馬達直接驅動、蝸桿蝸輪或皮帶齒輪等機構實現。
+2. **RX、RY 傾斜：**可以透過弧形導引、測角平台等機構實現。
+3. **六足平台：**六支直線致動器協調伸縮，就能產生 XYZ + RX/RY/RZ 六個自由度。
+
+## 小練習
+
+假設你現在要設計一個光纖接頭對位平台：
+
+**題目 1：** 如果只需要讓光纖接頭在水平面上旋轉角度，例如 RZ 旋轉 10°，以下哪一種機構最直接？
+
+A. 滾珠螺桿與螺帽
+B. 旋轉平台
+C. 直線滑軌與滑塊
+
+**題目 2：** 如果要讓平台向前傾斜 5°，哪一種機構比較符合這個需求？
+
+A. 一般直線滑台
+B. 測角平台（Goniometer Stage）
+C. 一般滾珠螺桿
+
+**題目 3：** 六足平台如何產生 RX、RY、RZ？
+
+A. 只靠一支馬達旋轉
+B. 六支致動器協調伸長與縮短
+C. 靠一條直線滑軌移動
+
+下一課我們再深入看一個關鍵問題：**旋轉平台的編碼器裝在哪裡？它怎麼知道平台已經旋轉 10°，而不是只有馬達轉了 10°？** 這會直接連結到你已經學過的 Encoder、Feedback 和閉迴路控制。
+
+[1]: https://www.gmt.tw/Images/uploaded/Catalogue/DM-EN/Motorized-Precision-Positioning-Stage.pdf?utm_source=chatgpt.com "Motorized-Precision-Positioning-Stage"
+[2]: https://www.gmtglobalinc.com/%E5%8F%B2%E9%83%BD%E8%8F%AF%E5%B9%B3%E5%8F%B0/gmt-gss100d-high-precision-hexapod-platform?utm_source=chatgpt.com "GMT GSS100D 六自由度精密史都華平台 | 高明鐵企業股份有限公司"
+
+---
+
+三題全部答對！而且你提出的兩個問題非常重要，尤其是六足平台。因為你已經理解一般 XYZ 滑台的機械結構，現在要做的是把原本熟悉的「直線運動」概念，轉換成「六支直線機構共同控制一個平台」的概念。
+
+我們今天分成兩部分。
+
+# 第一部分：旋轉平台的軸承，內環和外環誰在轉？
+
+先回答你的問題：**兩種設計都有可能，但常見的旋轉平台設計，是軸承外環固定在底座，內環連接旋轉平台。**
+
+先看看軸承的基本構造。
+
+![Image](https://images.openai.com/static-rsc-4/yQumGGpBH9ESjkAV5DVrNAfoL5QYhNPehAKNDrvXreWnTR9TbhuMjjPqwUpZ84bSdICwk12el8VrVD5B4IpT5vB08AjdcYPJNaoZMboKq-4bQa-Iet_mRd18KRwJ8FVwzzyrSNheMlQkxa3PYuWE08Ob8WzFgzP8dd_6hC9DG7MuaB4MarL7Q4jBbKJD3J_u?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/HKzeaJduI9ss_xV0wEOjk2w5AKS0ILvhawJ5MZPG_ichiSNNidlMS40ZtLcFx3BoOYTcQXzOYivlM-bltt9gaFU7KNzCO2NxkaJFoy05fijAeKwe-9g4q79FT-Ns49jKQMq1qTyVMyf8Uq7iBEw1PFhRniJ2QEbjQLtIgwcv8YpVKSDhyWZxnMYJr94o-uLy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/3NJpa5O_hPE42P4PTZzYejsDoDvJXVEdNjtzCYSVfHQrdGBcUG7Dk9zqbJoVcdlhbVWhbSTF41vKBAVFGvNS48L9ogsjbJo3MUFQwWp2gOrShUoDlbr9CY0evxb5XRO_IKzsrJsuh74UQso0YFnGywTSHX2iY25p0ZiV2h0n-zaxpMHnJKtgYjsV0-A1sQQb?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QPgcvadAv9sTeQT1Ao5iMH4qTBLQqHiiAmUxKxsCxpg5F6KBceoHHK5d3jrPc23KoOj8CbW62LSdzshw271wmIkGajvpwKZk4UaA7m9ZcfXwhBLrFoKVEI02dkh4MmtJ6b9GOawJ2AZWkYxNtjuZjitr7b1y5D_XnFsuzeyOnDm5lHdrjW7IvHVIP0eeew7_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/cZzywxeLTr-7ROFFowa4s_VC8xLbbqbwAsD1aJPJfNGHregDnCdFzqdRKfLDqRnwk5VQQtm1AJramNCTAgvJVcboR-1k5JoyMB8EGxEx64xM_xp4APuARWxCIBse3w7Ppef9mAKgxRJeuSftC6hxHJvnyzMtvZjaiijyB-wd5HYn1AiSkp7RI8KvT-nVJkIQ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/tSYTe8XqTzmAAwsjCa3pT43ChUneAeMlczpQG4jLg98k1DZfAg-O4MJj8mxXVZ6YoYLxbPMGGbJUrN--8w25ly8X7FhF0L1MkI68R609SJC-0A5KfdBQvu-lGd5xct0Xm-ugElyq-D6_ySDCUHBrYw7ZdLpYTeJ29Jfym0nHn1PSHeXCuZvN17qP5xZmrkCK?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/uc5eBq0-ejw4FtFwWEMMRt7dhM5v-G3aaXPgkTCDwOEj621ckkWanOypqYR-oPAf5VuKN1b0tuCZE4_kX6JhIK76M6MxnNkljUp-XoJ1W2mtyn_etLnSgmF4lL89rBlA_c6iJ33nGK71roMORkcnMW_s8K1wiHhsPOb3Mv_Qkjv5FrDW3gZHCY3MH7w_YqTV?purpose=fullsize)
+
+## 1. 先認識軸承的四個部分
+
+以常見的滾珠軸承為例：
+
+| 元件             | 功能           |
+| -------------- | ------------ |
+| 內環（Inner Race） | 支撐並固定內側的機械結構 |
+| 外環（Outer Race） | 支撐並固定外側的機械結構 |
+| 滾珠（Ball）       | 在內環與外環之間滾動   |
+| 保持架（Cage）      | 讓滾珠保持適當間距    |
+
+軸承的主要功能是：
+
+* 支撐平台重量。
+* 允許內環與外環相對旋轉。
+* 降低旋轉時的摩擦。
+* 限制不需要的偏移。
+
+## 2. 旋轉平台通常怎麼安裝？
+
+假設我們有一個旋轉平台：
+
+![Image](https://images.openai.com/static-rsc-4/RrBGm03QneOu2FCxD5OW3yBIuGaFb-syGYNXWfIdtrwwT6LSRlZDxg1bVpIyfToeoljK-bG8Ao_Ab0FA62OePETU4plhWFo73mRXDNXFaGXYEApSfQPIDR1_BnaQxWBs7gSlgOpqRUNXikwrtPymW1nMyG06pHfivb25BMkuCQeKqqqLIe0XOffGExWY4G7k?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Y4UJY2M_sj8G44BT9UROiFU-wPNKS790_RYzgMnK2ac-dHexcbeW6ViMb5fLrloO7VGrkyYcbTKhItdbHAcvYPyTBfSZFHUcW3B8UEz-eMi2zGO1bBIWpPjfBrDnHiXFaQ64fYMrb7csHAoJWZ7JXFJXXIIyioWZhTkfmjvxZTCcoAhI8XvKCDw_NpsDX2_f?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QPgcvadAv9sTeQT1Ao5iMH4qTBLQqHiiAmUxKxsCxpg5F6KBceoHHK5d3jrPc23KoOj8CbW62LSdzshw271wmIkGajvpwKZk4UaA7m9ZcfXwhBLrFoKVEI02dkh4MmtJ6b9GOawJ2AZWkYxNtjuZjitr7b1y5D_XnFsuzeyOnDm5lHdrjW7IvHVIP0eeew7_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/c159ALPUt-1lydzSuTOT-yMIjd6isELrS4gss9NVWCjrS9IurcB9bSj_fKgWu_GXEC0TnEEz657B0JOYyGCO1KqpYA-jMHHXGYNsPnCfISmsbsEIH1HFhIceIUYq9qTdJtW2BRSEkliiYNBE_yYXBg4BvduNbb6bvmuF1AkhAiTjOSKUn_3o2u6P8KVQ3JkZ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/TgxnsyeKR1VN6M2fFSVBdTLYf2BvbITcnNGA_cGYs4orhb__Y1SjP0UDT2Ork1xhOZHdqq7PmsnOzPI7KLQ3Tf6SbxtSphJ-xarM2LAjZQNefkuuKJXQhFA1Y32f8BvYoWpfwTNea2g-KKLA7sA1ev1ve33pFNSks-qkZZFYtuZ3s7HihGVw4TaIwFDGm7I5?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/I7ej8vJ0WGbIxS8JlxO0i-IcTMTzFIMkf_bACi_RsJEYHmyx6IJmfnjZMoUotax4ciqx_Lcg9rJJZ1pMgAqMziWN8i9EmifCY3VQpuRd6Ko8_4Lu7vwdSGYYKGUDKL2gs4iXrP5ejvWETi0w6PhgCc_5G57UOnEU-NSD-CxqNnlYTtXcJ9OE36jsXMdXEIRx?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/nrYNTmagimjTK_EpyNgbbkLGp1pNGS4kUrwYcr6B1hpt6uZQyAGJ6j7wxurklL4i0nvUL-WpyQl_9jcY1M-weKR9_5cI5pthfGrxa7CQ0bfLp2o5gwz1izSp62yIwaj6gUsMnq4YfhUWCCaptn-AzS0goYKMoiXb030ZiBPLej36Feqgalr1Vl2GF0DFBifJ?purpose=fullsize)
+
+可以這樣理解：
+
+| 零件   | 固定方式    | 是否旋轉 |
+| ---- | ------- | ---- |
+| 底座   | 固定在設備機架 | 否    |
+| 軸承外環 | 固定在底座   | 否    |
+| 軸承內環 | 連接旋轉平台  | 是    |
+| 旋轉平台 | 固定在軸承內環 | 是    |
+
+因此：
+
+**外環固定，內環帶著旋轉平台轉動。**
+
+不過，這不是所有旋轉平台的固定規則。有些結構會反過來設計，必須看實際機構圖。
+
+## 3. 那馬達的轉子與定子又在哪裡？
+
+這裡要特別注意：**軸承的內環、外環，與馬達的轉子、定子是兩組不同的元件。**
+
+以直接驅動旋轉平台為例：
+
+* 馬達定子（Stator）：固定在底座。
+* 馬達轉子（Rotor）：連接旋轉平台。
+* 軸承內環：連接旋轉平台。
+* 軸承外環：固定在底座。
+
+所以在這種設計中：
+
+| 元件   | 位置   |
+| ---- | ---- |
+| 定子   | 底座   |
+| 轉子   | 旋轉平台 |
+| 軸承外環 | 底座   |
+| 軸承內環 | 旋轉平台 |
+
+馬達轉子帶動平台旋轉，而軸承負責支撐平台。
+
+**馬達負責提供旋轉動力，軸承負責支撐與導引旋轉。**
+
+這兩者不能混為一談。
+
+---
+
+# 第二部分：深入理解六足平台（Hexapod）
+
+這部分我們慢慢來。
+
+我知道你現在最大的困難是：你已經知道 XYZ 滑台是怎麼組合的，但是六足平台不像一般滑台，沒有明顯的 X 軸、Y 軸、Z 軸可以讓你辨認。
+
+所以我們先不要從六軸控制開始。
+
+先從你已經熟悉的單軸滑台開始。
+
+## 1. 先把一般 XYZ 滑台想起來
+
+你已經知道這種堆疊結構：
+
+![Image](https://images.openai.com/static-rsc-4/ZA69ySRaRxlZieQwZ689NEFoLmnDLBA4K0b6ALWc7x64m7JZuMIo-ifEqt7xVvOo-ERwgDR-FJdMeFzXv6n4O8O2O3aL3RQ9j3fJBCqa4Ofl0wprcFhz4GuBbizGWrBVgePnR10vBP6Y2gIR3yL-QJ84ErRMMvkhns4GbOeiEVNH3TVW3vmgOeJMApB98sSz?purpose=fullsize)
+
+假設：
+
+* X 軸在最底下。
+* Y 軸固定在 X 軸移動平台上。
+* Z 軸固定在 Y 軸移動平台上。
+
+當 X 軸移動時：
+
+Y、Z 整組跟著移動。
+
+當 Y 軸移動時：
+
+Z 軸跟著移動。
+
+當 Z 軸移動時：
+
+只有 Z 軸自己的平台移動。
+
+這是你已經理解的三軸結構。
+
+## 2. 六足平台不是把六個滑台疊在一起
+
+先看六足平台的外觀。
+
+![Image](https://images.openai.com/static-rsc-4/-LbpTHVW2TJoi04ARanEcVx1ETiUn8pEMlCn86pg-QDcl_nKB1R5egZNK_ZKVhCl_szqHDZ0Qsyslm83x60L7i69LMtNoJuvApymrh2TXdgzxuGk3qArKPMvrA950wRuPg5t-2w2-rsKEaIh2qranE4zv4Jlbf_2no7YjiJG2cK612HTrkHJ3zql0vPljKHu?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8ENM21GHG8T159_YmnhHbnIdLKXHOLuuRno3ewI_q2IGdVZGL3KcvPZnocS3qa_3fgLy4Ywpba5PRnnj-i5qs3VadsTFyMKxZxP4i_nzt0aqe2n6QjkqB3wfTcGSAFhEEJTUjlvw2TU4DFigKKHpzpTiXrlSULlZP9cEJi_EInYKyEdxaiHq7vAKsCerebEt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/yokVD4tUDVARBSxdBpfHOqXpOeh-0a7lg0y0PubxkwDvprcV-CwflnMeR3kQpAsWX9FaTXKS0c6uWAqgxnr8guEfP2e_bc19LV5D2JEuX_TH_RbT3yg9RM8EiaKAi3_dEAvtYppd5EsDzZ8YHt2i00y8Zj_TbJQc9w4fas-f-a0-3XF-06Gc_ADeJhRpHMwy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5k3GdQRz-Ytuy83KCRBOkVxBODdSJszOZZ6WsjLLXYsGtEVAyvXl3HzBUZ6quueJWHNmVvsO4fxvURwbfeGjPGLEL1-sJDt_OrX3MiJiyuVhoA3ox__TY9zzxuiO46pqZ89mb7OYUmveR9cuGzn3LT7dS_eXDkZXk5H9SC2Vahy0Al7KQV8n1r_Zk9M3lG5l?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/oTZr0mpVOnwrbxhy1fEim4yK3wBWhPmCNbDvjYig1O_Ks_P1h0uwgKr88MNaXguh7EuQ4emQrm2ie7_hbjle_bfrK7uqmFQHYuG4CbgTmnHjrjhxwG8qVypi7lRxF0s8sddJyXoVWnJ-5Hr-Q_OrDZGz-igre3K6uBoEsTQoOyfdvOFW_rAhhz1uw_NAvshH?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2QeO2M5AzItEoHYUK_evGQu4A19dl95skwLf4VvijqLlwjxjV6IJKYYcMwncVMjspbMnsMGIzaL8pkFTAymOwxsBABiW1bkAHj5DnrtfFu1dXNwYuvxiUnOy7zm8p3qzGOCZvOzeCv2P-Diyvu_FEIZ2wrJ8Bxv2CrGG4-HXNbBp3cPhQJNuUGWjAwfXIlOj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Eari3CpAxGEYYoz9sfAKmiQawAIMm2SlCJaI1MoPotmW-cSz7FCFCoJh5Gl6QaHoIAyy80cD9UJtlnDlDQKHmHkaGjNRy4O8TJnmt44lr4_1lRbzl3xB1Ar44CuN4hK2L5EVz7Kz2zCA_52iPfYAAxU8nQgGw3YD6MNpFq0N7GsUH3uLJ185YlGSdmDb3Usc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Cj3Jj2nk5zuG9AeTtFWur7t_AGYvBPvjy__Do7XwtwRhDYGTQPqgVAewTak7NS-EEXao_4EM5DW2QMsgWG0wLgLWmmqp-tZTaI7a3bnrJdVvGp9A4AXF3Z0BEVh0OOh1GDXx9SZ9waK6hxkoL7Njbi6tQvbIqRAKktkrxb1sv4jw3xK1xGiNyKRkPf8EXCr-?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/cMNlzC5AmoNfMJ8xVJjsrz_yLp4OZnXcuY3yAiuGHyedtSJLgE8DWEBk3VYcnclzQfd4rUS5rQqfa71Ge0mhfkFnERYDA1kfzQXqhCqxiEYMLIQ1mK7O0Ee8m5qMl22Ko-rGuELlW6yJqc0tuIBKrY7rlfhM0KWi04pIS8OF-e2qg2XY3nasycww-RH-4q5e?purpose=fullsize)
+
+你會看到：
+
+* 下方有一個固定底座。
+* 上方有一個可移動平台。
+* 中間有六支可以改變長度的致動器（Actuators）。
+* 每支致動器的上下兩端都連接到平台。
+
+這六支致動器就像六根可以伸長、縮短的機械支柱。
+
+請先記住：
+
+**六足平台的六支致動器，每一支都能獨立改變長度，但六支必須協調運動。**
+
+這就是它最重要的特性。
+
+## 3. 每一支致動器裡面有什麼？
+
+這裡就可以使用你已經學過的滾珠螺桿知識了。
+
+很多精密六足平台的致動器，可以採用電動線性致動器結構。
+
+例如：
+
+![Image](https://images.openai.com/static-rsc-4/THqyQ20K37XLCgML3_eezp825QX-pnWoLTcX_7ZQFakvIk3sF0LNT2UVlL8uW5C63Hw3gMEXLsu3p6LMbnhJPML0x0HZJmoHsufftRBahMCLqCbBBgRH9fyYKAqyenwKGGwIFEUwWxZmBS8kvXMMJbOP8aLpOANynvv9-TwYH0DGo406yyynGXKJCfzl1QFX?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/1tpilKJ11JdOw2QrI_r2aa5ktUwySK7_czbMziuBu0BqXGBR1FnNgxoKID7NKA1xvn-lW98LDTr1WRsvJYZvhMEP91m2mAsX09AjHzzzr6S9ifU3U2wryBy-WvY1nZdwaAcyhqTO4DgB-0pzNhSC0AbmZfbhN8lc9G3SMkn7uacDc7h-_qcwBfq6s5LGBYZ5?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/apRq5nxoPt-XJY914YCLanwZ0wTAob-ZRzbL4k_xEIll8jsZn0rN122mx42V_vpXbYu7A6W5uAB98M5i4pFX5EhwZ9js6cVCyIugP0NLfrGIlygsBQYTFak6f-_r3w1KxPTew-SBhf4Uqh4piLKjYgQhzIdKneI6BkPfzkcuaeT2BFLecJ1jeABJtEfoKF0T?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0emfItX-YY7I_cBO9WbKkzSEDgMhbaBiFlLZiQezHMyBJuRaZowA7EEnxQP_R6vrFe3t7zzP6AWRc5gXCnhvdqPqVAwEbXkMBavuA3aOMf2uQAsImtZRqJXopWkz1EGd_jn-0uJ8uvkoivN6DUZNfEZBSdsQsC64MW0ZgYjg2hOrCucYHrejqKYsY0LAYMIF?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/nlYCf7mmuMMvyLdZlA7wdSnIJavnKEe70XW_fN0LZqu-NLTFxB0N0SoH7Ksi2R9g4kNsfcO3VP3wBUODaxd_lJHPDio8GUvgMTNnI6xpRCKgbdYkvJG6QfDHkD2dC62mvhp-GctlctW2HpTgSesYLUVJvJ9Y0Ta6gCGWpt_BpDpZbmQ7CIBsQ9lf0E6QtsQ6?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QUOS4pU_rFjtscs7gLrsdGyWTSrR_8_vvu5-u5TX6nTzuz6TIIn9SfJNOs-nhfFSTos6i4_4Ox8iKd7Bpj51z3hvCjd1bhY7YBNPY-PGQBYAwUmYotIP9xLYswgUoQU2LropwEJvJHePkCV012Tx-dtBn4mxuXEcQk1kn9pIe-4IcD6SWtameu3uLarvSTqw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/wn9yXx9R7pQQiH9AxgD7-ILzKsiIzGU9wTkH9fm7Hta6KXxn4wR6VjpvVXYhPhQN8bGjidg7Irsb928G0mWP5dc6IOucboTawV6YCEM-WOxHdFeEx8DNvV9qmYFha9-eB-I8VTTilAkBrno0cMuMtetH70sptncMYFcS7BunPu2RjuIWrnrWcVyMpskhkARA?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/H3HwX4kJgSYzp5qmFcdVT1Q_epEPe1fXy5AI8M26mzWQJ7VlFOjhC124vRghCbv7DCcZHNDthiODCmNa_62Cm_YPe-20g2ut5ai-O-rqrN0mh9admdnkPtP_nDOS-i9VjnUaaioiwboM4P7t1rWo2iCMbGp33WzqePcNhCnwpmwImlOdQUJiKOOCnh56o1Uu?purpose=fullsize)
+
+一支致動器可能包含：
+
+1. 馬達（Motor）
+2. 編碼器（Encoder）
+3. 聯軸器或其他傳動機構（視設計而定）
+4. 滾珠螺桿（Ball Screw）
+5. 螺帽（Ball Nut）
+6. 直線導引機構（Linear Guide）
+7. 伸縮桿或連接桿（Strut）
+
+它的運作方式與你熟悉的滑台非常相似：
+
+馬達旋轉 → 螺桿旋轉 → 螺帽直線移動 → 致動器長度改變。
+
+但有一個重要差異：
+
+**一般滑台的螺帽帶動平台沿固定方向移動；六足平台的致動器則改變上下兩個連接點之間的距離。**
+
+而且，致動器兩端通常需要可以改變角度的關節，例如球面接頭（Spherical Joint）或萬向接頭（Universal Joint）。
+
+這樣致動器才不會因為平台傾斜而被卡住。
+
+注意：這是常見的電動致動器實現方式，不能直接認定 GMT GSS-100-D 每支致動器內部都使用完全相同的滾珠螺桿、導軌與馬達配置。這需要看該產品的詳細工程資料。
+
+## 4. 六支致動器如何讓平台上下移動？
+
+這是第一個最容易理解的動作。
+
+![Image](https://images.openai.com/static-rsc-4/EibQ9qmAq2hSv7PR3ANQo6JVVWzRxkeMPWc-q51u68pYiUTXLff4XSzHU7HHHlgSfbVPi7K-S_2a-zQQKHLywxkgfGG64JaSjVJjNXre0GQB8C1RhYrcmlziFp2iN2dJx-BZ1qA5BDEi_teiXIvCNYa_ZHgR8mlgif_O0zUovhUNFon2Gca2DgZPAkcRNq8X?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Sfd8zTyvgLsviuZ_DS8fMhx1pWIAu3mxzNGrlOmaVr836qlZFjSDnIp_5if4dwoXRKm2ib6h1tr-moe0nHWQtAJ_tGD_y54PFJOEPnsPVECHy-MOLlsFxMoshsQDKnK0kaDISylnJ5WjmO86A6WQzUUITexKUig4wIxA9ws4Cw9HRBD28IyuF4DaJCOqPTAj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/mzmCneR7eetNptGcore6VarPRoGpOgau__V6lcVgdXpFhmLZHOxdMkKXJuQAbxa1tNm2KQMBwh1Am2GLLJDqQ883YlXXaKG7buLuvSR_TwRIh2chZokoVEw46TwHxHlHzdhC3fvr-SFzatrk5yQgGKD2l0vpPzCA3IO6AGxhk2fnoEkT1N1DP80oJemiEYLI?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/tPQawAXEpGV5Dikm3Qv7CAoAdxMB271D7g2k0CwShrEyIS4yWbIVybEpX6JA6vS9LP1RQ2vyP6CROT_Aq3jXZs8guU2lE-T1ErbMncbRe5JnpjPJrhRpSAP6GN5yo5LeH4-RSACEuz198J13MzqDJ8Zpkn4M6DO62fNDh-1n1hgq9vsttwlImEFtqkss-WAi?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2wP9Lq9XiOfDxyxTfHIytraLvwPwUSj6soMKGMczdIsCowZjc43nybNIWVdYXtPGX04yrDKripoT241l7RcIbgULV3m2ngj4q3rYGqYjc0BJwNyRZLamlROQLFWpl4isqQgdkMesvbq8-a3QSvlTMIbj1MsLgw5HNM_2xEBnKuWQUp5JAIpnZOiPUsYUm19r?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8ENM21GHG8T159_YmnhHbnIdLKXHOLuuRno3ewI_q2IGdVZGL3KcvPZnocS3qa_3fgLy4Ywpba5PRnnj-i5qs3VadsTFyMKxZxP4i_nzt0aqe2n6QjkqB3wfTcGSAFhEEJTUjlvw2TU4DFigKKHpzpTiXrlSULlZP9cEJi_EInYKyEdxaiHq7vAKsCerebEt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Q5wTBfcYA9puxOIFYnVo9Vdd1oZEBZxJpHKZ63JSfiRN-fua5dINejj8lQNuL0xe1t8mzFPyJ8HnZ3tec33NU7jjffMEXrtx32Syi8oXPhMWoioKlApMM1Bh-VdNiXcTPl6gondc9zygQw619xja3M2aMS34PWJxpxGgL_0T2BOFKBerhSmMwUhPGaNg-pLl?purpose=fullsize)
+
+假設原本六支致動器長度都是 100 mm。
+
+現在控制器命令：
+
+六支致動器全部伸長 2 mm。
+
+結果：
+
+* 第 1 支：102 mm
+* 第 2 支：102 mm
+* 第 3 支：102 mm
+* 第 4 支：102 mm
+* 第 5 支：102 mm
+* 第 6 支：102 mm
+
+如果幾何配置與運動條件適當，上方平台就會整體升高。
+
+這就是 Z 軸方向的運動。
+
+你可以想像六個人一起抬起一張桌子，每個人都把手臂伸長相同距離，桌面就會升高。
+
+## 5. 六支致動器如何讓平台傾斜？
+
+現在進入比較有趣的地方。
+
+假設我們希望平台向前傾斜。
+
+![Image](https://images.openai.com/static-rsc-4/Sfd8zTyvgLsviuZ_DS8fMhx1pWIAu3mxzNGrlOmaVr836qlZFjSDnIp_5if4dwoXRKm2ib6h1tr-moe0nHWQtAJ_tGD_y54PFJOEPnsPVECHy-MOLlsFxMoshsQDKnK0kaDISylnJ5WjmO86A6WQzUUITexKUig4wIxA9ws4Cw9HRBD28IyuF4DaJCOqPTAj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/EibQ9qmAq2hSv7PR3ANQo6JVVWzRxkeMPWc-q51u68pYiUTXLff4XSzHU7HHHlgSfbVPi7K-S_2a-zQQKHLywxkgfGG64JaSjVJjNXre0GQB8C1RhYrcmlziFp2iN2dJx-BZ1qA5BDEi_teiXIvCNYa_ZHgR8mlgif_O0zUovhUNFon2Gca2DgZPAkcRNq8X?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/cjz1KqPzp-sH3W91XICDN9o5q7pcbG0RuWGMQVQ3vhZm7zqlgEBpyLNC9KuayAxINEXcQ0iSvGkq-gHfJnIeD_TkHP9jIfwCvV1LR-cie2x1zJumtCX0OtmcHQye9_Edsm1QORb043t-GhmFG6qXNCP0kQj-deQnnSSvZ7Le1MC3o1IBenRyZ6vrjuILooCo?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/agZzfWVtMpYn48OSSHwg95DWKohkAhyc1LUeuadOV36o_nd0xLFMiXMWLdY74LvzQ0sUlQ8HfAjm1BuLnlbec20yVl9I3JS3vDtMfsd_gGwCtYIqEN8c1r6e-7lBLsw2m1-rml1JnYxvgzrTeo5dn2V9dtZYG9znHkSb-e5_e-dXzgs0PPZ8RVkpDHICNBwa?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/IEfpd-9eFLYy0NOFE29Xqj9bJ5v74ShJZmyj38aIkvkt_gN_TeweTVvbE5en5pmXEcybND-Ma5q5Z2SzFpmFit0g7mTUv3LR3IB6Zj7sTXalZVSy5CKvRIufdYE4rkKxrswkuTOp5IK5VjwwlzLjJQrCmL8Nnw9LabrmJeYeYS75pU6fTHKcn0veKG3n-28I?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/mzmCneR7eetNptGcore6VarPRoGpOgau__V6lcVgdXpFhmLZHOxdMkKXJuQAbxa1tNm2KQMBwh1Am2GLLJDqQ883YlXXaKG7buLuvSR_TwRIh2chZokoVEw46TwHxHlHzdhC3fvr-SFzatrk5yQgGKD2l0vpPzCA3IO6AGxhk2fnoEkT1N1DP80oJemiEYLI?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0hvJb5Ch-wDo8DjIvmrywk5nEOfAo2WK-WpHnoPg2Q0Nf7wXX-e4Erh6XvREKIqEMDC4RzDukHLwEXCZmtwpWt5ro7zPOMM10-kDya5LTnimuv44-63komQWfctc95oABrfCCY7dx_sfzv6spxyhqpHKJicIcthmbM8g8SzkimB8G4ShTunMqEAAs4SIsZUW?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/_q7vo-_MKYQBIahHcoNgn1nyaFvzte4VrKoDy1U8qGU8gaEnEDSK4FfIf0y0IZemT1W6c6Xy0C1IppFIhUOBKF9lXyrv4dVcM1CWFC7F9IpU6fdcOJ9T0iFRMCnwZpXWJgcCo1kgnmH9RC36F94a7mn3Xv3sxHqG8tU9kEH2leMzw4LeJkKkV8S3EUzYT4Ef?purpose=fullsize)
+
+這次六支致動器就不能全部伸長相同距離。
+
+例如，概念上可能出現：
+
+* 靠近平台後側的幾支致動器伸長。
+* 靠近平台前側的幾支致動器縮短。
+
+這樣上平台就會產生傾斜。
+
+這就是 RY 或 RX 方向旋轉的基本概念。
+
+實際上六支致動器的伸縮量不會只由前後兩組決定，而是取決於六支致動器各自的安裝位置、上下連接點及旋轉中心。
+
+同樣地，如果要產生 RZ：
+
+某些致動器伸長，另一些致動器縮短，透過六支致動器的協調，讓平台在水平面上旋轉。
+
+所以你可以先建立這個理解：
+
+| 目標運動   | 六支致動器的協調結果   |
+| ------ | ------------ |
+| Z 上升   | 整體伸長         |
+| Z 下降   | 整體縮短         |
+| RX 旋轉  | 依幾何位置分配不同伸縮量 |
+| RY 旋轉  | 依幾何位置分配不同伸縮量 |
+| RZ 旋轉  | 依幾何位置分配不同伸縮量 |
+| XYZ 平移 | 六支致動器共同改變長度  |
+
+這裡最重要的是：**同一支致動器可能同時參與 Z、RX、RY 等多種運動，不是每一支致動器只負責一個軸。**
+
+---
+
+# 6. 六足平台到底怎麼知道六支致動器該伸縮多少？
+
+這就進入運動控制的核心了。
+
+假設 STM32 或 Motion Controller 收到一個目標：
+
+```text
+X  = 0.1 mm
+Y  = 0.2 mm
+Z  = 0.5 mm
+
+RX = 0.01°
+RY = 0.02°
+RZ = 0.00°
+```
+
+它不能直接把：
+
+* 第 1 支致動器設為 X。
+* 第 2 支致動器設為 Y。
+* 第 3 支致動器設為 Z。
+
+因為六支致動器都參與整個平台的運動。
+
+控制系統必須進行一種計算，稱為：
+
+**Inverse Kinematics（逆向運動學）**
+
+意思是：
+
+已知上平台想要到達的位置與角度，反過來計算六支致動器各自需要多長。
+
+例如：
+
+| 致動器 |   原始長度 |     新目標長度 |
+| --- | -----: | --------: |
+| L1  | 100 mm | 100.12 mm |
+| L2  | 100 mm | 100.08 mm |
+| L3  | 100 mm | 100.15 mm |
+| L4  | 100 mm |  99.94 mm |
+| L5  | 100 mm |  99.89 mm |
+| L6  | 100 mm |  99.96 mm |
+
+以上數值只是示意，並非 GMT GSS-100-D 的實際運動數據。
+
+接著：
+
+1. 控制器計算六支致動器的目標長度。
+2. 六支致動器各自執行伸縮。
+3. 各致動器的位置回授提供實際長度資訊。
+4. 控制系統持續監控六支致動器的運動。
+5. 六支致動器共同讓上平台到達指定姿態。
+
+這跟你原本熟悉的 XYZ 三軸控制不同。
+
+XYZ 堆疊式平台比較容易把每個軸的位移直接對應到 X、Y、Z；六足平台則必須先做幾何計算，才能得到六支致動器的目標長度。
+
+---
+
+# 7. GMT 為什麼要使用六足平台？
+
+這就連結到我們這套課程最終要學習的光纖耦合與矽光子。
+
+![Image](https://images.openai.com/static-rsc-4/1facA9U_MKkjVDNZKRCokoM2LkklZHzvNGtrpiF9XFLSHPuTc1yl_9upJfM9UjzSO54zgRvJ4JnwdRHhM0MComY71Oj63UeOopSLjj5DUlgqNDK0HSN0-ylEY8inyMatmYqZIyf3Gv39GrTSQC7e0NsflHa_qjvkc76o_oalGgr0NoE9OZiC05Rynkyt0E8a?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/iAH0EV-Rbni1e5DaK1iPMDzUHQJPZZpPFzOCqEJ9ZmtgHx2NWPeijdR0v7Fpy6P40eLBpt8ckUGKUIPpPHiIPK-CR2sFS3sKU4_GUabg-UR9PTLbY_2xcVPveHUr8QhFQMkcF-zl-9SlZBx1Hlm_zTX1fQDEnWoq4lum4dKoqSZ8L5fOwZqHKrI1JLfi2nZ1?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/jIVngAXbYQ9PxRyRU_IdL6c9HGfgeFvMe6Y2I8LphsIyqk_ovEbLIQKcrOaM2Yw3y32jp8j9VO-U-1Npv39_6nnhpy0y2k7trIQDb2HQXy3_kEesWBN4af_Ut41_EoGNuK0JsBBPF-xy8qM1REQ1Fpa6P_IInpwN1dgd5bnvcl9kgxn9gVutD5_n3eP1TU_q?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/rYIZ7sH7lcRKTUtP8DpKZhk7leUlR8SyjmiFuO9bN9keF7B2QW71k5eFDYNbmF863PHT6A22FUXzsbeelUplytujaCz3YZktZw8rN2AzrUyVSGUHLoaKyHRMfyKKLva6cXc4t7o_4zuzHZ3IXbDXJUtqlKe-8HboT12MXTgBYn8iN-9WzyXamZ5cO7es4oWm?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Gb-zmcaJ9W6uDCD13HJPmZP1UAYMFymjIOromN2GpGMHxysbFPWTDHHQCyHsIrOclX_hXp9ZpeHots79lnjXewA7NAynJ9so2fi0mWHlp64_6DctGx3aqzbeM2TA238pY9ngz_kzzAySK9QXj29N4g57UkoebeCwW474iFB86FNW17FVhDamd9Bq27hi4WcV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8MynDX_KiqFC777yybxxiLN6euCEzuNHBIq5S6CEnGEc9cYt0eAzONTFhT4ILWObg1F0D5RQVU6hwYz0g24xUJcFqHwffgX-NdaKGSJdxwhOZ6CMMcMEJ8temVZ7QdnU4nLK5Y3Ozp9rhR4nzz7CS9wL5yiZEfohJPlUXKRgW5ousbtKl7LkiP0f4vpRUNBR?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4EaJU-fQDCXDBCnK5eLZ6alfxeY5h-R78iuaQL4z1VJ00Ml9yV8hKoPJURISfn1uZvAQZaxZ1M8VumW3hfgHrl5xd1kWiDnG03trZHgg-2pX4XG6brex3G0cf_BVAkTNqHvnRu2PJv3NZFEoUNCEtnjddB6etNGdpFzvTnqPqkhvH80aPGrq7d87DzlLS8f7?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/f1CM4ujIniZUkwf3xjTv_s7SRlzS6NPkkH48yguYOBuMy_uq53nHOZClMACYSuoy-SI61eXAoBE56NpVdFj-sDZa93K7xkd006DE9gcxwBQQi7TcZUweDmryHCd7mGjtxgyUfJkX2OqG4-dxOlfrUVMbIqajLNNz8YkEGO9sJQPDsujjV0UXDol81yi926DV?purpose=fullsize)
+
+假設我們要把一條光纖對準矽光子晶片上的光波導。
+
+光纖的位置與角度都非常重要。
+
+如果只有 XYZ：
+
+* 可以調整光纖的位置。
+* 但無法完整調整光纖的三個旋轉角度。
+
+如果使用 XYZ + RX/RY/RZ：
+
+* 可以調整光纖的左右位置。
+* 可以調整光纖的前後位置。
+* 可以調整光纖的高度。
+* 可以調整光纖的傾斜角度。
+* 可以調整光纖的水平旋轉角度。
+
+六足平台就能提供這六種自由度。
+
+而且它採用並聯結構，六支致動器共同支撐上平台，與傳統六軸堆疊式平台相比，在某些設計中可以具有較高的結構剛性、較低的移動質量及較好的動態性能；實際優劣仍取決於設計和規格。
+
+GMT 的 [GSS-100-D 六足平台官方資料](https://www.gmtglobalinc.com/?utm_source=chatgpt.com) 將光纖光學耦合及矽光子波導對位列為應用方向。
+
+---
+
+# 8. 今天先建立一個重要觀念
+
+把你已經學過的 XYZ 滑台與六足平台放在一起比較：
+
+| 比較項目 | XYZ 堆疊式平台   | 六足平台          |
+| ---- | ----------- | ------------- |
+| 結構   | 三個直線軸逐層堆疊   | 六支致動器連接上下平台   |
+| 致動器  | 通常每軸各自控制    | 六支共同控制        |
+| 直線運動 | 各軸沿固定方向移動   | 六支致動器協調伸縮     |
+| 旋轉運動 | 通常需要額外旋轉軸   | 六支致動器共同實現     |
+| 控制方式 | 各軸座標控制與多軸協調 | 需要逆向運動學計算     |
+| 機械結構 | 串聯式（Serial） | 並聯式（Parallel） |
+
+**最重要的差異：**
+
+XYZ 堆疊平台是「一個軸帶著另一個軸移動」。
+
+六足平台是「六支致動器一起決定上平台的位置與角度」。
+
+---
+
+## 課後練習：確認你是否真的理解六足平台
+
+這次先不考複雜的數學，只確認機械運作。
+
+**問題 1：**
+
+六足平台的六支致動器，如果全部伸長相同距離，在適當的對稱結構及姿態下，上平台最可能產生什麼運動？
+
+A. 向左移動
+B. 整體向上移動
+C. 向前傾斜
+
+**問題 2：**
+
+如果要讓六足平台向前傾斜，為什麼不能讓六支致動器全部伸長相同距離？
+
+A. 因為全部伸長相同距離，通常只會讓平台整體升高，而不會產生傾斜。
+B. 因為六足平台只能上下移動。
+C. 因為六支致動器不能同時運作。
+
+**問題 3：**
+
+六足平台的第 1 支致動器，是不是專門負責 X 軸？
+
+A. 是，每支致動器各自負責一個軸。
+B. 不是，六支致動器必須協調運動，共同產生 XYZ 和 RX/RY/RZ。
+
+你先回答這三題。下一步我會帶你從**六足平台的實際機械結構圖**出發，逐一辨認底座、上平台、六支致動器、上下球面接頭，以及每支致動器內部可能使用的傳動機構。這樣你就能把它和熟悉的 XYZ 滑台真正連結起來。
 
 
+---
+
+這一課我們先不談控制程式，也不急著談逆向運動學。我想先讓你真正看懂六足平台的機械結構。
+
+我們以 GMT 的 **GSS100D 六自由度史都華平台（Stewart Platform）**作為主要案例。
+
+先建立一個目標：上完這一課，你應該能夠看著六足平台的照片，指出哪裡是底座、哪裡是上平台、六支致動器在哪裡，以及它們如何讓上平台移動和傾斜。
+
+# 一、先看六足平台的整體結構
+
+![Image](https://images.openai.com/static-rsc-4/vTD6Qn7O8uaoVd6BYqZTkoIhflf0HXA1CgL8P7g0wMljaFxBZyjGfPFIxDIGzb8_n3DgYlGWmAbs_2rdQmA5GFg7ajkB_VbcjUNh4q6mm5yTjHZ5rW6XKQPj1I-aprHTeS_f3Oyw-5M4a7z53bvZALvysaJP3OafQMBtBDWOQsiLClbpFiwZL1DJX9YKQO-T?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-LbpTHVW2TJoi04ARanEcVx1ETiUn8pEMlCn86pg-QDcl_nKB1R5egZNK_ZKVhCl_szqHDZ0Qsyslm83x60L7i69LMtNoJuvApymrh2TXdgzxuGk3qArKPMvrA950wRuPg5t-2w2-rsKEaIh2qranE4zv4Jlbf_2no7YjiJG2cK612HTrkHJ3zql0vPljKHu?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8ENM21GHG8T159_YmnhHbnIdLKXHOLuuRno3ewI_q2IGdVZGL3KcvPZnocS3qa_3fgLy4Ywpba5PRnnj-i5qs3VadsTFyMKxZxP4i_nzt0aqe2n6QjkqB3wfTcGSAFhEEJTUjlvw2TU4DFigKKHpzpTiXrlSULlZP9cEJi_EInYKyEdxaiHq7vAKsCerebEt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/1t_HTgb3vmVMprNm5gZj1R1KaN3SJMaxOkhdlYQ1myF_MEVdOhTvQKjyaPvcI22vCZ0h8doofMvk7pv_Q6SYtroxWriIvPvd8IJS4VqW15sEMqWOMjGloi8tDbb77_v6d7EGMFH6lchCsJz41MPZtiKlyab82-pZiOb7SMMAClpPgcDEwbjyFYASVb8evzvO?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8_mlHQtIdMJdLb9QT2hSYrVwDdY0qsdMsTBoWZ4fu2dm1Wevljv00Sd7gbNw5FQwFFgV_ZoXeuqzjbo_VUaU0aJUNTrSUznFCby-DLK9J_HPtTXM1boZ8UyFS3PMwI_iVx30smGpBNX-jbZtFnTYj0eYo8UiwyNG3YMSS9rz3RyBx3FUOg93Nnbu9MT5nsGk?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8GpQsLVXSsdbyWp8Qe4nmY07PyU-Gq_lXJ10pK2bxecmNZXD1BJIp4jahnAoWBzLroqBD_EudNkLdpL4RmPPXJJ24U5NoBp21qiLwSC9ALCZObbPpBOFXPM4550zlJ5Gzwq-jWfzBPAA_VN3CiNaTZWd8ZmpqzMY3I3fJSo-PbrSVpPxy_q9qvXoq8CNhH0q?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/tPQawAXEpGV5Dikm3Qv7CAoAdxMB271D7g2k0CwShrEyIS4yWbIVybEpX6JA6vS9LP1RQ2vyP6CROT_Aq3jXZs8guU2lE-T1ErbMncbRe5JnpjPJrhRpSAP6GN5yo5LeH4-RSACEuz198J13MzqDJ8Zpkn4M6DO62fNDh-1n1hgq9vsttwlImEFtqkss-WAi?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/E1LMGoBh-jfGvSZZvBAn5Y0b6ZwoZFLwT7Vo4ygF06fqhlyF0ubdY2BL8dTYQPiMvIbP87vdzgtzHnH8-Y4Z5wZR9Q2PjoIwbBQDneuc72MJu2kzOf4YO5sfcTQblzvVlVfkeKwuQ2EBCZ5PBeSKo2WFU1plsdrzbJMifmQccd9OL5On5qEBB5XAiWFYzGh6?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/7kPd4w3GIV9tEeUnj3fEG95bnwHMtEsxKE8NPFVMb_8E_JCyoaaSvq2t_kSQRrhZ8XQGMdzVKcV20883e2CtLgXLPUWGykuJg3upFv2OiXMkxg4zn6k-RjyonROLJ7PXxAs_QYhMJf5Q_eJCozAvxSks9uK1TE8E6dcQ4fWlJkXqaTPEIK7Yh-aes4be6G4z?purpose=fullsize)
+
+先不要管它裡面有什麼馬達、螺桿。
+
+請先把它想成三個部分：
+
+1. **底座（Base Platform）**：固定在設備機架上，不會跟著運動。
+2. **上平台（Top Platform）**：安裝光纖夾具、晶片載台或其他工作物，會移動。
+3. **六支致動器（Actuators）**：連接底座與上平台，負責改變兩個平台之間的距離。
+
+這裡有一個很重要的觀念：
+
+**一般 XYZ 滑台是把一個移動平台放在滑軌上；六足平台則是讓上平台懸置在六支可伸縮的致動器上。**
+
+換句話說，上平台不是放在底座上面滑動，而是由六支致動器共同支撐。
+
+---
+
+# 二、六支致動器究竟安裝在哪裡？
+
+這是理解六足平台最重要的一步。
+
+請看下面這種結構示意：
+
+![Image](https://images.openai.com/static-rsc-4/RePzWWHAL7btWLOkarUJmGlb68rqokeGsXR4znxD4VJvX2bmuq-JDlDVP8IM2I-Hb9hHfQQIWX7fhtqH_jS3G0OnLHhqLaqulsAd-KGp3igJeC4Y1ATOx0oxmMr9fKw_XuDBVY9jGYWtD_1PQTIj1w-0SAPMQ--F_Nz33JLfldif1BjErbOVwmFM-X8kKvz4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/EibQ9qmAq2hSv7PR3ANQo6JVVWzRxkeMPWc-q51u68pYiUTXLff4XSzHU7HHHlgSfbVPi7K-S_2a-zQQKHLywxkgfGG64JaSjVJjNXre0GQB8C1RhYrcmlziFp2iN2dJx-BZ1qA5BDEi_teiXIvCNYa_ZHgR8mlgif_O0zUovhUNFon2Gca2DgZPAkcRNq8X?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/GY-48XPa85IoAltnZX0tokMSKkWmZvCSyvRbSK_4KMfAcwJ_2KyHntdgWZubzrqOQdUIbLdd5KUfmcAWaFrUfEJTHEu5Vm_kYqbhU2cS_Fwo0GtckHkLZlJSX6bQ4vNbjekQLF1fB5bBq0IcbZQZ3y0AMvCoYG1HB4HdtglqkJaTuEdFq-yXtxefEPajphPy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/9cHOVKoMb7KzeqK4iFKfmq2GEuiRDCtOy810-6pOCwd4dW9vK4RAs5yM7FU4ZecTQBezmMIdNKttCp3V8lMBUu7I79ChI6BL1wz2xO3du_KpSU1uao0p6cej6oXFPEhIDCDG5mzhVyE1cTB2xzF9liGsib2SxwnyuTe4Ockeu7K1EGK8WtPWV0WGsaCTHthh?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4Os3Mgoa68JB29yG7Bl_Zj6ny9-FFr2iAwu5DNZLR9xymydAAEluJOFORXs1YdNf2RHyFKZ3xFi5l4eC1kycOYf_7-xyjn-cIeHDEJSYvi0cGFUdI_H7e6cy_Eheot6gxyqhjueS-AGeiLGmbS_oqkSa0MUstZX91hUHo7cnlPpXerx_MeGWQOvORc05hm-l?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/VmwPFOEGyEj7IyT5r3oIRisu2QcsIcJ9CNmZrCXSxABdPkcmEBXK3uwQn0yDUK6NG20VIbx4QcWkUMLQE-MvpSFPfcgY2VG3zfio3ET3nQWP920fF_2XcuvWlfj1i5jaGLqdtLui1LgW0RDFF7kPpYnqmc8pmLP0D9ybfGQL-11J6pB25XKQHfLHeVSubMXL?purpose=fullsize)
+
+我們把每一支致動器想成一根可以伸縮的金屬桿。
+
+每支致動器有兩個連接端：
+
+* 下端：連接底座。
+* 上端：連接上平台。
+
+例如：
+
+| 致動器 | 下端       | 上端        |
+| --- | -------- | --------- |
+| L1  | 底座連接點 B1 | 上平台連接點 P1 |
+| L2  | 底座連接點 B2 | 上平台連接點 P2 |
+| L3  | 底座連接點 B3 | 上平台連接點 P3 |
+| L4  | 底座連接點 B4 | 上平台連接點 P4 |
+| L5  | 底座連接點 B5 | 上平台連接點 P5 |
+| L6  | 底座連接點 B6 | 上平台連接點 P6 |
+
+這六支致動器並不是全部垂直排列。
+
+它們通常會以傾斜角度安裝，並且分布在平台周圍。
+
+為什麼？
+
+因為如果六支致動器全部垂直排列，就很難透過它們的長度變化產生所需要的水平位移與旋轉。
+
+透過不同的安裝位置與傾斜角度，六支致動器才能共同控制上平台的六個自由度。
+
+### 你可以先想像一張桌子
+
+一般桌子有四支固定長度的桌腳。
+
+現在假設：
+
+* 桌腳可以伸長。
+* 桌腳可以縮短。
+* 桌腳與桌面之間的連接處可以改變角度。
+
+如果六支桌腳能夠獨立伸縮，就能改變桌面的高度與姿態。
+
+六足平台就是利用這個概念。
+
+---
+
+# 三、每支致動器內部究竟有什麼？
+
+現在我們把其中一支致動器單獨拿出來看。
+
+![Image](https://images.openai.com/static-rsc-4/fIKUcS13oiyXTL8XjX892cstkkGgUY_5HjetT2P71anzc3wTiUQnEvl1G0sO1N3DCO2imJrA3p0mGVPtqQnuB-PdfWuzNaG-ggWE10J-wMGMHGWLBXduPMGnRQHSeefCSG7Pj7LITA_hR_mF3P1pRzc16obLYFfScNd5LJt4_aMlRe4RS6Bk89tttwJDEkix?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/HC9-CiJ_RPNhc1zwIqh9TwmYM8Mj9cAgJJVqobPr9CCuzpkIVjcQEh6IzHe3B_5MV3QfmAMIBbU73ZiVlQVeoMPBaYxLV0nfjpb9nHeT0WH7bEw9sU5r7kP1tmn6ubps6rssW4ryM3shtmpdP8L_m_3fNu3IRsyGYalPkIHw_Op45gg-CLFw8BuGFAoCCuXl?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/THqyQ20K37XLCgML3_eezp825QX-pnWoLTcX_7ZQFakvIk3sF0LNT2UVlL8uW5C63Hw3gMEXLsu3p6LMbnhJPML0x0HZJmoHsufftRBahMCLqCbBBgRH9fyYKAqyenwKGGwIFEUwWxZmBS8kvXMMJbOP8aLpOANynvv9-TwYH0DGo406yyynGXKJCfzl1QFX?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/apRq5nxoPt-XJY914YCLanwZ0wTAob-ZRzbL4k_xEIll8jsZn0rN122mx42V_vpXbYu7A6W5uAB98M5i4pFX5EhwZ9js6cVCyIugP0NLfrGIlygsBQYTFak6f-_r3w1KxPTew-SBhf4Uqh4piLKjYgQhzIdKneI6BkPfzkcuaeT2BFLecJ1jeABJtEfoKF0T?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-HRXayU8Zbiw4AHb0IeRZVd7vnQ7yZXS0mx_BXm2pPDLSV8bsc5cy-lXiYUmz5QEPVRQUP3YXL7gg4YSW73XHZk3k7FmAFOIopTRAIm1L56JdreY-UdJG84W_itBdFkVqFIP5DoXnEzYRrrXZLq9wSkndFj9VN_YDEj1Trp1fsjOzR9z39m4318itP1X08Is?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/y8VvJyHqsWVVbEZOc9EVDk1Nmk1iFcqA_dQioCLJh3F1KY_EP96F9t2MsFGnz_g9eP9_Wv9rs18HtZwHj1d5D5t3Ovsy1xmIEejUEk6tTlIBjPcJ3HbgXTOD6UNbFOl2Z2V3GyEHGSMj5z6PLbKKR_Nx5gQfDrAGgsje6JcS9osztT72YszUwGwaq5iTMeCC?purpose=fullsize)
+
+你會發現，它其實跟你已經學過的 XYZ 滑台很接近。
+
+一種常見的電動線性致動器可能包含：
+
+| 元件              | 功能                |
+| --------------- | ----------------- |
+| 馬達 Motor        | 提供旋轉動力            |
+| 編碼器 Encoder     | 量測馬達或致動器的位置       |
+| 聯軸器 Coupling    | 傳遞馬達扭力（若採用此結構）    |
+| 滾珠螺桿 Ball Screw | 把旋轉運動轉成直線運動       |
+| 螺帽 Ball Nut     | 隨螺桿旋轉而產生直線位移      |
+| 導引機構 Guide      | 約束內部移動件的運動方向      |
+| 伸縮桿 Rod         | 將致動器的伸縮動作傳遞到外部連接點 |
+
+例如，馬達旋轉：
+
+1. 馬達帶動螺桿旋轉。
+2. 螺帽沿著螺桿移動。
+3. 螺帽帶動伸縮桿。
+4. 致動器整體有效長度改變。
+
+這跟你熟悉的滑台很像。
+
+**最大的不同是：滑台的螺帽推動平台沿固定導軌移動；六足平台的螺帽改變致動器長度，讓整個上平台改變位置。**
+
+這裡要先特別說明：這是六足平台常見的電動致動器構造，並不是已經確認 GSS100D 每支致動器內部都採用這一整套零件。GMT 公開的 GSS100D 產品資料目前主要說明平台運動性能及控制架構，沒有完整公開每支致動器的內部剖面。
+
+---
+
+# 四、為什麼致動器兩端需要特殊接頭？
+
+這個問題非常重要。
+
+假設致動器下端固定在底座，上端固定在上平台。
+
+當上平台傾斜時，致動器的角度也會改變。
+
+如果致動器兩端都用一般螺絲剛性鎖死，就可能造成：
+
+* 致動器彎曲。
+* 機構卡住。
+* 產生額外側向力量。
+* 機械結構受到不必要的應力。
+
+因此，六足平台通常需要能夠允許角度變化的關節。
+
+![Image](https://images.openai.com/static-rsc-4/GY-48XPa85IoAltnZX0tokMSKkWmZvCSyvRbSK_4KMfAcwJ_2KyHntdgWZubzrqOQdUIbLdd5KUfmcAWaFrUfEJTHEu5Vm_kYqbhU2cS_Fwo0GtckHkLZlJSX6bQ4vNbjekQLF1fB5bBq0IcbZQZ3y0AMvCoYG1HB4HdtglqkJaTuEdFq-yXtxefEPajphPy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/3S-j30rGWrCkPHTjYmamg01mc7N5zntIAW_y3WBClU7vfB8LAlZa0IscUT_3L_3SAjbwhmm9z20XUDOThr-iY8pYG5YUDmoauU3n1wR4lkjHqxDIR7GRKRK4p0MEXwfHZCR3avqM_bP_Qo0hDg4ea6ZFPHWiMgqbz7-Cli-Wh5J_5KOY1TeKFddeIDaKPErN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0tb6GpbLBl7PHCP6PvreN5zVsAD33IPy6hg6A8mjb4Qe1Zvn-2ZriWTshvpLOSm-ffy1N-V72vu1F3qZJMGRU7E52yM2ICMi8ESVy_EELr7fftVwnMmxmg3ZyBlVz_bRD2Mbx7WPrCtfu83HN2zigiFoEX_8dV66lytYBuYpCE9aiTUmiuPwx_fArjIR5IxV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/269QOHSjNN9T5xejAzHx0NTFsJvZUI7FhIF7Tv50B3IS3E-2uJn53BjpMkEl8ibApSsMwnJ6p-Fek5QuLFq-ek_Ut3bVPOXwKA-ySv2DH7jM-wf9SZ4vmzCQJIBEP5r8VDfhABavwPGthIccMTAmhvXFklst_FGPRBVHMKQCRfnmyxzrUkyqL07rNXz6-CoK?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/tN3tyb5utrg3eemtifGbZkJPYAAN02KiC6XSVNrjh2oXoDgii6IXpMLRfw5W10JE5P8swsQ6JjEfv-AzMODY6pfsqWXsjxyCSH0iZUTBjKt14bwMm-93EQ5yw_FJ0ZgVe25gAquANhN_sXOJBIwV3F3QccdMZoB7qQM-sQH54wYQcuKKE9_8HCyjzXCznhbI?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ROQQTBedaOmWLb2oNfh1Gfkyl29GipZkRrZF9rWwgfB7NuEdX71haNipfPdN_lr0TB0NLlep_NNflr9r73Kic4yf3zCKcCbUvbn8l9reS9CbNKTpBW6jPjYFgGg4vYXGYtZskNTf8XwMZXGe83RPNwMG8fJKYT6LKwcct7-KlRo0MInWFVcFNSWIYnHOGzGq?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/qok6gWQyZtcGVmvwL1Rmjn39muiyiPIQdf-Rb62s3v0LgwA4GmeXXHPePqiNVOPlKFoORtysvAA6ntFbAx3P0aXt2DCYrf41LT3MQkqi2I8NYQQlrFSjPp9WCi_YZAi4o4rtkXBGVSCANnfalhhJHWaV-2OkQ77ia5td-EpyUOrPsk7GgKASqBYbgykPPxLr?purpose=fullsize)
+
+常見的關節形式包括：
+
+**1. 球面接頭（Spherical Joint）**
+
+允許連接桿在一定角度範圍內改變方向。
+
+**2. 萬向接頭（Universal Joint）**
+
+允許連接桿繞兩個方向改變角度。
+
+它們的共同目的就是：
+
+讓致動器可以改變長度，也可以隨著上平台運動改變方向。
+
+你可以把它想像成自己的手臂：
+
+* 手臂代表致動器。
+* 肩膀和手腕的關節代表兩端接頭。
+* 手臂可以伸縮，關節可以改變角度。
+
+這樣才能讓六支致動器在不同姿態下共同支撐上平台。
+
+---
+
+# 五、現在來看六足平台真正的運動方式
+
+這部分我分成三個動作。
+
+## 動作一：上平台整體上升
+
+![Image](https://images.openai.com/static-rsc-4/EibQ9qmAq2hSv7PR3ANQo6JVVWzRxkeMPWc-q51u68pYiUTXLff4XSzHU7HHHlgSfbVPi7K-S_2a-zQQKHLywxkgfGG64JaSjVJjNXre0GQB8C1RhYrcmlziFp2iN2dJx-BZ1qA5BDEi_teiXIvCNYa_ZHgR8mlgif_O0zUovhUNFon2Gca2DgZPAkcRNq8X?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/VcpAFMTck13nMChmQLHaoYc_eaJdXZum4OuydZmKzAH-72x1gKnAB_ChOVRjOtN7cM3b5LCoNtDAS4FXGvl4WA2JA10n6JSHvfYraNQvQ4fbc2BkP8aOC-v1joRP8qhUHNISXiSWzBc6bYEnkdIspkOEaIrFtYEiC1O1gHBwlNPsXQyBVdfs3B8oX-Se69bl?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2wP9Lq9XiOfDxyxTfHIytraLvwPwUSj6soMKGMczdIsCowZjc43nybNIWVdYXtPGX04yrDKripoT241l7RcIbgULV3m2ngj4q3rYGqYjc0BJwNyRZLamlROQLFWpl4isqQgdkMesvbq8-a3QSvlTMIbj1MsLgw5HNM_2xEBnKuWQUp5JAIpnZOiPUsYUm19r?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8ENM21GHG8T159_YmnhHbnIdLKXHOLuuRno3ewI_q2IGdVZGL3KcvPZnocS3qa_3fgLy4Ywpba5PRnnj-i5qs3VadsTFyMKxZxP4i_nzt0aqe2n6QjkqB3wfTcGSAFhEEJTUjlvw2TU4DFigKKHpzpTiXrlSULlZP9cEJi_EInYKyEdxaiHq7vAKsCerebEt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Q5wTBfcYA9puxOIFYnVo9Vdd1oZEBZxJpHKZ63JSfiRN-fua5dINejj8lQNuL0xe1t8mzFPyJ8HnZ3tec33NU7jjffMEXrtx32Syi8oXPhMWoioKlApMM1Bh-VdNiXcTPl6gondc9zygQw619xja3M2aMS34PWJxpxGgL_0T2BOFKBerhSmMwUhPGaNg-pLl?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Sfd8zTyvgLsviuZ_DS8fMhx1pWIAu3mxzNGrlOmaVr836qlZFjSDnIp_5if4dwoXRKm2ib6h1tr-moe0nHWQtAJ_tGD_y54PFJOEPnsPVECHy-MOLlsFxMoshsQDKnK0kaDISylnJ5WjmO86A6WQzUUITexKUig4wIxA9ws4Cw9HRBD28IyuF4DaJCOqPTAj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/IEfpd-9eFLYy0NOFE29Xqj9bJ5v74ShJZmyj38aIkvkt_gN_TeweTVvbE5en5pmXEcybND-Ma5q5Z2SzFpmFit0g7mTUv3LR3IB6Zj7sTXalZVSy5CKvRIufdYE4rkKxrswkuTOp5IK5VjwwlzLjJQrCmL8Nnw9LabrmJeYeYS75pU6fTHKcn0veKG3n-28I?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/tPQawAXEpGV5Dikm3Qv7CAoAdxMB271D7g2k0CwShrEyIS4yWbIVybEpX6JA6vS9LP1RQ2vyP6CROT_Aq3jXZs8guU2lE-T1ErbMncbRe5JnpjPJrhRpSAP6GN5yo5LeH4-RSACEuz198J13MzqDJ8Zpkn4M6DO62fNDh-1n1hgq9vsttwlImEFtqkss-WAi?purpose=fullsize)
+
+假設六支致動器原本都處於某個基準長度。
+
+控制器命令它們配合伸長，使上平台保持水平並向上移動。
+
+結果：
+
+* 上平台升高。
+* 上平台仍然保持水平。
+* 不會刻意產生傾斜。
+
+注意：在對稱且適當配置的結構中，純 Z 運動可以由六支致動器以對稱方式協調完成；但不能把所有六支致動器的伸長量一律視為完全相同，實際數值取決於安裝幾何。
+
+## 動作二：上平台向前傾斜
+
+![Image](https://images.openai.com/static-rsc-4/EibQ9qmAq2hSv7PR3ANQo6JVVWzRxkeMPWc-q51u68pYiUTXLff4XSzHU7HHHlgSfbVPi7K-S_2a-zQQKHLywxkgfGG64JaSjVJjNXre0GQB8C1RhYrcmlziFp2iN2dJx-BZ1qA5BDEi_teiXIvCNYa_ZHgR8mlgif_O0zUovhUNFon2Gca2DgZPAkcRNq8X?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4Os3Mgoa68JB29yG7Bl_Zj6ny9-FFr2iAwu5DNZLR9xymydAAEluJOFORXs1YdNf2RHyFKZ3xFi5l4eC1kycOYf_7-xyjn-cIeHDEJSYvi0cGFUdI_H7e6cy_Eheot6gxyqhjueS-AGeiLGmbS_oqkSa0MUstZX91hUHo7cnlPpXerx_MeGWQOvORc05hm-l?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0hvJb5Ch-wDo8DjIvmrywk5nEOfAo2WK-WpHnoPg2Q0Nf7wXX-e4Erh6XvREKIqEMDC4RzDukHLwEXCZmtwpWt5ro7zPOMM10-kDya5LTnimuv44-63komQWfctc95oABrfCCY7dx_sfzv6spxyhqpHKJicIcthmbM8g8SzkimB8G4ShTunMqEAAs4SIsZUW?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/P45d50lRkBDM86gfX_hog2dAQTZ25W4fSoNGkbo4idT0sVL3kfmSJmi7e7FkUaIeZnHQwptP-W2bnGlKu3SGgbzqSpr1YXZcFGhsBumq7DTTn4wLQjPLGRuVBIRQdBD1n_N4AKlysZTlyXMYLXRnASUC0kHskgavQHpKW1hlnYKKwQqI0TxNre2xXEX2tGyL?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Sfd8zTyvgLsviuZ_DS8fMhx1pWIAu3mxzNGrlOmaVr836qlZFjSDnIp_5if4dwoXRKm2ib6h1tr-moe0nHWQtAJ_tGD_y54PFJOEPnsPVECHy-MOLlsFxMoshsQDKnK0kaDISylnJ5WjmO86A6WQzUUITexKUig4wIxA9ws4Cw9HRBD28IyuF4DaJCOqPTAj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8ENM21GHG8T159_YmnhHbnIdLKXHOLuuRno3ewI_q2IGdVZGL3KcvPZnocS3qa_3fgLy4Ywpba5PRnnj-i5qs3VadsTFyMKxZxP4i_nzt0aqe2n6QjkqB3wfTcGSAFhEEJTUjlvw2TU4DFigKKHpzpTiXrlSULlZP9cEJi_EInYKyEdxaiHq7vAKsCerebEt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/agZzfWVtMpYn48OSSHwg95DWKohkAhyc1LUeuadOV36o_nd0xLFMiXMWLdY74LvzQ0sUlQ8HfAjm1BuLnlbec20yVl9I3JS3vDtMfsd_gGwCtYIqEN8c1r6e-7lBLsw2m1-rml1JnYxvgzrTeo5dn2V9dtZYG9znHkSb-e5_e-dXzgs0PPZ8RVkpDHICNBwa?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/dPswECGhd2uvYLA0DIMTqvbOcp-3zewnRdjjy_mV2T7CZ-HVegyBvX4RWIIZQvR-e3B0CLUBJCN1wuxP4TeZmuglcAI19bdH94CkfsMgJ7xf0zf7kuU1tz4ot_cWn6QogA8clwsrOSeJRPQz_RumMsZx0TjxbCbZOs8dqth87S9LXoQqHv5NP1Leduzn1z9Y?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ETD0wAY933Nt7pXTJuIyrkxUgo5fYR2Wlul094V526TgdVmIQNHKIoH85Qyr8S5fTHZNtCMQTpsCBx4hP6x1MEi3FSvaYfv0Wy5pCNCtTc6A_Xtw7jHaIoCulxSVjgImGJqSOxe6sF5ZmodHwnYM8qM5nkkeBzOWMMzD_KiG1YOFF2OwWs0fpKRo-XzIVgf9?purpose=fullsize)
+
+這次我們不要求上平台升高，而是希望它向前傾斜。
+
+因此：
+
+* 某些致動器伸長。
+* 某些致動器縮短。
+* 另外一些致動器可能只改變少量長度。
+
+六支致動器的長度變化組合，讓上平台繞指定軸旋轉。
+
+這就是 RY 或 RX 旋轉的基本原理。
+
+## 動作三：上平台向右平移
+
+![Image](https://images.openai.com/static-rsc-4/EibQ9qmAq2hSv7PR3ANQo6JVVWzRxkeMPWc-q51u68pYiUTXLff4XSzHU7HHHlgSfbVPi7K-S_2a-zQQKHLywxkgfGG64JaSjVJjNXre0GQB8C1RhYrcmlziFp2iN2dJx-BZ1qA5BDEi_teiXIvCNYa_ZHgR8mlgif_O0zUovhUNFon2Gca2DgZPAkcRNq8X?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Sfd8zTyvgLsviuZ_DS8fMhx1pWIAu3mxzNGrlOmaVr836qlZFjSDnIp_5if4dwoXRKm2ib6h1tr-moe0nHWQtAJ_tGD_y54PFJOEPnsPVECHy-MOLlsFxMoshsQDKnK0kaDISylnJ5WjmO86A6WQzUUITexKUig4wIxA9ws4Cw9HRBD28IyuF4DaJCOqPTAj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/7kPd4w3GIV9tEeUnj3fEG95bnwHMtEsxKE8NPFVMb_8E_JCyoaaSvq2t_kSQRrhZ8XQGMdzVKcV20883e2CtLgXLPUWGykuJg3upFv2OiXMkxg4zn6k-RjyonROLJ7PXxAs_QYhMJf5Q_eJCozAvxSks9uK1TE8E6dcQ4fWlJkXqaTPEIK7Yh-aes4be6G4z?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/9cHOVKoMb7KzeqK4iFKfmq2GEuiRDCtOy810-6pOCwd4dW9vK4RAs5yM7FU4ZecTQBezmMIdNKttCp3V8lMBUu7I79ChI6BL1wz2xO3du_KpSU1uao0p6cej6oXFPEhIDCDG5mzhVyE1cTB2xzF9liGsib2SxwnyuTe4Ockeu7K1EGK8WtPWV0WGsaCTHthh?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/IEfpd-9eFLYy0NOFE29Xqj9bJ5v74ShJZmyj38aIkvkt_gN_TeweTVvbE5en5pmXEcybND-Ma5q5Z2SzFpmFit0g7mTUv3LR3IB6Zj7sTXalZVSy5CKvRIufdYE4rkKxrswkuTOp5IK5VjwwlzLjJQrCmL8Nnw9LabrmJeYeYS75pU6fTHKcn0veKG3n-28I?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Q5wTBfcYA9puxOIFYnVo9Vdd1oZEBZxJpHKZ63JSfiRN-fua5dINejj8lQNuL0xe1t8mzFPyJ8HnZ3tec33NU7jjffMEXrtx32Syi8oXPhMWoioKlApMM1Bh-VdNiXcTPl6gondc9zygQw619xja3M2aMS34PWJxpxGgL_0T2BOFKBerhSmMwUhPGaNg-pLl?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/tPQawAXEpGV5Dikm3Qv7CAoAdxMB271D7g2k0CwShrEyIS4yWbIVybEpX6JA6vS9LP1RQ2vyP6CROT_Aq3jXZs8guU2lE-T1ErbMncbRe5JnpjPJrhRpSAP6GN5yo5LeH4-RSACEuz198J13MzqDJ8Zpkn4M6DO62fNDh-1n1hgq9vsttwlImEFtqkss-WAi?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/P45d50lRkBDM86gfX_hog2dAQTZ25W4fSoNGkbo4idT0sVL3kfmSJmi7e7FkUaIeZnHQwptP-W2bnGlKu3SGgbzqSpr1YXZcFGhsBumq7DTTn4wLQjPLGRuVBIRQdBD1n_N4AKlysZTlyXMYLXRnASUC0kHskgavQHpKW1hlnYKKwQqI0TxNre2xXEX2tGyL?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/oTZr0mpVOnwrbxhy1fEim4yK3wBWhPmCNbDvjYig1O_Ks_P1h0uwgKr88MNaXguh7EuQ4emQrm2ie7_hbjle_bfrK7uqmFQHYuG4CbgTmnHjrjhxwG8qVypi7lRxF0s8sddJyXoVWnJ-5Hr-Q_OrDZGz-igre3K6uBoEsTQoOyfdvOFW_rAhhz1uw_NAvshH?purpose=fullsize)
+
+現在我們希望上平台保持原本水平姿態，但是整體向右移動。
+
+這時候：
+
+* 有些致動器需要伸長。
+* 有些致動器需要縮短。
+* 六支致動器共同配合。
+
+最後，上平台向右移動，但不需要產生旋轉。
+
+這個動作很值得注意：
+
+**六支致動器不只負責上下移動，也能共同產生水平位移。**
+
+---
+
+# 六、六足平台和 XYZ 滑台最根本的差異
+
+我們把兩者放在一起比較。
+
+![Image](https://images.openai.com/static-rsc-4/A-8IeFKHKOFp0CC_9jmeCXy8fD0Ux0E4deyFAvHEb6dIjW8OiO-PZu4p6NYdUvRpBXS0hxV7BUKxoqgLI-vqSxW6mGJMzS8eLt2jq3lOZNL9pC9douoZNN-VQ64xzXNw3ZWIUvLRmCBukLh2Gbu0riK9CyKr-_3ppsbLPg7li2juTitbo5V4jSd9914G5t3H?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0q3-VtoKHWBoqjUo9gG1Vs-oJfP2_BEcDadTRf4jM2CT0uRONFqPesIpgtKYttIUxRuwWTFN7BAeJX2R40fSrDgLpTSF-agRjp8ZbKVAk34nU6TVKS2TNLmcmnRWGD2UxWkh1VUHEkhII5LloTOE_UTUP1zXOdTrSmaM6ibbjH1ex-rmG1PVIUOmWGUnHMhJ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/mmiAANzfhw2Nrjcif6exPHrGJ4ffnocyOxpdXxSveVE-9Tkwh_aucrP2lsMR9eaVtRuUpe55XtA5pfABtwxURsDdYhRMgnBjmXcOq7D3pGqAbWRB3Nf_Xxg2eQjWFRNTv_uFVMO7L-yDTwuJAirUncSogwmOT7yE5X78pkQCyyRRMWcQLojOgD7nlNplRyP3?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Go6B4tIq-wT8k505OgumfUvZwvs36KWKE4RqPFmtNEgBkWlsD_jitsmkTIq0I-CXBHwKXmV-b44AVLdQCzRnv7vW9tlc1nt4g-g0ph6zzLBFWYSWr-SU0hbPrrvso8jG_cQ0pOWZv5mu1Jp2Lv8UZ-xfDCDDW-I3wQI_adwVH6GuOUGMVQRNAz8STAa4DupH?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/vZkOuBjNEk8vPzAwq_Wj4MKORSLYLwDLIm7YHu1PaqpQatevOovrkDf0yRVYRVu7Y1RshFWwxXwA8WVV2zFYwn22HHr5e0_atcPmNHgMfQkibGMWxVymYFzWXkSdep9BtYjTe3GtW1u6i-UZGWEb8ggKTgg9XK0hmK1K8ADf3NX-4IJn7FJNWsfg3UYUHnk0?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5KeEsS-_QvMLw8FqYIXEt1rFvE2icFWW6lgPKjUSulBGHmj61FteLkcGXZZbA51xg6ns__rRs0LrKBUd7_foaO6Sw7Hc_drlzVdFHEdRZ1HzJWFwpKgUQcD-qwPgqP9-7yuTkmCSlKgsR0rZFEtsPlcqHFAyBkkoFc04pKVl5JmRgNw1FcsWJAUXDPPOn4_f?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/aI5uqTa3_UjS6LncPZ3IGO2UMfVlVo-LlQtya-FkHeR1g9y_HGkx5uXwdZEI4lJXBwp1Uqf5kmunvOXpc5lNsXFim0LueJng5t6ueuIxVCZf7PVs8EHeHs64Ptmlk3syQxr8W029FfOCdw_mxgAcnWrg4zhIYsPV1STTg7QpASvykePMQza5xC2BEXULcSs4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/SXKeLhLyORa6-J9OvQAb_nCvYm_JIOtBM7WzOP2GQVs-zV5OU2Ots9oxHq_uil6b5b-c-Pw-tf5jFP415xuXWj3PPGNgyFDbQ-JochyJshbPOa9FZnfR6GryTliBb2AMFSdm1UccdmnSN18mhUZrxzHCA52scPYYDLsAG1rkT3_Y2OlYReY5rbekHgERvo2c?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/XPAc45b9Wh2QcygudHaCcGahANqoGoNCY-pyeERar7-crgta-boLKeY0JUwlJRTC1svANhJu56iQjgK3qO4BCZ3BJ1hewWXuNxd1gTdZIx2BXQzAk8-3y8_tBPNKc3Y3V4lPq9o8-iPPetUVmFCZcUR_Ow6QLTWZ0OPk3rirJ7V0NDFRUQcj4gl9rLyrqfDn?purpose=fullsize)
+
+| 比較項目    | XYZ 堆疊滑台  | 六足平台         |
+| ------- | --------- | ------------ |
+| 機械結構    | 三個軸依序堆疊   | 六支致動器連接上下平台  |
+| 馬達數量    | 通常三組      | 六組致動器        |
+| 每個馬達的工作 | 負責一個直線軸   | 共同決定上平台位置與角度 |
+| 水平移動    | X、Y 軸直接移動 | 六支致動器協調伸縮    |
+| 垂直移動    | Z 軸直接移動   | 六支致動器協調伸縮    |
+| 旋轉      | 需要額外旋轉機構  | 六支致動器協調伸縮    |
+| 控制計算    | 軸座標與多軸協調  | 需要逆向運動學      |
+
+你應該已經發現：
+
+XYZ 滑台的 X 馬達很容易對應到 X 方向。
+
+但是六足平台的 L1 並不是 X 軸，L2 也不是 Y 軸。
+
+**L1～L6 是六支致動器的編號，不是六個運動方向。**
+
+這是六足平台最重要的觀念。
+
+---
+
+# 七、實際 GMT GSS100D 的資料
+
+我們來看官方公布的規格，讓你知道這不是只有理論上的機構。
+
+![Image](https://images.openai.com/static-rsc-4/-LbpTHVW2TJoi04ARanEcVx1ETiUn8pEMlCn86pg-QDcl_nKB1R5egZNK_ZKVhCl_szqHDZ0Qsyslm83x60L7i69LMtNoJuvApymrh2TXdgzxuGk3qArKPMvrA950wRuPg5t-2w2-rsKEaIh2qranE4zv4Jlbf_2no7YjiJG2cK612HTrkHJ3zql0vPljKHu?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4p9ZqBxXWub5NJ8l-llSBQALCSgSb6aaD-yjYCzWiFJHgrmwcIhebmUqqcwk3svB59ofByfzAoW-zHKeflboxeb1LW6rrv5Ij9pQ5n3pEC-SFO_WDpv33GGWqQCgOmqZ8VbdFBcpW4XCSCiWvnrETqusUyhyc6_EWU48J7Cyg1EskHQRUllyZNfCPPb9TC50?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/RL8S1C0ntdV3Hd69xNudZOWAyMJKcu5ch7HqelU6PFZ79kYFVNj4rFiMd2mo9kAJseJvh5HW9WJqt08D-OS-5_VhIF84pxvdST3IDLn4ApySnzf1I6Bbn7G0FHd7ObOu8z4no5UPJONi2NQLpacuOBFzG5GHNffTpU8FRMmpZENzLuuFNGH1PaTTygaKiMtd?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4EEzIx7nieo_sr4tGrkkf4lcgk4aMd9WIU1TA4F6ns8FbFnkWhoWhgvO4U9NnN3bykqW0HEy5zTzjEPrbH4RZTQ4DOKmBfPMZ1fDR9jyQ2knJniXP5VhGy2SPHFuBJxVIEFfz2ADDZoxIPErpKmUnrtx60ruoZ2gTsjsSeM9mo0eOIEjMq7CLKoN4rBZ6mca?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0jv8R3DC8OBm83PHrgMP8ONG18y9iYnloelP5dJR-HnsV5ggOZ6a9khfFHmXB6xF3XxGywPmg_WiwZLangc46AHmndO2R_Q_mOfszpKVOmJjz4Qznt-Ixq0OqnIug0e0Am-CiLpJEJ59_fp3ZoyT63LGahoghk8hA_LDkoKsAl70-_8ujX3ooPe__akdM6bg?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/UgrlS7JVcWXSuHoxp6_7PC92reGgp9Fo_2GR3R0a2W4MohgQiDK-PlhsI91CcsWGnh0_IaxzTN0AQ5U3PySLWeIvrdKeleILpwlEhwSOjk_a2VQMCjjfHJlQPCn8__Al8Dcuk2au6litbbjYbmgDg3ogmJPQNYJUYlTMLSFAQh1M0LzCAGcJ3etikqgx0KLo?purpose=fullsize)
+
+GMT 官方資料列出的 GSS100D 特性包括：
+
+| 項目    |         官方規格 |
+| ----- | -----------: |
+| 控制自由度 |            6 |
+| X 行程  |       ±16 mm |
+| Y 行程  |       ±16 mm |
+| Z 行程  |      ±6.5 mm |
+| θX 角度 |         ±10° |
+| θY 角度 |         ±10° |
+| θZ 角度 |         ±20° |
+| 控制方式  | EtherCAT 全閉環 |
+| 控制軸數  |            6 |
+| 上平台直徑 |       100 mm |
+| 底座直徑  |       136 mm |
+
+資料來源：[GMT GSS100D 官方產品頁](https://www.gmtglobalinc.com/%E5%8F%B2%E9%83%BD%E8%8F%AF%E5%B9%B3%E5%8F%B0/gmt-gss100d-high-precision-hexapod-platform?utm_source=chatgpt.com)、[GMT GSS100D 英文產品頁](https://www.gmtglobalinc.com/en/stewart-platform/gmt-gss100d-high-precision-hexapod-platform?utm_source=chatgpt.com)。
+
+這裡有一個值得你注意的地方：
+
+GMT GSS100D 使用 EtherCAT 全閉環控制，官方資料列出專用控制器、六軸控制，以及編碼器介面。
+
+這表示它不只是六支機械致動器，還包含完整的運動控制系統。
+
+我們後續會把這部分與你熟悉的 STM32、EtherCAT、Encoder、Feedback 連結起來。
+
+---
+
+# 八、這一課最重要的觀念整理
+
+請先記住以下四件事：
+
+1. 六足平台由固定底座、移動上平台及六支可伸縮致動器組成。
+2. 每支致動器的兩端都必須有能適應角度變化的連接結構。
+3. 六支致動器各自改變長度，透過協調運動決定上平台的 XYZ 位置及 RX/RY/RZ 姿態。
+4. 六支致動器並不是各自對應一個運動軸，而是共同控制六個自由度。
+
+---
+
+## 課後練習：這次確認你是否看懂機械結構
+
+**問題 1**
+
+六足平台的六支致動器，下端通常連接在哪裡？
+
+A. 上平台
+B. 固定底座
+C. 馬達編碼器
+
+**問題 2**
+
+上平台向前傾斜時，為什麼六支致動器需要特殊關節？
+
+A. 因為致動器除了改變長度，也必須允許連接角度改變。
+B. 因為特殊關節可以讓馬達轉速提高。
+C. 因為特殊關節可以取代編碼器。
+
+**問題 3**
+
+六足平台的 L1 致動器是不是專門負責 X 軸？
+
+A. 是，L1 就是 X 軸。
+B. 不是，六支致動器共同決定上平台的六個自由度。
+
+你先回答這三題。
+
+下一課我們再做一件很重要的事：**把六足平台的一支致動器拆解成馬達、編碼器、螺桿、螺帽、伸縮桿和接頭，逐一比較它與你已經熟悉的 XYZ 滑台有什麼相同與不同。**
 
 
+---
+
+很好，這三題全部答對。
+
+今天我們就進一步拆解六足平台的其中一支致動器。這一課很重要，因為你會發現：**六足平台並不是完全陌生的新機構，它其實是把你已經學過的直線運動機構，改造成六支可以改變長度、角度也可以變化的機械支柱。**
+
+今天分成五個部分：
+
+1. 一支致動器的外觀與組成。
+2. 致動器內部如何伸長、縮短。
+3. 致動器兩端如何連接底座與上平台。
+4. 六支致動器如何共同支撐上平台。
+5. 把六足平台與你熟悉的 XYZ 滑台做一次完整比較。
+
+# 第一部分：先把六足平台的一支腳拆出來
+
+先看一般六足平台的機械結構。
+
+![Image](https://images.openai.com/static-rsc-4/6hwkbFBBS7hKwHtRGz9tY4GdTPQIvu3woWJLUu4vTmMaDoJLISRZmJLSCOZKiY8x2KXVPOxCYwmkEoG4dB-iTGirHmumG64t3SVHS-ZQApgvP0vDu9lGO8DHYU4pwBx7TflCZkc1G3gJ3tY7UriyG4fXujtuMieZCknABR_km4oen7xBgYmEgQJVR3MsoXYz?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/qBU81wCFyTwxa16rMj-0gcTDhNCG6bqqGh1Uk9mU-7SgaaDdLonkWftUuJNbcy9YyO3HqwdwnwyrS5ilxV-2MO7vUv-nk-udWmDvBST3xp279KmwAUbu-tVHgWUtcu8YYN97i6mMYncYxNqpdvBjRKb1CweyQwYdsYYvqH6RrXpsLYlY5JPIRBfhxFWxeQ5R?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/vTD6Qn7O8uaoVd6BYqZTkoIhflf0HXA1CgL8P7g0wMljaFxBZyjGfPFIxDIGzb8_n3DgYlGWmAbs_2rdQmA5GFg7ajkB_VbcjUNh4q6mm5yTjHZ5rW6XKQPj1I-aprHTeS_f3Oyw-5M4a7z53bvZALvysaJP3OafQMBtBDWOQsiLClbpFiwZL1DJX9YKQO-T?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/SQpuFzIvbzm53qGhSfsRCTHoXCa2b7I54rfTzXk2N1j6lTsG2QvvvC2tDT9LAC0TCd8d26Xclldr4dtXq4e3TXVDYt_9EIhCCbq7HDNqXjdRj-gJ3b50U4LiSCTS2GrDqFOvS2sunOJ4Ex7f6R7P5MiuUMRHFOkBepztim0lWQi6TlpjSZiyHY7CPzj2hOmq?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Eari3CpAxGEYYoz9sfAKmiQawAIMm2SlCJaI1MoPotmW-cSz7FCFCoJh5Gl6QaHoIAyy80cD9UJtlnDlDQKHmHkaGjNRy4O8TJnmt44lr4_1lRbzl3xB1Ar44CuN4hK2L5EVz7Kz2zCA_52iPfYAAxU8nQgGw3YD6MNpFq0N7GsUH3uLJ185YlGSdmDb3Usc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/yokVD4tUDVARBSxdBpfHOqXpOeh-0a7lg0y0PubxkwDvprcV-CwflnMeR3kQpAsWX9FaTXKS0c6uWAqgxnr8guEfP2e_bc19LV5D2JEuX_TH_RbT3yg9RM8EiaKAi3_dEAvtYppd5EsDzZ8YHt2i00y8Zj_TbJQc9w4fas-f-a0-3XF-06Gc_ADeJhRpHMwy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-v7g0R03pIngQ5Gf4WgUJUCYbyTHex7Lsk_rNcAaxjZMJF6z8jbbFvc2gM8H4GHrmCZ2g6oPUTY6GbefcJ8d7Rjmeg5EVY6KQZfDcOTjlyaN8zBStKssVO1A1Hvi30J-Du0sR2RffixSGFYZ1y5S8fQnFgBkArqVJJGyy7iPzKA4fPEecxoyIisvh52U8-87?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/y1Krk891ixp1D_rtrfgVjAWid-nmQitZVXBiWRivrkUqolgvsHAB0MiN1Ih6SVDEwwK7mdMLihg9bu0IfLLxZNviUWu5Noz2oDPR_KonMIsz_xFeR3Ou4Rwq_ap08DTicKO9KI1tegA1IHsHXs7kppkFlSiJvWHBx_3IPMwY4FQAMR_AM5qJWlY7M0zZCi6R?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/oQz3mlTE2YhVVrk-dlrWyvfvQTas_tjNMZ05zKtiDfdJEZr-0qCOIpG0yIFtf0YgxGfF8d_CY8vTcUGlh0P_15X1Upedyr5Xi09jF2bMNOynXh41TSEh9N382I-GgR1V3PSZP8XxpTFbOWsB_lbjOXNrcQzsMIAzU7jN7G7irJKsJl2QTP64c0xGhPKdpdtU?purpose=fullsize)
+
+請先把一支致動器想像成一根可以伸縮的支柱。
+
+它有三個主要部分：
+
+* 上端關節：連接上平台。
+* 致動器本體：內部具有產生伸縮運動的機構。
+* 下端關節：連接固定底座。
+
+這裡要注意：
+
+**致動器不是單純一根金屬桿，而是一個可以主動改變長度的機械裝置。**
+
+它與一般 XYZ 滑台最大的不同，就是它不需要固定在一條水平或垂直的直線滑軌上，而是可以隨著上平台的姿態改變安裝角度。
+
+---
+
+# 第二部分：致動器內部到底有哪些元件？
+
+現在我們把致動器剖開來看。
+
+以下是一種常見的電動滾珠螺桿式線性致動器，不代表 GMT GSS100D 的實際內部剖面。
+
+![Image](https://images.openai.com/static-rsc-4/DmPLGQ4oFG7RxP72Z5ETQ8buKir8-LWADhraovXqshmvgOUYGBCZELR0f1qJ2qz47Slkvx1dn3LRJfUnOUBTpDmr0_iEiOO4gUWu0LAkcWoujcgz4IG3HgJ2Eswtu0-fIPRV7kH0m05COckKPws0Dvbct_5SHCQp8yyK0YO_ft_Vo7zS32zIwLzseT-n4ghO?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/y8VvJyHqsWVVbEZOc9EVDk1Nmk1iFcqA_dQioCLJh3F1KY_EP96F9t2MsFGnz_g9eP9_Wv9rs18HtZwHj1d5D5t3Ovsy1xmIEejUEk6tTlIBjPcJ3HbgXTOD6UNbFOl2Z2V3GyEHGSMj5z6PLbKKR_Nx5gQfDrAGgsje6JcS9osztT72YszUwGwaq5iTMeCC?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LuWR829YUgaave7u_qgmK4scxPEX_LJ35RLBfMZVuJts6m9RaOKqk0PNqM8Fj7vUATCdl7_cC3KkuqWUJ2kHvxhy6xHJIaKzABdhw50KKju7qDxD-vlWoJtCvmj-nz-TlOgvgh9zZPKHFYI-73qTBzlv4ZRE2c5U4V1F7nNI7gKinqOrOq07LJmhwCoI2Qz7?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LXUy83v7lW3AbA4YjDo5xKFhJNtHn6NK9dSr-b2KwOYwl7aB0G8p0FTfB9aOBr4mBnDTY8n1LzP3OJarI1mfAmf-55gkJnJgmr7DISg6JSQfptQtVUgYaLZA6KruydVp_BK9TLoTq2zOTwUoZkD-vwmLPU0cuUfG6oKgyJu4ClSRCgbHxxFXBL3VHZkNjdGy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QUOS4pU_rFjtscs7gLrsdGyWTSrR_8_vvu5-u5TX6nTzuz6TIIn9SfJNOs-nhfFSTos6i4_4Ox8iKd7Bpj51z3hvCjd1bhY7YBNPY-PGQBYAwUmYotIP9xLYswgUoQU2LropwEJvJHePkCV012Tx-dtBn4mxuXEcQk1kn9pIe-4IcD6SWtameu3uLarvSTqw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/GucUVyx6Se2xBIkCJb3NWLRCuWDvcnKQY5D_1_6UxjdzsgTpWC9Yw_U3ytydOflzIQaT0yxgKoEW9cG6NqWLVQal1yr30jL7sp2EV61qorN4m9wdZKQzi6FTiSiC54bfrugMsvUTQCMvB2ONZFf8Oqo8m7xWayjjkqKmHJY7mRUa9JTMTdc2-12UNYGxVh0Q?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/UzxnQ1B61VCOhBSv6BoXkWiD5ugpCInOsbPbxwyHY8VQa374RGkdsTFbKhM8LEoHmT1XBSRUXpqVFj13D1BF4atk4dS2PIsFDVihwPaX4ug5bzh0LEng6vVTsodhmy60GQQJwudw8eavyfAVnXQdpT-1X-AHGWF1ziEOCjpKR62AUGrpK2k2aRb2byuAaUNm?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/sX3lfn8TvPx6md-Yltof8dZb-iCmC0Jhx-N4PF5_vARvf5mOht26Rhj5EOvKM00_TgBiKboLLNebwmFGZnrHBWavwQRwTwzWMAZeIeN35oCD5UgdswgFQpwrkDC-bQi3RZNOAgPPWrU6uyu0lkQwlYdODoIjH_CtLgaO1OKIhG-L9lILFVNKSFpccBQYBToK?purpose=fullsize)
+
+我們從馬達開始，一個元件一個元件認識。
+
+### 1. 馬達（Motor）
+
+提供旋轉動力。
+
+可能使用伺服馬達或其他適合的驅動馬達，依產品設計而定。
+
+### 2. 編碼器（Encoder）
+
+量測馬達或致動器的運動位置。
+
+例如馬達旋轉了多少角度、轉了多少圈。
+
+如果系統另外有直接量測致動器伸縮位置的感測器，也可以取得更直接的長度資訊。
+
+### 3. 聯軸器（Coupling）
+
+如果馬達與螺桿是分開的，可能使用聯軸器傳遞扭力。
+
+但有些線性致動器會將馬達與螺桿整合設計，不一定有獨立聯軸器。
+
+### 4. 滾珠螺桿（Ball Screw）
+
+把馬達的旋轉運動轉換成直線運動。
+
+例如導程 1 mm：
+
+螺桿旋轉一圈，螺帽理論上移動 1 mm。
+
+### 5. 螺帽（Ball Nut）
+
+隨著螺桿旋轉而沿軸向移動。
+
+它會帶動連接的伸縮桿或移動構件。
+
+### 6. 伸縮桿（Rod）
+
+將內部螺帽的直線運動傳遞到外部連接端。
+
+它是致動器對外輸出直線運動的機械部分。
+
+### 7. 外殼與導引機構
+
+外殼保護內部零件。
+
+導引機構則限制內部移動件的方向，避免伸縮桿受到不必要的側向偏移。
+
+## 這裡做一次比較
+
+| 你熟悉的 XYZ 滑台 | 線性致動器     |
+| ----------- | --------- |
+| 馬達          | 馬達        |
+| 編碼器         | 編碼器       |
+| 聯軸器（視設計）    | 聯軸器（視設計）  |
+| 滾珠螺桿        | 滾珠螺桿（若採用） |
+| 螺帽          | 螺帽（若採用）   |
+| 直線滑軌        | 內部導引機構    |
+| 移動平台        | 伸縮桿       |
+| 底座          | 致動器外殼     |
+
+你會發現，它們其實有很多共同點。
+
+但是，兩者的用途不同：
+
+* XYZ 滑台：讓工作平台沿固定方向移動。
+* 線性致動器：改變兩個機械連接點之間的距離。
+
+---
+
+# 第三部分：致動器兩端的關節，究竟有什麼作用？
+
+這是六足平台很特殊的地方。
+
+先看球面接頭。
+
+![Image](https://images.openai.com/static-rsc-4/fArR89pSioFORUdOGQ2UekkfK8qjIq1tcEAFTjsizTZtR0V42vlhsU64xebAeUt7kfoUXk2cW3GL1nQx1V6Gpne7PcttJW4RbR4pSnEdbsbxUVI1shr_rVAWHlsuxD4-p4SOKWnp2CNaUx62cn7tTjriStwJcXm5pz1SVkdftcxNJ7viuxt7PnEFA2onz6hy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/269QOHSjNN9T5xejAzHx0NTFsJvZUI7FhIF7Tv50B3IS3E-2uJn53BjpMkEl8ibApSsMwnJ6p-Fek5QuLFq-ek_Ut3bVPOXwKA-ySv2DH7jM-wf9SZ4vmzCQJIBEP5r8VDfhABavwPGthIccMTAmhvXFklst_FGPRBVHMKQCRfnmyxzrUkyqL07rNXz6-CoK?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/GY-48XPa85IoAltnZX0tokMSKkWmZvCSyvRbSK_4KMfAcwJ_2KyHntdgWZubzrqOQdUIbLdd5KUfmcAWaFrUfEJTHEu5Vm_kYqbhU2cS_Fwo0GtckHkLZlJSX6bQ4vNbjekQLF1fB5bBq0IcbZQZ3y0AMvCoYG1HB4HdtglqkJaTuEdFq-yXtxefEPajphPy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/HO8Pk6rUdLPKOqjSr1CVYvrQMnMHckAHgXLyHUx9KBoC0mq9jz6RXzStReqrhT40iZMnJ_Lc1xHZEq0msoMjJZL7M7-eryti8Xkmwj6C5uBrC5KB0mXHTrFK7x2Ey1JAejlB22XMT39WTO7PwxpVZM5JiGx23uR77Z__fSwT2FALSzL38pDXCv4r-aTl5xuI?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8TRzgIJ8gMn5MvskD7s1mDLSltVGGRURSI6GgO1aFUTZLqDIuy10QtOQWJa9ovMujVkI1aCAXZj9uJQXBt85vPiecktV3V0y2Ea8d1nr4qiTkao2F3YykQnmuu9lY5xUTHdUEKZObW1BPZd1ryvek80JrownXp5bUfGs0Weoz46MpRQH3I5gVPLZh8FJQUDQ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/qok6gWQyZtcGVmvwL1Rmjn39muiyiPIQdf-Rb62s3v0LgwA4GmeXXHPePqiNVOPlKFoORtysvAA6ntFbAx3P0aXt2DCYrf41LT3MQkqi2I8NYQQlrFSjPp9WCi_YZAi4o4rtkXBGVSCANnfalhhJHWaV-2OkQ77ia5td-EpyUOrPsk7GgKASqBYbgykPPxLr?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/9gtga0N9byEpnFLZ61pRZAZsn4l6OsP4P053dgfEyDBB9gIICco48W0Oj0Q8X9EsahRb6UoFukFVo7RrJswWJN2kwvaDH-gNoZMnDg_mDaGRnbjXc6vg0-s86cby3tSxWTAe7Wsduk3hRePkq7BfrTqtZ9Ev_fY340ZnZt9-tkCl3ksJXRPc-B_mkfRPQQM_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ROQQTBedaOmWLb2oNfh1Gfkyl29GipZkRrZF9rWwgfB7NuEdX71haNipfPdN_lr0TB0NLlep_NNflr9r73Kic4yf3zCKcCbUvbn8l9reS9CbNKTpBW6jPjYFgGg4vYXGYtZskNTf8XwMZXGe83RPNwMG8fJKYT6LKwcct7-KlRo0MInWFVcFNSWIYnHOGzGq?purpose=fullsize)
+
+你可以把球面接頭想像成一個可以多方向轉動的關節。
+
+假設：
+
+* 致動器下端固定在底座。
+* 致動器上端固定在上平台。
+
+當上平台傾斜時，致動器也會跟著改變方向。
+
+例如原本致動器是：
+
+```text
+       上平台
+    ───────────
+         |
+         |
+         |
+    ───────────
+       固定底座
+```
+
+上平台傾斜後，致動器可能變成：
+
+```text
+       上平台
+    ───────────
+       /
+      /
+     /
+    ───────────
+       固定底座
+```
+
+這時候，兩端的關節就必須允許致動器改變角度。
+
+否則，致動器會受到額外的彎曲力量。
+
+這也是為什麼六足平台的連接關節非常重要。
+
+**致動器負責改變長度，關節負責允許方向改變。**
+
+兩者的工作不同。
+
+另外，實際六足平台可能使用球面接頭、萬向接頭或其他多自由度關節設計，不一定上下兩端都使用相同類型。
+
+---
+
+# 第四部分：六支致動器如何共同支撐上平台？
+
+現在我們把六支致動器裝回去。
+
+![Image](https://images.openai.com/static-rsc-4/EibQ9qmAq2hSv7PR3ANQo6JVVWzRxkeMPWc-q51u68pYiUTXLff4XSzHU7HHHlgSfbVPi7K-S_2a-zQQKHLywxkgfGG64JaSjVJjNXre0GQB8C1RhYrcmlziFp2iN2dJx-BZ1qA5BDEi_teiXIvCNYa_ZHgR8mlgif_O0zUovhUNFon2Gca2DgZPAkcRNq8X?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/tPQawAXEpGV5Dikm3Qv7CAoAdxMB271D7g2k0CwShrEyIS4yWbIVybEpX6JA6vS9LP1RQ2vyP6CROT_Aq3jXZs8guU2lE-T1ErbMncbRe5JnpjPJrhRpSAP6GN5yo5LeH4-RSACEuz198J13MzqDJ8Zpkn4M6DO62fNDh-1n1hgq9vsttwlImEFtqkss-WAi?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/7kPd4w3GIV9tEeUnj3fEG95bnwHMtEsxKE8NPFVMb_8E_JCyoaaSvq2t_kSQRrhZ8XQGMdzVKcV20883e2CtLgXLPUWGykuJg3upFv2OiXMkxg4zn6k-RjyonROLJ7PXxAs_QYhMJf5Q_eJCozAvxSks9uK1TE8E6dcQ4fWlJkXqaTPEIK7Yh-aes4be6G4z?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/agZzfWVtMpYn48OSSHwg95DWKohkAhyc1LUeuadOV36o_nd0xLFMiXMWLdY74LvzQ0sUlQ8HfAjm1BuLnlbec20yVl9I3JS3vDtMfsd_gGwCtYIqEN8c1r6e-7lBLsw2m1-rml1JnYxvgzrTeo5dn2V9dtZYG9znHkSb-e5_e-dXzgs0PPZ8RVkpDHICNBwa?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/mzmCneR7eetNptGcore6VarPRoGpOgau__V6lcVgdXpFhmLZHOxdMkKXJuQAbxa1tNm2KQMBwh1Am2GLLJDqQ883YlXXaKG7buLuvSR_TwRIh2chZokoVEw46TwHxHlHzdhC3fvr-SFzatrk5yQgGKD2l0vpPzCA3IO6AGxhk2fnoEkT1N1DP80oJemiEYLI?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8ENM21GHG8T159_YmnhHbnIdLKXHOLuuRno3ewI_q2IGdVZGL3KcvPZnocS3qa_3fgLy4Ywpba5PRnnj-i5qs3VadsTFyMKxZxP4i_nzt0aqe2n6QjkqB3wfTcGSAFhEEJTUjlvw2TU4DFigKKHpzpTiXrlSULlZP9cEJi_EInYKyEdxaiHq7vAKsCerebEt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/OZE9qVUk4BNgOMC0IVMxde0GwN32DOz_UpVBZaQh2TsTp1oBFhvWGIDNlJHudVzt7_FnEQOnaEpj034d3wwAp9-WJb-msqKTB4TzT93F8oHNQV1iVSzLv0Nu3QiPo147lUxYpICjc6eq9IvdC5U9OkS_QGeX7vVey-k5J4OGKLJfUpPyw8n58n9OgAc_MIL3?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/nI_HgZxvOwPxFjR_tjiJkH1sW1T4cDt0HbHGDD1pJe0c3J7eVmyjU-1ug4buao-NwTJVSp-4iITuUw-iecDPYMZTjaDmA8-7SvaajSfoxFnohtj83dxULdrI_IM7MymeF5lY1iAI_tIi-u8La8dpkJyP8WINgnPUJPoLTRGLT9QMmQQC1lHvd_OUeOy0Z18l?purpose=fullsize)
+
+這次請你特別注意兩件事。
+
+**第一：六支致動器不是垂直排列。**
+
+它們通常以不同方向傾斜，分布在底座與上平台周圍。
+
+**第二：每支致動器的兩端連接位置不同。**
+
+例如：
+
+* L1 連接底座 B1 與上平台 P1。
+* L2 連接底座 B2 與上平台 P2。
+* L3 連接底座 B3 與上平台 P3。
+* 依此類推。
+
+這六組連接點的位置，是設計六足平台時非常重要的幾何條件。
+
+為什麼？
+
+因為它們決定了：
+
+* 上平台能移動多少距離。
+* 能夠傾斜多少角度。
+* 每支致動器需要伸縮多少。
+* 致動器會承受多少力量。
+
+## 一個非常重要的觀念：致動器不只負責推，也可能負責拉。
+
+例如上平台向上移動時：
+
+某些致動器可能需要推動上平台，另一些則需要拉住上平台。
+
+它們共同支撐上平台，而不是六支全部只負責向上推。
+
+因此，六足平台的致動器、接頭及固定結構都必須能承受設計所需的拉力與壓力。
+
+---
+
+# 第五部分：實際看看 GMT GSS100D
+
+![Image](https://images.openai.com/static-rsc-4/eQptT9jGDmtKku913SdLPm1zPvi31_K2uow_0xoNrce0YPnLlBk96ZLRTA1sk7jTS6L_lHh8N-e5-kCanjoInC00is5mx67sTXQBnKFIbmtAHajzEd3H6-mw_HslsGbKzv7EnhsJv_40c8MQvaSUVAqUmHAl8RksZzRpHG4253X2R5AYy8rj_DeUV4kmifC3?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/RL8S1C0ntdV3Hd69xNudZOWAyMJKcu5ch7HqelU6PFZ79kYFVNj4rFiMd2mo9kAJseJvh5HW9WJqt08D-OS-5_VhIF84pxvdST3IDLn4ApySnzf1I6Bbn7G0FHd7ObOu8z4no5UPJONi2NQLpacuOBFzG5GHNffTpU8FRMmpZENzLuuFNGH1PaTTygaKiMtd?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0jv8R3DC8OBm83PHrgMP8ONG18y9iYnloelP5dJR-HnsV5ggOZ6a9khfFHmXB6xF3XxGywPmg_WiwZLangc46AHmndO2R_Q_mOfszpKVOmJjz4Qznt-Ixq0OqnIug0e0Am-CiLpJEJ59_fp3ZoyT63LGahoghk8hA_LDkoKsAl70-_8ujX3ooPe__akdM6bg?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/HcdqhT-8oEf0W7wYQmfnAX2U9SkQHnkRdQW4adYqlSbqYHpR8CpQhRvgLUo72n-Lvzr-fxSj2irlfXnhWU0sRyn5klRK4Y_WnPGQx2gqjYoF5txde4FRmmbwg_HoONuy7wpnp85I2fB6vKZPfYwpb9fs2csVj65Dp9aEXpwqSBnjDtFKXz3SPVtbl7Cnl5Bm?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8KQa7aurKccH2b5_MhG0nyazvPNeViZW97eeZdqBBUMCegN_DINSRBhF5AVELCrMKMPty3lIxnrVw7drmue9qAR8x0yvohtuUrBOGS2SEzWowHMdRi24S3_ksifJvK6_Th1f51dx0x0MAi0YiMMcJJgePIPohYaOV3kfOBBfoxdlQ4_a9Fc0mnOaick9Tl6L?purpose=fullsize)
+
+我們把剛才學到的結構套用到 GMT 產品上。
+
+GMT 官方產品頁確認 GSS100D 是六自由度並聯式運動平台，採用 EtherCAT 全閉環控制，應用包括矽光子、FAU 主動對位及精密組裝。([高明鐵 GMT][1])
+
+官方公布的運動範圍：
+
+| 運動方向 |      範圍 |
+| ---- | ------: |
+| X    |  ±16 mm |
+| Y    |  ±16 mm |
+| Z    | ±6.5 mm |
+| θX   |    ±10° |
+| θY   |    ±10° |
+| θZ   |    ±20° |
+
+這些是整個上平台的運動範圍，不是單支致動器的伸縮行程。
+
+這一點非常重要。
+
+例如：
+
+上平台要向 X 方向移動 1 mm，並不代表某一支致動器就伸長 1 mm。
+
+而是控制系統根據六支致動器的安裝位置，計算出每支致動器應該改變多少長度。
+
+另外，我們目前沒有足夠的官方剖面資料，能確認 GSS100D 內部究竟使用哪一種馬達、螺桿及關節配置。因此，前面介紹的是一般電動六足平台的典型機械原理，不能直接當作 GSS100D 的內部 BOM。
+
+官方資料：[GMT GSS100D 英文產品頁](https://www.gmtglobalinc.com/en/stewart-platform/gmt-gss100d-high-precision-hexapod-platform?utm_source=chatgpt.com)
+
+---
+
+# 第六部分：從韌體角度看，這六支致動器怎麼運作？
+
+這裡開始連結你熟悉的 STM32、EtherCAT 與編碼器。
+
+假設使用者希望上平台移動到：
+
+```text
+X  = 1.0 mm
+Y  = 0.5 mm
+Z  = 0.2 mm
+
+θX = 0.01°
+θY = 0.02°
+θZ = 0.00°
+```
+
+控制系統不能直接把這些數值分別交給 L1～L6。
+
+它必須先計算六支致動器的目標長度。
+
+這個過程稱為：
+
+**Inverse Kinematics（逆向運動學）**
+
+計算結果可能像這樣：
+
+| 致動器 |       原始長度 |      新目標長度 |
+| --- | ---------: | ---------: |
+| L1  | 100.000 mm | 100.120 mm |
+| L2  | 100.000 mm | 100.085 mm |
+| L3  | 100.000 mm | 100.145 mm |
+| L4  | 100.000 mm |  99.940 mm |
+| L5  | 100.000 mm |  99.890 mm |
+| L6  | 100.000 mm |  99.965 mm |
+
+以上數值純粹是示意，不是 GSS100D 的實際數據。
+
+接著控制系統就會：
+
+1. 計算六支致動器的目標長度。
+2. 將六組目標命令送給對應的驅動控制通道。
+3. 各致動器執行伸縮。
+4. 讀取位置回授。
+5. 持續監控實際位置與目標位置的差異。
+
+這裡你應該能連結到之前學過的 Encoder 與 Feedback：
+
+**六足平台的六個致動器，各自有自己的運動位置資訊；控制系統再把六個致動器的狀態與整個上平台的目標姿態連結起來。**
+
+至於 GSS100D 的逆向運動學究竟由專用控制器哪個軟體模組執行，以及各致動器回授的實際實作方式，還需要更深入的控制器資料才能確認。
+
+---
+
+# 今天最重要的總結
+
+你可以把六足平台記成：
+
+```text
+固定底座
+   │
+   ├── 致動器 L1
+   ├── 致動器 L2
+   ├── 致動器 L3
+   ├── 致動器 L4
+   ├── 致動器 L5
+   └── 致動器 L6
+          │
+       移動上平台
+          │
+      光纖 / 晶片 / 夾具
+```
+
+這只是結構簡圖，實際上六支致動器會分布在底座與上平台周圍，並以傾斜角度連接。
+
+最重要的是：
+
+* 馬達提供動力。
+* 螺桿或其他傳動機構產生直線伸縮。
+* 伸縮桿改變致動器長度。
+* 球面或萬向接頭允許角度變化。
+* 六支致動器共同決定上平台的位置與姿態。
+
+---
+
+## 課後練習
+
+這次我想確認你是否真正理解致動器的機械作用。
+
+**問題 1：**
+
+一支電動線性致動器使用滾珠螺桿，馬達旋轉後，最直接的結果是什麼？
+
+A. 整個上平台立即旋轉。
+B. 螺帽產生直線位移，帶動伸縮桿改變長度。
+C. 球面接頭開始旋轉。
+
+**問題 2：**
+
+六足平台上端的球面接頭主要負責什麼？
+
+A. 提供馬達動力。
+B. 量測致動器長度。
+C. 允許致動器與上平台之間改變連接角度。
+
+**問題 3：**
+
+假設六支致動器中，L1 伸長 0.1 mm，是否代表上平台一定向 X 方向移動 0.1 mm？
+
+A. 是，L1 就是 X 軸。
+B. 不是，必須考慮其他五支致動器的運動，以及整體機械幾何配置。
+
+你回答完，我們下一課就進入六足平台最有趣的部分：**逆向運動學究竟如何計算六支致動器的伸縮量？**
+
+我會用實際幾何位置和簡單數字帶你計算，不會一開始就丟複雜數學公式。
+
+[1]: https://www.gmtglobalinc.com/%E5%8F%B2%E9%83%BD%E8%8F%AF%E5%B9%B3%E5%8F%B0/gmt-gss100d-high-precision-hexapod-platform?utm_source=chatgpt.com "GMT GSS100D 六自由度精密史都華平台 | 高明鐵企業股份有限公司"
 
 
+---
+
+三題全部答對！六足平台的基本機械原理你已經掌握了。
+
+我同意你的想法。六足平台的逆向運動學、致動器內部細節及複雜幾何計算，已經超出目前課程最主要的學習目標。我們先停在這裡，不再深入數學與控制演算法。
+
+接下來回到原本規劃的課程進度。
+
+## 目前課程進度
+
+| 單元 | 學習內容             | 進度        |
+| -- | ---------------- | --------- |
+| 1  | 精密機械基礎元件         | 完成        |
+| 2  | 傳動機構：滾珠螺桿、滑軌、聯軸器 | 完成        |
+| 3  | 馬達、驅動器、編碼器與控制    | 已學習主要概念   |
+| 4  | GMT 電動與手動滑台      | 已學習 CXS50 |
+| 5  | 直驅、壓電及自動化模組      | 進行中       |
+| 6  | 光學元件、雷射與 Camera  | 尚未開始      |
+| 7  | 矽光子與光纖耦合         | 尚未開始      |
+| 8  | GMT 精密對位設備整合     | 尚未開始      |
+
+## 下一階段：直驅與壓電模組
+
+接下來我們會認識兩種不同於傳統滾珠螺桿滑台的運動方式。
+
+### 第一部分：直驅馬達（Direct Drive Motor）
+
+主要學習：
+
+* 直驅馬達與一般伺服馬達有什麼不同？
+* 為什麼直驅馬達不需要滾珠螺桿？
+* Rotary Direct Drive 與 Linear Direct Drive 有什麼差異？
+* 編碼器如何量測直驅平台的位置？
+* GMT 直驅產品通常用在哪些設備？
+
+### 第二部分：壓電致動器（Piezo Actuator）
+
+主要學習：
+
+* 壓電材料如何產生微小位移？
+* 為什麼不需要傳統馬達與滾珠螺桿？
+* Nanometer 級定位是什麼概念？
+* 壓電平台如何搭配位置感測器？
+* GMT 壓電平台的實際應用。
+
+### 第三部分：自動化模組
+
+了解如何將滑台、馬達、感測器及控制器整合成自動化設備。
+
+---
+
+**我們的最終目標不變：**
+
+讓你能看懂 GMT 的設備機構，理解它如何運動，並且從 STM32、C++、EtherCAT 韌體的角度，理解設備如何控制這些機構。
+
+六足平台先告一段落。下一課正式開始：**直驅馬達（Direct Drive）——為什麼有些精密滑台不需要滾珠螺桿？**
 
 
+---
+
+# 第 5 單元：直驅馬達（Direct Drive）
+
+今天先學一個核心問題：
+
+**為什麼有些精密定位平台，不需要使用滾珠螺桿，也能讓平台精準移動？**
+
+你已經熟悉傳統電動滑台的運動方式：
+
+馬達 → 聯軸器 → 滾珠螺桿 → 螺帽 → 移動平台。
+
+直驅馬達的概念，就是盡可能縮短這條傳動鏈，讓馬達直接對負載產生旋轉力或直線推力。
+
+---
+
+## 一、先比較傳統滑台與直驅滑台
+
+### 1. 傳統滾珠螺桿滑台
+
+![Image](https://images.openai.com/static-rsc-4/mEClov8EaUUV9UYP5OAKUeavyJj4Zhitk1iwtE43zyKdAWgKS2qmbrgTNHNGee_4dy3xHXlofvupDZ12hNx8U3mYWAh_8kvubLjH2XPUVzX91bBOUjN-GoeUV5NqwMr46UNiTgel6wFenB9Yi1Y5kh_CMUOVpV9b_5BD810AZmNR0aQ2YuXsSvW05V7z0Hup?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/H0EHImYuQMSPz2w5yK1WzudUttEUJQrPnhZHGm-3mBwHkV7W0Sk68fM029q6hO8k44hq9sdjR-pl3mEpm-q9T4WBzCndZQXYl1cTuErvsvaOcFkg2TH72sR9lv5gDeMQPNP4xOuBEksFztbnhBlewyrmsQG6wlcR5R_gcc-NUbRH4lEhthagz5U8exNrr6lK?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/EibxTVBuTsiE5-gSzQv1d59ZRDzYrtJnIVirL2NXGyU8-Su5BgLpuoNLsi0tnnn1mJ_RBSrPBPZu9V8ZUWsA70QCXvwMMDLeBArWWj8-BrljUqyqkeqipJuT3yYvS9stf2AxZtnsk_hHdlqOBMxW4naoGKy85lnoYYYMRrxQ7sRF58qoGJknxHtBVFIk_eYD?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ZaOnw3nKJ1oFKZ76o9ap4jJIiI3AwWNVF5ejDFgGAtKlFLfp1-SJExhBpcM76zYX05dxNJ06y2YvnLRq166j7Ho8t4Gs5ONxpeztKSjduOGHVHkBx94v3lObaNgeo92Lexuc6dTo2iPhHMRvyBl0x1601WJqVae0AeWaqit2gnAwOKneEhMdWfyt57mF5bLP?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/kb4252ETSg5LEkuO1IbHGAcv6NUpKfSmueRvtB_dUyG6JqxGKre_zEYMQFR3MAzKSXCOACgY2Z0SRbq-QOINuzamSCykD5k4NtoN8RNRc9TJuDoy4zIMcee_oK4vEazRI8ispvhttLc78A_pZwQNPSt3JYwZUVlkLOzxmve4rrqkJiovlIA05Dvfcrr8j_qc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/fhR2CgYnYdz_dP0ot31uWhlQacq81fRbe4waM36d6hlQgV9BL8H44v-JAhS3BEWNwdWbH1h9NXKNB_cmcF3QPxjXWxEcxLCfQAlENglL8tcNADYcHm_gHx5m_RhyBj37THE5S3YgoLmvfnsT2NrkFlkHNPerAUgM9ZG4xXYwPXnbDESmUvJ-DeGlFdiNgDJW?purpose=fullsize)
+
+傳統滑台的運動流程：
+
+1. 馬達開始旋轉。
+2. 聯軸器把馬達扭力傳給滾珠螺桿。
+3. 螺桿旋轉，螺帽沿著螺桿移動。
+4. 螺帽帶動平台。
+5. 平台沿著線性滑軌移動。
+
+這個架構有一個特點：
+
+**馬達的旋轉運動，必須經過機械傳動機構，才能轉換成平台的直線運動。**
+
+### 2. 直線直驅馬達（Linear Direct Drive）
+
+![Image](https://images.openai.com/static-rsc-4/uouXmPwyb_qarR9uOIKHrMlsx6bver0MZEXAMEd98lZJStIV5muTc6PwSSim4gYFo_pqI5p9z-Yt-ZbLNV2PDJdhi564VAILofklNoyegdkj1UOcpx95Z-b73vvPdkbMqVfrhcbR3PbIPq13qt78xq5szrpqMfUDzIQFmDXPVzcskxTvEhH5Z6Rq2DSTGtXN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5Z_yg5EHz5Nbr2drB9eEcnyOmDLD7Bv1XhBroyqC2vVeYC5WVi6d6vehpDX8CES9XUkuotSEG0HQ-H3pU6b7W0KHd3Ej6fSNZSvmzA3H-5-KVc_aYaqosEPC5_aolHiuA1RYi1uziFGE4UI-Qlz03Ppx-LSgg0HpRGbsxqWLscO2p0Gs6_b86VUHNZhZvMec?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Lm1f6eMZf1eO4HR5e01GtS_46Hr1JmAodawLBCx5OqRjYTAgoo-GMhWKpzg_KaL74aBOMdOrHZhZx5pL8AuBLWPV_A2aTXZvWOSzUkGNX7XH11MynrlXArGge_AB7mKeY5NAgI9jeT1bHFixyEUzIfuPGg95gJZbh91X1iyM8HPDM1emhQERrCmSVjpt9BEV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/lipHUSwEM973CO0luvJhj53fseV68e6XFUfESN1X54OdpBuJb5zQYowygHrM6mthJbF6SAMUamQaLIxE95_BtU_Y_SJyk6dUOWIi9YlVyT1Jcbcd4P1mC-_T7W32SEHqWNGBl5cM2fwMpYyCgI692HMghBuW5Pe7mXSA74c-4mzGdIZCHcD1tdo0HhClw68o?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/tKjA9a8fxhIOmTcw0byezSa1MiJ6tQ5f4_9BJb7mULJF9fCB1DfKDUsNvXqcB7-PRF7msEkavS2AUalbWuXa4Io7kKSk4yoDVMu17_ih0fTpsu1zp1pyWhPOETOo4OPl-4q-Bg9ex2POy1Mn-NK4-wNQdAjaHAkBCogxBrGIFz-CMGiu0ALp2VVtuwUd9P84?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/F9c-WuKAsn2wiI0kMJgVxRjwS7WiRivz-D_tXihK53ul_GUbW-Xrf5iGZWbSY2LgSC_s9qtdYwcdxcT0A0F6BHvLhMkg-vcp5N5yNhjIc27H_Fl8Q1Nntqs_5rM-BQeWbAfA-sElOmoRO6Wdd5_j-QGaURMbhiI_fivQKblDN_AKuQDqc9ZRwyE9BQpiXVdx?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0YcCAEI-4bYK3qmneDqqHIXvJkT460sHT9n_u8Uzb0ETUHlDwflnEJyIrJTQj3SN5haRK59uDx3QVpMg2x0S87K1s9bK_6JhnbLqXlAUFj_5kuBK3E37wi2-fGrA3_9lrtUldzeV4qNYTxVovsrCglkFKDYwOneuOimTq6hO998giHNwjERGEM-fKQDWn__I?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/6olGKZru5WdpSwVX32aUzDcyoQTx69PBt6LDH3B8AdHGpVrGGhAA6Tcm5ZiDt-pKqj1Pzv-dZOaIHJYhtkxBS76kZjj5_AMgye7Nxg2VKVcDpvo7uObjcwB38mVg6j0twI0dOiKxcF3iUuAeyyr01x7y-Fvdcc5WmfhjuO3ed9wnREU7WgT7J8usAz3rj6Pv?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/xHz5B5TK6Al1FUiegGReg6ECH6q0hLzT-lcS9753_jvRIV1jXYBpGbv7PTeEKyx_-QIc-94YbzZ1MiMyb91BvqKvfb3l_cfcOBC32mmfSglkH6hTllxpxR1EpkDLpCOrBZyVAO7FeDfL1wbABy4yRh9XYfAeQYiacL_d_FBByCj8WwHNmClL6iDhr6qzjBNA?purpose=fullsize)
+
+直線直驅馬達則不同：
+
+1. 馬達的線圈與磁鐵產生電磁作用力。
+2. 這個作用力直接推動移動部件。
+3. 移動部件帶動平台沿著滑軌移動。
+
+因此，它不需要：
+
+* 滾珠螺桿
+* 滾珠螺帽
+* 馬達與螺桿之間的聯軸器
+
+不過請注意：
+
+**直驅不代表整個平台沒有機械零件。**
+
+它仍然可能需要線性滑軌、軸承、編碼器、底座等零件。
+
+---
+
+## 二、線性直驅馬達的基本構造
+
+先認識四個重要部分：
+
+![Image](https://images.openai.com/static-rsc-4/5Z_yg5EHz5Nbr2drB9eEcnyOmDLD7Bv1XhBroyqC2vVeYC5WVi6d6vehpDX8CES9XUkuotSEG0HQ-H3pU6b7W0KHd3Ej6fSNZSvmzA3H-5-KVc_aYaqosEPC5_aolHiuA1RYi1uziFGE4UI-Qlz03Ppx-LSgg0HpRGbsxqWLscO2p0Gs6_b86VUHNZhZvMec?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/uouXmPwyb_qarR9uOIKHrMlsx6bver0MZEXAMEd98lZJStIV5muTc6PwSSim4gYFo_pqI5p9z-Yt-ZbLNV2PDJdhi564VAILofklNoyegdkj1UOcpx95Z-b73vvPdkbMqVfrhcbR3PbIPq13qt78xq5szrpqMfUDzIQFmDXPVzcskxTvEhH5Z6Rq2DSTGtXN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Lm1f6eMZf1eO4HR5e01GtS_46Hr1JmAodawLBCx5OqRjYTAgoo-GMhWKpzg_KaL74aBOMdOrHZhZx5pL8AuBLWPV_A2aTXZvWOSzUkGNX7XH11MynrlXArGge_AB7mKeY5NAgI9jeT1bHFixyEUzIfuPGg95gJZbh91X1iyM8HPDM1emhQERrCmSVjpt9BEV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/raGwbWdG66-rhL7_ovSARVGV1vxCSiwbE3XPASrm9vvahml2BpEDazFe5g0YXPjMRmieOIiq_HDp2JzeoKZqW3MArwRiVrXDpCbshPO0RTgeRvAibx50XZy7qqv3zk8Ii0E1Ui9ftagof0Xo7zDGKD9T7GA0OERDLAsizMC4VEkRBVqtnNItOm19UWEqfbhr?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/kjkbTsUgY_9lfc0OnJRIO9VB73DKCxO2-pEAo5X9xobg_Ezsvy9EPNEtwjIIY00mOByCOTkpBy02iwS7iYoptJ7CPnoOSbYk8ho9Bc01KDimHM7wU7LV3NzgpTceI_YMzDufjt9ByFb_34CoegDJXOeQIQ9EUIokPCoa-X-PqMBE5exFWVf66FXHHM5iDEeY?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/OvHNggLDw0QQ1xEbKVmvc8WfGPW6ytaa5ytxVORIOg-v7EucVCoLLBaTSXCx9Qo7qnC9c8nBVrOwwM0OGG1QyPR_CjsRhrckgpAwsyoZnpV7DZcdRYCgnsIA1LWG7I7PSRjLLEWDmRj7xBdNQxW1lRLEebXShauNT57IFSycD4XKEteLhT7e4MJKz1WYAlFR?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/qi_jzwYmQKvd8gJH5unh6XXlzSJFI6uk12jRukum6PAPtGKmVwhf23QhR1Pf5GtGMOX49o_GRvLBQoEn9oVG-DG1G_96Rv_s7wS-utttuQta0kI13W2YMy2dW6DIV6eD-1cZqIJu7JkDhdHKkD9v4rb2023SrY_tVHbmxtXijNVpSe7r5tXXzctWImEJ9vId?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/u2p0r7MIzHhmy8RnOKbEkbYKiusSZWsI6utVXTkUcaIt2sWx0gcRBafLY8FSCVIUKU3ZZAi8dKxaOub44yLTLMOIU1P9SEIdV5eg2btUTYqbBYmpHTczchKzNqnBhgkSIZTE2GiOZJ23zp3Bx8wLQzFCTEkQM4S9TQcdm81QT0ZiPxSfr2qz1mTWRYNMuEw1?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/lqvgxHDMMVL4N8azcKBlJD7mPWPFIH8GdQkaqkyMxN055cBwmPKsUg3ZDpvg56aRUfY6-H4FzUZ4sGJvu-z__BwJjzHh_sYS3mMC2wN_pX6VSH0JtGA1QAAbxXWYNYDi2PptvZ3ih26euCN9VXbM4kVGHTK_4vrbKevjh-eVNvHA-c5oeaQu39gLNlxkERL5?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Em88LZ9kz3EaXaNaHU0mg12IoEP3iylqTsxrQ3f8DgqQlLj1VMEhiciKNtMs0MEx3bqE3s8fSZ340OzdRzrGSBW_TqlVZr-mHi3z7nTC7r0mkXxbW6cPPXam5k3uXpNmkU6IF90o4X8NrvCnUmZDxw5Fc4jjIcB0-UX4pAUNseih8IPRIPzUy-AlyOqT19iv?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/21ha-ECSDwIlC_7UGHKQLkv-vbxY1daMED9laa5JcMBLeJO1byDVxR2LzlYEFnix16MiaQ3XCnu2sOOSUK8X_K9D3WVE7vcVhIVjxXXAaXEUH5AIDtGgEh0uuEpUrg-NlL23Ipgs-w1X9H_o1AlL07pjpCU19umyIP4Ph9hsJyhYoxv149nnE8jxR64tcy-S?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/oxrfGy2ihy0ur0YeogyP6YO7k3JFtp9SgSeUPuFDhpmZKF6zCiQux618DrEmEVwGmXOSfVCtrq9yoTgHULg2IE8gFddXTmPJq_DryopY6RYaxxWLlzfJaluVeYr1RMMGgrjdX_fQgFS4o8lngZ6RbvT0R_GNQF9wQPh9tMyKkD3B7WmszaiwusZ6KWzKzNWV?purpose=fullsize)
+
+| 零件    | 英文             | 主要功能        |
+| ----- | -------------- | ----------- |
+| 磁軌    | Magnet Track   | 提供磁場        |
+| 線圈動子  | Coil / Forcer  | 通電後產生電磁推力   |
+| 線性滑軌  | Linear Guide   | 支撐並導引平台移動   |
+| 線性編碼器 | Linear Encoder | 直接量測平台的直線位置 |
+
+其中最重要的是前兩項。
+
+### 磁軌（Magnet Track）
+
+通常由排列好的永久磁鐵組成。
+
+它提供磁場，讓線圈通電後可以產生電磁作用力。
+
+### 線圈動子（Coil / Forcer）
+
+線圈通過電流後，會在磁場中產生力量。
+
+透過控制電流的大小與方向，可以控制推力的大小與方向。
+
+你可以先把它理解成：
+
+**線圈通電 → 產生推力 → 推動平台。**
+
+這就是直線馬達最核心的原理。
+
+### 線性編碼器（Linear Encoder）
+
+這個元件你之前已經學過 Encoder。
+
+不過這裡有一個重要差異：
+
+* 傳統滾珠螺桿滑台：可以使用馬達端編碼器，再依螺桿導程推算平台位置。
+* 線性直驅滑台：可以使用 Linear Encoder，直接量測平台實際移動位置。
+
+例如：
+
+STM32 下達目標位置 20 mm，線性編碼器回報平台目前位於 19.8 mm，控制系統就能知道還有 0.2 mm 的位置誤差。
+
+這裡的編碼器仍然只是負責量測，真正的控制修正由運動控制系統與驅動器依照架構分工完成。
+
+---
+
+## 三、直驅有兩種常見形式，不要混淆
+
+這裡要特別區分：
+
+### A. Rotary Direct Drive（旋轉直驅）
+
+![Image](https://images.openai.com/static-rsc-4/RrBGm03QneOu2FCxD5OW3yBIuGaFb-syGYNXWfIdtrwwT6LSRlZDxg1bVpIyfToeoljK-bG8Ao_Ab0FA62OePETU4plhWFo73mRXDNXFaGXYEApSfQPIDR1_BnaQxWBs7gSlgOpqRUNXikwrtPymW1nMyG06pHfivb25BMkuCQeKqqqLIe0XOffGExWY4G7k?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-vsNjFQHrjsVYaNafgRhr-85YCKN-CynnKmF5RFqQkOalwk3p9p2ArXOwBbj-_5wonnRsB9tkQ0iFUzWHxMJwa_4D48ZZDTFRV6e0shd6iNJIqy5eDihZrkEmn2xGKc97kvnw48w0KW1PYKM82iHf0Wqq8oR6TrcJrZXdFnIqCxrNlzoJOse8jX7JrvFeONx?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Y4UJY2M_sj8G44BT9UROiFU-wPNKS790_RYzgMnK2ac-dHexcbeW6ViMb5fLrloO7VGrkyYcbTKhItdbHAcvYPyTBfSZFHUcW3B8UEz-eMi2zGO1bBIWpPjfBrDnHiXFaQ64fYMrb7csHAoJWZ7JXFJXXIIyioWZhTkfmjvxZTCcoAhI8XvKCDw_NpsDX2_f?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/VLsvf3A8Fx1e6m0ujJCpPaBwcm5juX20tafV57vRkJ8OL3vY_1ARev_T_JRP5KFo351v6o4LAJQcI_gMX6t_PGL1rB4ybSdFNQvtg0YO_PWuvX7qQV1fzW39bxCzqLbWkQx1JaCXcrggX3xRsw8J3WpN0BfJtQU8LLS6ukWX5cwkgCSWAzZm27QqzolEOpyG?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/gwZHIFCyaLx6agl_TvgfuMoLxRkbLWCBv5FZUbZwMNSv5zlcZQjcDUjevV7G6gC8-L7d47dxrwTydoIo18gOdUP6L3sdu1bsuxXmYXIH4tKZ2lbZbyOzXDC0VHJE7SKEDxkESqguQ5W-g2eno8ojNt7ulN1huw-EFhHkB4tUEstzV-brwxncwYLKW2Z2_sEy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/oVhdF2NQGSeUbueis35voXZlJ4HJrhBE2U82ebNEhTqUsiF414vJsuq76LM_bcn7sSAMgJniUbxVSWrdAdfAa6Kb_Jr3kt-zcRDye1b8DidKnX6zugHB8nP0FdUxBTswvubVoCz6iDKI45txSQkaD7b8DSfTXGxUVENcK6xSosN9XQVRu4yGcqItckC6lVX4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/dpVBgW-Y5JJPpiqHAnuLVoYj1KsGZwN1N7bQ4XTEu2jdWhjx8a9aAEvrvyl8NX_74V1ii9_P83bCR0cCLTyuB8eLYmme1v1PHB-q_L4RK2gMhv7uz69WqQkIDYb8p6KXJY5_RwxOX7s7IKUZKYWui0N9baG_o7hUUFu3rS7rbD2Iq-TQ6xTx4ZnexzQ-Nzei?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Oo8wh0GiRDlm5SvOyv-ltHc4kMp3mm2z7Bnxtq4T9XGLyvp7MvZEFbCouiYbQ0rCMDw6cBZWx56jwcFIe8AkULNndTx8FRymLwGGakeoqOiE-ZmXfbnwWgRZv3_-uX2o_xHpF5SwFGhJmJPVSOUYzXA-wbPva6rpxBRRISRRd6-6Ve5VGOLsTN2sfDpMvCJj?purpose=fullsize)
+
+這種馬達直接帶動旋轉平台。
+
+例如：
+
+傳統旋轉平台可能使用：
+
+馬達 → 聯軸器 → 減速機構 → 旋轉平台。
+
+旋轉直驅則可以直接讓馬達帶動旋轉平台，不需要中間的齒輪或減速機構。
+
+適合需要高精度旋轉定位的應用。
+
+### B. Linear Direct Drive（直線直驅）
+
+這種馬達直接產生直線推力。
+
+它不需要透過滾珠螺桿，把旋轉運動轉換成直線運動。
+
+適合精密直線定位、高速移動及高動態響應的應用。
+
+**簡單記住：**
+
+| 類型                  | 馬達直接帶動什麼？ |
+| ------------------- | --------- |
+| Rotary Direct Drive | 旋轉平台      |
+| Linear Direct Drive | 直線移動平台    |
+
+---
+
+## 四、直驅馬達有什麼優點與限制？
+
+| 比較項目   | 滾珠螺桿滑台   | 直線直驅滑台       |
+| ------ | -------- | ------------ |
+| 動力傳遞   | 經過螺桿與螺帽  | 直接產生直線推力     |
+| 機械傳動零件 | 較多       | 較少           |
+| 傳動背隙   | 可能存在     | 沒有螺桿傳動背隙     |
+| 高速運動   | 受螺桿等機構限制 | 通常較有優勢       |
+| 加減速響應  | 受傳動機構影響  | 通常較有優勢       |
+| 散熱需求   | 依馬達與負載而定 | 線圈可能需要特別注意散熱 |
+| 成本     | 依規格而定    | 通常較高         |
+
+直驅的優點：
+
+1. 減少螺桿、齒輪等傳動零件。
+2. 沒有這些傳動機構產生的背隙。
+3. 傳動鏈較短，動態響應通常較好。
+4. 適合高速、高加速度及精密定位。
+
+但也有一些限制：
+
+1. 成本通常較高。
+2. 線圈發熱需要考慮。
+3. 需要適當的編碼器與控制系統。
+4. 沒有滾珠螺桿的機械自鎖效果，垂直軸要特別考慮煞車或防墜設計。
+
+---
+
+## 五、GMT 的直驅產品
+
+我們回到你真正要認識的 GMT 產品。
+
+GMT 官方網站將相關產品歸在「直驅模組系列」，目前列出的產品包括：
+
+* ZR 馬達系列
+* GLM 微型對位模組
+* DD 馬達系列
+* XYZ 三軸運動模組
+* XYZT 四軸運動模組
+* GLM-Z 軸微型平台系列
+
+其中，GMT 官方直驅模組系列頁面說明，部分產品採用**音圈馬達（Voice Coil Motor）**，搭配阻尼器，沒有減速機構；該頁列出的系列行程為 8 mm，依型號負載為 1 kg 或 1.5 kg。這是該系列頁面所列的資訊，不代表所有 GMT 直驅產品都採用相同規格。([高明鐵 GMT][1])
+
+另外，GMT 的 DD 馬達型錄說明，DD 馬達採直接連接負載的方式，不需要齒輪箱，並整合高解析度編碼器。這是**旋轉直驅**的例子，與前面介紹的線性直驅不同。([高明鐵 GMT][2])
+
+你可以從以下官方頁面查看產品：
+
+* [GMT 直驅模組系列](https://www.gmtglobalinc.com/%E7%9B%B4%E9%A9%85%E6%A8%A1%E7%B5%84%E7%B3%BB%E5%88%97?utm_source=chatgpt.com)
+* [GMT 產品型錄下載](https://www.gmtglobalinc.com/download?utm_source=chatgpt.com)
+
+---
+
+## 六、本課練習
+
+今天先確認你是否掌握最重要的概念，不急著深入電磁學。
+
+**問題 1**
+
+傳統滾珠螺桿滑台需要透過螺桿與螺帽，把馬達旋轉轉換成平台直線運動。
+
+那麼，線性直驅馬達是如何讓平台移動的？
+
+A. 馬達旋轉，再透過齒輪推動平台
+B. 線圈與磁場產生電磁推力，直接推動平台
+C. 編碼器產生力量，推動平台
+
+**問題 2**
+
+線性直驅平台不使用滾珠螺桿，是不是代表它也不需要線性滑軌？
+
+A. 是，不需要任何滑軌
+B. 不是，仍可能需要線性滑軌支撐與導引平台
+
+**問題 3**
+
+如果一個平台需要旋轉 360 度，應該優先認識哪一種直驅馬達？
+
+A. Linear Direct Drive
+B. Rotary Direct Drive
+
+你先回答這三題，我會依照你的答案確認觀念。下一個小節再介紹 **音圈馬達（Voice Coil Motor）**，因為它正是 GMT 部分直驅模組採用的技術。
+
+[1]: https://www.gmtglobalinc.com/%E7%9B%B4%E9%A9%85%E6%A8%A1%E7%B5%84%E7%B3%BB%E5%88%97?utm_source=chatgpt.com "直驅模組系列：馬達模組與多軸運動模組｜高明鐵 GMT"
+[2]: https://www.gmtglobalinc.com/images/uploaded/Catalogue/DM-TW/DD%20Motor%20Series-1141104-en-p.pdf?utm_source=chatgpt.com "Direct Driver Motor"
 
 
+---
+
+三題全部正確！🎯
+
+1. **B 正確**：線圈與磁場產生電磁推力，直接推動平台。
+2. **B 正確**：直驅平台仍然可能需要線性滑軌支撐及導引。
+3. **B 正確**：旋轉平台應認識 Rotary Direct Drive。
+
+接下來我們進入直驅模組的下一課。這次會認識你指定的三個元件，而且會以 GMT 的 GLM-Z 微型平台作為實際案例。
+
+# 第 5 單元（二）：音圈馬達、阻尼器與減速機構
+
+先看 GMT 官方的 GLM-Z 微型平台。
+
+![Image](https://images.openai.com/static-rsc-4/pUi9CA4bvrkCxR_xAkfTxDD61JwcqIXfpPAkg9qdj-YgU-_uDap9_iIYATOQnqwELeAq5_ws9DTN2gcwQHhAcxM4XZteOvbxXW1U0onAbYTFZ1KiJ2BsNdJVjTxmymq9j2pntCMVphnYxAzYKQ54JFMg0OYVAFwc7JvjDsA7nUFplEPVveTMerzFZHod3Lgj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/HnBnqK4d7RokvvOG8F14ly7PCCvQaybNUf3X7WfUgj6SSPwiZlV1DlDtAUj5mTk3QX8_dSfOhvye3yeTO23ZRniaVkC8CBVSxLde990pyCLXrsQzxc-_wI9kkWuGnP_oPYPz-13gavsNUv4KfdK7CTeZiENnWnHfmd-F3YPlcqZtVpqVnNz_leRxnhy5VwLz?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/CxDjBNUZDHcPrpH1yLYsv1WZGd6jyStHK6Og-vAhYHgjbFkt8ePUMXeFuCTYb-qru3XERzByje5oBxgq03AW-DuFR4bZdqQbZQdekvQJvvHt08yYM6qY9u3OCaOewCGoEtRjAZ6RVtbywE4p95f9we6n_fWuhAbfYehFTMzP3C5whI2kFbEYe2Ka1YwdC4cw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/X_P8M-nl2PHQQYzKNhm9r2N7b0WR5CtGpAT108tAs3giCuZWGye32OFmctnOfTOMjUlo6Ra6BtAialDvEDsgIbw7OBeVcAKf1eyKTWyY8gzV4t2N-isCc8ZUwdpsaEp6nZ2II_Kx5ajfhJujbwvtxWglpuSRzr770pNaDY3d5_EGQd2aTdxdvgPfxQDcD_zV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/49nNq8g6nn0VqgNksbCZorIFJJKYd-1dh69UqLDDYlR663pBHGJI1FBUKJhyOuP_8lqZWqm7_9-H0JLABr9uxYzq2B_vgCOCCDN5RieixcRbakVumIjKpotljLp0-6_LcDUA7t0bszHhtx8zfnVrtYHU8DiV_oza9WcGvts1p6aag_8eEA_e-mruc6OFZVyt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/W752UR5-H88yuI1n5BwqW6Z7O5v7Iw779elbjCL92ysOIhTJdgbxvGP6stoPSGzeBD4awOcL8i_StEwKZq9VWytSBBJzHChkrcQ45a1L71JtbKO0v8cx4NNujo58Q9b1JZXZUviK_D2eMOSYqoK8lalLJ9wF_CIsINBX7rFanKaqIK9p_QIJJLK59JQaUidx?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/WS5LtGYQZHWACsfoGQYUQCTNCnZh-saH6FGhJqXuqd-cUqukmJ7LW6l8cN9QPPIxBsm0MLcJ-i2vaV1MnpiQbxkB6d4y_g9y-hkIYEdJVyfMQ1IIFHSyxD8Cane9dQyOzTjAJoup6bmSI7BerK5SDYwBh6kn7Fatiokl4zLg-8vPj-Ylmx4dQk7U0kjqFClt?purpose=fullsize)
+
+GMT 官方說明，GLM-Z 使用音圈馬達（Voice Coil Motor），搭配阻尼器提升穩定性，而且沒有減速機構。這三個概念剛好可以連在一起學習。([高明鐵 GMT][1])
+
+---
+
+## 一、音圈馬達（Voice Coil Motor，VCM）
+
+### 1. 它是什麼？
+
+音圈馬達是一種利用電磁作用力產生直線運動的馬達。
+
+它的基本結構可以先簡化成兩個部分：
+
+* **永久磁鐵（Permanent Magnet）**：提供磁場。
+* **線圈（Coil）**：通電後在磁場中產生力量。
+
+![Image](https://images.openai.com/static-rsc-4/SaxRTGWR5QSu9ef1DdZM21thu8Z7OQ5psCsT8BuKFuTzmJjLKiQF7BNjzEyLqwgfVyoHY3rQz89qg_lkLh8w4bbyIapPlbanMq92bnFmvHgtzU4CzQrXr3VV3XNC_agxJWLb1V4RxYOhpOgYshqZ8WLefLZg2CU2BkQhtHYY7Rd1q0ZiJNSgtKX7_26e5_sW?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/X_P8M-nl2PHQQYzKNhm9r2N7b0WR5CtGpAT108tAs3giCuZWGye32OFmctnOfTOMjUlo6Ra6BtAialDvEDsgIbw7OBeVcAKf1eyKTWyY8gzV4t2N-isCc8ZUwdpsaEp6nZ2II_Kx5ajfhJujbwvtxWglpuSRzr770pNaDY3d5_EGQd2aTdxdvgPfxQDcD_zV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/NYozoPkxUAHuc4HIzB9aI0jydeiYX_MZhIJ6wkgQhpBTX8VmqKJAYkpIVaSbMlaHNzs-tiRm68Sf_Ix42RmKG5Sj5Y57kKtNnnDEd-2ouIY8UQlQe6vmoiPyKWDJRCHFjvMiA459GOzuWOe0LsNaiskGqg8A7bhOAnCeNkkv2fXnz2YUoZikrmsQdizrmYL4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/g3ZFcILv2ljTuuYoQcp_FX3gEDP0RztkKgWChfF0CbvhInG6BoUo3W8esa6j9pCzHpETNrDoRcdJCEJtOu1u_6LaoYGuKmtFnO6hsPhiLMuGGfMkmgBPbXxS4mFeOmZcUErSN-n3dadsBT9W1bWDllY7FQ5OLwFshbo18aupwsuHurV3J0FuKzaw8RZgnHLE?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/f8RhysYsjpBKci0oIcz0YxxfJ4uYMfNu0IfV1ULeWQpunwiKeohm0NiGWM2wEhcAeVgUt0HPB05Y3TvNBVo5tK-Gw6plgWz4H7wgNw1vMMIR3rwDX-1K7i_m2MK7fFRgg-GvQvajHMEG5cLm_plt5spcjeV6krHEZNw4W13jWmUt85kNza_mKme65-rXLlCd?purpose=fullsize)
+
+### 2. 它如何運作？
+
+我們用四個步驟理解：
+
+**第一步：線圈通電**
+
+控制器透過驅動器讓電流流過線圈。
+
+**第二步：產生電磁力**
+
+線圈位於磁場中，通電後會產生電磁作用力。
+
+**第三步：線圈開始移動**
+
+這個力量會讓線圈及與它連接的移動部件產生直線運動。
+
+**第四步：控制移動方向**
+
+改變電流方向，可以改變推力方向，因此平台可以向上或向下移動（實際方向取決於機構安裝方式）。
+
+### 3. 音圈馬達有什麼特點？
+
+它有一個很重要的特性：
+
+**推力大小與線圈電流大小大致成正比。**
+
+例如，假設：
+
+* 電流 1 A，產生 5 N 推力。
+* 電流 2 A，理想情況下產生約 10 N 推力。
+
+這只是用來理解原理的假設數字，不是 GMT 的產品規格。
+
+因此，控制器可以透過控制電流，調整馬達推力。
+
+### 4. 音圈馬達與滾珠螺桿有什麼不同？
+
+| 比較   | 滾珠螺桿       | 音圈馬達        |
+| ---- | ---------- | ----------- |
+| 動力原理 | 旋轉轉換成直線運動  | 電磁力直接產生直線推力 |
+| 傳動機構 | 螺桿、螺帽      | 不需要螺桿、螺帽    |
+| 運動方向 | 可依螺桿旋轉方向改變 | 可依電流方向改變    |
+| 背隙   | 可能存在機械背隙   | 沒有螺桿傳動背隙    |
+| 行程   | 可設計較長行程    | 常用於短行程精密運動  |
+
+**特別注意：音圈馬達不是只能向上推，不能向下拉。**
+
+只要電流方向改變，它就可以改變推力方向。
+
+---
+
+## 二、阻尼器（Damper）
+
+現在來看第二個元件。
+
+### 1. 為什麼直驅平台需要阻尼器？
+
+假設音圈馬達推動平台向上移動。
+
+平台到達目標位置後，可能因為慣性而產生微小振動。
+
+例如：
+
+目標位置：5 mm
+
+平台實際移動時可能出現：
+
+5.02 mm → 4.99 mm → 5.01 mm → 5.00 mm
+
+這種來回振動可能影響精密定位。
+
+所以我們需要一個元件，協助抑制振動。
+
+這就是阻尼器的用途。
+
+![Image](https://images.openai.com/static-rsc-4/RXcB1ls5g8iEyl4QPva2u4AfbDAiSQ-or9XaI16fvfpNymZm9uiOPdms1IGaG9EyILAYlLdFR1iyAgpE8k567OoEZhPxYk5vgl7vaQh8L2koPJBDPIwR8hOItU2RCOwqdHUn1dwBRxSy7YysQGK_ebma25Zw9PicYymbZ3DqK5GQjLBtMsN6ZLuRgF6JKtxH?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/whjpqb2-a2NPvLFgMebuQ5sfepWqok1OVl15cx3oKiigOTBcDzHOMLRn3fybles_PauQWAa-gAW77XmMMu2OP-Yjysemp-SaFNg0g5iQTIzZa4gWP-ao1XUop_blohrbvvi3QETXcoZfSlGXow48UZ0sU6qMPgHjUakTt2cLynSBFma5zDVx_iu0w5rynxfs?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ADLV5_qfiaGQ5ozdAqQDk5nSC1a0HpOsVkvDAZJLUQkdtQJ0ovYy9kqXGq3PRD-Q0RC5IWGFLT488rVg63LlfZ4N0RW9Vk9KsESQaFjVrfGgJv6cJjZZvzAlfixYp-Y_Cko5IVtHiO-DuByPZzZlCnw3AXTDxbM-1jAgULc8fGUwLcc2V91KLmO5fVSCCPae?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/PxjGNveQHWhFWbGd4BjPfpSqepHdusnKcVcWoR3L8xyBvqBkZhTmMkyyL1tUctHtpyG8fTIOm8FUFPuWkIjB90-r6FhX9hrUFBTRffLuCIFeaUNdjyGh0aqWbGXpcUAMRvCmYyvVPo4F0OkrPb9TrhsQQ_yHvLDydimT5-NQNKiwAaJSNdKZdMHqecXR144k?purpose=fullsize)
+
+### 2. 阻尼器的主要功能
+
+阻尼器（Damper）主要是：
+
+**吸收或耗散運動過程中的能量，降低振動及過度擺動。**
+
+你可以把它想像成汽車避震系統的一部分。
+
+汽車經過坑洞後，彈簧會讓車身上下彈跳；阻尼器則協助抑制這種反覆彈跳。
+
+精密平台也是類似的概念。
+
+| 元件   | 主要作用        |
+| ---- | ----------- |
+| 音圈馬達 | 提供推力，讓平台移動  |
+| 阻尼器  | 抑制振動，協助平台穩定 |
+
+這兩個元件的工作完全不同。
+
+### 3. 阻尼器是不是煞車？
+
+不是。
+
+這一點很重要：
+
+* **阻尼器**：抑制運動過程中的振動。
+* **煞車器（Brake）**：用來制動或保持機構位置。
+
+阻尼器不等於煞車器，也不能直接假設它可以在斷電時固定住平台。
+
+另外，GMT 官方目前說明 GLM-Z 搭配阻尼器提升穩定性，但沒有在該產品頁面明確公開阻尼器的內部結構，因此我們先不推測它使用油壓、摩擦或其他哪一種阻尼方式。
+
+---
+
+## 三、減速機構（Reducer / Gearbox）
+
+第三個元件是減速機構。
+
+你之前已經學過馬達、聯軸器及滾珠螺桿。
+
+現在我們來理解為什麼有些馬達需要減速機構。
+
+### 1. 減速機構是什麼？
+
+減速機構通常利用齒輪組，讓馬達的輸出轉速降低，同時提高輸出扭力。
+
+例如：
+
+假設馬達：
+
+* 轉速：3000 RPM
+* 輸出扭力：1 N·m
+
+加入一個理想的 10:1 減速機構後：
+
+* 輸出轉速：約 300 RPM
+* 輸出扭力：約 10 N·m
+
+這是忽略效率損失的理想示意數字。
+
+也就是說：
+
+**轉速降低，扭力增加。**
+
+![Image](https://images.openai.com/static-rsc-4/Ek8a6EwNxq8Oz8mD-tLSVoTkMrgSDmwZfO4H6iI1iThzl8U4YUCzXbAaWLXan_Sp4k35hjYBEctvPM7izRT8AWtJwtdSU6WmxlZ_iAc_FXOr_3EmOT2Tme-_sy9mTajuQRp12B72TjlFOgnMIl9G9bVSpAj8WWFTdy-olnS_HnO692Pao8BQo9n7kGGZzRfp?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/yok3l95jv0ibQAjWFCIbGGE1zCO93LL1qjgtj6UYPdbzn28EqT6R8E8eM2_pFdyq13TJP7YKsRpv1iet8I88qAMfl9Bx1Uw0BEWf2u6YU9uFKIGAKPdBXDSXUm17F_cnH73uvEbb1xVwz7z5VI5fmz-2_RbSiLnWw7J59n4L2IEMAu9buWi5rIZ1vtQzI4Db?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/CcvaiSwCC5Tfz9vrVpDqxSFWtuzoUSxcyjQPe3v7BJS7Nqhm8W618l4gI9ci-9-re_8uleQhl9yS524pRPya1002FG0Fu76PbYHCUzj5CvtNACZ7V9SUOwFJRuDrdoIzNsIVvaquMZVjjcnUsm9mgdXrGpmvt2gdfRBWioBLhmVkaWwo__cUQZHZyoeGuZl4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Qx1W9rbXCMf1ry0z2UDUYxaShZWgfo2UeRpWPo-1N9WJUDHLcYDTBoNHbsxcUU4rn5Uf9hReZVO4Jc5yb-Kh3bBI1cUMDJ11iE2WmXELSFqSVP-1eA9nZbWYHnxGgV9qoU4mnIpaFsw71GfbnZpz-JTjcsD7gRPwLrTRC_kwoqqkJ6XtFdVn_G-G3niWyBfO?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/oRhjR_3J-ZLW_a-xS_2pbn1_ke6IdLFB6v_5lSJmP2iKwVu2DCoeG3ZNVJnm2k-c3Wdxo9ICc7_7vFI5uhLsdn1-ATvsJCZRRlkoO2PKb7GfHXPVGPLDndHY2YGEWHWPiZ4lWjOmaZ2lHv6fduYknG1tDQVmVZl2blL93406Uh43V89r5eOncbouZF2KVPxg?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/SjHHtBMhx5H4oCA6Taht9JDyGCt-QDxhteS5oI8WqnDONLOYPq-w1itj8dA3kREPCkZhX_QaHpkk5W1sM6QC25rU1Y7zPvM1J1eGyAkqK-qMJ-1hvOEmkSgQ085hRyXC70YOF8tWpliP1AkZm06HKrwYq7esESsVYCgZUm1o4nICC5yJop7S8ThydLGV8MkT?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5daESudmEOdzYZZgHhkYwc6EUlHVDkfFj7VMg1ehDx2YXWoiPHdqHZoAQ9XRBxo8LOK4sPdWaghjz4VaggGRuCIMmESQB-HugePfR43lAx-j2qeJxZED4Pk1GD2a8p3537b_gdZQnna7cD9nlKWuBkjKpWQvy7ub7WK_HC0z3PdJKW-dU2Fh0TaeKERMsbs4?purpose=fullsize)
+
+### 2. 為什麼需要減速機構？
+
+假設有一顆馬達：
+
+* 轉速很高。
+* 但直接輸出的扭力不足。
+
+如果要帶動比較重的旋轉平台，就可以加入減速機構。
+
+減速機構可以：
+
+1. 降低輸出轉速。
+2. 增加輸出扭力。
+3. 讓馬達較容易帶動較大的負載。
+
+但是也會增加機械傳動零件。
+
+部分減速機構還可能帶來：
+
+* 齒輪背隙。
+* 摩擦與磨損。
+* 傳動慣量。
+* 噪音。
+
+不同減速機構的特性不同，不能認為每一種減速機構都有相同程度的背隙。
+
+### 3. 為什麼直驅馬達不需要減速機構？
+
+因為直驅馬達的設計，就是讓馬達直接對負載產生所需要的推力或扭力。
+
+例如：
+
+傳統旋轉平台：
+
+馬達 → 減速機構 → 旋轉平台
+
+旋轉直驅平台：
+
+馬達 → 旋轉平台
+
+線性音圈馬達：
+
+音圈馬達 → 直線移動平台
+
+少了中間的減速傳動機構，就能減少機械傳動鏈及相關誤差來源。
+
+但這不代表直驅馬達一定比所有傳統馬達有更大的輸出力量；仍然要看馬達設計、尺寸、電流及負載需求。
+
+---
+
+## 四、把三個元件放在一起理解
+
+回到 GMT GLM-Z 微型平台：
+
+![Image](https://images.openai.com/static-rsc-4/pUi9CA4bvrkCxR_xAkfTxDD61JwcqIXfpPAkg9qdj-YgU-_uDap9_iIYATOQnqwELeAq5_ws9DTN2gcwQHhAcxM4XZteOvbxXW1U0onAbYTFZ1KiJ2BsNdJVjTxmymq9j2pntCMVphnYxAzYKQ54JFMg0OYVAFwc7JvjDsA7nUFplEPVveTMerzFZHod3Lgj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/49nNq8g6nn0VqgNksbCZorIFJJKYd-1dh69UqLDDYlR663pBHGJI1FBUKJhyOuP_8lqZWqm7_9-H0JLABr9uxYzq2B_vgCOCCDN5RieixcRbakVumIjKpotljLp0-6_LcDUA7t0bszHhtx8zfnVrtYHU8DiV_oza9WcGvts1p6aag_8eEA_e-mruc6OFZVyt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/bCALb48OEJW5SsrF38HB0J0PuoPVWbSGtCBQcBj8C1Ji8c7-kZHTP2YDRN-4_RnsoZqjsBw1Z_9wt-4qnbsxbkEv4tIzeWZz2aXAlyitv2wk3U5hPVoAUTm6QXaDOgSZ2QsU8yPU0wDGVWsI4x2mp3J1YB8WbTKTyav5pwVMJOiS8Uu2O8Yc-9j3XzxwZwcM?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/_ahEjBLbt4EifJF7RvMivhJ5RYPaBq_STLIG9adSLBG3uJ-F-aIoy8bBcioDXDUfWUS6VjVoEU_2wiSv269sFJW6FwQf3PZb8O8RHrfDIpQ5UgWEcZ_Gq21eXU2Nvmgah6aLm6eoThYgmHvr0nCfnChi3XIirls3jEVCMK2eZaoRhF7c7q5AhZf0JVWbViI-?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/oeX3G_uY1MrOMkKGf0KDUTAwVJza6ZGh3rxaQ0yOYH-uWix_R7Q31Fcw3chR_iCH8fYYUiY4JDn6JmloQgcYZ6LV3h9vz2PtWV7-qWUzGAtdEvu4WWwftzMlOjvhfluoXgnx8qyh7CJ9iRjATMxi-SkECQeU-5cYc9n_atzuzBg9eyWSYguWpn1bSpJy9HCK?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/lt5o4cJcKednE1EN3oxu6HKsf58Ry6FL0kc_xuxBXriLgbVNTJaKFhWCwzX65-Ywvr2Ix6J3hW5CqXaYQXSwje7cRyEksSvACNV1FNVhgdSld9i46T1uotnakYNyr85eNOSqQ9AuxYCGeOHsxRYysuiLuDMaE3RKxezHAnglBvWAb9000xLfDtEzOn3ItZqu?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/qN-Y_EIpv-EXMJG1Bag6HlzF1oDdF28ZlLx8PlENyvB0biyRpyK3bEW4zpPTIsEphC1HDO0N7c_XvZi6t0dx-5rxAOnrqGBQoRPerChHJEyiWrFQXpYVb2Iri9X62in45J3ycZnbw34RMuUdsmHZ1Dn3eQ41pjtB6wc4tz0kxqPNh0C2ok0z9ey_-Z3EvPPy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/u-aqOeUNGj6w2WUYnTQPmCBRugcWhftpAgD5HlzK1JyADyHtF3RiLfnxQrI_DHRqq1VsEWpM4QRJ3w3tYRPI1Ghr7UDNvEBLeWGsz3ARcow_9AvJzOgiCVXyPEGdMpLkPeaqQ0bJ24Cz-SdRGlkQK4gF6zxklB7LrUX75AWZ-e0p50E72P7vqJVvfkFyzonW?purpose=fullsize)
+
+我們可以先用以下方式理解它的功能分工：
+
+| 元件   | 在平台中的工作           |
+| ---- | ----------------- |
+| 音圈馬達 | 產生直線推力，帶動平台       |
+| 阻尼器  | 協助抑制振動，提高穩定性      |
+| 減速機構 | GLM-Z 官方說明沒有使用此機構 |
+
+這裡有個重要觀念：
+
+**減速機構不是阻尼器，阻尼器也不是馬達。**
+
+三者的功能完全不同。
+
+GMT 官方 GLM-Z 資料還列出以下規格：
+
+| 項目   | GLM-Z 系列官方資料 |
+| ---- | -----------: |
+| 行程   |         8 mm |
+| 連續推力 |         15 N |
+| 最大推力 |         45 N |
+| 絕對精度 |      ±1.5 µm |
+| 重複精度 |        ±1 µm |
+| 解析度  |      0.02 µm |
+
+這些是官方產品頁目前列出的系列規格，實際選型仍要依 GLM80-Z 或 GLM100-Z 的個別資料核對。([高明鐵 GMT][1])
+
+官方資料：[GMT GLM-Z 微型平台系列](https://www.gmtglobalinc.com/%E7%9B%B4%E9%A9%85%E6%A8%A1%E7%B5%84%E7%B3%BB%E5%88%97/GLM-Z%E8%BB%B8%E5%BE%AE%E5%9E%8B%E5%B9%B3%E5%8F%B0%E7%B3%BB%E5%88%97?utm_source=chatgpt.com)
+
+---
+
+## 五、本課練習
+
+請回答以下四題：
+
+**問題 1**
+
+音圈馬達的主要動力來源是什麼？
+
+A. 滾珠螺桿旋轉
+B. 線圈通電後，在磁場中產生電磁力
+C. 齒輪互相咬合
+
+**問題 2**
+
+音圈馬達要改變平台的推動方向，可以怎麼做？
+
+A. 改變線圈電流方向
+B. 改變線性編碼器方向
+C. 增加阻尼器
+
+**問題 3**
+
+如果平台移動到目標位置後仍然持續微幅振動，哪一個元件可以協助抑制振動？
+
+A. 減速機構
+B. 阻尼器
+C. 聯軸器
+
+**問題 4**
+
+一顆馬達轉速很高，但輸出扭力不足，想降低轉速並增加輸出扭力，應該考慮哪個元件？
+
+A. 阻尼器
+B. 線性編碼器
+C. 減速機構
+
+---
+
+你回答完，我們就可以繼續下一個主題：**壓電模組（Piezo Stage）**。這是精密光纖耦合、矽光子晶片對位中非常值得認識的技術。
+
+[1]: https://www.gmtglobalinc.com/%E7%9B%B4%E9%A9%85%E6%A8%A1%E7%B5%84%E7%B3%BB%E5%88%97/GLM-Z%E8%BB%B8%E5%BE%AE%E5%9E%8B%E5%B9%B3%E5%8F%B0%E7%B3%BB%E5%88%97?utm_source=chatgpt.com "GLM-Z軸微型平台系列 - 直驅模組｜高明鐵 GMT"
 
 
+---
+
+四題全部答對！不過你提出的問題非常重要，而且正好是理解音圈馬達的關鍵。
+
+你會覺得奇怪，是因為我們之前學的馬達，幾乎都是「旋轉馬達」。你熟悉的概念是：
+
+* 定子（Stator）：固定不動。
+* 轉子（Rotor）：在定子內旋轉。
+* 馬達軸：跟著轉子旋轉。
+
+但是，**音圈馬達（Voice Coil Motor，VCM）與一般旋轉馬達的運動方式不同。它可以設計成直線運動，不一定有旋轉軸。**
+
+我們一步一步來。
+
+# 一、先回答你的問題：移動的是線圈嗎？
+
+**不一定。常見音圈馬達確實有一種設計是線圈移動，但也有磁鐵移動的設計。**
+
+先看這張簡化結構圖：
+
+![Image](https://images.openai.com/static-rsc-4/ZLyumvROmmqP6ph981rlfQc9Hhy1aSkyfSI6NbYZ3KRAH7xKEx0YGiucWSX_xcAPb29RVrP6Slg8a-Eoz6T1CUL1mYw_GRY3p9GVGfPZPBSHtZ2p_8seK4cTeXCaRlOhqVu5sK3h6nvomAheeFi3-IDj7vBK08gDtNYJtMgR9RCV9KncBOIY0d-47syTpoVD?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/NYozoPkxUAHuc4HIzB9aI0jydeiYX_MZhIJ6wkgQhpBTX8VmqKJAYkpIVaSbMlaHNzs-tiRm68Sf_Ix42RmKG5Sj5Y57kKtNnnDEd-2ouIY8UQlQe6vmoiPyKWDJRCHFjvMiA459GOzuWOe0LsNaiskGqg8A7bhOAnCeNkkv2fXnz2YUoZikrmsQdizrmYL4?purpose=fullsize)
+
+音圈馬達主要有兩個部分：
+
+1. 永久磁鐵：提供磁場。
+2. 線圈：通電後產生電磁作用力。
+
+這兩個部分中：
+
+* 一個固定在底座。
+* 另一個連接移動平台。
+
+因此，常見的配置有兩種：
+
+| 設計    | 固定不動 | 跟著平台移動 |
+| ----- | ---- | ------ |
+| 移動線圈型 | 永久磁鐵 | 線圈     |
+| 移動磁鐵型 | 線圈   | 永久磁鐵   |
+
+所以，不能認為所有音圈馬達都是線圈移動。
+
+---
+
+# 二、為什麼線圈可以上下移動？
+
+這裡先不談複雜的電磁學，只理解一個原理。
+
+**通電的線圈放在磁場中，會受到電磁力作用。**
+
+你可以想像：
+
+* 永久磁鐵固定在底座。
+* 線圈放在磁鐵產生的磁場中。
+* 線圈通電。
+* 線圈受到向上的力量。
+
+![Image](https://images.openai.com/static-rsc-4/X_P8M-nl2PHQQYzKNhm9r2N7b0WR5CtGpAT108tAs3giCuZWGye32OFmctnOfTOMjUlo6Ra6BtAialDvEDsgIbw7OBeVcAKf1eyKTWyY8gzV4t2N-isCc8ZUwdpsaEp6nZ2II_Kx5ajfhJujbwvtxWglpuSRzr770pNaDY3d5_EGQd2aTdxdvgPfxQDcD_zV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/f8RhysYsjpBKci0oIcz0YxxfJ4uYMfNu0IfV1ULeWQpunwiKeohm0NiGWM2wEhcAeVgUt0HPB05Y3TvNBVo5tK-Gw6plgWz4H7wgNw1vMMIR3rwDX-1K7i_m2MK7fFRgg-GvQvajHMEG5cLm_plt5spcjeV6krHEZNw4W13jWmUt85kNza_mKme65-rXLlCd?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/COD2yPk1ZtgYjak8HaRFNzoRnPLppray5PS-QZIkx8tVZ-1w56lOaAw9rf8RVIDvEA5mSlAbrDU7IAnqxOI-_3HqPToMAYXTpfBPwVI6KrH0UxVm1B80XA5Zy4C3dEV246XPjIhjYiBZJZqYLq18A1MfSintK69GI2V0XfmKxwb56qB_vUppuG5BbSnkUHnu?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Lg4iB3jaW8h-8HyIntLPMuHx9H0xRgwRHG6fJ4gXJBYxkt8ckDgrA5qhL9SaYo10aawr8lHCnH4bbd-YlMeFVhm9hEkg-tR4WXVzXwHVp9Qe8I9OSq1OLygoR9Dhlp2-s6SP_a8lzpJP1aMrK-bleeEbGQZwkqrlHiYK6HSq2ZobhUqj3qw1Z8cJqAp8OUFp?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0UWadWgyWOHsJm9CU6qcODs7Px4Bwham0--B5PuryGnLeNctsfyXg4z7AUpsoqMkJFSXMuDXJe6b0bvVORZAVgFc_80c0EuTruxGl6LoyiTZnDvR_A19vxbVEkC48Am673Z_zwKyXcMX14_arNbhCpXqbGhNCqSg8gTaBhAGpGqY6olPs5FuB_LwlR1PHs9B?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Fg-X0_a2tRbq5Hkaty-Q9yrwAk5Di3jwkr3N4bbFcvV7OeXgUhEpD3Tv9UKKfpk10ol7qSaoWUzIc-qj-6JV5wFFYNzb8uhTfM3iSE9ZnDc3SKIIETHD1h9KceBZ9ajpcfTNJpVTSBjTmI-Y02DblNNNFXkaJuiotJJcdAhCbE9dBoNjCrv_jAfKEtdkUDYe?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/9u6nj8HY6xKlpTxH9mkr-OwemHCUr5q6mhRJrcG1vtQImiFyf3NB5xV-Nmdc-wyHACOHUNwXFTZRFhN0g6MR8jAn3mZsEJYItOmvBxgQ1rWn6cT06haOENZC_7C4bDFWP-ozdSLrdcZRP4X8QOGhkmidyNQbqO1V6XwGOI_hoSaQM-7c3gX0NyYU145hSp0F?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/NYozoPkxUAHuc4HIzB9aI0jydeiYX_MZhIJ6wkgQhpBTX8VmqKJAYkpIVaSbMlaHNzs-tiRm68Sf_Ix42RmKG5Sj5Y57kKtNnnDEd-2ouIY8UQlQe6vmoiPyKWDJRCHFjvMiA459GOzuWOe0LsNaiskGqg8A7bhOAnCeNkkv2fXnz2YUoZikrmsQdizrmYL4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/g3ZFcILv2ljTuuYoQcp_FX3gEDP0RztkKgWChfF0CbvhInG6BoUo3W8esa6j9pCzHpETNrDoRcdJCEJtOu1u_6LaoYGuKmtFnO6hsPhiLMuGGfMkmgBPbXxS4mFeOmZcUErSN-n3dadsBT9W1bWDllY7FQ5OLwFshbo18aupwsuHurV3J0FuKzaw8RZgnHLE?purpose=fullsize)
+
+如果線圈連接著移動平台，那麼：
+
+線圈受到向上的力量
+↓
+線圈帶動平台向上
+↓
+平台移動
+
+如果改變線圈電流方向，電磁力方向也會改變：
+
+線圈受到向下的力量
+↓
+線圈帶動平台向下
+
+因此，音圈馬達可以控制平台上下移動。
+
+這裡有一個非常重要的觀念：
+
+**音圈馬達不需要先旋轉，再透過螺桿把旋轉轉換成直線運動。它本身就能直接產生直線推力。**
+
+---
+
+# 三、音圈馬達也有轉子和定子嗎？
+
+這個問題問得很好。
+
+一般旋轉馬達的轉子、定子，是按照旋轉運動來定義的。
+
+但音圈馬達是直線運動，因此通常不會使用傳統旋轉馬達的轉子、定子概念來描述，而是使用：
+
+* Coil（線圈）
+* Magnet（磁鐵）
+* Moving Part（移動部件）
+* Fixed Part（固定部件）
+
+如果硬要類比：
+
+| 旋轉馬達   | 音圈馬達       |
+| ------ | ---------- |
+| 定子固定   | 固定的磁鐵或線圈組件 |
+| 轉子旋轉   | 移動的線圈或磁鐵組件 |
+| 產生旋轉扭力 | 產生直線推力     |
+| 旋轉軸輸出  | 直線移動部件輸出   |
+
+注意：這只是功能上的類比，不代表音圈馬達一定有真正的轉子和定子。
+
+---
+
+# 四、音圈馬達可以旋轉嗎？
+
+這裡要區分兩件事。
+
+### 1. 一般音圈馬達
+
+一般音圈馬達設計成直線運動。
+
+例如 GMT GLM-Z 微型平台：
+
+![Image](https://images.openai.com/static-rsc-4/pUi9CA4bvrkCxR_xAkfTxDD61JwcqIXfpPAkg9qdj-YgU-_uDap9_iIYATOQnqwELeAq5_ws9DTN2gcwQHhAcxM4XZteOvbxXW1U0onAbYTFZ1KiJ2BsNdJVjTxmymq9j2pntCMVphnYxAzYKQ54JFMg0OYVAFwc7JvjDsA7nUFplEPVveTMerzFZHod3Lgj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/cckKSiiaPnl_fhNRtHjkajcjIzqCa2tACfq5nF-TGKTAEP8WRXiz2EN1oc64t8wT_of_kxgQHzfT12HKHYINw60ANzFonNWxG1AmsD73SJebbx6m7Cio_LFM3BfPrw260UaQfywGLoV8IwlFcWxZbEy8lhe_eMpx1w1AhsFW4mxNWR3DdRQXsHr-94xSpUUa?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/CxDjBNUZDHcPrpH1yLYsv1WZGd6jyStHK6Og-vAhYHgjbFkt8ePUMXeFuCTYb-qru3XERzByje5oBxgq03AW-DuFR4bZdqQbZQdekvQJvvHt08yYM6qY9u3OCaOewCGoEtRjAZ6RVtbywE4p95f9we6n_fWuhAbfYehFTMzP3C5whI2kFbEYe2Ka1YwdC4cw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LWMT1TnubjD1fU-7azIh_as2Mcfk9iSg6em774B3p9jfiag7LOCqZYVS47OhbzYNyO6ubOCLIb8ipq6rYRqla4bHmTL8xHD-Iuk5_gHhC7jb54jpvRDELL6rsiwaxrjJTuxLKlb0M8tICm3Vws3E4rVp2rHeWhWSSmrhqRT3rQlTCCr0HI2HmrNNVfNakNV-?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/u-aqOeUNGj6w2WUYnTQPmCBRugcWhftpAgD5HlzK1JyADyHtF3RiLfnxQrI_DHRqq1VsEWpM4QRJ3w3tYRPI1Ghr7UDNvEBLeWGsz3ARcow_9AvJzOgiCVXyPEGdMpLkPeaqQ0bJ24Cz-SdRGlkQK4gF6zxklB7LrUX75AWZ-e0p50E72P7vqJVvfkFyzonW?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/EkmJ3ZNkdmL4XDeuan23JrdNC0tBzY-5DQC4m0r-eS5zZR_g0-VqrNz6Vpl_xTxJ457t-noMvez8LuZqtKEznENjNAG-MDNqsOeLzMU_BWLIdrjHYikG02Nbi8T5NJpZa4M-GHm8J_CVMkA4OmQ15kAB5GfzTemLXRtGdxk0Y_Riz1a3UW7XEJHCnlbCHqcm?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/iVMG_K1CpacHZ0SGpWaAEDShOthx5Wi_UvQYigg1rwSeBDNkF1YxqGEpfIji9OLyb5r8c-V2a0eR1aRlemiOw02XQ0bNF7hSRq68925G9fXgi6TwH7bviDEVq45ZI_b4_8rwTZEM7IFRRWLN46J8-Kh7wA4uNN2WbQmfswNIdcYJZLrMyOKKvmsKnHy4enyj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/WS5LtGYQZHWACsfoGQYUQCTNCnZh-saH6FGhJqXuqd-cUqukmJ7LW6l8cN9QPPIxBsm0MLcJ-i2vaV1MnpiQbxkB6d4y_g9y-hkIYEdJVyfMQ1IIFHSyxD8Cane9dQyOzTjAJoup6bmSI7BerK5SDYwBh6kn7Fatiokl4zLg-8vPj-Ylmx4dQk7U0kjqFClt?purpose=fullsize)
+
+它的用途是讓平台沿 Z 軸上下移動。
+
+它不是用來帶動平台連續旋轉的。
+
+### 2. 旋轉音圈致動器
+
+音圈原理也可以用在旋轉致動器上。
+
+例如，讓線圈或磁鐵受到切向電磁力，產生旋轉力矩，使機構在一定角度範圍內擺動。
+
+![Image](https://images.openai.com/static-rsc-4/dVJQgjQqa-sglUXgyJ6zOxrInsN_U0kot0QS5JdgiD0u0tLTrUBdrgrr6qOqgKwFrgOZKB4I0XcPuB1uFfh3NXQ7rvtr3zeImamlh3a8JFJabjnypQy96NyN5SCbfQuFBlK9GkYNZlnHuhiMDmGELmxWhs--sG1eq_7gGYXueAXCr9J7mD2od1xXNufaJAm7?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/j_c6weEv1Uk7aOx0L6peA9BuRZsWKSEp2XDasdgfzsPYXrzPCylNlUo7YhTKCPlpHjodCtowV4E6kS52lAw1g6kxdqK2IWLEtxQ0Ip-s_ZsjaDVGTv-D5zrVbMre890ztX3OrvPUtQ2Lk9WaPwukLBvEBx_AXYoTBBdTug960_TQLXMj7Byz4d8KK_ZOSTsQ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0RJzH0rPiQ6_Dnjqya333WPIj4mOlZBwjxA81GJcDdTv-1zALGej6bf8rUQ6a8KV8wY9U48Tkci8ApA9jYBbBLHypNm15dlFk4Tt6en48snHQ-aawmCzTWInHd61WHAgxDqXpTOLQJfCONWzQz30LM9fJ_n6K0A1yJzfTfBwFXFq1VJQ0E2SDYbbtWJaxOPy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ZLyumvROmmqP6ph981rlfQc9Hhy1aSkyfSI6NbYZ3KRAH7xKEx0YGiucWSX_xcAPb29RVrP6Slg8a-Eoz6T1CUL1mYw_GRY3p9GVGfPZPBSHtZ2p_8seK4cTeXCaRlOhqVu5sK3h6nvomAheeFi3-IDj7vBK08gDtNYJtMgR9RCV9KncBOIY0d-47syTpoVD?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LUW0UceJ4LN3_NxI-3Uwr_GM6R0CT25FnL6JEIMQygiZwcxI7_PmAM2cED8wn38YcYXLS2nECyAKW8O1xjNAWqn3NN-7Yz3vwdLMdqW2JcIv0sjAdRR9ELN4ZQJDjxEEZlDTs788wpei8P5IS4Q0OtjQpKG6WxFaTTQSeoJKPNXQ2cpV1d5IrZgDTr8G18gO?purpose=fullsize)
+
+這種裝置可以產生旋轉運動，但常見用途是有限角度的旋轉或擺動，不一定適合像一般旋轉馬達那樣連續旋轉 360 度。
+
+所以：
+
+* 直線音圈馬達：產生直線推力。
+* 旋轉音圈致動器：產生旋轉力矩。
+* Rotary Direct Drive：則是另一類旋轉直驅馬達技術。
+
+---
+
+# 五、把它與你熟悉的 STM32 控制連起來
+
+假設 STM32 要讓 GMT GLM-Z 平台向上移動 2 mm。
+
+控制流程可以概念化為：
+
+1. STM32 下達目標位置。
+2. 運動控制器或驅動器計算需要的控制輸出。
+3. 驅動器控制音圈馬達的線圈電流。
+4. 線圈與磁場產生電磁推力。
+5. 平台向上移動。
+6. 位置感測器回報平台位置。
+7. 控制系統根據位置誤差繼續修正。
+
+這與你之前學習的伺服馬達控制有相似之處，但動力來源和機械傳動方式不同。
+
+尤其要記住：
+
+**音圈馬達的推力主要由電流控制，而不是由馬達旋轉圈數和螺桿導程決定。**
+
+---
+
+## 六、確認你真正理解了沒有
+
+這次不急著進入壓電模組，我想確認你對音圈馬達的理解。
+
+**問題 1**
+
+如果採用「固定磁鐵、移動線圈」的音圈馬達設計，當線圈通電產生向上的電磁力時，哪個零件會移動？
+
+A. 永久磁鐵
+B. 線圈及與它連接的平台
+C. 整個底座
+
+**問題 2**
+
+音圈馬達為什麼不需要滾珠螺桿，就能讓平台上下移動？
+
+A. 因為它先讓馬達旋轉，再透過齒輪轉換
+B. 因為線圈與磁場直接產生直線推力
+C. 因為編碼器可以推動平台
+
+**問題 3**
+
+一般直線音圈馬達與一般旋轉伺服馬達，最大的差異是什麼？
+
+A. 一個直接產生直線推力，一個主要產生旋轉扭力
+B. 一個有電，一個沒有電
+C. 一個需要編碼器，一個完全不需要編碼器
+
+你先回答這三題。這部分弄懂之後，再進入壓電模組會容易很多。
 
 
+三題全部正確！🎯
+
+你現在已經掌握音圈馬達最重要的概念：
+
+1. **固定磁鐵、移動線圈**：線圈通電後受到電磁力，帶動平台移動。
+2. **不需要滾珠螺桿**：因為音圈馬達直接產生直線推力。
+3. **與旋轉伺服馬達的差異**：旋轉伺服馬達主要輸出旋轉扭力，直線音圈馬達直接輸出直線推力。
+
+我再幫你整理一個重要觀念，方便你日後看 GMT 設備時判斷：
+
+| 項目     | 旋轉伺服馬達       | 直線音圈馬達   |
+| ------ | ------------ | -------- |
+| 主要運動   | 旋轉           | 直線       |
+| 主要輸出   | 扭力           | 推力       |
+| 動力來源   | 電磁作用         | 電磁作用     |
+| 常見回授   | 旋轉編碼器        | 線性編碼器    |
+| 是否需要螺桿 | 直線滑台通常需要傳動機構 | 不需要螺桿    |
+| 控制重點   | 電流、速度、位置     | 電流、推力、位置 |
+
+還有一點：音圈馬達通常沒有滾珠螺桿的機械自鎖效果，因此垂直 Z 軸設計必須考慮斷電後平台如何保持或防止下墜。
+
+**音圈馬達這個主題可以先告一段落。**
+
+下一課我們進入原定課程：
+
+**壓電模組（Piezo Stage）——如何讓平台進行微米甚至奈米等級的精密位移？**
+
+這會直接連結到你未來要學習的矽光子晶片、光纖耦合與光學對位。
 
 
-
-
-
-
-
-
-
+---
 
 
 
