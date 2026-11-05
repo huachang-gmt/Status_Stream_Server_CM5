@@ -15786,6 +15786,6963 @@ B 產生的力矩是 A 的 5 倍。
 ---
 
 
+好，我們開始下一課：**聯軸器（Coupling）的種類與結構**。
+
+這一課我們會特別注意一件事：為什麼馬達與滾珠螺桿之間不能隨便用一個金屬零件連接？為什麼還需要選擇不同種類的聯軸器？
+
+# 第三課：聯軸器（Coupling）
+
+## 一、先複習聯軸器的工作
+
+在電動滑台中，聯軸器位於馬達與滾珠螺桿之間。
+
+![Image](https://images.openai.com/static-rsc-4/3PzrrGO_qvRLp_Bu6gX8a-XlaZz7yDLbo2SUt_4ft18_TudVe9p0KI0yQyxoplxJEcp_GF5pIJm3Xxxd1BpdgUxwDKELopn1DJTLdzBfOeAkJdFCXfZNcsHfc7Oqm5eGJEepqDQj_LTdz9unsf4ajYNPaREdVn63IfdVaeDGuFTiGuVQ6NVPKMM-n0Z89-lc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/_TSk5pYtJ54V1doBb-ULD91bWrBpUAYEJc1ZcVdAJiRpD1_Uzl0cdt3CQMAqvjA9W8MvElRlIN3FhPCuXbV1nJMolCb2WsTTSZFZ7MpLvuR5songW27La4Z8ONwgvh1TrHyB4Jv2rZFzdsucgZPGkhsAavP4HDa8sxjvuqiLE6m9pIrGz3m68nkvFb09lv5K?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Z9eHmNH8UZuhh1co6n6xFEdMUer9IZsAd_J_X7Z8kFyXFMkyI22PH96Zdy4B0sLyswTIfpkSphnuVWadTBsQphLVFLvC_iH5ugbmfidM0c5PbmGn1dk_oXTutVJc7nidnfOYhafwAsMWvT1_htMh2B2fLhtGMEqso3B5YT2X-eMoa--oWK6f4PMNt13bIwEw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/dgFgzJ4z6HUwG6G1jIY86s24s8gEZxYemX4fY-r4ew51Cq2o6XBXgvnDhXZQ_ljunAQbQr2gLh3IzT1y_m1FHCe8SFqPJUYeiluQFDAFnLqlHCwYCYpZL7QcsNcC3ZPYMvd7Ww7PY2lFVhR6cr0Ty1eBlFkIG7Y57xE1tjy2z2FaOgWCTO3PYangR4zeJ940?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/F-PHRdMNuPxWjtYDSQlGJMwHJsnOidNp49Dqb8cgEFA9mPpeHMZfNXTY6vnKD2YEeHiJ1IAryfz-uZXm2PeDgAhWP1mEfqrPwOUoHm9-CLtSCiKzljWJtqfy5vVWxMHTievVjqAEfD6mQ5VT1QU1QBAvMH34pn5au_yi7VsdxczwjderC3I5e0chrxh71a3U?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/UY9yol8HzlaQWFP03ZmkE9YuNfQtjJBWWfeLfP9GhOEt9TwAy1Ho-Qa-2iSuSkYUIl8Vdjp_41o9ODulZEPcirZYdMEhqpijSi4flN1cvFhD7JVoZ92ti4wcKmNPAD_bgTrtbfu35OenIILN1vjmevKy3MEROEUs8frkE-XWxLsNwzG2pd5vXmWG0g8hiTOp?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/TRbJuXaoog7X_av4aDy5b68lUJYd1z0BIE_68fMt4vPG4vn53Q6Duc87eE9wESklpY_zW85dUIkFfYVNyw8KKoOpVe1hHjPPNUsiJLxK5TUhBIcRHIks7VDVUCSdcUDgud8u3FUlt4uzMR8kki7hVZdBb3lpTt_Xutq58RwhafTtpw5GaVgSXmmznkzexsd4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/3hgwywzpjJqM25M7VmOAxV39KLRNKxZsLgtAtYB1yBleBkZ4nU8qMaiE3Fyt6-bg12OUoVC6QwRsoWir4Kh_Ep54SOyVCns-lLgY37x1Vjf63rYrtmd14TwO-8P1s_QpOjAZEUO8k2iGykPWzklCiCgLwtihRHPYaceviAwTf208qxWGswMoKe1tjExOKED3?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/82w5OKpKaz_-8kAFaoqJQY-GKugqlxOBCQh1a0tsDC-QuA6txpI1RCuq83DV2BHWxOmGjpat31NmCs28uKwJmMKZCL1iYy6J6g_yjjUkb1dumBeBSo83wuuBQXwppk6I7oMmlJsm65lTrixT7xXcOFg7fx3ayMMoafc4if5i2DNeHwPoXm8hRIqaTdGLyYzj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4v7_BgfYvIi6psurRmxsAnrKskO8pe6AZgWtVz7Xt6vV5vdjhOmz8RBVyXg131G7UVTC6AgB0SwnF9ZItPAH-RXWqkAuTAtnkJ15xsxp3NAZi_y_35W0dRpwPB296lns5INJCLs5FrYoXFI2YJQQ64CEvCtNR18I9xpmnk93vB4g1qy4bp1QUIzjSx8PAupf?purpose=fullsize)
+
+它連接兩根軸：
+
+1. 馬達轉軸（Motor Shaft）。
+2. 滾珠螺桿軸（Ball Screw Shaft）。
+
+當馬達旋轉時：
+
+馬達轉軸 → 聯軸器 → 滾珠螺桿軸。
+
+聯軸器將馬達的扭力傳遞給滾珠螺桿。
+
+## 二、為什麼需要不同種類的聯軸器？
+
+這裡有一個實際的機械問題。
+
+假設我們要把馬達與滾珠螺桿連接起來。
+
+理想情況下，兩根軸應該：
+
+* 位於同一條中心線上。
+* 彼此保持正確的角度。
+* 旋轉時不產生額外的偏擺。
+
+但是，實際組裝時可能出現一些誤差。
+
+例如：
+
+**情況 A：兩根軸完全對準**
+
+```text
+馬達軸 ───────── 螺桿軸
+```
+
+**情況 B：兩根軸稍微偏移**
+
+```text
+馬達軸 ─────────
+                  \
+                   \ 螺桿軸
+```
+
+這種偏移稱為軸心偏差（Shaft Misalignment）。
+
+如果直接用完全不能彎曲的連接方式，可能造成額外負荷，傳遞到馬達軸承及螺桿支撐軸承。
+
+因此，有些聯軸器會設計成具有一定的彈性，可以補償少量的安裝誤差。
+
+## 三、先認識兩大類
+
+今天先認識最基本的分類。
+
+![Image](https://images.openai.com/static-rsc-4/oU0epF0jVYhHo7xO8uH788mfs6t1TsezoRTmkeajuwVsD45zDC9gSLUvz_Q0e1NjgxhhhOVwQKp6wQ9O0in-OeKSGExUUpiImy9SgmqzdBU02tgpPq3_RcYs0FZRQDSCwnA2bjOkVIs6VHokI5020w1epaUpXZusGsX3WC129xkk6jdzxZ0lnOhne3WLhD71?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/1V0_51Sf2tDEBfGvnPC3F-oL7Lz8kCtijbzNWNvlYn4K1IGS8FDEmJOD7ItMYR6w16J1q8jEuulpLcC_N35wGcfWxbfspT_P3J71b_Do_koh3diJdyFQUXRLrLi5Z5Owt3JFhYts1OTmVE9rPT2Bs5SXwlrPydZs4kYFallsWEeXfS-PJCjt4YCvTUhLTIvI?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/cDjGnxMd1wBN4XsV05QoO0arAriPQMTskraSTImwovYVtCvQrs6wSpnKPKJiry7_mkeq1c65ASo0FN0dOsMKdi5a-MNujA6gsPYh0mPIw2tYsZehpzIZ4iOGKRo47rag-tJDNpnJhxu5HUKLNc6FoEn6dsreyiVX8zNrAX3qpiV2vVUZfWowDxIpXhfXyS6W?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/fu7dIcF8DpDXu7awLrwL9GrOHbrCu4UWhox3A8EorOiMZaA1rs1a0ufE50YemHpfWZ3yKpLsomywx_V6ZBaiyLw1fBf-xhUdLgkUJNzQWkwPFC4_Mkw-8zgnqbmLW0-roxVF52eWCXR6mFswP4I0V4vcEsB5-O3Ami5XnbngwQxnjpCsNZL4_BGLqL1uE9zR?purpose=fullsize)
+
+| 種類                | 中文名稱  | 特性            |
+| ----------------- | ----- | ------------- |
+| Rigid Coupling    | 剛性聯軸器 | 幾乎沒有補償偏差的能力   |
+| Flexible Coupling | 彈性聯軸器 | 可以補償一定程度的軸心偏差 |
+
+注意：彈性聯軸器並不是可以任意彎曲，而是在設計允許的範圍內補償偏差。
+
+常見的彈性聯軸器還包括：
+
+* 爪型聯軸器（Jaw Coupling）
+* 膜片式聯軸器（Disc Coupling）
+* 波紋管聯軸器（Bellows Coupling）
+
+我們下一步會逐一認識它們。
+
+---
+
+## 四、今天的第一個練習
+
+假設你正在組裝一台精密電動滑台。
+
+馬達轉軸與滾珠螺桿軸因為安裝誤差，兩者中心線有一點點偏移。
+
+現在有兩種選擇：
+
+**A. 剛性聯軸器（Rigid Coupling）**
+
+**B. 彈性聯軸器（Flexible Coupling）**
+
+你認為哪一種比較適合這種情況？
+
+請說明你的理由。
+
+我們先確認這個觀念，下一步才深入研究不同聯軸器的內部構造。
+
+
+完全正確！B. 彈性聯軸器（Flexible Coupling）。👍
+
+你的理由也正確：它可以補償一定程度的安裝偏差，減少兩根軸因為沒有完全對準而產生的額外負荷。
+
+不過，我們再增加一個重要觀念：
+
+**彈性聯軸器不是用來取代精密安裝的。**
+
+即使使用彈性聯軸器，馬達軸與滾珠螺桿軸仍然需要盡可能對準。否則偏差太大，仍然可能造成振動、磨損或損壞。
+
+# 下一個單元：爪型聯軸器（Jaw Coupling）
+
+![Image](https://images.openai.com/static-rsc-4/q3W63DFtQ9_LQ1v_YDybxMcCIgUFpWdyJzaha5fVjiX6Ml0GQ7-tWpkxf65do8bWqb7mSv5RrGaSVkMXNaNqm5nlgo-rstUdHBChwQnKTxw6uEMbXpibNFwhsyd8MwWuelhjA3BzgvUoI8aW0OJi3eqidERezR_VW_6y7FYLui_Ce7nLjZ3KQB2Hd-ImJ68m?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/na1ZVQ8OpuOCN5bsMTLBbyU5CFBjiAePwKtqKJ5W6aepnTC716Jx4hLYxZXD0se2fD891VIxXctP1nhHkO9Lf7j3FM4DyI5gOBAQnhTeGS5gvNWIKRp3H18rJQYkbgMaL_2GvlaG8_scaPdH9r4oF-A11ieCRXyfzVEGVwxaervsZc2_iQzXh5VpHj5_vLlD?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/jCTPw6nLLYsejlSKpCZ2DyReH3rgESXhvWkHxNjC3JXKxNFQ0Q0WGnT3BEjco7CU18brY0c_5_wm8PhHYJhYIu_raEjgvDTzYUUSTs_3JCCeuD82g7zmKdPys9oGUdTNL0gQ-5iSrLhs092J5P1y7YXMyS6CwPBIkoWR6PF9cbXpgP8rlzZSSg1qBazrKd4V?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ldguV6n7pUIheCnJm7D4IxB4HV9BQw29D9IRfc44Neg9-RF2H2LHgkRGUryhoUIfRuYB4vZl82WyH2DtkHQ9EF1KwHuHKzGHX3eGhsfLMxKGy9BF0HLVaQsv_02Cj2QWWHqXof6Gu-9CoQqAwX_IAZo81ZrTUWMyFMVuhoJ0xU02iw8ALrI2lJrM8WZkvdrW?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/57OybKZWUSKSOYVPo9wJS-VY15ggApgUCOZLSkyVU8UrHAAWtZNDUXek8FiKv-pAqTvYU8N5aGY0j88SrOHZA_naNRChtqjAz63kSZ_-zipmQqvblIxQmnPiJ0D375tXHsJULUmnWs3NG-fki4UTBVwZfFkKyTjZl1S-5yY-wdSQG06Wxd3IvGi0Byn27Xqb?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/6mQefK_E43wJyYHc7VRkMAPqLkFfoLZbPSb9F4w99YQLCEZzRtsxcPjxRx0R57NLCFRyhMx7_rGvjH4ixUj4jvml74z34cR8-xdSkOwwWd8q_ICKBb1HCKcCEvqgCFgGAKDQ5eiIhABoI_Wp_3II-1KOsPetP26a_-4ogoAAfnrVniIF1ikP0otc-vXjXdD7?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ESoMnIjJINUjhEQTu9lpWSYGpde-Q9_R-7YnEN8Drra_d0tbq7Vl9Qrm00L4FrSMZd4fWn9FpQ7-eCl4La7RnIJ7i5tfJGKjBdyf9Jc2uukmjd5oqunAlZjz9ltuMsHerMiiXal2ZseyegX7wROQdx0UXJ847KJcgFqkUxm59XAq-7GcKNock6zjIziMGTqT?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/HCgDce9sYcPLgK_zzQB6Chh0mQs977ftiYxTihRQOC7OLbtbIoxU2eIw4LoVV-RN07uZCN4lY-fK47zwjI-GQyAXVkYzvjAuOD1PlMLP7MqLUCUZj4SwbRc9lTa0dt8NTjQpBaAK898RtgJmdy2QgEGfz0l-JeONFEwOWVkvHMRJQN4tNUrlsfAalFf_yeuW?purpose=fullsize)
+
+這是非常常見的一種彈性聯軸器。
+
+## 一、它由三個主要部分組成
+
+1. **第一個金屬爪型輪轂（Hub）**
+
+   * 固定在馬達轉軸上。
+2. **彈性體（Spider / Elastomer）**
+
+   * 安裝在兩個金屬輪轂中間。
+3. **第二個金屬爪型輪轂（Hub）**
+
+   * 固定在滾珠螺桿軸上。
+
+兩個金屬輪轂通常有凸出的爪齒，彈性體夾在它們之間。
+
+## 二、它如何傳遞動力？
+
+想像一下：
+
+```text
+馬達轉軸
+    │
+    ▼
+┌────────┐
+│ 金屬輪轂 │
+└───┬────┘
+    │
+    ▼
+┌────────┐
+│ 彈性體  │  ← Spider
+└───┬────┘
+    │
+    ▼
+┌────────┐
+│ 金屬輪轂 │
+└────────┘
+    │
+    ▼
+滾珠螺桿軸
+```
+
+實際上，兩個輪轂的爪齒會交錯排列，彈性體填在爪齒之間。
+
+當馬達旋轉：
+
+1. 馬達帶動第一個金屬輪轂旋轉。
+2. 第一個輪轂的爪齒推動彈性體。
+3. 彈性體再推動另一側的爪齒。
+4. 第二個金屬輪轂跟著旋轉。
+5. 滾珠螺桿因此旋轉。
+
+所以，彈性體不只是墊在中間，它實際參與傳遞扭力。
+
+## 三、為什麼中間要使用彈性體？
+
+它有幾個作用：
+
+* 補償少量軸心偏差。
+* 緩衝部分衝擊。
+* 降低部分振動傳遞。
+* 傳遞馬達扭力。
+
+但彈性體也有缺點，例如長時間使用可能老化、磨損，且受負載影響可能產生扭轉變形。
+
+---
+
+## 四、今天的理解練習
+
+假設爪型聯軸器中間的彈性體（Spider）因為長時間使用而破裂。
+
+但是：
+
+* 馬達正常。
+* 兩個金屬輪轂沒有損壞。
+* 滾珠螺桿正常。
+
+請問：
+
+**馬達旋轉時，滾珠螺桿還能不能正常獲得旋轉動力？為什麼？**
+
+請試著從「第一個金屬輪轂 → 彈性體 → 第二個金屬輪轂」的動力傳遞順序思考。
+
+
+你的問題問得非常好！而且你已經開始從機械設計的角度思考：「既然馬達可以直接帶動滾珠螺桿，為什麼還需要聯軸器？」
+
+答案是：**聯軸器不是所有馬達與滾珠螺桿組合中都絕對必要的元件，但在兩根獨立旋轉軸的常見設計中，它通常是必要的連接元件。**
+
+我們分幾個部分說明。
+
+## 一、先確認你上一題的回答
+
+假設爪型聯軸器（Jaw Coupling）的彈性體（Spider）破裂：
+
+你的回答是「滾珠螺桿還是可以獲得旋轉動力，但動力傳遞會變弱」。
+
+這個方向有部分正確，但需要修正。
+
+彈性體破裂後：
+
+* 兩側金屬輪轂可能仍然接觸，因此在某些情況下仍能傳遞部分扭力。
+* 也可能出現打滑、間歇性傳動或完全失去動力傳遞。
+* 可能產生異音、振動及額外衝擊。
+
+但**軸心偏差不一定會逐漸擴大**。是否發生偏移，還要看安裝結構、軸承支撐及其他零件的狀況。
+
+因此，不能把彈性體破裂理解成只是動力變弱，它可能導致整個傳動系統失效。
+
+---
+
+## 二、沒有聯軸器，馬達可以直接連接滾珠螺桿嗎？
+
+可以！但要看設計方式。
+
+我們比較兩種結構。
+
+### 方式 A：使用聯軸器
+
+![Image](https://images.openai.com/static-rsc-4/_TSk5pYtJ54V1doBb-ULD91bWrBpUAYEJc1ZcVdAJiRpD1_Uzl0cdt3CQMAqvjA9W8MvElRlIN3FhPCuXbV1nJMolCb2WsTTSZFZ7MpLvuR5songW27La4Z8ONwgvh1TrHyB4Jv2rZFzdsucgZPGkhsAavP4HDa8sxjvuqiLE6m9pIrGz3m68nkvFb09lv5K?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/3PzrrGO_qvRLp_Bu6gX8a-XlaZz7yDLbo2SUt_4ft18_TudVe9p0KI0yQyxoplxJEcp_GF5pIJm3Xxxd1BpdgUxwDKELopn1DJTLdzBfOeAkJdFCXfZNcsHfc7Oqm5eGJEepqDQj_LTdz9unsf4ajYNPaREdVn63IfdVaeDGuFTiGuVQ6NVPKMM-n0Z89-lc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/3Rz6xKUiF8NcCzbqTB-YzGcDhEaQaBfZSl_ZpF22YEvi-yVkcDUl3lNyx7e08MDDjXBsHeT2O5JGo_pTfDmTLjOFK0r1_h4VYuW1LhRB9aXGdiKRgqeMnigVjgghjgvZUg7oH8sHeaVjH0Riq-B4fzibiQkZg7r5as21pqVJG7UbbkmounWn_XZ5cFLCbwfu?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Z9eHmNH8UZuhh1co6n6xFEdMUer9IZsAd_J_X7Z8kFyXFMkyI22PH96Zdy4B0sLyswTIfpkSphnuVWadTBsQphLVFLvC_iH5ugbmfidM0c5PbmGn1dk_oXTutVJc7nidnfOYhafwAsMWvT1_htMh2B2fLhtGMEqso3B5YT2X-eMoa--oWK6f4PMNt13bIwEw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LHPZNrf8p0Y0kc_iyVXXKvLzTE9zv3MCII0-8nqGTJnEqi42Bjw5pBK994Ek2Wu0W7Rj2oE8LlfqZ5YBtmgXP_GoZXTkt9hzCjMZ2uqubTltcxaqTVMb8HuOGNfxaMRIHRBvAkyPz3UDEnTxRTvPPsTZB2wXLDlmUa5qTpjOYxqCWHTEHN7tn6aBwniIovOH?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-Nrw9WsWhSjgTdyxUDyMUa3TA-95vfjxoD3k1bhH5dnkCNhT_WhxbFfOPH5WfUNSsTRM3RP603K882rGMZmzQOM2glCkizimNa3HupZGUpdp6JDNv90E7WhGhkmtYzfh8xr3OtXlif2A7jn2u-L_s5IHUHTV8ZVJXS5CJgMMMiNlLagUE3MxDB0Tog8AHQUg?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/hmbf5KvhocQFtwGGgwOV5yWkSFUWiWLtTicGRkRkquqzyMsU1CddqRNFM3G423pCJOodw-qMFtH4N5gjbXlZb_Cdd4Ub_FtnvNMigwYRQIdWP-7i_Y4bXVhJBU6zUd5mMbcbzhc-1PWydsLa8pNI5lhDq9Qji0Wc5NXD0zkORPpPVNlNu6ZOJnPI3OyQS4ol?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/zped5003FlogGo60F5eGDTx4H6pjkZlpehiunZV7ZGbV0dsQmsEU9Mt1vVGgTxnneqDqGIyPo-HVh9Wz6ILtP9_cS146F0Hc6dOS9qai7pqsM0vfc9lpmZVvGXz7r6LGZ_xBOZNpHYUJx3nCjB2uR33Y7OZ-c_tbOJrUJOyDlPGtPahgvSNUHsiqJdOjxSmH?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Pl5FiuZadxX2RljfkrdKCweE-xlTAyroI7Xfk91terDS6uQGHPpy9Nm7kXQkQVCk8BpaHG3OlAIf1vg7uRxE1DBTR7wcmzqvkqQaGO8x1Sgc2g7rIPZRuzfordzZivDjUUbwGZzVR2pbCfv8aEMInG0hiSIAbN_DM7twcwLrqYOJ4lhucevsUTOTaLPGwEOI?purpose=fullsize)
+
+結構：
+
+```text
+馬達
+  │
+  ▼
+馬達轉軸
+  │
+  ▼
+聯軸器
+  │
+  ▼
+滾珠螺桿軸
+  │
+  ▼
+滾珠螺帽
+```
+
+這是很常見的設計。
+
+優點：
+
+* 馬達與螺桿可以分開選擇。
+* 更換馬達比較方便。
+* 可以補償一定程度的安裝偏差。
+* 可以使用不同類型的聯軸器調整傳動特性。
+
+### 方式 B：馬達直接連接螺桿
+
+![Image](https://images.openai.com/static-rsc-4/84ZaYa43lUKafxJZ1Hy38OnZABYefj9LLSMuws3odM32XQASE5bEDIUTIJYM7HNPQu6u_mBFakOxdzxLjuxeV34eb90n4G8eCZz10fHbEDX6-03rosCU4llkyzmJOSZX6JuETBgIYwoNqNyGlg9S9lizxwKLUDmplyKbHiwR73qBCUp7kJGtdK5fSMJhKHAc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/YV9K6BbD70HiFqZZjZYtz85DNK-uwQ5PPxEdFfY49THUYEIgLOK7r8Ahs-LNfjjL-JBeC9F5WArZdcXJCDdrhVaqZVSUBs-XUAZ4apRpSpl6531PJpEHLMRTGPduEHxylj0buV5KKHj_OTRCdrdy9snArY8e3jBTHYsznOBwwfa2CJ5T3-Lcq2L8LqY10zd-?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/evP6sbQgusJ0kAuM-sprPrhORAzR5-qsplxgMG1duruyItw3VZtLRSno8LsWuZFUfA54BBU0QIwM_ixtOO-EJfF6pUqvLPOJ1mkaexxt9V9GiGXf3qskzZtkmMLcdsgimv0Xr-A6TDNVs1TrXnL8XhUR2dKS3treU9RiyMuFQ2GlpQrMwvM6zY0tkYaKT5hX?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Jd1icxY_bYbzEwOfNbXUZ7scyTjcB4Jgf_h-XAP6igF3Rj7q0LGj8yobrLyNyfaoUmrgxk0sGQ2jz7jZfPNGlPb3ieAP3c113qe-DX6xFkIyjU_efLBQM97Ev_DsfjE_vvpIiP1HY9rErTqIHPSXma7KUszxLvZzUKNO0z2slmqWONH7fDzW0W9MOG4ExoLH?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/3UeuQYV5POQIGSeFkekVsDQtUeMvh03Q36CPeKwZ8ES16Cc5u5zdDvLttxst-bx_Dj36Iq8aDqtjId_GoFtfNzzj1ZJ9miweiGcilrAi4Eq3Xyqv6os2GQxVxq560kJzX9GMCqTpxW4B9IDuT6LeqodlkNBONI0cDr5v5Em2nWokyOjoyw-Wje1injr2kF1B?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/rogaNBwZ22o3V4Xzsm4Y0dOPkoF4L6ENpqiaw6wDIhvFP1qAttEw5jLosndXoRuryoULbJ4t06YW6rWfsxxkongPT7nPK0dMWuerRR5OtVWEd4rzUd1_v06Ov5rTP85l7KG5Hyf5XUCBFgiGG7h-NyYG3KRqGjFrHeVkyDxWYO1z0wF8AKXdEVWIVL2AtbGc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Eqr0gtbJ6u0YX2J6o9i9Mh6L9bImRw8a_o6AJlUtO0yu4-DzdECREvPIzFZHbcWDHIvVz0f8La66pMrLN7SO0Ral5WzrA3zhsh6fZXJ5qlLiUYzZHZz9XxiFQN9eYuyY77XnWBL7VuZWiwsmgjX_3AdN_SARhSWzcV_eL9p2KwD9I6B4UUUv9v3sbQNKGBec?purpose=fullsize)
+
+有些設備會採用整合式設計。
+
+例如：
+
+* 馬達轉子直接連接螺桿。
+* 馬達與螺桿採用一體化軸結構。
+* 螺桿軸直接設計成馬達的輸出軸。
+
+這種情況就不一定需要獨立的聯軸器。
+
+但是，不能只是把兩根普通軸硬接在一起就算完成。
+
+仍然需要考慮：
+
+* 軸心對準。
+* 扭力傳遞。
+* 軸向定位。
+* 徑向支撐。
+* 軸承承受的負荷。
+
+---
+
+## 三、為什麼有些設備選擇聯軸器？
+
+想像你有兩個獨立零件：
+
+一顆伺服馬達，以及一支滾珠螺桿。
+
+如果其中一個零件損壞：
+
+使用聯軸器的設計，可以比較容易分別拆卸及更換。
+
+這也是機械設備採用模組化設計的原因之一。
+
+---
+
+## 四、今天的小考
+
+我們來確認你是否理解兩種設計的差異。
+
+假設有兩台電動滑台：
+
+**A 滑台：**
+馬達 → 聯軸器 → 滾珠螺桿
+
+**B 滑台：**
+馬達與滾珠螺桿採用整合式直接連接設計，沒有獨立聯軸器。
+
+請問：
+
+1. A 和 B 是否都能讓滾珠螺桿旋轉？
+2. 如果 A 的聯軸器損壞，是否可以只更換聯軸器，而不更換整顆馬達？
+3. B 沒有獨立聯軸器，是否代表它不需要考慮馬達與螺桿之間的軸心對準？
+
+我們一題一題確認，讓你真正理解機械設計，而不是只記住零件名稱。
+
+
+三題全部正確！很好，這次你已經理解聯軸器在整個傳動系統中的角色了。👍
+
+我們逐題確認。
+
+### 第 1 題：A 和 B 都能讓滾珠螺桿旋轉嗎？
+
+你的答案：是。
+
+**正確。**
+
+* A：透過聯軸器傳遞旋轉動力。
+* B：透過整合式直接連接傳遞旋轉動力。
+
+兩種設計都能達到相同的目的。
+
+### 第 2 題：A 的聯軸器損壞，可以只更換聯軸器嗎？
+
+你的答案：是。
+
+**正確。**
+
+因為聯軸器是獨立元件，可以拆卸及更換，不一定需要更換馬達。
+
+當然，還是要確認馬達軸與螺桿軸沒有受到損壞。
+
+### 第 3 題：B 沒有獨立聯軸器，還需要考慮軸心對準嗎？
+
+你的答案：仍然要施作軸心對準。
+
+**完全正確！**
+
+這是非常重要的觀念：
+
+沒有聯軸器，不代表沒有軸心對準的要求。
+
+任何旋轉傳動結構，都必須考慮旋轉軸的同心度、安裝精度及支撐方式。
+
+---
+
+# 下一個單元：不同種類的彈性聯軸器
+
+目前我們已經認識：
+
+* 聯軸器的用途。
+* 馬達轉軸與螺桿軸的連接方式。
+* 剛性聯軸器與彈性聯軸器的差異。
+* 爪型聯軸器的基本結構。
+* 直接連接與使用聯軸器的差異。
+
+接下來要認識另外兩種對精密運動設備很重要的聯軸器。
+
+## 1. 膜片式聯軸器（Disc Coupling）
+
+![Image](https://images.openai.com/static-rsc-4/pEvb5V4pOyfQvSvMCPSPFBdyogmCb8UfbKYfGAmTIabeQa6_jIXTztFwdO6pZOkDDEhrhGGfKmPxNAPSNwhAGZWzRzcAE0h07t7Pnu8ufOCdzLV5QCZXzngx_xHB5tfy1bU-xQzNCj9wkW9M71rPrCkqMu4ZPBqzXtqwpUaO_DJprhHV1rSEk2-UI24iE1ev?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-yd9SROdUtk7r-TdNwZsSF7rG1kXmSohNs7qgX9e3wBMQRs_GCDxzolBqzmjylfXVdd1dh0L1TayL-YLSaQuW_TsRU2ZyDdwgIQNE1pc9qtsHIIqnoLp_a8Ic4Te5kHZqEzyFs8Wcbt_me3o0oLjZ8RSTu4LEc4uD7rJ0tHoek2W-3gjzU7eoNaVvPxJtIJg?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Ra_h0NzxB1BeP59WK-FtVnkcx8tPllV3QmT2GOREEQKtGE7jf2tu3AZFoXR53BIAaQliQne-eQ4EIf6cLlNbOPgsyxFscOjwbYMGHGHE1MB8deku_JqspDEfU7eMkdQQ00hNV-Y9K6WaqEvM2Wk0kbJuqoheMbvx_-hmXRExlyIPOFPaR8A9iTDSFsg1BfmE?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/S-hB9lqz5DDfCWSLNo3d4E4lJ2-D1Nl1Qjs1gSVH3TUbYskCVwvwoPNb1lPwQ2oMPrXNJhXhWiJZS1UjZZXBECxYJQn2HSdSSOxaaIKlrhjk2Jt86x8KBGrFerFzz1_zHtzzfEwZ-Nv0VjwmJa2ERXxR8Wm0fQLO4cJv3jh-mJq7rcLAFlN9Z4lT4_6teSqc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4aeITywesGqe3ccvr3S5Tdbg19ONOkP-HEnFs8W52ZnYyDgXqd7yxjSXcdDbP97aRCpuXzbNPz_hm4-UP-yqlp_tZaaNkeMVi7cYQxedD4pKhwymgQRPebC75hzIT6kddbn_jHNTeOGBgJX4D5ToImcZmFKquRU4yY0xGwz0olmZArLGIp4mvGcl44iRi25Y?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/9owyDW478o7VEs9TKwEAaRN01o_A29IYtHtygEGCeoCFCy8oAJ-j--3C5V7VwoK0lSfGGLVXt6zftO9I-FSEG7-7Zxf0r5TPNlW4zsLVItSgy0nzdHyJqZaLdAAcR0OeFzPo4fpTHOZj_ixOJ0lEQwCMNHa-ErHXxFU560forvW3OwWuKNKP1RivZthxdoim?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/NymbD-frVmbcLgWtuzuwb3qRnmA_tKP2vDIU0e7zbrEB_so79nKJaSnNZZn3CChdcblnRJ9eDZ4klRYs1PnPNkqrUGqNKXIkltkeem4iKIHaZxUfPTKL2XBlcdWLyMCZu0RL4CJlnFTxWuIUmLNu1m7XyIuCBcdWgHV45F6ji6zK_YsBAryskao1O13TtI6q?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/15OiNrbYvM-8OST47NDuG_pRQOaRrNqF5OiZzbHB80nbHDX2hU9gQo1bZpUdmWw7c0y_v1JmjPdqIZeYuQaRa7hHuqGTRCV8109ERgsrwRTaeaJi4gYYy6nFXyFZWfmBqMau6FfmTz22hSnIsMWAqwQkMf2mPmeZMMIa-QjrZkltWNkWg-UAHoUetelAH7Qd?purpose=fullsize)
+
+它利用金屬薄片（Disc）傳遞扭力。
+
+主要特點：
+
+* 使用金屬薄片的彈性變形補償偏差。
+* 扭轉剛性通常較高。
+* 不使用爪型聯軸器那種橡膠彈性體。
+* 常用於需要精密傳動的設備。
+
+## 2. 波紋管聯軸器（Bellows Coupling）
+
+![Image](https://images.openai.com/static-rsc-4/ldHWkcCbZcLSH8iaiLm_JBgykb8B_ltp3BphOKRVaJAqcdus6NefftUh4oc4qIOtqK6YIArbraNrm1E5KbBKPfvnTVCradeZaLdbT0Oe1Yoeyh62Egp9GNUror26sfH2QaUoOUvY1m1a9PAadKwBQJwBSpqFRDs8an1TZNPhlkxs9XUCTNG5gmp6Ko460t3s?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2gwGlbp3oAlMFYnWSUOd1VpimHBRkV2vixoDLVJCtrhMdMJ5kopYYz8iJEkGnTyENlfoUtmB_1W9Zad8YhuGWUXvUGH21PIIKytPy_pmRXzBAzkpkMTO23YKKT070KllG78O8TwyWsm3ShBmBMt7doj-QXUBfoePF8dd4PvGFyj5D1HQGXrzJyRfdNKf-vUD?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/dZmB01bjqAIzgiY3p1ZfWeNdd705HFLOMSvMtnbPlyr8RgT64TQlEbI7TBJDQUBBjn1MplYBRdEBiaGWcxuFD_2GDFhUZBxlm8Z86aae2QXM4g0Qf09yDt5yklC5l2q6QjBcGiWx__YI1VSKGZs7olMLrGkgfoRhExM9Vgy9jtVmoGuGw1y9IB2KiF_ZJFyl?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/jHroF_i0QYsW3anb2_m99zqJ5v4PXXBiqp1g-rh9RCYqWNV11sb3rcQfICqeCkhwg80hDYk63Kyyq2gw_pzwCeE4WIdqNGTflmsdRS5TgBYEjZQbJuZA_efQzsrqoKAZks10b8yGMBrxSUayGn7lZPs54lEEaI3bC8v7gp1qon4PNdQxw8fC7ifkX_7cNvG6?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/rAqS8PrGK0r_9IKd4qvg_DE6mUgc-RsseCkunUfdI6mI4mJVeBrNHDeHhx4DFiZ7KMtUp4dtP1Fln61z-jt6FquONHCHsDdtSDVJFAcuUo3Fcs9qg2BkUoDtmK5pyIOa0uIzDsi54zXZCFRNZ4VwNjrEtmP3ZNEUyccbT3uPjSd6qmhTjhmhekgqHDbh8VQq?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ymCljsacPFWrpJYdHAjGtRJLvk3Na982EFsCvbKG45DBrcNj4WtD8ah1zRbKVMHvBcmXjVdYmwXa-lrv5NqKGvOM63PtoLiZuFxcjJsvXHTyNCI-2WPBBcTLeSvoUbmrM1pcxj1bXqJoYPnmHvT51mLbX1j7BWZ0Ubv7v93yTGwJvqtTf5P-IZn9P8P46AP9?purpose=fullsize)
+
+它的中間部分有像手風琴一樣的金屬波紋管。
+
+主要特點：
+
+* 可以透過波紋結構產生彈性變形。
+* 通常具有高扭轉剛性。
+* 適合精密定位及傳動。
+* 可以補償一定程度的軸向、角向及平行偏差，具體能力依型號而定。
+
+---
+
+## 3. 三種聯軸器的差異
+
+| 項目      | 爪型        | 膜片式  | 波紋管   |
+| ------- | --------- | ---- | ----- |
+| 傳動材料    | 金屬＋彈性體    | 金屬薄片 | 金屬波紋管 |
+| 緩衝能力    | 較好        | 較低   | 較低    |
+| 扭轉剛性    | 中等，依彈性體而定 | 高    | 高     |
+| 精密定位應用  | 視需求       | 常見   | 常見    |
+| 彈性體老化問題 | 有         | 無    | 無     |
+
+這裡先提醒：表格是一般產品的特性比較，不代表所有廠牌、型號都完全相同。
+
+---
+
+### 今天的練習
+
+假設有一台精密光學對位設備：
+
+它需要馬達帶動滾珠螺桿，讓平台精確移動到指定位置。
+
+設計工程師希望：
+
+* 旋轉傳動具有較高的扭轉剛性。
+* 避免使用容易老化的橡膠彈性體。
+* 適合精密定位。
+
+你認為膜片式聯軸器與波紋管聯軸器，哪一種或哪兩種比較符合需求？
+
+不需要急著選一個唯一答案，請說明你的理由。
+
+
+可以，而且我認為這個方向很適合把你目前學過的滾珠螺桿、直線滑軌、聯軸器，逐步延伸到 GMT 真正的精密光學對位設備。
+
+不過，我想先把課程目標訂清楚：**16 小時內，我們可以完整建立 GMT 產品體系的認識，深入理解與精密運動、光學耦合相關的核心產品與技術，最後進入矽光子、光纖耦合、雷射及 Camera 對位。** 但如果要求每一個產品型號、每一種規格都深入到設計和選型層級，16 小時是不夠的。因此，我會採取「所有產品系列都認識，核心產品深入學習」的方式。
+
+# 一、先認識 GMT 的完整產品範圍
+
+我查看了你提供的 GMT 官方產品網站。
+
+[GMT 官方產品總覽](https://www.gmtglobalinc.com/product?utm_source=chatgpt.com)
+
+目前網站列出的主要產品系列包括：
+
+| 類別          | 主要產品               | 課程安排   |
+| ----------- | ------------------ | ------ |
+| 半導體、光通訊解決方案 | 六軸平台、多軸精密對位、光纖耦合設備 | 深入學習   |
+| 直驅模組系列      | 直驅平台、多軸運動模組        | 深入學習   |
+| 壓電模組系列      | 壓電平台、壓電控制器         | 深入學習   |
+| 電動滑台        | X、Y、Z 軸及多軸滑台       | 深入學習   |
+| 手動滑台        | 交叉滾柱、線性滾珠、旋轉、角度平台  | 認識與比較  |
+| 精密對位平台      | 多自由度精密對位機構         | 深入學習   |
+| 傳動元件        | 滾珠螺桿、直線滑軌、聯軸器、支撐座  | 深入學習   |
+| 自動化模組       | 電缸、電動夾爪、中空旋轉平台     | 認識與比較  |
+| 光纖／光學系列     | 光學平台、顯微鏡平台、中空平台    | 深入學習   |
+| 馬達／驅動器      | 步進馬達、伺服馬達、驅動器      | 深入學習   |
+| 刀桿燒結機       | 感應加熱與刀桿裝卸設備        | 認識基本原理 |
+| 模具類         | 導柱、導套、沖頭、精密模具零件    | 認識基本原理 |
+
+以上分類以 GMT 官方產品資訊為基礎。([gmtglobalinc.com][1])
+
+我也會把網站上的產品型錄當作課程的重要教材來源，而不是只依照產品名稱自行推測功能。
+
+**GMT 官方產品型錄：** [產品型錄下載](https://www.gmtglobalinc.com/download?utm_source=chatgpt.com)
+
+---
+
+# 二、第一階段：先建立所有產品共通的機械基礎
+
+這是我認為最重要的部分。
+
+你不能只知道「滾珠螺桿是什麼」、「直線滑軌是什麼」，而是要知道：
+
+**當這些零件組合成一台精密設備時，動力如何傳遞？各零件如何配合？平台為什麼能夠精準移動？**
+
+我們會先建立以下知識。
+
+## 1. 基本機械結構
+
+![Image](https://images.openai.com/static-rsc-4/Cb0-4FBQFXdnwDnf52EheeLR0jByfT2Gy09cYoGoMDioUe2ftpaHu32Ziuwt_M50Nel4A7U8Q7HU8ml8VlGOZ6FmkwhUdZ0XhkLPnQqjI3dyCdidbPEWlOK0VKbWXxDkg3BOdoFdjKf3_LDfFQnQqNnwHs1r6esOJSeDttDVE2SiaqW4wtA2ugPkEXC3MYLA?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/kb4252ETSg5LEkuO1IbHGAcv6NUpKfSmueRvtB_dUyG6JqxGKre_zEYMQFR3MAzKSXCOACgY2Z0SRbq-QOINuzamSCykD5k4NtoN8RNRc9TJuDoy4zIMcee_oK4vEazRI8ispvhttLc78A_pZwQNPSt3JYwZUVlkLOzxmve4rrqkJiovlIA05Dvfcrr8j_qc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/UMIruAApQAy8we12PwgBf8Fw5LBjsQI0Az8MJYFtmIqEWP2sPuVniHwxCXiURAaWte4usd2x8McxFsnu_i3-L9A8A78Tnc4NxJ9BtMQ1cZm9Fk8DQepO17Y92SYGFkDmBiTRBvOkWf5KfVIgaEd9MNevVMq6AkdXBsGEHgFTYxI9r8ZyE84Dt29p7m89hVLR?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/M5pYr_9-F9WznwVhzpNN4apzJkFOiEZ6STo0JTU-PfqliTfSNxDYLgVzZor-wGsHAbWim51MIeskAws1_1N4myDC55QdlnLpBCaiX_9F_h_ut4Uxise6CYtRdAh-LenGQjAMHjWmXQhtUouD5zCjiuOgbpusE2_END822PRlhs97DLeOJRfDwkLgnVe1yQAx?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-HRXayU8Zbiw4AHb0IeRZVd7vnQ7yZXS0mx_BXm2pPDLSV8bsc5cy-lXiYUmz5QEPVRQUP3YXL7gg4YSW73XHZk3k7FmAFOIopTRAIm1L56JdreY-UdJG84W_itBdFkVqFIP5DoXnEzYRrrXZLq9wSkndFj9VN_YDEj1Trp1fsjOzR9z39m4318itP1X08Is?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/lFppUzOmb7btaz7jFxoGB055RUxhsSj1BJy7ZN0ABq7eGamhQ8gU5YgfkrrS1aMLHHFeJkzQ8Cat0dZL8qdxszEutAvNfnMRjtcavRupKvKvmtxbTgboitLRGh0CHCZFjthUsZb11dMSR9wLhfjtdWTZVd8FVnnP9seNo9kNqBKriT5drEWCIE1IleL1Zifw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/JjNn1_2ivw379zgrNl9q7c2VnQQbYWpF1Cw-zMDnJLW9pcLnhfp5Bnmkrf4ENB9Q9KnZrJotJyKIr-pcM43Gtla50qC7JGwCfosrl4Qg-D_SifAVR3tiOqah9ZuGj6XP5vlAzeNU1wYKNzYG0iK9im-TVedIcKg7E5zFWfFoWjB5awYIoD2VypuXoDT3DyVV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ivP2SZitFn7idJmQXdQmmvJKqhMrc8S_EHc_uUPIW0EUBMkLif12vJVlozZ8S5l8wC4wt01uBDx1f1KD3KYYC1dvVznJwr6z0l7TkIxoFJJWNmPyQjeUkX9A8E77bOrjmC0ULei36NkYjP6s3EE3wBaRDN53KdlImr-cSXqLvCn3X9-8RHFgI2a1Js11LujQ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/d9603dxsLjmNRYw4sQ4sbVj2JrZlLT7clJ0wcLTcqwrpRdWB_CJze_CZmO333hdOxrqTaJCnB7rBil0ADbv8JORKIL0VUzjn26PIlCLbyIJUqBpu8B85Oqdh2PUAepaAQnGCx7elYpQzS8vRcZEYA_Q1zjsVrX6-P5m3BjMbEYlIc5woDsktwgWL1I1EIU1-?purpose=fullsize)
+
+| 元件   | 英文                 | 必須理解的內容       |
+| ---- | ------------------ | ------------- |
+| 基座   | Base               | 支撐整個機構        |
+| 滑台平台 | Moving Table       | 承載工件並移動       |
+| 滾珠螺桿 | Ball Screw         | 將旋轉轉換為直線運動    |
+| 滾珠螺帽 | Ball Nut           | 配合螺桿產生直線位移    |
+| 直線滑軌 | Linear Guide       | 限制移動方向並承受負載   |
+| 滑塊   | Linear Guide Block | 支撐移動平台        |
+| 聯軸器  | Coupling           | 傳遞馬達扭力        |
+| 軸承   | Bearing            | 支撐旋轉軸         |
+| 馬達   | Motor              | 提供動力          |
+| 驅動器  | Motor Driver       | 控制馬達          |
+| 編碼器  | Encoder            | 回報位置或旋轉資訊     |
+| 控制器  | Motion Controller  | 發出運動命令        |
+| 感測器  | Sensor             | 偵測位置、狀態或其他物理量 |
+
+我們會逐一介紹每個元件的外觀、內部構造、作用、工作原理，以及它在整台設備中的位置。
+
+每個元件也會另外搜尋網路上的技術資料，參考專業廠商或技術文件，例如 PI、OMRON、THK 等，而不是只引用 GMT 自己的產品介紹。
+
+## 2. 機械組合後的作動方式
+
+例如，一台普通的電動精密滑台：
+
+```text
+           馬達
+             │
+             ▼
+           聯軸器
+             │
+             ▼
+        滾珠螺桿旋轉
+             │
+             ▼
+        滾珠螺帽直線移動
+             │
+             ▼
+          滑台平台
+             │
+             ▼
+            工件
+```
+
+另外：
+
+```text
+基座（固定不動）
+  │
+  ├── 直線滑軌（固定不動）
+  │       │
+  │       └── 滑塊（跟著平台移動）
+  │
+  └── 滾珠螺桿（旋轉）
+          │
+          └── 滾珠螺帽（跟著平台移動）
+```
+
+這裡我們要建立一個重要觀念：
+
+* 滾珠螺桿負責提供推動力量。
+* 直線滑軌負責支撐與導引。
+* 馬達負責提供旋轉動力。
+* 編碼器負責提供位置或旋轉回授。
+* 驅動器負責控制馬達。
+* 控制器負責決定整個運動流程。
+
+我們還會學習當其中一個零件故障時，整台設備會發生什麼事。
+
+---
+
+# 三、16 小時完整課程安排
+
+我建議分成 **8 個單元，每個單元 2 小時**。
+
+| 單元 |   時數 | 教學主題            | 最終學習目標                |
+| -- | ---: | --------------- | --------------------- |
+| 1  | 2 小時 | 精密機械基礎元件        | 理解所有機械元件的構造與基本作動      |
+| 2  | 2 小時 | 傳動機構            | 理解螺桿、滑軌、聯軸器、軸承及其他傳動方式 |
+| 3  | 2 小時 | 馬達、驅動器與控制       | 理解步進、伺服、編碼器及位置控制      |
+| 4  | 2 小時 | GMT 電動與手動滑台     | 認識不同滑台結構、軸向配置及精度差異    |
+| 5  | 2 小時 | 直驅、壓電及自動化模組     | 理解高精度微小位移及多軸運動        |
+| 6  | 2 小時 | 光學元件、雷射與 Camera | 理解光路、鏡頭、光源、影像及視覺定位    |
+| 7  | 2 小時 | 矽光子與光纖耦合        | 理解光纖與晶片之間的精密對位        |
+| 8  | 2 小時 | GMT 精密對位設備整合    | 理解整台設備如何完成自動化對位與耦合    |
+
+另外，GMT 的刀桿燒結機及模具零件也會列入產品介紹範圍，但不會占用太多時間，因為它們不是你目前最終學習目標的核心。
+
+---
+
+# 四、最後要學會的：矽光子、光耦合、雷射與 Camera 對位
+
+這部分會是整套課程的重點。
+
+GMT 官方網站已經列出與這些技術直接相關的產品及應用。
+
+例如：
+
+* 高精度六軸平台
+* 光纖陣列單元（FAU）對位設備
+* 雷射二極體雙透鏡主動對位設備
+* 多器件耦合設備
+* 自動化光纖耦合設備
+
+([gmtglobalinc.com][2])
+
+## 1. 矽光子（Silicon Photonics）
+
+![Image](https://images.openai.com/static-rsc-4/W_4oUaQDQX5vsqdpJOryZxGR19qqPZ1lRF4p6PktiXtOOf76BjPK0AIrdYT4kFhwsUQrjyakqrsGp4OFbJwGSnq74ybL-S9aucn7ITCOzYXpOE_4F0NIr0cK_nlx9K2YCSkaZkeQJ68G_jjSKuEfqkkZeE5tNNa7FoX6inNeplg1hyvdAtzAz8r-CmTfaiiR?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5iKCNolLInXdNzvUv1eCo2_ezkGXwEGlqO9MeSLKwO_zBzi-8_o0YrbdhddV4lfrRJemsrjuMb1ZFMRxzrBK0sh4w50yJ48yT8F_1riVUGzC42nmJrDg7jL6oxj5H9ngTNCmay_0Spo-QhGNz2-E8OqAKXg_mxGlwb36JdDIXb-2ViprJAJdS0iq17y0VKgR?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Z12fTH7myHm8g8S9LahdRkO4XhUdCs9Xnp4zMW14X9fL6SQvqr_Qy-Aw6SXrz2rBuWv0m9l-6J0xSTb1KED1MuTjJdrpWTof3ATcfSphQXx0FARJPs8sgGqp9ZfviBoxqPduzhlT3hfRit20YOU2559AKixB3WIqYnsXnL_cESrl4NIa7MczT7Z9k-WcP61k?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/zsgf55x465eP0YqFs56e-2_yxktW_i6gkFjFan5Mzy3Qb1x123h1PACh2WS8OZAzyBsPF6BZoDes6UuDHk_qB66qMvG_9jTQ0eQQzwe-aOeL-uweSPTon7at6i3y7N17MKjIPy5YCZY0rTQgNfIg3apF-T33KAvIHJddvm2tOUG5hhr6Keco6m9tbjYQSnmz?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/HM0OJ_xsfuZYEnP3BXvetCdmd93Tz_r1-xgXdH_rwHsQjx0y0EE-nAH49AteWVNMk4iD3ah2Kh5PDU8eaerZRywgMUo1IpE8-5EwHh6APGA7paP7QCKpHgaje3_SdJIvyC1yvictt2MP3zP9ifSQS6gs5EVFyoVdLEp8q4R6Ijfjwf-sIEw0HtJA-ua6Qzf8?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/qs29DxuKYy1LhYHbJSsTK_pdtLG_rDtnaH9fezCuhduUTbn9yHn5ECgNNM-geU0aa1zQXX2UJNgAiL9_Pi2XHLtDneIBDs5KEBnNHL53IROq0j7i5RFfQPKZWeoAPfpBftWUK2XGje1FhlKQPoOQb3MlNqe46UAjnXFS8nAIEwx5GjMCBbWdMme54K57lvIy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/GLrTh96z580dUvM7iPxqtfO3mVGzqE4fdL4hpgfQhmgqfXmo3E1hRyZSIHWH9eA9PTL3tekveDwgLAsrOH1pBuCK2K-1M9ULLCvGMEpxAWGO5ty3Io4QO0tgdUudR2vZRtKxc7twuI5bYyqgWj9e0YQTJOBDxvkCxxULKSz5IR39bqmJZfc19pfjMdHPuc99?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8R4utd3OJ8EnEz862bK6CyAbcUbKDeS_-Qy_l_uAINTSiIPrk33BwA4izjPSzybg6kkqavDGjnbrM5CidqCzl1EtgVlZjua8QBVyZnXi1fhfdU2f0wGJ_BBLV8X6KKUYIL-2o9EW4NKGXRx9BnyCDogsa2HIXdGoWJyRDJsrvx25krHB4IHjatfdpzAmro2B?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/_vp558jwmq-24NqAn4dle0a_FAm4b1l8eSjtXYru7SUVnvxXb6y99Ej3VTUpYwa0xy1NGbz_tN8rBI5-N-SFspOQSHctfzVEhoST4zkfKsaZP_nj1qhL0dUn-QvsJP-15Io58cVgYEE83DCBlVMVjSDkqxwtZMdObr0qOz4MYEruQqciaO7kOtF19_TMzFAC?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/AErx7xD4GHpWkweQorgHHoiKUjlQ5BbPyotjMVoGwf2JCwkN9IRTvlIdTF0Dgovro5emS_zk2XNv0s2btWBc-RSo3YcbQGTmLJiyZHIIgJUfZtoF0epKrJP_pLxdebaMR-ovWxL8R4vfRofjgOlVDR6xrybGmbQp_6Dx1ph3o4w5lFq9VAEfCM_WqiaygIFh?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/3AuiefW3YSrbe0_kA6aXn8zLDrm-2NM8kZ4E7gXBUCcAyVCfz0spHwDoiTs0I4uhz1jI0KXJ-ECCVy-cE6wFaJPhy238ecXiGgXEwX2VCYflWk1Ii3cRAZLENPtTOfrdNSTNs_trOvEKRWQ9eu3c8BfsVPqqhFKNEMRcTUb5pSFx9rYIGhabHbBVCflTIpGm?purpose=fullsize)
+
+你需要理解：
+
+* 矽光子是什麼？
+* 為什麼晶片除了電子訊號，也需要光訊號？
+* 光波導（Optical Waveguide）是什麼？
+* 光如何在晶片內傳輸？
+* 光纖如何把外部光訊號導入晶片？
+* 為什麼光纖與晶片之間需要極高精度的對位？
+
+## 2. 光耦合（Optical Coupling）
+
+![Image](https://images.openai.com/static-rsc-4/WIA3-mvkv6qIRLAYxd719dYoI0p_XGNWdbqAB_loCO7PMaCrvjICkxNNMVI2iuiLgAuk96O7doA1nnB2NX_bwPSx8jeAwkA_41LuzMu1oiKlWAyjNEH2UJujMX8CDeSXkfohuCamK483OhfKx6mRX7iAH4_3Np5dXiQUuGlRn4vsg-Sh83j_GXARPx-QZm41?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/bwWO4r1FCWmI39LzxC7fmskcd3rSJaodeczMr0X8nR9eqG6jeDMJnvDhVWL190XjTHL0GPGTvuyp_0dVzvv6q3dqjZYoo3JNCN7qIU07-TPUpJR2ZpLf7R5GQhvdJIH2fEOz8WoRBu1o0TAjWDW_mIYCYXw0-5-h3Gpu3Lx-y_eRCob_2x6doXuPlVQKflJO?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Z6U-ESoQ7qiA1uoVcHCAsVS_yejJX3a2o2mrtTwtgIR5YWqAseV_QHAjS6ds-SGzWkD16y1wJK3CVod_IlGAggdUl79P9nl9bxvA6N0rYsz7dYv9zrfENkPsOCmgQXiGAY3Ymp4yc0kYYt5Q4kg4a0z_ZVnN4c-HfIB-QXZ_W0rdBm9AfiABqMNlwEsXGquj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/A0NJeChrjIQo54IP5MW6GSKyhXLMHPW4QUdaI-TNBQ6R0MDCKs7xXyakJxN4bAYXZBizEXm6dvYu4La1qlEua9VbN2sDbOecArusSMhkJwGWtA3ohbSwqAWvzw2V3fWyxXhenPs8FBuIqV1sMrCcAc7Cx4lJ98eJdUjwU8QZBGe3mcfrdfO-2cgG-ocksYN2?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/it-c_KPPbn-CB009hIJa2goxMCz7MRdiPRJ-BmtWJEWcPb0dbhNJlRNEl2k90q7A3ixDYfeMvS1EixVwAm45QXtBeDskrZgAWiq-Bh0QD0sYyOHazqS93BazYplZglVy2bjBWecGvY4gDAEiuLx_JVD7xMliJIlMis2quBjJUffU5aOXEK0NX2fW8aw-nfWc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/WSJhjVhz3n21ZzlrqEXYA0aUsvbtzhG6qkOxretnEfzYaIYBXFUhd5qZJDAs2QHbo7koG49QhuW0wYM0w3m_zl26pMvc1W7F0H3sf1QKJ9e8zCu-UuHqksC4RKWgGBYrE8-4tU_owbTEhKxAHmORe506VQD68-QeXAjDK4JT_8ky_CQxDiQm9N-71w5Sx8YD?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5B2Xm3Ulzp0Yz-8eSiCVPVT9o6zZdSckRK5q_nlOeyWrJvwKxy9w1ArcUdPtw8P0FLvBxsttxembxTlvbTenSYHFoZKCM9Q5HeI510vfNk7iBCd1cE1XYUxtkJOlNwnGOWbUiQ4NCpRl9m30f8m2r-cGSQSn_mLklvccDgSeYYeNUy4_M7yglcUjeWqpj81H?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/YxTBuwYRVxbxCibQ3Swp9VVfuWZHNH4k_oWkoR4clGp7GICxKgX-gm-aHqN6GEnA2eRJYpFneFqHAq5M0_NQ8QrkMvEmvmpsHVcvH0nNyUpksHrwSw6u8JnwTweYdn_ez-bTdA-pU_UOMRXhDlASSsWehOVkSMf4SzTMm1upWoXpMMKUTlPvaZJhjsmi-33b?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/qGHBJJvfFOH9J83Y99eKR-q4-Lxe8Ic76J1xXW-ubNonibmc_IN3HwbjbpZrbFTxtL57oMnEmEGDISPd9iAIoXl7wtbUNVTc2-R-63vBvLkQ9CvcPph_VvN8K6ch8cLYkqYLGUaPSSObdfDiSkoiT7UVifqi-DrKt6XkIh_ehzbfUyAgFT7ujzpEucCHugYw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/aNxe6yhAarrmlS5kLUv65Bclwv5Nc0AbGNAG6XXv7HLoHH6nyQ2WNKnwG-vvGCf0WG3I1Rh_jqziCTkCbndYHvt_ss7Uw3LMamd6x51u2M5ZjF4pv3ZcMyFIPhMgXsXhy6YOwkKG3To2v5Et378WvYesMW-gaKvzS5SmChm36JZVmdYojxEfB0Bcr_MljkHR?purpose=fullsize)
+
+我們會學習：
+
+* 光纖與光波導之間的關係。
+* 光纖核心（Core）與包層（Cladding）。
+* 光訊號如何進入光波導。
+* 耦合效率（Coupling Efficiency）。
+* 插入損耗（Insertion Loss）。
+* 主動對位（Active Alignment）。
+* 被動對位（Passive Alignment）。
+
+這裡有一個非常重要的概念：
+
+**機械位置對準，不代表光耦合效率一定最好。**
+
+有些設備需要在光纖與晶片之間持續傳送光訊號，並且即時測量光功率，才能找到最佳耦合位置。這也是為什麼精密運動平台會與光功率量測系統結合。([Pi Southeast][3])
+
+## 3. 雷射（Laser）
+
+![Image](https://images.openai.com/static-rsc-4/Hee79yuuQWVoStpxIl-PufCzoI68bymGQlw4GIcV_ZwwbohjKyw48DXKBp1rNtyL1F3NskSE-TL3fbUZobUc5eH69SNavUNmOBlIwXYKu9FeLRDNqxO-hRbu961wIZuf5p6x-PNolQm0XKfYoiL8tgKRuurcFve80B8M6Zxx4xA9sl2NxqDj3qSgnanCX3bs?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/B_iDRh73aeWem2puYJcDo-rDcgwIAs8MLe7uUJLXHQ3Cbiv47RkSIF595K1RL001U9Tq_8yjoHJD9Td7_l9ZSnf41IyP862Jc1Yj5h8sIqCMbVdWS7H5B7QAdp_kHAesK8lx3aunIAjhMexBJ86V0NzhWuq97iHLwNOcnoi-l4ynMvO3FxnGRgJ0l8SE_M0G?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/rmA5phtG12Eqz3-QVeXcXGgENP5ivs93xm4VUULTc6PE8WG9ZMo-h0L5n3glbbgdkFedEvTCoKz5yTJLLSe89OkyERcoCkyezHQWUcUH6LSnnxcm0qwIqysB0wMVucPbbE1m-xnDJkLckViC50UhLhzRmd-lwv6ia8cVF7v_YQuiKX9k7hLXu-UAEqGgHOXe?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/g9tBCTBlzPIqzjl_pyUfxrkQEp480-H_PmmEu1R_5FG9sxjEWnZ501-bgDWWlumQTAsGIq8DMOaoseCU7KZ56-CI8hIObi4G7CKJ5APkOmTyJwviHs9Nubgd25j75QwlY4Mkfg59NoAU3H3ML21gtCkGzjSvfeubR3vEj87GygYvJIlH1DlIV16cF5nYAep6?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/YQt0FHiwzsHgZcuep_HPuf27zoHmO-G9yeky_EOnx4sLm4o7pHnvS4_bTpKPNCCKRm8WvlQjWtL4Gpp0zirgHjSsJALwkdZNuADL_A5830xZzCEbiHX298bcJfgKXMGxPmULisFQaMtqYiurofzkuwA0PuSHOJTn_X3DMhDMYGR9-weeU3t2DyMJHRkKAND6?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/dTX709LPXiJ5fNE2zTmd5IiwSYv7YeVOwPqaqfTzTAF6frirrdO68LzLBJYXFo4igkdY2N3GGOHIijjB4WUeRC6Lfsg_N-IKK5dT8hXpVOBF1wF-hp9hZNQvfE-zC4mG79YNthZmOHaoXxf8g1qDBf36yFics5J3XEx4EXnXU3cvAexho3R0Hee9epud4b5T?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8Vkqdu25DVCCcu8pJgtgisln-AWI84h24kWxS-KZRWdiEMUCYi-C8q5gcO8h3DPp4u-A5CsQVvYlyZ0Ht6DRw2V-resNl3cELlwEeb7w3JZRVprx1JM9IzhgBN0Hm0xFEX880rg0Fnh3SXA6ROj-CM74O4_y-ffyaD1BI7wreaQb0aBKYDZIYtEDBI4bYDao?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/pbcD_CV5UOyNZ2zsEHHSdQP8kyzc8UEIDsDaMM7P5GbL12UQlxUrTKnXZHajd2cD5JdumoNW4IB14JFTGgpYWdxHe80bGL-oKhXPYQz7IpSEOQTop7P-x73PAa-5sEYZzh2qcszTyUgsgeiZNofF2o0t6A4-soNS5EBEAJL0uXrfUNskls8-oGFtw-q-hvWG?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/xjm_uRL-mhMKcZ5L43mXPqdTgzHItac7Qxp74OlSQB4YjaKmHzIsjCU7q_fZ3NwHxAPZCVNBkkpfRiSJWyI3FAwATQDEpiIY1rmvnfWlKv4FH8GjaQZ96EdD1Tv2jWhZ63JvtUq7w6haIFTgyQpB37HSOF_snegLcE6X9kXfpnAEblCcBIghzfXmky7PX3mQ?purpose=fullsize)
+
+你需要理解：
+
+* 雷射與一般 LED 的差異。
+* 雷射二極體（Laser Diode）。
+* 光束發散角。
+* 焦距（Focal Length）。
+* 準直（Collimation）。
+* 透鏡如何改變光束。
+* 雷射二極體與透鏡如何精密對位。
+
+## 4. Camera 對位（Vision Alignment）
+
+![Image](https://images.openai.com/static-rsc-4/N-KZbcBLF1mXmaF-0BOn8PDLpfUTwEcq6J0Z6W-Ye0bmtepSW4DGcUkkLbd3uk_ooLBXrE0KUMWw_rqViJV1gXg1OaPUPzPP3wVk9oG-zzmYvxPVnkNpDegGxFyHJOGklNmy9hF5k5o--Wt8gWo0UbsuxzoKw5ilIWY7K-2DdQ3BdriNslgkpnxTlYRcOCRy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-Dn5XyiAjQ5c6bfVyN0dKBrr0U7i11r1GKYUuHOXuRT-8wj4n0CF7xwEEJKfN9TM8SyKvxOuG5I3lU5qbSX7d6zoWPujo_4Uwy4gwU7BkuQHrvwescEq9tiGTYKGHUck0z3YBuVT1gJDTIZW03eMmluUjqIunOdTCGz3RAJLAnrwmt6YAyc_OE1Iq3uEL4Yb?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/66PE4URklNTgvZ5KKIXIyy7dMNu9Xwppb1hzS6eZS2wqs9Bj80_lrKLDGgylDVNY9iIVyHny8lgfKSMqdVkFKPWQqXg5j4oX4E6uEHjG2o0GiOEw-rX0VQtxHHXolLhbWjiT9VBlq0rcz-EGevhkIt6CmUb8sTrkTqqNvxWlQklr2GEptPbpCGG7ku-dYhcK?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/yjczTlFJFvLfgce-6jf1cu1Bwv1D_l0U1GQ0Vvsn8w_qGYm17zi10xn3R1fOfDAggAs5KwCoJD8xnSVduDluBpC3vGlTu-SOS_RmYGMaA2mVcKj3P8aI3Ff1x-zcqsQHldyQtLyVe3dHcp2wleyDsYH71dTEy32Kvoqxkoped4THeC0oRbpuibLFI-APXUuS?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0l1CCrSdfpCx6XmyZzYvfo4VHeSW50_7A4U8CNba-LWo0L6U4QDBxEOvHJggU62rPqFdOxPBzMUgH2SXSPo9W4c-0KRWUs2BdBkoC9VjSpJ2oMq7plA3ZIyvKicjugcroYfK_rv9wbvwuRk4wP_X4y06gBvr-sShm4u_q_y2tvqkH5qBc47WjPr2_v-GdtKe?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/M_n11Bu4gh-DZwPZqQ1LH_HxLmLd-B9RZNR5vAPKgNonRxkm5nQS-W9E3a7V9YXS-CME5o13vE0DlWx1hJ0TBCi3uiJX_ltFsyNUMhMSdKafedJRHOWE7upc3qAnj_63wenBHjYK3PnaH7GuVFAA2yE8cP89lfuncC8xj5Z-zG9AHtcRxZIAnlUbgbADqUfK?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/qnPcKU9Rjb-DfE_X9VILBBsgkCpQ022DH7_L5yTT2IbrSrY_8PAZTwm-V2u9GaVz4bo5vLIc4esRiZVt3YnX2D8Qz-nbdSgAjXZ9tFocITcdCQ9NLh2BGrIBuKkHmF3awUszTDoKVZ5iBHDs9s1ehEfx1dQ35jn591olfOS2GWZZbesVm35H57mlhuAHfPIR?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/av3dBZUoIaG-EPwijZRSaYF0nGJv8J9_2Ad5cJi6iRZx-J7kv7UVGjOhiJmKlnS1nJGUWImm8oSpEz7lxkPjR1hvDej8US5VwG8XBUnxuBakEOXPN1RFLqOb884u00IqMoFT0yuwuW7s8enR83aE_2bWHw4LVxfAc24R4VVj4-MEq8XDRJ4vBsgUEgxjumyl?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4gPYV-WPvIbj_ZqqkM2Xms6IrnG-NcM9lK_Tj08YHtTfiCPsJL3pGQQTl-YoeWn0HDFhVh_S4rVyq0hHYffHwdhEUzEYEefRS6AbRwRd4cOSRQb6EslsP0AhqKdzyaZadKt6xUbRYfngqDeEyoXit4rSiJ8aRbWKSF4GCovunKVQkI-wH_UU7lBiavPdRc90?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2WQSS3IZJD3U7RC-uzcc9iiA8pfNCDdVtQl39uRYqIOopEC1zdicN9v96aektGIizkYMTdfwhrCKOKP8ZXqwent5fpFNU5D2WomCghDxCPTpwVwrfQn1yNhNeN5CghwknNabUULRq2Y9gzdPvVvJ_p2NCbZmv2sWVT78MkI2YotcPJmCE6H2dxLFGhV5PGPk?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0xyleOtgHdTaFQSNjWRD3GnwvxvSwMOovA-SNPlgJgK155fJBU8U2veuIO3wbQ9qUCF0Ao_2ytXMtpx45ptdkNYKk9dXcRNRsDSfZeJFsVeUs4z4WfeVifi5DGqdkPHPVWmdj8zeyh6KazLK2031HeWZU580z-OLsMH2tNj3VRBcvFCbtT5UWXV6uDgQmzLX?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/yYFej-VrKlSZzbB-RMA4Pp6k48HimBr2ng2lg5TmquzBDbbbeY3Q8pHLY5kuNdLcdskeMz5Qh5exgqlm2dcOEDzskSVb32qbeLaP_rvwzg3Q4827kkaIgLfhMCI2wX4NE7ArwSGmvUWAttm_eE-2_-689ld-Q9AK48Y07xWi72soFlglUKtJge0J2954q96H?purpose=fullsize)
+
+我們會學習：
+
+* Camera Sensor 如何接收影像。
+* 鏡頭與感光元件的關係。
+* 視野（Field of View）。
+* 像素（Pixel）。
+* 影像中心與機械座標中心。
+* 視覺定位（Vision Positioning）。
+* Camera 如何判斷工件偏移。
+* 如何將影像座標轉換成平台的移動命令。
+
+例如，Camera 發現工件偏移 0.05 mm，控制系統如何計算應該讓平台移動多少？
+
+這會把我們之前學過的機械運動與新的影像技術連接起來。Teledyne 的 Machine Vision 教材也說明了 Camera、影像處理及設備定位之間的關係。([Teledyne Vision Solutions][4])
+
+---
+
+# 五、我希望每一堂課都採用相同的教學方式
+
+我不希望變成單純的產品型錄朗讀。
+
+每一個元件或產品都會依照以下順序教學：
+
+| 教學階段     | 內容               |
+| -------- | ---------------- |
+| ① 外觀認識   | 看實際產品照片，認識外型     |
+| ② 內部構造   | 用圖解說明裡面有哪些零件     |
+| ③ 工作原理   | 解釋它如何運作          |
+| ④ 組合方式   | 它與其他元件如何連接       |
+| ⑤ 實際應用   | 在 GMT 哪些產品或設備中使用 |
+| ⑥ 故障情境   | 如果這個元件損壞，設備會怎樣   |
+| ⑦ 網路技術資料 | 搜尋專業廠商及技術文件交叉學習  |
+| ⑧ 單元練習   | 由簡單到困難的題目        |
+
+每個單元最後都會有練習題，包含：
+
+1. **元件辨識題**：能否辨認元件及其功能？
+2. **動作分析題**：組合後，哪些零件會旋轉？哪些會移動？哪些固定不動？
+3. **因果分析題**：某個零件損壞會造成什麼問題？
+4. **機構分析題**：為什麼設備需要這樣組合？
+5. **實際應用題**：如果要設計一台精密對位設備，應該如何選擇機構？
+
+答錯時，我會先找出你混淆的概念，補充說明後再讓你回答，不會直接跳到下一個單元。
+
+---
+
+# 六、最後，我們要能看懂一台真正的 GMT 精密對位設備
+
+這是整套課程最終希望達到的程度。
+
+![Image](https://images.openai.com/static-rsc-4/Vtajn4rdhoQ_IvZOL_EhAuveLo6j04O39dYuOMI8iUUqvP-5-P0LMRaHGXYBjPcsAIUsZZ4w0Lljlc-MekubI-IOh_m7-yRc9djMQ91KZg6LGo5gAvzGs3we89cIA3JhIX8MQRmhMAsu9cBS8ZgI9svcfH-gBtCMmlEwhfIxnvZTUWGNlPYN0Us68rcDmstv?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/mHzSq4GcoXt0xRpcn4DGOJOvTE3g5K30I5KK0VUMXyt822joETpeFiYQm6XlO5DPjLzV5q1da-1al6tYpCXyTDaNEY3XUwm0a40uVfn24NXJs6IandZikkBMFJ3Z4MCA3Z-eX0Si7pPaLLBCEZEW4aDPH_Xi8eEr9NFiwEHqgXniNs7nv5ums_v7UaxbDnhY?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/bWzhYmCFXBromfOPOGxY5jMesZv_G5jhcR5v8-o3SdavBXoNdK-mOG7RYXKhNDX0QtxwFWyNHSeC8BMs6QZ0VsLLHQBq3W-t_kusmevkxxzGP-dCi2hsYzd0ECiwiSoJWTP3-9iTuTKn9OiNihJ-BbCBuTtK1KnK9Qc4iWjHk2TtpO5gQV3bTa2Z193EB0Ic?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/TOCtimf321PLYNQ4JMWKHaOdX0K1knYcNab5oZnToN7WgEiBv37bKMH0OXLcbA3TFwqJNS6t74rB7ZQWFrJW8SSpGnc8038Zt4tfAtEBnYyeGfyKCBlnAKTjypWwQrwPWOp4XvRB5aLhsmKkHP2NI_CS1ygm0hcSLyFiXB9LowYJt7ezvQ3w5W08BFhz0K5x?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/J1FaiHHOXeFexRa0LDjA9CQb9m6_fqXgfFhjgsxjLabmGv2Y6gntgLtsAPPBGVh-O3V3-VWgzAraBvwkV0IN19tgTg0WnRDnNCFI8OxyKmTGw3qBoYcdNzn2spm2ojVngaTcQ22uG4DxEoxw02qK2lbIDRiBUgRocFmJxLFE5OrerBj0nOek9QIZxSA6RUq4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/whCyN6LawTYs3kHAeQ5SPLyOu0kJ0UvwinnPDJYhTCcDMsDACQ4JK6Gd1x2Uzyxd5psx75YieAJ83OEehYOzN3HHeADp7ZQde5KgLtsiR5lriMf14RjFQjl55hMSCcWGfCR4cG6ZGEs1kWGbzZMny7urFxW9CM5rzjbfhjgp7HmLWqndzjfga7IBHK_zzP3e?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/mj3nuQZoisw2Qh9fANofjOGIufm0r1ZaeRXTZMb6fqJ1PZQzo9ERzh5Ong_wp8BoDZp99vIoPool83bWIf3tcVJMgTM5unhzf3UYU22yCsOrlU6S9H66NrVkl20XViJXgoiOVabA7y5DlxqRQhAhr6nCLm_3g5pW--eCYuwzx329Yq-M3iufBlEhRL_HvJ2U?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QzuSZxz88ZY_3x2IJUKPkdBoP-FdRaOK46SPu_mtrmn-h17Pj4tPh4tGtTRSCWMCN5jQql4ZS7jCV4WPmtXkTNV9ijlcrVM7ZWOc9Ex9OH0rCNghvjz8IEu83KIV3RXAjHejNuBk3rall6P_BM5iBPlVUoHygWyh1wFkiKOyPVpvK7pv4fCRC13uVq1CRTlL?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/wED6UIg1J3TLNAgM0MYg4Nb_bnw-QVI5obYlcWtMQE9MHdjywCexedV4Ct3BJeJ8JH0ovrfCWHNubc9fyCJkLBrgpSxWQdLiDor6yBfb6D3swwzkSnCX9UCS0GFwjSo9Ke0Qo0Mn1VLhfYW89uVfvQ-ff-zpVDG8sKnyev9DJ4XmhqYvJMA2YbTHuNibOI1y?purpose=fullsize)
+
+GMT 官方公布的高精度堆疊式六軸平台資料，已經涉及：
+
+* 六軸精密運動。
+* 全閉迴路光學編碼器。
+* Camera 影像回授補償。
+* 即時光功率回授搜尋。
+* 矽光子模組封裝。
+* 光纖陣列自動耦合。
+
+這正好可以作為我們最後一個單元的整合教材。([gmtglobalinc.com][5])
+
+我們最後要能夠理解這樣的工作流程：
+
+```text
+        矽光子晶片
+             │
+             │ 需要光訊號耦合
+             ▼
+          光纖陣列
+             │
+             ▼
+       精密六軸對位平台
+             │
+       ┌─────┴─────┐
+       ▼           ▼
+    Camera      光功率量測
+       │           │
+       ▼           ▼
+   影像位置      耦合效率
+   誤差分析      即時分析
+       │           │
+       └─────┬─────┘
+             ▼
+         控制系統
+             │
+             ▼
+       調整六軸位置
+             │
+             ▼
+       找到最佳耦合位置
+             │
+             ▼
+         完成光耦合
+```
+
+這個流程會讓你把之前學過的機械元件、馬達、驅動器、位置回授，全部連接到光學應用。
+
+---
+
+# 七、關於你剛才的聯軸器答案，補充一個重要觀念
+
+你選擇膜片式聯軸器是合理的。
+
+不過，「沒有老化問題」這句話要稍微修正：
+
+* 膜片式聯軸器沒有爪型聯軸器常見的橡膠彈性體，因此不會有橡膠老化的問題。
+* 但金屬膜片仍然可能因反覆彎曲、過載或安裝偏差而產生疲勞。
+* 是否適合精密定位，還要考慮扭轉剛性、允許偏差、扭力、轉速及使用壽命。
+
+所以我們不能只看聯軸器的種類，就判定一定適合某台設備。
+
+這種思考方式也是後面學習 GMT 精密設備時非常重要的工程觀念。
+
+---
+
+## 我的建議
+
+16 小時的安排，我希望以**真正理解設備如何運作**為第一優先，而不是背誦產品名稱。
+
+你已經學過滾珠螺桿、直線滑軌與聯軸器，因此不需要全部重新從零開始；我們可以先做一次基礎觀念整理，再逐步延伸到馬達、驅動器、直驅、壓電、多軸平台，最後進入光學與矽光子。
+
+**下一步就從第一單元開始：精密定位設備的基本結構與共通元件。** 我會先帶你看一台完整的精密電動滑台，從基座、馬達、聯軸器、螺桿、滑軌到編碼器，逐一理解它們如何組合成一個能夠精準移動的系統。
+
+[1]: https://www.gmtglobalinc.com/product?utm_source=chatgpt.com "精密滑台、對位平台與自動化模組｜傳動元件整合專家｜高明鐵 GMT"
+[2]: https://www.gmtglobalinc.com/application?utm_source=chatgpt.com "產業應用解決方案：半導體、光通訊高精度定位技術｜高明鐵 GMT"
+[3]: https://www.pi-southeast.asia/en/expertise/technology/controllers-software/active-alignment?utm_source=chatgpt.com "Active Alignment"
+[4]: https://www.teledynevisionsolutions.com/learn/learning-center/machine-vision/machine-vision-101/?utm_source=chatgpt.com "Machine Vision 101 | Teledyne Vision Solutions"
+[5]: https://www.gmtglobalinc.com/upload-files/catalogue/display-information/EN/GMT_High-Precision_Stacked_6-axis_Stage_DM-EN_P.pdf?utm_source=chatgpt.com "Stacked 6-axis Stage DM單頁-英文20260407"
+
+
+我完全同意，而且你補充的這兩點非常重要。這會讓整套課程更符合你的工作需求。
+
+我們要培養的是**能看懂精密設備、理解機構運作，並且能從韌體角度控制及整合設備的工程師**，不是機械設計工程師。
+
+我會依照這個方向調整教學方式。
+
+# 一、重新確立兩個教學原則
+
+## 原則 1：元件介紹適可而止，以應用為主
+
+例如介紹滾珠螺桿時，我們只需要掌握：
+
+* 它是什麼？外觀如何？
+* 它由哪些主要部分組成？
+* 它如何將旋轉轉換成直線運動？
+* 它在設備中負責什麼工作？
+* 韌體工程師需要注意哪些事情？
+
+不需要深入到：
+
+* 滾道幾何設計。
+* 鋼珠接觸應力計算。
+* 螺桿材料與熱處理。
+* 螺桿製造及研磨製程。
+
+這些屬於機械設計工程師的專業範圍，不是我們這套課程的重點。
+
+## 原則 2：共通元件先教一次，產品介紹不再重複
+
+這點我特別認同。
+
+GMT 有很多產品，但不少產品其實是由相同的基礎元件組合而成。
+
+例如：
+
+![Image](https://images.openai.com/static-rsc-4/4ZUlJS_whoEWmRXzvXEvVFzB-woecad6LK_rlgExYRR21s4yNaiOkfPsdQEgh3sXDarYpgkyj-41dBLPgoHTxAKQQUeuTu31msOyThPQcau-zOJR67q9Dk-Y-hlmHjtMdijYbbsfMvUKxeK8EqLCrpco2KzYbM4wW_Zo7WeZ7QdPx1qo5eGeUu1XpurXJPpM?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/qwk_3fNnDHtejefwvkec4-LNsvhnlZrtojx5Xn0gg0gXtp4xY2rjWc34NSkvEjtBbwTxy6cD4AqnpM92_CfvesZoVtv1nqbOCzY0laVFVjxAQJXztgKGzyyl_hyeKc69h4WEbj_veD38mwJ79KmTKKimPpHI88mNYRCeSjQwdJQntxX6XZGEezRVAKnNFbsY?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/xtb201p5bfTsaal6phv26yFc70qxcCdb1IBcJwYEClhN0BRnm7uenCRmEmPQElkk1VhWA3pQ6BucztTFn_oVFuh3JOXTQ_05kIn0WLj-9ZwVY_vR6jPT_e6yz57yBq6C2sZmRI0OlbjzMoTl83mFN5hop3MFWH8pcwgajFePM6CLtEpcY9A85e7HMagMd7I9?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/jt89w9JShKQg5Mj8Vu-JYywBJWxK3sGQfxlzJX4lwn7m-_TnqVxHVfKKMDROSqp7HZjrxLeqKKDp87tXM30mYtLl9HV22VKH3cr_i2kIvpRIta4Y231hy9KHKwjGLJ-89JSPIA20bExuATwOpusWRAxFwLNoGOW86LHhYq8yDmQ9_pGm_j0TXW50IMrFkZjL?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Wr3aeki3uU6Qy-oxl6Xq6Gn7n3oIbLtfpAsPPiCS4WuCG-1f4Ia0xqR61qfIOuN72ma73GaGbHpUJPgZCgIhsCLBXLiHHbSJBSyeBH93YLsjjzEQx7EVvbX7jY4ZvCuE2RI0WJ4NsNIpoDsLnaFM_SZ2oMy_UY_tvSv50zedCzW5CGaJwJ3_Q5KdfJflEMrt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/WJdY0Q4mY0D9KaPAi6iDOpWIYYoMqUhdfNVLcZmaO_L_qvtSava9LlueYqMXSrdOCbZ_IYCkJqY3pI7n645fOJxlUyZHChjLOkuVZU_elt8b4ywx3i63Po3Ao6i9Z2LyHopBlnxTmZ3NgHMiom_S-OQTjZdC1EgqF00vFwUfgRss5s2orw9IfD2woo6wecGF?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/rbb0lQwYyGpGlTvgHlMDr5nXZoqchNPXftcDsW5ZkmmTy4FX0Hx7eeE8697o0BJBzQHQh7Ov6OD6QQV7BsOGlC012k-6g_ZAI9GlUktods-2Stl4RfxwmPC2wFZq3btwmoQp4ayweCmgnAVouYTx2wJMfHFU203fo98tnT7Ti5yBzoOKxTAxhicANH18ylFy?purpose=fullsize)
+
+| 共通元件  | 主要功能      |
+| ----- | --------- |
+| 馬達    | 提供運動動力    |
+| 驅動器   | 控制馬達運作    |
+| 導軌    | 引導運動方向    |
+| 軸承    | 支撐旋轉或直線運動 |
+| 聯軸器   | 傳遞旋轉動力    |
+| 滾珠螺桿  | 將旋轉轉成直線運動 |
+| 編碼器   | 回報位置或旋轉資訊 |
+| 控制器   | 控制整體運動    |
+| 基座與平台 | 支撐及承載工件   |
+
+這些共通元件會先完整介紹一次。
+
+之後介紹 GMT 的電動滑台、直驅平台、壓電平台、六軸平台時，就不再重新解釋馬達、軸承、編碼器的基本原理。
+
+我們只會說明：
+
+1. 這項產品使用哪些共通元件？
+2. 它與之前學過的產品有什麼不同？
+3. 它的運動方式有什麼特色？
+4. 韌體需要如何控制它？
+
+另外，要特別注意：**不是每一種產品都具有上述所有元件。** 例如直驅平台可能不需要滾珠螺桿，手動滑台也不一定有馬達及驅動器。
+
+GMT 官方產品分類也確實涵蓋直驅、壓電、電動滑台、手動滑台、線性傳動元件、光學元件及馬達／驅動器等。([gmtglobalinc.com][1])
+
+---
+
+# 二、正式開始第一單元：精密定位設備的基本結構
+
+這一單元我們先不急著介紹個別零件。
+
+先建立一個觀念：
+
+**一台精密定位設備，究竟需要哪些系統才能完成定位？**
+
+我把它分成五個部分。
+
+![Image](https://images.openai.com/static-rsc-4/QZbxntDrU-hnIUBGlro8iBhGCJbddnSnZN1d9uP5HT366sI7uK4pZRgldEVaGsp4rZ1UXXSI1dfDnLKKQsbT_8tFR6TzHs2t2vcyCLZFkWcTNzndOH3j6r5Cs7DflLJ1eb1Ktg9sJy661kfNo-HgcPwFXkhNOxE7GdXdHzZpUYuNFRdMljE7Z0OaEJ3aF4b3?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/fHgdUpc4Vwm3QnbJ80RgNDsFVhcoq0njexABKW4cl8Gaxf6y1HCj0B-L9SgHefPZm7RyfeutmHpaJgJAHhga0LmXtl-IEA1Gpt8fBQQ-J0jVSp-HWkyVk_ptedgN5JjJCqd6mXgn0gN2MkHYa8xYoyk6at9FOnP--vys_tZEeT3kxM76Ergm1JZhn8OMK7vf?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/zz6hOFvGK2x7lBF7ZVgDZVwY__if0GRkiACw22dgY6UrvfZsAx3P9Q4xyIKbNnJvw64wsekcILvJe4unYtmwr5LjbacnuM2E6gL4Biw6yA1v_vhI4dJhuqZTL4frvq5atwQSJoCt241l2fl8-kHOCuFix5mNaj9sRD_VNUzG6tBifmveBBvuALkfh2AZ7ZEf?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-3s8Dqkc4ZYVL9UaIC1u-HcdbcoZsG4sVnaf_zA84r_mP-ZrBQpfyeim1k7FdEnR539WS1q2cA4j3yyPQHHlQfFdk6UdyrFLxLBVhulFFVasXu8oF0B-NS2Wcbs3RW3sjNStNgXY5XeI9cBXuP4xAC3w_PR5BK8JoP7Thj4VuJ5Vt3w2UCENEHLpBEuxXi7-?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/BgqzJ1Mkn9J5MTOBFUvdYcrpMp2E5zjA8aUlcx_jcHgUdc4KXCI4-84Os7FVP90kjrR9RxMRxJj15y5aTHPbp5UuinDt-vEtI17TxrBjVPBLHnexjKrZUaGHRGDMiGqG0GFAZinVPtFoF6M-NProDVdkNLjO3TyOT8E8i81YsCTH7dPhhy7NkLBO9NinQ6KP?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/UL8CVTwCumuJ0oQc9JbZTrfFBjqYXFFT_DxEhHuoouuDVtWx2aSqnIirkiqGaLZ8j5KA2hP5dbo_zcUT_b4KamLxLT2tSARytmjAE0J49ZVgR9tUArkue65vQYwdMfn1G1AYwTemRfpJoyDrL8IuT6RS6F4cyJevfkkDhS1iwAoPxnW3kQOxbDdkI5f9ytGM?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/HJWWFV6QbmMz63ueaIHrHvA52lCje4wum7-W2ds0nqR6ylwWLmTqJFjsy2S8L6VPW52rbZf7U45O0rAj63E5amFuanZZk2rdDY2b_lMiTCLEBW65VrFoQBF4WWKxDMM0GaHnX9JdiSHaKiyZF-WNdqCyRckBmvlSUJRrzZlY0GMnnzoEtuN4KASQPw65CksF?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/pWQhvH7JVZG8EQmzF6nFwydXT7nk3XDh7R8ztyuxyjC6PaeD3QITUpxF2-4RujgmeF1CYRo7YhZvSRfzmKq_xx1Ss7d-X5575yqtBg2tY6_rXkt7M5epvpPzpmk-qaJqcslQdyoPgekgtJTtD5uTGyL66JDp3sBH_OVOiil_PGABCH87EjJssE9vCm5JCUo4?purpose=fullsize)
+
+## 1. 機械支撐系統（Mechanical Structure）
+
+負責支撐整台設備。
+
+常見元件：
+
+* Base：基座
+* Moving Table：移動平台
+* Linear Guide：直線滑軌
+* Bearing：軸承
+
+你之前學過的滾珠螺桿及直線滑軌就屬於這部分的機械運動架構。
+
+## 2. 動力傳動系統（Transmission System）
+
+負責讓平台產生運動。
+
+常見元件：
+
+* Motor：馬達
+* Coupling：聯軸器
+* Ball Screw：滾珠螺桿
+* Gear：齒輪
+* Belt：皮帶
+
+不同產品會採用不同傳動方式。
+
+例如：
+
+**一般滾珠螺桿滑台：**
+
+```text
+馬達
+  │
+  ▼
+聯軸器
+  │
+  ▼
+滾珠螺桿旋轉
+  │
+  ▼
+滾珠螺帽移動
+  │
+  ▼
+平台移動
+```
+
+但直驅平台不同，它可以直接由線性馬達產生直線推力，不需要透過滾珠螺桿轉換。
+
+這就是後面要學習的重要差異。
+
+## 3. 驅動系統（Drive System）
+
+負責讓馬達依照命令運轉。
+
+主要包括：
+
+* Stepper Motor：步進馬達
+* Servo Motor：伺服馬達
+* Motor Driver：馬達驅動器
+
+例如韌體發出：
+
+```text
+Move X Axis
+Position = 10.000 mm
+Velocity = 5 mm/s
+```
+
+驅動器就需要依照控制命令驅動馬達。
+
+但要注意：實際上，韌體通常不是直接控制馬達線圈，而是透過驅動器或運動控制器完成控制。
+
+## 4. 位置回授系統（Feedback System）
+
+這是精密定位設備非常重要的部分。
+
+假設：
+
+我們希望平台移動到 10 mm。
+
+但馬達實際運轉後，平台可能只移動到 9.98 mm。
+
+設備如何知道？
+
+就需要位置回授。
+
+常見元件：
+
+* Encoder：編碼器
+* Linear Encoder：線性編碼器
+* Optical Scale：光學尺
+* Sensor：感測器
+
+例如：
+
+```text
+目標位置：10.000 mm
+             │
+             ▼
+        控制系統
+             │
+             ▼
+        馬達與平台
+             │
+             ▼
+        實際位置：9.980 mm
+             │
+             ▼
+        編碼器回報
+             │
+             ▼
+        計算位置誤差
+             │
+             ▼
+        再次修正位置
+```
+
+這就是我們之後要學習的閉迴路控制（Closed-loop Control）。
+
+對韌體工程師來說，這部分非常重要。
+
+## 5. 上層應用系統（Application System）
+
+這部分是我們最後要接觸的光學應用。
+
+例如：
+
+* Camera：攝影機
+* Laser：雷射
+* Optical Fiber：光纖
+* Optical Power Meter：光功率計
+* Silicon Photonics Chip：矽光子晶片
+
+這些元件不是單純讓平台移動，而是讓設備知道：
+
+* 工件是否在正確位置？
+* 光纖是否對準晶片？
+* 雷射光是否進入指定位置？
+* 光耦合效率是否達到要求？
+
+這就是精密光學對位設備的核心。
+
+---
+
+# 三、從韌體工程師的角度，最重要的是什麼？
+
+我希望你記住這個概念：
+
+**機械系統負責產生運動，控制系統負責控制運動，回授系統負責確認運動結果。**
+
+未來你會經常看到這種架構：
+
+```text
+        上位機 / Qt
+             │
+             ▼
+        STM32 韌體
+             │
+             ▼
+        Motion Controller
+             │
+             ▼
+        Motor Driver
+             │
+             ▼
+           Motor
+             │
+             ▼
+        Mechanical Stage
+             │
+             ▼
+        Encoder Feedback
+             │
+             └──── 回授控制系統
+```
+
+這個架構與你目前熟悉的 STM32、C++、Qt、通訊及控制程式有很大的關係。
+
+後面我們會把這些概念連接起來。
+
+---
+
+# 四、第一單元練習：先確認你理解整體架構
+
+今天先做一題，不急著進入下一個元件。
+
+假設有一台 GMT 電動精密滑台：
+
+操作人員透過 Qt 輸入：
+
+```text
+X 軸目標位置：20 mm
+```
+
+設備收到命令後，馬達開始運轉，平台移動。
+
+請你回答：
+
+**如果要讓這台設備能夠移動到 20 mm，並且知道自己是否真的到達 20 mm，以下五個部分各自負責什麼？**
+
+1. 馬達（Motor）
+2. 驅動器（Driver）
+3. 滾珠螺桿（Ball Screw）
+4. 編碼器（Encoder）
+5. STM32 韌體（Firmware）
+
+請用你自己的話回答，不需要使用專業術語。
+
+我會根據你的回答確認哪些觀念已經掌握，再繼續下一個部分。
+
+**我們的教學原則已經確立：不追求機械設計深度，追求看得懂產品、看得懂整體作動，而且能從韌體角度理解設備。**
+
+[1]: https://www.gmtglobalinc.com/en/product?utm_source=chatgpt.com "Precision Alignment Stages & Automation Components | GMT GLOBAL"
+
+---
+
+你的整體理解其實已經很接近了，而且你描述的運動傳遞順序是正確的。
+
+尤其是這段：
+
+STM32 韌體 → EtherCAT Master → 驅動器 → 馬達 → 聯軸器 → 滾珠螺桿 → 滾珠螺帽 → 滑台平台。
+
+這就是一個典型的精密運動控制架構。
+
+你特別提出兩個不懂的地方：
+
+1. 編碼器（Encoder）究竟是什麼？
+2. 回授（Feedback）如何讓平台不斷修正位置？
+
+我們今天先把這兩個觀念弄懂，不急著進入下一個元件。
+
+# 第一部分：編碼器到底是什麼？
+
+先想像一個問題：
+
+STM32 命令馬達旋轉，馬達轉了 100 圈。
+
+但是，STM32 怎麼知道馬達真的轉了 100 圈？
+
+它不能只因為自己發出了命令，就認定馬達一定完成了。
+
+這時候就需要編碼器。
+
+## 1. 編碼器的工作
+
+![Image](https://images.openai.com/static-rsc-4/j3SkIrDAa8pUt4f_1CkA-OEUQCSfNjfMJdl9nB6dzvKU6_YB_e-aY26pgWTbzMK0qfEtMYqA_WVqk-JgHCriFqUT8x2D6thlo9Rgf9NiEsfv1lJiwvw7wK0C0rbbBLgzTMhHHuxaLdiQJoLFExLk6XDBgrv-q6gsTUoIub1m2AMdeThmI7fwtz3T0hTKHm51?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/BkZxTacDESmOactbhLrpU4K3KhTQwxxS_zv3cUizloHRBrLK1gIhL-fWutQ5n1BwFUUxCIzrDQI7kFo5cbElBzyasySfASQ-aNly-75JtIYLJlQTZmLLCFdfkngGyoeBqh_2tMOKQwHQAo_d2dpNIC8dTMhW2_J38iAqIvwykmsCw_dgdzFBPYyOrziJznVc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/kxrCToNAQ5mdbE0AFsVkPTv6cPA-DXuiV_vC0pvHGoJFn__sTwurykCck48ATveNNzNsOjAgaMQoP_1KexaMjjzrVp_4QDyAZcFuS5yyCxtolO4aR_FV9qjNx_tu8I-d44UAa-5dVOgkfDsTdoape_3d8r-U04aVYAi1hszrUFM5kQKpFveIyElxvtcPDAD7?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/qXWEpSRSptet5QBaFwBNS96O_0bWohkIrRpiDkst_DBhw7wGZ-J5hB285EOR-dxi8PddAxJd5UuObhJnnXfeJl31-hjo8DU_WE5nKh29BTTyFn_UqnUsYoEZmhBErC7xuW790OKA5bd7jeDflikA1ByLHP3SJTh0ELJfq6tyiIzbq-DSB6PMxtnGCeMibx0v?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/7P9wf3icGm8Yth54uikOepzoyKI9dA8PWEmlIi5UxKlpB6LnIrNvVrfo2ivpdBfAimGB5Sjoz7TJBzAMg6IgYS9dPZ-5TaLH9CyjsW8nE3eBys0qoTRGmuFZ9UZMP2CTttmuV7W6MjG1pc4ZNomHTiguHj7c5yOQpcfqlQbdab9ePjVcDESs8SaDVL4eTDD-?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/7zdMI132mlqTDSY6L12G3YVs1lk7EkP9d7OBibyOQtAtV14BsR7Bp0Lz2iBTFRIgqJmartBYM-fNG0jFzz9tYG8chnfXY7RhYjrJeJjgttfjHLA-KTSPg2iWkzaIkLSMU9DYPXmD2a3suK8siEVHEXLm9SMbiuUc8sFwzWOvVm6pydjrsMUW6wyqMnyVQctf?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/X8IyOiuWqATsISteLEb6kp_kIUPbFT2bnZ36PXBy3Wa82zn0mgiNLrkFtSNS-vDImSFJs-POxrjHlkgqTbQ1HHRj27SwtqfGzRd5e2J9EeCvZfNSC9utyYwZj1aMrYHWWHqty5EIJh2lHin-BLLSO-_wW59kok0WPY640UyDbeHLJkxTomiVdb066DrlfRTt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/glmqrNIfE06abWFTokT1IVHz-6ZNDmdfNGN_b2CQLFCApVHqNkGC8MnCkpGQfl-lhfmyRBnCdNCjsOBvRCKdNTiKHnQhC0PNiuuA8Fln1GReFeHwH4xZC6Zkrnloqf1wJDDaUYP0pkahCBmu29fma5ALEpUblgTlqp9BlaEk7VtrxUxpSCTkDpLHA3KHcfMg?purpose=fullsize)
+
+編碼器是一種感測元件，通常安裝在馬達內部或馬達軸端。
+
+它的主要工作是：
+
+**偵測馬達軸實際旋轉的位置、方向或速度，並將資訊回報給控制系統。**
+
+例如：
+
+| 項目           |     數值 |
+| ------------ | -----: |
+| STM32 要求馬達旋轉 |  100 圈 |
+| 編碼器實際偵測      |   98 圈 |
+| 差異           | 少了 2 圈 |
+
+這時候控制系統就知道：
+
+馬達並沒有完全達到命令要求。
+
+這就是編碼器的基本用途。
+
+## 2. 編碼器如何知道旋轉多少？
+
+你可以把編碼器想像成一個非常精密的計數器。
+
+例如，假設一個編碼器每轉一圈產生 10,000 個可辨識的位置計數。
+
+那麼：
+
+|  編碼器計數 | 馬達旋轉角度 |
+| -----: | -----: |
+|      0 |     0° |
+|  2,500 |    90° |
+|  5,000 |   180° |
+|  7,500 |   270° |
+| 10,000 |   360° |
+
+這只是方便理解的假設數字，實際編碼器的解析度、計數方式及輸出格式會依產品而不同。
+
+常見編碼器有：
+
+* 光學式編碼器（Optical Encoder）
+* 磁性式編碼器（Magnetic Encoder）
+* 增量式編碼器（Incremental Encoder）
+* 絕對式編碼器（Absolute Encoder）
+
+目前先不用深入它們的內部構造。
+
+你只要先記住：
+
+**編碼器就像馬達的眼睛，讓控制系統知道馬達實際轉到哪裡。**
+
+---
+
+# 第二部分：回授（Feedback）是什麼？
+
+這是精密運動控制最重要的概念之一。
+
+我們用一個實際例子。
+
+假設：
+
+* 滾珠螺桿導程：5 mm。
+* 馬達轉一圈，平台理論上移動 5 mm。
+* STM32 要求平台移動到 20 mm。
+
+因此：
+
+20 ÷ 5 = 4 圈。
+
+理論上，馬達旋轉 4 圈，平台就會移動 20 mm。
+
+但是，實際設備不一定完全如此。
+
+## 1. 開迴路（Open Loop）
+
+先看一個沒有回授的情況。
+
+![Image](https://images.openai.com/static-rsc-4/LQff8suk2_-IeVcluNQ8L9bP2irUaJy199wYqG34_p640llh8E1uBbOP41hRm-HuBSyMPp8xXM7y6WL2oQNzUyMalWf9pchyo7EKjz4TTT6zNVizCQb57rKp3sLyb_HGqO2BUaXlfgrpNnTMXIuZAh7VmZtykoSNvMdlOYnFsX5YKSj6gHmgOMBG8Ws0S4Yf?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5PxvMZ_sUuQ6rcLEWgBRqBtoxGF4sdADTkPnoiA8J4OEW0eJ4xHrs4lcYYpheLHGCa9A0coponih0SVTmiuq6TZClZ_HuA4V9sxHQo8jyTwKCVhSEM_UH2m0koKRh13BzInklI4rvXuM5LpDJWkJ6sV8AVMvz4TLB8ATHTvcwUrMlcyB31gJmC_Whxt2rvqv?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/lZdEsAckfJOUok6CF776zo4QKlTorCSA6DduMtCZlAWaOOofr2TqZzU30I2BwxlOgXv79wfB7aFZB6YAcNqbd5jPASxMrZkuIocpMrrZD-yo7L6HHNA5yqGtXlgBlj13hfgadA3z-9FD-W7Zs9dPKkl1AYi_68PYcxgxp3fhQ1SlspVq1mOVYGHtG5JZa6io?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/V9lhbe-Jxd3fT25R8UZUJ7ZXvC4CIkAr9erau4ERRyqF88aeGkLKc5noNk4IBO9QNFnRgrMzdI3FiDrmLvSmbVwTyZ_5kjP_GOO-jsBtGRAqD03U1nw2QekD1Wz9zYy56Nt8of_0jWWi4DKs4dknHDzeCX4Q4L2U9Xhl58VRPlwwvOsA61jYsctUl-PVz6FU?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/aLoaJqyfJjESpmsCg6ibjSIYZ8tdvjWGt9Th8ZvX6Q1jNpzZn4aH_R5IDQlAKJtq6Weu44deDAZBRftpL_-KX4D89R9RTonanL6wx0i_7eeGOS8hfuUQDZRRjtStv9ULHzCP8abuOTYc5WvW686hFy68cYRU7zAnoVcMC6EXp-9O0HTgavA37m8B3FuzVaKe?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/32mvsJDwMvzLioqKncQHUqFAS5T720L4ECdckA9eGBTXmYo0tf_iB4OQ-KtM7cAEjJ-oiEmQS4ac2Hq5WQB4qPJI3uXs5aZMogm5ynWM1GVsgaEgZIeGR1h8_atAx7uIo2R2L0dg4D7brY-1MgnAIWfqg6rWtIOHs_TWmaGdUwuXDKa9lBQojuhl-DrI0gxw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/yaUBbvC0s74cu_pg3SY4CFsQ94w7NYwWwwDum00FuHSUN4OqI1X08DqSTk4yPX8m-B6p839mmOui63oWRodIDV-A3yt7qw4Q8bubJ0EB5bA4jjta9KNbo2zX7TSCgGfYUMEv07PtIIXs1oAVuZ9QeqzDbL5gaI-g2tcsE0rheMo9igyjCg7AHUNvPw2-S0de?purpose=fullsize)
+
+```text
+STM32
+  │
+  │ 要求移動 20 mm
+  ▼
+驅動器
+  │
+  ▼
+馬達
+  │
+  ▼
+滾珠螺桿
+  │
+  ▼
+滑台移動
+```
+
+STM32 發出命令後，驅動器控制馬達運轉。
+
+但是，STM32 沒有收到實際位置資訊。
+
+假設平台最後只移動到 19.8 mm。
+
+STM32 可能仍然認為命令已經完成。
+
+這就是沒有位置回授時的問題。
+
+## 2. 閉迴路（Closed Loop）
+
+現在加入編碼器。
+
+![Image](https://images.openai.com/static-rsc-4/zZf2_zEge0y7SDKJC7w6gGJ6sBX2h-ndD3uQ8XsGC5tspW6b8tkq92QbhzWAcJ0OFwNpoJ3xCO4ACLutVpBAcLqwi7MPmMCvGd8cBlSwPCTIRNbbFYYHZv7ru5sN-kJLoVsWp8m_0eZcEhwug7DPL2fUfBIgcPf2XFkmp8FtIZcTkX98ZDBnZyE2oyrOnJ8S?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5JYY4_c58DjWNxds9MGo-tNfELNTmfZBhgOBqbP5IXTAisDOQQSnVyxzMdg6AOMFAZe4_lZ5ZBYgdjIqDF8NovExj5chdcJBxd1B20OCmQZ1xOgV3ckYfFNs9Yj4M_RbePugFf4s0p0rryk68_ctCvF-vRgT3ivyYPBdb1CMwmPD5MfwB4-QsT8oMO72DEyQ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/YgrSVFfDS_ALUcqmnloPkTSzzk37738UgygBTDij-GaYO4AVA5tnEqBAB3OBngxFcqSja6Xiljl1AEUgsA-yZtkDOkLv9Z_sgR5oPNdhZsOiLAB2wPOD9SRH-pBMFq3b4alGrSqlajHtH94k6CK0pI1XzluH84X8mUqs3-K-4xOoUfDr30jn_7KBMdSlHX6y?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Atj9KR8IYg8-ktj9aaNjwYMGXx4JCPeSLA-A9jhu0_jyiAylTxIjyzpJh3Ffb3EOt3NyTrekPX6n1GTfhHozF6NjylszHhSSmVczRutGfH8uFC2O5xhLwZ6VjKBhOem0G4bQI0uY4SKYCPEEWGRC-QpzR1g-T2c89cX6npRpJavnZyszpiKRpJZbpQ7z4YQm?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Wb-ea1Of35iw36Rohq8wehuDppKyGzU5nHPbTNu3vKPZ6Y2D2VZaQQdIxJhcNaGOVUACVIcHbraOOPqkGTY9RGA8ak8Cx_5kepi3-qRSrbM47UFYqfxofA5tpm3w8gKkY_76dCFYweNCFDg3E9sHjLEQTjXlqhA3etk1b29sbm9nEDf_LQdBFaA_kqc2lC-U?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/SgH4-ej9rODJ4bQGE-8hJ1KTPRx6dTh1gge-DyorE-Q4ao5_aCOXSpufU0TwkYEYvZhr6LM3OEiku4_5cJVVojO0FuQnNrhEYGge3kcDpzIVCfAXoHU-buV7JKbXW6rD6trCAXaoShAE45LNN4jLc8L8VOWtHGo-sAWj_7mHa-BAvBGeFG43hR-6fGqpHuwo?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/p3ckcjhTy-9qK9ZGjr26txB-1fLxk6NpQXU7U8FlGms8O-d2dwv3oVMHcQceX4dDXZO0eLvqiQjO_kdeE41BfCxc8beQzEwx10L77TvlnFFtfo_5pk53EUewJNLodzByIfO-29ObZNQo56Nc3yI_wD5PiJR4fXC9RJjLVh90ZmGQliIE61XT76Al1DzTawzR?purpose=fullsize)
+
+```text
+          STM32
+            │
+            ▼
+       目標位置 20 mm
+            │
+            ▼
+       EtherCAT Master
+            │
+            ▼
+         驅動器
+            │
+            ▼
+          馬達
+            │
+            ▼
+        滾珠螺桿
+            │
+            ▼
+         滑台平台
+            │
+            ▼
+        編碼器回授
+            │
+            ▼
+       實際位置資訊
+            │
+            └──── 回到控制系統
+```
+
+控制系統會比較兩個數字：
+
+* 目標位置（Target Position）
+* 實際位置（Actual Position）
+
+兩者相減就是位置誤差（Position Error）。
+
+公式：
+
+**位置誤差 = 目標位置 − 實際位置**
+
+例如：
+
+| 項目   |       數值 |
+| ---- | -------: |
+| 目標位置 | 20.00 mm |
+| 實際位置 | 19.80 mm |
+| 位置誤差 |  0.20 mm |
+
+控制系統發現還差 0.20 mm，就會繼續控制馬達，使平台往目標位置移動。
+
+當誤差進入允許範圍，例如 ±0.001 mm，系統就可能判定定位完成。
+
+這個允許範圍稱為定位容許誤差（Positioning Tolerance）。
+
+注意：這裡的 ±0.001 mm 只是教學假設，不代表 GMT 某一款產品的規格。
+
+---
+
+# 第三部分：這裡有一個你必須理解的重要差異
+
+你可能會問：
+
+「編碼器不是安裝在馬達上嗎？它怎麼知道滑台實際移動了多少？」
+
+這個問題問得很好。
+
+實際上有兩種常見方式。
+
+## A. 馬達端回授（Motor Encoder）
+
+![Image](https://images.openai.com/static-rsc-4/GqNoT2HfFr-qBuSApDDquoXQB38JitlLznGxLWpY6ukp_J8HI1pJwVNNWgFSnY-1IobgY4YszXepA2ENAFiTwyySazzhpTyflCiuVTfrgynVwOAF6_HyitP5bJfCpnjUrWJ95yNWWekf9g5pY6eHwuDAaS05SYn2MrUKOfCLQJJEJIbK5O3slXFoNjeHXvo9?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/_FvYgdMHo12hOHPoB9Ck6LvcgjX9H3fTgSWDKebTQ6M_1LCu7in9Z8K2xgphrbTkBIpg3inNlxU-0csJqJCU09j4bqkQK1VdQLH5q9pC3ZzKpaB7cjEq1zDCz4-OzvYxwYlWwdGKNoSdOhfvGLVylCegwgqkVkgsgpLjbidY8JiU8VaXEqEjEFuaEsvlAK4a?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/NXmqGfyM7PM81HfAOTReXPrT5S9SRHuH7KSESvvSiBJiAmx12iQJPZ8bLiBZzkdkq6FNrq2_dwxljAzemshkQluI0dSWOKHAjMYxkfsCGKYix6d3sxS_KxWmkdKuvGKAHaSMaA_EFdf4QZYV1Hxot_W0_UPomG0nA9OxVIri4xR98VKVJvbHkRbGX1VfwosR?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/VbyAY-thC2xr7gpvXt8Bjudy_MJS5s6Q_pkDMGKxAtEuG6gXoNVzgQAESED1vqkgebNj8X94ccQ7R5iUHnUWcS1GSEJoEUiqUFYWAqAQNllsLXRVK902BKbF_OW6zwzWLwDMt9aZZbmQEVX14xKAomeftYzstIcuLhwBwW-Wgpy-1CthtxuKiDZUFRkAknyh?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-VxQ_9o62n6OZYLqeElg3x3mYI-qywL6JzkreAAoV5vxo74c38uioIbyW48-Uz4TeKSpL4AwDH98wbmH2CrVaOYum3bxhkuopySHFkuoNnpVpv9aVjFmyMz6xBtBJ5kSjYqk9LzQ-8RNN5YJ5AX1iI-Pi7xIa_EChCuHNwa12VB1ytOs91EvdnfOuAiLh0ub?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LoVZ6YUp8_CoXRIpooCPtCpaGaWqLnBwhnBhep4JdmLj8Gy8PueLYnFh4xp1aithrl9eWQSSbUiehXcxs1sXC0TywFqOnP7I-7F3lZTunb-pLdpzsENniS1moH56PrHKe_TA-RhlrNHOPW_hdloxGJQ-ycxFesoksEZf1eKp3rLw5twVjhXcc3XL-vQkjGv0?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/XBY_XFtnEkFE1dW6S5ID0f94g4csjwvZRJESLGrYLk5ws2WObfQJRItK6WN2J_6-TxJjUYCs093o_NCrDS4noqwHg0Yfrb_YUyC8wGhdxqQzuEGpr4oc-5n7RSRYaZBFBqSlcrWkSBdHxrp0u4rx_V0XVbE2mNJkYGMDNKcC24-1G0FKq-iTk3A_VNS3L4ns?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/6IOKpMZo5TL-tz1wYO36cRrRKCWFQBv7rzItFzT3yjeYM1Il2IXx6f8VBVaSqR2kJroKGLaCbDkUNC4oG46cXw7WHOPIjwDPXWakOqkPM1rLNcCF8CYCAk2Yuqm9xvUldk5jdLcAv_pafx_Wiia-znnH5cOLQo6UsH83TCEqiP0l-QIroyeBss3IvWRAcCJY?purpose=fullsize)
+
+編碼器安裝在馬達軸端。
+
+它直接測量馬達旋轉多少。
+
+控制系統再根據滾珠螺桿導程換算平台理論位置。
+
+例如：
+
+馬達轉 4 圈，螺桿導程 5 mm：
+
+4 × 5 = 20 mm。
+
+因此，理論上平台移動 20 mm。
+
+但是，如果螺桿、聯軸器或機構有間隙、變形等問題，馬達旋轉 4 圈不一定代表平台實際移動正好 20 mm。
+
+## B. 平台端回授（Linear Encoder）
+
+![Image](https://images.openai.com/static-rsc-4/gilE2IhCCIL1ZDo2aGpL9Vdkedij-lvZ8VLnjthqbNeuRZwQI830Aqr7m16eB-QNNdrjarreqSdV5VMnHwV8Y_0zvM8v-Y7qTn6omPZDZ24nnjtjXGM3FykbDJM-7WrK4aBFuTrjQde3GgHTm_FdGTUIn_EaJ7QHE2xbX0ei92iA6UipB2nu20cVmR_imGIb?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4UT3x-QhoxnsMsM_o4MfxuMkB2YPZHdBgOpm1fOC56y-WYyakGj02L3jGMuLCPbd-ubrR5O7pGUE3es3XPrvrgj_d7wbVH8cONYVZWzvG-1_4bm59oJHJrzOJxMIi1FL6w5arNIdMoLpn1_9NosInmn4W5YpdGP581rW-_OBXdP_NqYewWgNWBa_yOV0GW5Q?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/XnG_NHJhZyUNuNSKaJ6s77V3m9ORfHn4NWN8sW0gB8wBQNME0IaMPqz-_ldWr8WrPjiONFKKHp9cWcEPpFX30c4qrAu3N1gaT6cuRoDnzS2-HCn8qy26w81xYiIkHPKEVFKtf9uNrucMm4WP3A9YWTKOZOn9od7gt499veBIetw1n9WVVujabNGhdLHkb-br?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/UuDrlzJtvi3ZsA14Xz83GlwANyMaP4DVdAktfvjESRT_AUu3jN1Kz1JHMwBfrpOvkujOVrYpivUPJjvUmz6AMof7kAlQhVEQd22Ic-w2UHNSy0-8KZuzfRhl07Gq92OBTE5eiYkOk9UZBTAyntbXiw1N7DFJWm0t6O69bZrguQE_YRk9YDopNgxTCOoAw5-X?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/RBNGWZJ_-Sx7wIrmED0PAdLrKXeb_4uKrQaSulw84qZogVSsIVEPPFz8O_I7ZzJUMNMJSnmW7N9LU1KuTBgzSG90N5-_alBCDTAqdCD1z--pE5ODZo6_xgDOYZZOdsCjdDRzLrpFkjdEf5Erp1bxEwtYdLk-We1DOM7V_W-I4wMuoj7_pQdS0cbPtp3Xa2pd?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/elj_fstJUW4m9m6y0Qjg7QBbs07vG1c-NVQmG4XcmMKxhuEeIi48ecabKKHbVsJdOksFkYQhx-MHsZSnUxrUnoQOOZmKmfmMCCqUgcrEfmw6WJ20V1Z3yF1waEGoZ3kAo78Z6pa59pVmMcH8hkGStGfqI_iLfUL8veEruxfkS9bDhD5JkB01NSyzLtrH_sPs?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/kUt6ZZYsrtu8pb8mzo8rHasADYwAdX3sQ-bgm2smx-fttgd403EVQOTsrr3EUaPBwU9D5mOAwxCssDA_9hadoGo-lZ7EbHza9ThuHBVvWnXNH6yvvr2oGS_6yaEwDKOQRu564-9BoQfOxSNLmkHQedpLhRDRLGptLm0WsbaevXBGWGtiBHQaZz4Wb10sVcHO?purpose=fullsize)
+
+這種方式是在滑台上安裝線性編碼器。
+
+它直接測量平台實際移動多少。
+
+例如：
+
+| 項目          |        數值 |
+| ----------- | --------: |
+| 目標位置        | 20.000 mm |
+| 馬達端換算位置     | 20.000 mm |
+| 線性編碼器測量平台位置 | 19.980 mm |
+
+控制系統就知道：
+
+馬達雖然已經轉到理論上應該抵達的位置，但平台實際上還差 0.020 mm。
+
+這種回授方式能直接觀察平台位置，常見於需要高精度定位的設備。
+
+---
+
+# 第四部分：這與你的 STM32 / EtherCAT 工作有什麼關係？
+
+這是我們之後要深入學習的部分。
+
+在 EtherCAT 運動控制架構中，常見的流程是：
+
+```text
+Qt 上位機
+    │
+    ▼
+STM32 韌體
+    │
+    ▼
+EtherCAT Master
+    │
+    ▼
+Servo Drive
+    │
+    ▼
+Servo Motor
+    │
+    ▼
+Precision Stage
+```
+
+驅動器通常可以透過 EtherCAT 回報：
+
+* Actual Position：實際位置
+* Actual Velocity：實際速度
+* Actual Torque：實際扭力
+* Status Word：驅動器狀態
+
+而 STM32 可以讀取這些資料，判斷設備目前的運動狀態。
+
+但有一點要特別區分：
+
+**馬達內部的編碼器回授，通常由伺服驅動器高速處理，不是每次都由 STM32 直接讀取編碼器訊號。**
+
+STM32 可能透過 EtherCAT 取得驅動器已經處理好的位置資訊。
+
+另外，位置控制迴路究竟由驅動器、運動控制器或其他控制層執行，取決於設備的控制架構。EtherCAT Master 不一定親自執行所有伺服迴路。
+
+這個部分後面會專門教你。
+
+---
+
+# 第五部分：今天的小練習
+
+我們先不急著考太多。
+
+假設：
+
+* 滾珠螺桿導程：5 mm。
+* 目標位置：20 mm。
+* 馬達已經旋轉 4 圈。
+* 馬達端編碼器換算的位置：20 mm。
+* 但是平台端線性編碼器測量的位置：19.8 mm。
+
+請回答兩個問題：
+
+**問題 1：**
+
+為什麼馬達已經旋轉 4 圈，平台卻只有移動到 19.8 mm？
+
+**問題 2：**
+
+如果這台設備只有馬達端編碼器，沒有平台端線性編碼器，控制系統是否一定能發現平台只移動到 19.8 mm？
+
+你可以用自己的話回答。
+
+這兩題理解之後，我們就能進一步介紹下一個重要元件：**馬達（Motor）與驅動器（Driver）的差異，以及它們如何配合 EtherCAT 工作。**
+
+
+---
+
+你提出的問題非常好。我先告訴你：**你不是不懂，而是前面我把「編碼器、回授、位置修正」幾個不同層次的概念放在一起講，沒有先把訊號傳遞路線交代清楚。**
+
+這次我們重新整理。我會從實際硬體開始，依序說明：
+
+1. 編碼器究竟是什麼？是不是獨立元件？
+2. 為什麼買伺服馬達時，看不到編碼器？
+3. 編碼器連接哪個元件？
+4. 實際位置如何傳回 STM32？
+5. 誰負責比較目標位置與實際位置？
+6. 誰負責修正馬達運動？
+7. STM32 韌體到底需要寫哪些程式？
+
+我們先不談程式碼，先把硬體架構弄懂。
+
+# 第一課：認識編碼器（Encoder）
+
+## 1. 編碼器是一個獨立元件嗎？
+
+答案是：**它是一個獨立的感測元件，但不一定以獨立外觀安裝在馬達外面。**
+
+工業伺服馬達通常有兩種情況：
+
+* 內建式：編碼器安裝在馬達內部。
+* 外掛式：編碼器安裝在馬達軸端，從外面可以看到。
+
+因此，你購買伺服馬達時，可能看不到編碼器，因為它已經整合在馬達內部了。
+
+看看下面的圖片。
+
+![Image](https://images.openai.com/static-rsc-4/GqNoT2HfFr-qBuSApDDquoXQB38JitlLznGxLWpY6ukp_J8HI1pJwVNNWgFSnY-1IobgY4YszXepA2ENAFiTwyySazzhpTyflCiuVTfrgynVwOAF6_HyitP5bJfCpnjUrWJ95yNWWekf9g5pY6eHwuDAaS05SYn2MrUKOfCLQJJEJIbK5O3slXFoNjeHXvo9?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Td_JSZWbht8Iha_sH5dGjf8-B7rykE53RkMjE2qqbfzjeecaJ1BBb7jFL-s5qRFNr6TVKNyMre86yChbH1AaO1pDe5Xk1FP6WBSUWnww3aXE1zFDXQd80UWLlTqCiDnKQMoOgLf1fJnDR5YsmkXJIvnIdw7wiSjfpYUIFKhkfLqS9PSK_wI1zDBrQg0EyjeU?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/a4laWnTYOMeXT9maDAYyobi9dLsY6QdmERF1zb3dLNCkQaWmK2WGcvWnqXthMJWv6CEpUxqBNHWgzSQXh4eomMDDh-MwER-VJOaxMmhZXWdDmZMT7IaFUZ75CWPWe3hhjmyJl8g8NiG2Awzc5j9hwa6GyD6gb53F1HcsXFBu2qcTIQ3pW-SxfN4s2zJfQrF4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/EVkdblSdLTh02DG0kY5vuFyDWjfVzLfdicO98u-6Sf9j13Pt_6Q4AsSDqOFV1eoviDNcnjkXgn9RSxL9Ozyxkv9nrpDNoSRwvmV_lKe65n15C8Xdk4Y3kC-Me8HTt5mKtmt1YdREIh-tUrQmN0BpzrE98p75VjUP-i-oAzZb0YQ11PWQvYMN1WpY8n1yRy5j?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/BkZxTacDESmOactbhLrpU4K3KhTQwxxS_zv3cUizloHRBrLK1gIhL-fWutQ5n1BwFUUxCIzrDQI7kFo5cbElBzyasySfASQ-aNly-75JtIYLJlQTZmLLCFdfkngGyoeBqh_2tMOKQwHQAo_d2dpNIC8dTMhW2_J38iAqIvwykmsCw_dgdzFBPYyOrziJznVc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/7vrW_IK5mjCfJUjI9j3YQibt80aNR3pJGaY2fWWYNQB4Dw7FFRYPPEo7Ik_MAuFo9uKRBnuAWO8CBQH8ztRF5jFVGufon7YPl6WCwr8RBAXwwlLA-FE6oQ5Inj-6NlMqYweZ6CSbwVSzGGUVynIiXfX4tAtSxEspELgRhB1GsfN9ahJZ6S_Efi2EV_gB5_bZ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/TQsSgVOZZpgEBD5PM_HI7k9LEQOXuaBVQMgCvE2YLjHVsDS8QSTFh9Ce7eF3F9n_eCc4cQ4FzuTW1rKBsq1yW-2Q9FVkXEpxrrgA-2Q7uG78yO_OeIs4pL2b50-od443zvzGMZpFo_5wQhmWOV_kI9rSuZUzW5INwahkc5tuUqEYiJ3l3f6ssPJwfUE-xd9w?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/CgZ8LJui8JwpugvgYJ-3Y3FAcY2rftPZmJFUyjuFSL-lfc7Y7Ziy00u9wHtiPEFJstUflcxAW1zIUSLrrl6tNYRicsdqDx7nuOBYx3MtMGgfciVVIZ6qWWo5GpONdtUTEbJpojaRF80qLgb0Vzoik-WNc13TuEmXEeo_nx2-rQZnqL_DJcatZacqIYlDp9ik?purpose=fullsize)
+
+請特別觀察：
+
+* 第一種：完整伺服馬達，編碼器藏在後端。
+* 第二種：拆開後，可以看到編碼器內部的感測結構。
+* 第三種：獨立的旋轉編碼器，有自己的外殼及軸。
+* 第四種：馬達與編碼器的組合位置。
+
+你可以把編碼器想成安裝在馬達後端的一個位置感測器。
+
+它不負責讓馬達旋轉，而是負責**測量馬達實際旋轉的位置與速度**。
+
+OMRON 的伺服技術文件也說明，編碼器通常內建於伺服馬達或安裝在馬達上，也可以獨立安裝在其他位置。
+
+## 2. 步進馬達和伺服馬達都有編碼器嗎？
+
+這是你必須先建立的觀念。
+
+| 比較          | 步進馬達            | 伺服馬達         |
+| ----------- | --------------- | ------------ |
+| 是否一定有編碼器    | 不一定，常見基本型沒有     | 通常有          |
+| 是否能知道實際轉動位置 | 沒有回授時，通常只能依命令推算 | 可以透過編碼器取得    |
+| 是否能偵測失步     | 一般開迴路型不能        | 可以透過回授偵測位置誤差 |
+| 常見用途        | 一般定位、自動化設備      | 高精度、高動態運動控制  |
+
+例如：
+
+**步進馬達：**
+
+STM32 命令驅動器讓馬達轉 1000 步。
+
+驅動器按照命令輸出電流，讓馬達轉動。
+
+但是，如果馬達因負載過大而失步，沒有編碼器的系統通常不知道它實際少轉了多少。
+
+**伺服馬達：**
+
+STM32 命令驅動器讓馬達轉到指定位置。
+
+編碼器持續測量馬達實際位置，回報給伺服驅動器。
+
+如果馬達沒有到達指定位置，驅動器可以根據誤差調整馬達。
+
+補充：現在也有附加編碼器的閉迴路步進馬達，因此不能說步進馬達一定沒有編碼器。
+
+---
+
+# 第二課：編碼器到底連接哪個元件？
+
+這是今天最重要的部分。
+
+答案是：
+
+**編碼器通常直接連接伺服驅動器（Servo Drive），不是直接連接 STM32。**
+
+先看硬體接線概念。
+
+![Image](https://images.openai.com/static-rsc-4/okAnrhDTYwt5WNZpnf1PS2PmvC3sDAu55PV-aH5IM6wQSm-5J2IVJ7EkZSeIGElALzBNmokFAxIGXsNF3CiDKLtZvPmnUHzqPbz552j4PwS8RgyIZXOqB8Xpb-6sGZ8aLSVmStk8gQu_uNxzBwmUfwtEg5UNppy_9s3dJuT8J27ohkZrip_nP8J-jclmCpoW?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/dbO-yoZqCF1WRDw6QP67SXigy7hYRinZgYk2WBw-VMedDYs0GTu3ulSW3rGeXMCLFaEhU-wtz7ncgLY-ObK6Kvz9IlIYF68mdSASsmWT8XRo_ooYPly4SR4Awed5bKupKVKAtT9A5vX_kMsYXijI78NA1udDbSnrnnFgC6XYgfo4-lXqfvrL8AM2TM2v9E_8?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ekugZOrcUMSQuDvSNExckNMEpg4RL4k32-n_sOzIDvLV8TZ-8HKm3_gb9sZCBc3HCQ8JcSL9kdO9pmUc5_641nOBDJ4b1EWJcWZKR9LFHUL4OsjHQoHzfs9XEYVelaRWECZiN_UnQMyhkd7CxYnHVVQJvW7Zeg_QJRS8WM_4cuLhbzU7JAcPDK6W4glctkNH?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/o3dWwbyqU30x1i4OwJsh6KBN273-a3HR7nnKZbzFaqqVC1pbjUT3n3cFCs1oywsh-sbJiKy2Bn3V1kQdVETo4seXC5YuuP53kwO6htLrgOInnYKm_z3WygmMoK4HPehwzNwAxgeRkau4ANPAP8KiWHnqLfp6c-aw5BsrudMFflldaSEqtYyBSyjlYAGCVnMO?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/EzACbCaQtulrwUZC5K0T_EWnaxn-9X7sWK89kkPxRQ7LR6FEpCRfSwXH6gXoZCtVsiKAl46ASe1x8tpLZi947Qx2Pduqlh-i2V5Qh1reIt67yS3onSlWyVUxxGbiqsVq4-lrhZlFhqDN3ZWobunKNVrTQYSlc4lh66_TfAjq1lTVt_rUZM8lnoHrkFCtMl_M?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/lU8f5ikSuQxvx_TcR8YhYu3Ujb6qhg0o4HPo3R98qP6hIOdyxivTaLUwJKDz-l8Xutr5G7TODAVtbULwRn1Gn_miiCTwrhrGNdohLwsJx0YQa6bPk9YKC-jDvkfcz28iWQTJHtvlK9Ku3m9mPWMiFqfI_Ovo9415wCpZGj_fOqQDhupXa6DK_OZS6Ut7d_lk?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8Ncadsau5NGXZXgU5KBjfY6IzuvKAOwzXRXZ7pi0lwmZoWPrFH_ptYk5QpHOG7dAoSlyQTileF6SMwDQDuvCvE3xvHA4ms93THfQ4rm3FjZ_OXsc0hVxbWCApWr8i_vfP8AMPdxyiLgw8uBfd9DVlWuz5lsqZwUW1I1YONLtSLHYzCSmowJPs0ryoVm6c6kK?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/MQs8Ql0Kp5nHP249ED0dI7IXnaxavwYSQCn8uHaDobu9vHlM4XMpVPLUwufTlN6TSNxSqxfgE7Hfmle7OisGi2gWnsllD7OXgQD5c9iATknf7T_5_u6DVoqNMHQcDg8AIe3kqvH8MXcJFYdBP68RCRtz4WevScrrOfnj1wM9PKum-E8lYwg5TNjDhy6-iSIh?purpose=fullsize)
+
+一套典型伺服系統有三個主要元件：
+
+1. 伺服馬達（Servo Motor）
+2. 編碼器（Encoder）
+3. 伺服驅動器（Servo Drive）
+
+它們之間的關係：
+
+```text
+       伺服驅動器
+       Servo Drive
+          │
+          │ 馬達動力線
+          ▼
+       伺服馬達
+       Servo Motor
+          │
+          │ 馬達軸旋轉
+          ▼
+        編碼器
+        Encoder
+          │
+          │ 位置 / 速度訊號
+          ▼
+       伺服驅動器
+       Servo Drive
+```
+
+這裡要注意：
+
+馬達動力線負責讓馬達運轉。
+
+編碼器訊號線負責把馬達實際位置傳回驅動器。
+
+所以通常可以看到伺服馬達有兩組不同用途的線路：
+
+* Motor Cable：馬達動力線。
+* Encoder Cable：編碼器回授線。
+
+有些新型馬達會整合成單一電纜，但內部仍然有不同訊號。
+
+**為什麼要接到伺服驅動器？**
+
+因為伺服驅動器需要即時知道馬達的實際位置，才能控制馬達。
+
+它會不斷讀取編碼器訊號，並根據回授調整輸出。
+
+這也是為什麼伺服驅動器不只是供電設備，它本身還有控制功能。
+
+---
+
+# 第三課：回授（Feedback）究竟是什麼？
+
+現在我們已經知道：
+
+* 編碼器負責測量位置。
+* 伺服驅動器負責讀取編碼器訊號。
+
+接下來就是回授。
+
+**回授就是把設備實際運作的結果，傳回控制系統，讓控制系統知道目前的狀態。**
+
+我們用一個簡單的例子。
+
+假設：
+
+* 滾珠螺桿導程：5 mm。
+* 馬達轉一圈，平台理論上移動 5 mm。
+* STM32 要求平台移動 20 mm。
+
+那麼：
+
+20 ÷ 5 = 4 圈。
+
+因此馬達理論上需要旋轉四圈。
+
+## 1. 馬達開始運轉
+
+STM32 透過 EtherCAT Master 對伺服驅動器發出目標位置。
+
+```text
+目標位置 = 20 mm
+```
+
+伺服驅動器收到命令後，控制馬達旋轉。
+
+## 2. 編碼器開始測量
+
+假設馬達實際只旋轉 3.8 圈。
+
+編碼器就會測量到這個結果。
+
+透過螺桿導程換算：
+
+3.8 × 5 = 19 mm。
+
+因此，系統知道目前理論上只移動了 19 mm。
+
+## 3. 比較目標位置與實際位置
+
+假設：
+
+| 項目                   |    位置 |
+| -------------------- | ----: |
+| 目標位置 Target Position | 20 mm |
+| 實際位置 Actual Position | 19 mm |
+| 位置誤差 Following Error |  1 mm |
+
+公式：
+
+**位置誤差 = 目標位置 − 實際位置**
+
+20 − 19 = 1 mm。
+
+這個 1 mm 就是控制系統需要處理的誤差。
+
+## 4. 誰負責修正？
+
+在典型伺服系統中，伺服驅動器會根據位置、速度及電流等回授資訊，持續調整馬達輸出。
+
+例如：
+
+```text
+目標位置：20 mm
+實際位置：19 mm
+       │
+       ▼
+伺服驅動器發現位置誤差
+       │
+       ▼
+調整馬達輸出
+       │
+       ▼
+馬達繼續轉動
+       │
+       ▼
+編碼器重新測量
+       │
+       ▼
+實際位置：19.5 mm
+       │
+       ▼
+再次比較及調整
+       │
+       ▼
+實際位置：19.9 mm
+       │
+       ▼
+持續修正直到符合定位條件
+```
+
+這個過程就是閉迴路控制（Closed-loop Control）。
+
+它不是 STM32 每次看到位置不同，就自己寫一段程式增加馬達轉數。
+
+**通常是伺服驅動器內部的控制迴路在高速、自動地完成修正。**
+
+OMRON 的技術資料也明確說明，伺服驅動器會讀取編碼器回授，並進行即時閉迴路調整。
+
+---
+
+# 第四課：那 STM32 如何取得實際位置？
+
+現在我們終於來到你最關心的韌體部分。
+
+你的理解是：
+
+STM32 設定目標位置 20 mm，之後也會收到目前實際位置。
+
+那麼，實際位置從哪裡來？
+
+我們把整個訊號路線畫出來。
+
+## 1. 完整硬體及訊號架構
+
+```text
+             PC / Qt
+                │
+                ▼
+           STM32 韌體
+                │
+                │ EtherCAT
+                ▼
+         EtherCAT Slave
+         （伺服驅動器）
+                │
+          ┌─────┴─────┐
+          │           │
+          ▼           ▼
+       馬達控制     編碼器回授
+          │           ▲
+          ▼           │
+       伺服馬達 ──────┘
+          │
+          ▼
+        聯軸器
+          │
+          ▼
+       滾珠螺桿
+          │
+          ▼
+       滾珠螺帽
+          │
+          ▼
+       滑台平台
+```
+
+請特別注意這兩條路線。
+
+**路線 A：命令傳遞**
+
+```text
+STM32
+  │
+  ▼
+EtherCAT
+  │
+  ▼
+伺服驅動器
+  │
+  ▼
+馬達
+```
+
+**路線 B：實際位置回報**
+
+```text
+馬達實際旋轉
+      │
+      ▼
+   編碼器
+      │
+      ▼
+伺服驅動器
+      │
+      ▼
+EtherCAT
+      │
+      ▼
+ STM32 韌體
+```
+
+這就是你想知道的實際位置取得路線。
+
+## 2. STM32 收到的實際位置是什麼？
+
+在 EtherCAT 常見的 CiA 402 伺服驅動器架構中，有一個很重要的參數：
+
+**Position Actual Value（實際位置），物件索引 0x6064。**
+
+另外還有：
+
+| 參數                    | CiA 402 Index | 功能   |
+| --------------------- | ------------- | ---- |
+| Target Position       | 0x607A        | 目標位置 |
+| Position Actual Value | 0x6064        | 實際位置 |
+| Velocity Actual Value | 0x606C        | 實際速度 |
+| Torque Actual Value   | 0x6077        | 實際扭力 |
+
+這些資料可以透過 EtherCAT PDO 傳輸。
+
+所以在 STM32 韌體中，可能會有類似以下的資料：
+
+```cpp
+int32_t targetPosition;
+int32_t actualPosition;
+int32_t actualVelocity;
+```
+
+例如：
+
+```cpp
+targetPosition = 20000;
+actualPosition = 19800;
+```
+
+注意，這裡的數字只是示範，實際單位要看驅動器的設定，例如 encoder counts、脈波或經過電子齒輪換算的 command units。
+
+這時 STM32 就能知道：
+
+目前位置與目標位置不同。
+
+但這裡有個非常重要的地方：
+
+**STM32 收到實際位置，不代表 STM32 就一定要負責修正位置。**
+
+它可以只是讀取狀態、監控進度、判斷是否到位。
+
+---
+
+# 第五課：究竟是 STM32 還是伺服驅動器負責修正？
+
+這是最容易混淆的地方。
+
+實際上有不同的控制架構。
+
+## 架構 A：伺服驅動器負責主要位置控制
+
+這是很常見的架構。
+
+```text
+STM32
+  │
+  │ 目標位置 20 mm
+  ▼
+EtherCAT
+  │
+  ▼
+伺服驅動器
+  │
+  ├── 接收目標位置
+  ├── 讀取編碼器
+  ├── 比較目標與實際位置
+  ├── 計算位置誤差
+  └── 自動修正馬達
+          │
+          ▼
+        馬達
+```
+
+在這種架構下：
+
+STM32 負責：
+
+* 設定目標位置。
+* 發送運動命令。
+* 讀取實際位置。
+* 判斷是否完成。
+* 處理異常及設備流程。
+
+伺服驅動器負責：
+
+* 讀取編碼器。
+* 執行伺服控制迴路。
+* 調整馬達輸出。
+* 讓馬達追蹤目標位置。
+
+這是你目前最需要先理解的基本架構。
+
+## 架構 B：運動控制器負責位置控制
+
+另一種架構是由外部運動控制器執行部分位置控制。
+
+```text
+運動控制器
+     │
+     ▼
+EtherCAT
+     │
+     ▼
+伺服驅動器
+     │
+     ▼
+    馬達
+```
+
+這種架構中，運動控制器可能負責產生週期性的位置命令，伺服驅動器則負責速度及電流等內部控制迴路。
+
+所以，不能單純認定所有位置修正都由伺服驅動器或 STM32 完成，必須看實際控制模式及系統設計。
+
+OMRON 的資料也指出，位置、速度、扭力控制迴路可以由伺服驅動器、運動控制器，或兩者共同完成。
+
+---
+
+# 第六課：還有一個重要問題——馬達位置不一定等於平台位置
+
+這是你未來學習 GMT 精密對位平台時，非常重要的知識。
+
+我們前面介紹的是馬達端編碼器。
+
+但假設：
+
+```text
+馬達 → 聯軸器 → 滾珠螺桿 → 滑台平台
+```
+
+馬達旋轉 4 圈，理論上平台應該移動 20 mm。
+
+但是機械傳動過程可能出現：
+
+* 聯軸器扭轉變形。
+* 螺桿熱膨脹。
+* 螺桿導程誤差。
+* 機械間隙。
+* 負載造成的彈性變形。
+
+因此，馬達轉了 4 圈，不一定代表平台真的移動了 20 mm。
+
+這時候就有另一種元件：
+
+**線性編碼器（Linear Encoder）。**
+
+![Image](https://images.openai.com/static-rsc-4/EK3KnD0fQylA8NihFj3jeevBAa5Cvwaly6tNyutvMZ63OcRAJiIXNgDq8W3dEM_TM0Wu1EtriVmDVyo5oy4sY7DxC5qJwwrVaKKz7yolzQcOUE-K5_KKjR4q74qccvJOxlFCEgnRTaTRvoUCKLpaeG5G5yT6vEQncN7PAsP0XZ7I3pRzqWocXXuuyTYQ8Iyb?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4UT3x-QhoxnsMsM_o4MfxuMkB2YPZHdBgOpm1fOC56y-WYyakGj02L3jGMuLCPbd-ubrR5O7pGUE3es3XPrvrgj_d7wbVH8cONYVZWzvG-1_4bm59oJHJrzOJxMIi1FL6w5arNIdMoLpn1_9NosInmn4W5YpdGP581rW-_OBXdP_NqYewWgNWBa_yOV0GW5Q?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/gilE2IhCCIL1ZDo2aGpL9Vdkedij-lvZ8VLnjthqbNeuRZwQI830Aqr7m16eB-QNNdrjarreqSdV5VMnHwV8Y_0zvM8v-Y7qTn6omPZDZ24nnjtjXGM3FykbDJM-7WrK4aBFuTrjQde3GgHTm_FdGTUIn_EaJ7QHE2xbX0ei92iA6UipB2nu20cVmR_imGIb?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/6m9GRL1d6ujf7NTweFhlDJmwP-kLtArCfOWOdhfNWbKh2jZp8HHDv2X6mt5N_gUBe7rvAk7eJsA-DpMLGJb6Ub-b_2pS-u7sncaJ7oditgp1_woUp1b0NHGTeYU50IO0giTB97oo-LZEf2ZKhz_HoY5ATvDrCoGCUShfoY4Z28sYBkkqA5xvdigqdwvDv6G_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/b6VGopv19iekF1h8jdBgL4XVPBOCya5Pm14HK7ndJSQm3tHpXFh9qtvcv4VqP4l3WVPd9cOdr3sz6sR91ATX9rch8XZRfOVTys6osmO8GsjmxDEV3jktC1KztEFrioSkkLS232htgLkuEKYANWPMwuSQ1Na27PeDBiVrDD3jNjrNGFzfStKdx-YW50SoH22T?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/XnG_NHJhZyUNuNSKaJ6s77V3m9ORfHn4NWN8sW0gB8wBQNME0IaMPqz-_ldWr8WrPjiONFKKHp9cWcEPpFX30c4qrAu3N1gaT6cuRoDnzS2-HCn8qy26w81xYiIkHPKEVFKtf9uNrucMm4WP3A9YWTKOZOn9od7gt499veBIetw1n9WVVujabNGhdLHkb-br?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/xC857v9KtyH922MELLB6cSLwJqZgXuZ1pNdClwyYIosQ6Hcmv6_gHzKqd-SGkjHt3kQN7yoLWAq1872QudTDOe9da7_YghkbEtb3BEkC4Gz_VzeWQoqq9vgFZKYTFuqKEBjyKVK4kmqhwINeJi-vmDQXnBoB0wpRBMM6LRgeB-5YCRk4PKtF8jfDPCp3Eimp?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Lr6MbPgPUQihkEE6AONaaJHK11da-w9-iA4SFBqcBvlMjUIbhbsv5kXT8UGlmDgy2DcSiiWhF-UwSfg67NZ_PaVtcq9nfMiHx0WEhAYB_m4vprn80txgLes4agQ6g2OpTPFXat9RRcaDlMdDWVTmY9Uay-kG4XyNQkAR8zU7oxgWXcgPcKLWCBFks1fFB2wA?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/AJB3JHhuine2gE22ci8B8P9k7nzP-TAMn9FcKqT8FjfLcDq2d08Tj69q9K6W8lTw1RKWOwPyNTCWXDQncJHxS91n5_TkojeKiqa5QbpM1IelQdUh1laqMUTTxD4kjEKebWjXxWDG2fKpgSm79R3_X2Qsn0Y62K0BPOJ0qzbwhM5aQRi8SGdNPe4dTj074eJw?purpose=fullsize)
+
+它不是安裝在馬達後端，而是直接安裝在平台的測量位置。
+
+例如：
+
+* 馬達端編碼器換算位置：20.000 mm。
+* 平台端線性編碼器測量位置：19.980 mm。
+
+這表示平台實際上還差 0.020 mm。
+
+如果設備需要非常精確地控制平台位置，就可以使用線性編碼器建立全閉迴路控制（Fully Closed-loop Control）。
+
+這時候線性編碼器通常會連接到支援外部編碼器回授的伺服驅動器或運動控制器。
+
+OMRON 對半閉迴路與全閉迴路有清楚的說明：
+
+* 半閉迴路：測量馬達或螺桿的旋轉位置，再換算平台位置。
+* 全閉迴路：直接測量平台或負載的實際位置。
+
+---
+
+# 第七課：把整個觀念整理成一張表
+
+| 你的疑問         | 正確觀念                        |
+| ------------ | --------------------------- |
+| 編碼器是獨立元件嗎？   | 是感測元件，但通常整合在伺服馬達內部或安裝於馬達後端。 |
+| 步進馬達有編碼器嗎？   | 不一定，基本型通常沒有，也有閉迴路步進馬達。      |
+| 伺服馬達有編碼器嗎？   | 通常有，可能內建或外掛。                |
+| 編碼器連接誰？      | 通常連接伺服驅動器。                  |
+| 編碼器負責修正嗎？    | 不負責修正，只負責測量並提供回授。           |
+| 誰負責讀取編碼器？    | 通常是伺服驅動器。                   |
+| 誰負責比較位置？     | 依控制架構，可能是伺服驅動器或運動控制器。       |
+| 誰負責調整馬達？     | 通常由伺服驅動器執行高速伺服控制。           |
+| STM32 需要做什麼？ | 發送命令、讀取狀態、監控位置、處理設備流程及異常。   |
+| 如何知道平台實際位置？  | 馬達端編碼器可以換算；線性編碼器可以直接測量平台位置。 |
+
+---
+
+# 第八課：我用你的 STM32 / EtherCAT 工作環境做個總結
+
+假設你正在設計一個 X 軸控制功能。
+
+Qt 下達：
+
+```text
+X 軸移動到 20 mm
+```
+
+STM32 韌體可能執行：
+
+```text
+1. 接收 Qt 命令
+2. 將 20 mm 換算成驅動器使用的位置單位
+3. 透過 EtherCAT 傳送 Target Position
+4. 伺服驅動器接收命令
+5. 驅動器讀取馬達編碼器
+6. 驅動器執行伺服控制
+7. 馬達帶動滾珠螺桿
+8. 平台開始移動
+9. 驅動器透過 EtherCAT 回報 Actual Position
+10. STM32 讀取 Actual Position
+11. STM32 判斷是否到位或是否異常
+12. 完成此次運動命令
+```
+
+這裡的第 5～6 步，是伺服驅動器內部的高速控制工作，不需要你在 STM32 裡重新寫一套馬達編碼器控制演算法。
+
+當然，如果你的設備採用外部運動控制器執行位置迴路，流程就會有所不同。
+
+---
+
+## 今天先不要急著往下學，我想確認三個觀念
+
+這次我不出太難的題目。
+
+**問題 1**
+
+編碼器的主要工作是什麼？
+
+A. 讓馬達旋轉。
+B. 測量馬達實際旋轉位置，並提供回授資訊。
+C. 提供馬達電力。
+
+**問題 2**
+
+一般伺服馬達的編碼器，通常連接哪個元件？
+
+A. STM32。
+B. Qt。
+C. 伺服驅動器。
+
+**問題 3**
+
+假設 STM32 命令平台移動到 20 mm，伺服驅動器發現馬達實際位置還差 0.1 mm。
+
+在我們剛才介紹的典型架構中，誰負責高速地調整馬達，讓它繼續追蹤目標位置？
+
+A. Qt。
+B. STM32。
+C. 伺服驅動器。
+
+先回答這三題就好。
+
+等這三個觀念確認後，我們再進入下一課：**步進馬達、伺服馬達、伺服驅動器三者的差異，以及 EtherCAT Master 如何與伺服驅動器溝通。**
+
+這樣才會真正銜接到你的韌體工程工作。
+
+
+---
+
+```
+編碼器的主要工作是什麼？ B. 測量馬達實際旋轉位置，並提供回授資訊。 一般伺服馬達的編碼器，通常連接哪個元件？ C. 伺服驅動器。 誰負責高速地調整馬達，讓它繼續追蹤目標位置？ C. 伺服驅動器。
+```
+
+三題全部正確！這表示你已經掌握編碼器最基本的功能，以及它與伺服驅動器的關係。
+
+你這次提出的問題，其實進入了精密運動控制的核心。我也很高興你特別問到 MCU 和韌體，因為這正是韌體工程師應該了解的部分。
+
+先給你一個重要答案：
+
+**伺服驅動器本身就是一台具有處理器、控制電路、韌體及功率輸出電路的嵌入式控制設備。它不只是把電力送給馬達而已。**
+
+而運動控制器（Motion Controller）則是另一種設備，負責更上層的運動規劃與控制。兩者可以合作，也可能依系統架構分擔不同的控制工作。
+
+我們一步一步來。
+
+# 一、先認識三種不同的設備
+
+這三個名稱很容易混淆：
+
+1. Motion Controller：運動控制器
+2. Servo Drive：伺服驅動器
+3. Servo Motor：伺服馬達
+
+先看實際設備的圖片。
+
+![Image](https://images.openai.com/static-rsc-4/YD_8fsLJ9g6igHC5O-dRP-EX44CYQMPzKGB4T33MDHqBS2xKd0SmqngRb5E16Es6v5GqOMrjyW8WEvzWf9JaI80PCkzs9FMUzGg5O8ighucElMO2LdzCVwMlForAerfEWPn-rsPsd5ZdSe6SC4uGvIegNFOUgKhxLinnLBCkS6Vd2W13y_3Pc9ktA9gMdtSi?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/fPHBEcq1JWzvOgbYDQTxt3reh5OtlNQmn808KfML3KAQfOgkeu-i35Zg-OiTiZ5C63XpGka3o-F3HHIOSveTmaMycbOUWVp7i6y0s1AmCHs1i9q0mDwkvn0HQDPn__jOL7LQDx9oUyb1MF0f9h-e5I0Jdbcx_HzJh8w7u10DLCfUrqAylmFdfLHFtcR4oUFt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/lzmEP_VxwRfCU7JBQWx6xytB-vn9aiM8TO7ojHz8_oOW5p7DK1KZ6r0_d6z-S8yLELkfT_XP6ktZTuhvsXDVva3SRCEcbWw9YksGOt41tBQKhSuD__8KzO14B09IlfvcespJrm6FVQTbbNglY_D7AsJaTGyjg3uw385pnS7PyZz9sYusqlDgZpPw45r3uYrG?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/nBtQ5xtTbS9grYLjbFdE5URANO7qJZhXy-qlQUIrNmPJI4YUtRoTCW8VoOc4Nrk0jFzAr_rguEgRI61jEVcg_k3SFXcIMROf1-5G-Z2g_DZF52qB2AdhUDoWLpF9Lt2kqiPgJmyq9FDWr36RjCNHwppYEx58RFmTOeskCLELOhfUZ_zJO9LnL3YlliVmMjyv?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2G2xoJ7CAo9vMfPZLbjS9a16rQAbTio7pxY7PiP4nPBAFf_pgeReaQUD-xAHI4rVC90HmwKNz4qbooWVB9ch_ApL3OR0bq1uqFQosWsxsV299he6G3cw9XrhU0FZXtm2I6uB9eJ0bvCFcsYxE39ww7853CxsTUg64_R5XzWwwWC65Pa3jDSKcD8pHq1Kkb-v?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/p2G1S0QwQoBKTJqgQ7Ji0tZNI_VH165archOcozOb_4n1qwj7iL5RVtLn7BQZxZkDuXyzFmjZzlLihlW3_-Q4_SsHZa76Lh3sVOehLhLHiVNeWHAAs1VvtcuXRYa0ztESKXID5gTKDO3ytqkxPgxlTng_9ZXszSjwuQNWiFzTLSEyUNwBNxpAQSj8Z5KXkFK?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/DFv9v4vbklcm4WjRSXgQLjPhDs0iw_6quYObxWbwXgr5ObYYBb-iX-vY2jxHE0WCwUTBnwVZ-G7UXJb_kWOJ04a7Bf0OpVRE96hNPcVqN-kdgRNRk-0aEXUaR_emildBXQzHhXaI3TLxWq8tujvmRUnZEcv-8OlrNmAA4RTBaJoMYDYtr7Fe_P45gvsweeVv?purpose=fullsize)
+
+它們的工作並不相同。
+
+| 設備                | 中文    | 主要工作                 |
+| ----------------- | ----- | -------------------- |
+| Motion Controller | 運動控制器 | 規劃運動、計算各軸目標位置、協調多軸動作 |
+| Servo Drive       | 伺服驅動器 | 控制馬達，讀取編碼器，執行伺服控制    |
+| Servo Motor       | 伺服馬達  | 將電能轉換成機械旋轉動力         |
+
+我們用開車來比喻：
+
+* 運動控制器：決定車子要走哪條路、何時轉彎、要開多快。
+* 伺服驅動器：控制引擎輸出，讓車子按照要求運作。
+* 伺服馬達：真正產生動力的設備。
+
+這個比喻不是完全對應，但可以先幫你建立三者的分工概念。
+
+---
+
+# 二、什麼是運動控制器（Motion Controller）？
+
+運動控制器可以理解成：
+
+**專門負責控制機械運動的計算設備。**
+
+它與一般 MCU 韌體控制最大的差異，在於它通常具備完整的運動控制功能。
+
+例如：
+
+假設 GMT 有一台六軸精密對位平台。
+
+它具有：
+
+* X 軸：左右移動
+* Y 軸：前後移動
+* Z 軸：上下移動
+* θX 軸：繞 X 軸旋轉
+* θY 軸：繞 Y 軸旋轉
+* θZ 軸：繞 Z 軸旋轉
+
+如果要讓六個軸同時運動，控制器必須計算：
+
+* 每個軸的目標位置。
+* 每個軸的移動速度。
+* 每個軸的加速度。
+* 各軸何時開始移動。
+* 各軸何時停止。
+* 六個軸如何協調完成整體運動。
+
+這就是運動控制器的重要工作。
+
+![Image](https://images.openai.com/static-rsc-4/fQYs_t97jTZlMDk3_UsFOLTw-CK1tIQ-EbNdxYRij3Pfc5JbBuyLxicaQmYtCpZG4v1WLKCAm3FjdQCAlcKXH0qiWsLKa8fsk8KTRVURCCQNhLa4A9V6iD7uni1DGSwyYwHMwxAYL7qSGzuFV-WfH3w-zN_A6S4O6ColPtiwjs0y_sfYB7qlqTdiy1qGC8M1?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/YBj6cFslqFYHM1f27KcDfn3lBSoWJ9lPmCLpwIsa6F6w2U4DDI-cS5OQ76wimTwXxipPiTil2rKMDfnQ8Sln_kH_ZBpSMcbsPhsNduDZhEMfNOGUvtCCuLBQRTd8kJEkpyVQN1eNQpJRpsvOKsXux_VAzmiWA4JbpZ57w4CCOUdRYCiErV3xroDuey2oo5Yg?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/72w6qSEVzJOMSNNb4DS7poDhO5RxfNs2n9Gh1YqS1arRy2kbmRr-KdtwE19e7UhR-a-wufFYuQqryQHFCkKoTKqlj0fvkUYYcpiAtw7c4OlJvXVBwMwuvXELXcIyvLVh0DxY9ynRaDWo6EnGHrMjhcUWBwnCj2nICP8Tfa-cAUPZ4FFX-H82lPc1hHwPrHJq?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/gVwaavFGWOa7q7dZ4FoJaRyf9NSwT6iFCb5S-KnRUgyi_bggDu19F22NTxR83qz96DAnWDcHTeHwbX0M8KRIByoF5nivVRHouUniZe7QYUv3JY1tPcNjEe5eRI0KT04CXDf4pv0nhjTVIroQ7WvWs_8CCVzQhEZle9K95QD_y-pWJfTqSZexjTSlGoGIutw5?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/F76RYq-K5B-YFYsCIUDM8UlcibYWPzkERZF4LYDpZi2q-Y8GhyhQpNlT5Mti6gbz6zqRMVm8-lCxiJm6cewYQ0jOTHCy7VIghnTeXo4oH_Pt7nPh_JaIhh_2jBqs86jQ5XkX48v9r5yZX_8bKKQHPtu1Ue9-497GQ1HVgQoIPDRBcupOv73jxYWup0hNynnC?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LrNiimsB5NJjv802em-3uW3u9atYuCQpo5ukLkDEMUKg1arBH4h3FEMmRUUhXHszhTe7ujQlH9ZOIFTLQ5Iv4k_w_Rpov_PYMKVCAAtvWnbI3JxBd5UavmDETbK09pNXfwHDh6-QYxSQx7H8xnmXnzy3w5byFZ2xi7eVbV8YmiIqyHFLR57yAuvls9hC3HjN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LWRfavBxD8uu0Ypw9A4pM7nrfyykEdaronTfOGCbX9pZ8HQJ8esc_DMZuyEyL2Dy3-F0a9e6YiakTzCoqN-IyhAXpb6ktfdOddPbAA_JLWkeTShj4_wbg05AE7u4v0zzB3GoHMq8uL-_RjsoLi15x6jck_nQP5eSpVbIvHVmRiQ0oO7CBSpgUioQSTgx-EML?purpose=fullsize)
+
+### 舉個實際例子
+
+假設我們要讓六軸平台完成以下動作：
+
+```text
+X  軸：移動 10 mm
+Y  軸：移動  5 mm
+Z  軸：移動  2 mm
+
+θX 軸：旋轉  1 度
+θY 軸：旋轉  2 度
+θZ 軸：旋轉  0 度
+```
+
+運動控制器必須將這些命令轉換成各軸的運動目標，並協調它們的執行。
+
+如果沒有適當的運動控制功能，而是完全依賴 STM32 自己處理，就需要自行設計軌跡規劃、多軸同步及控制邏輯。
+
+這也是為什麼精密自動化設備經常使用專門的運動控制器。
+
+---
+
+# 三、為什麼運動控制器與伺服驅動器都能比較位置？
+
+這是你問得最重要的問題。
+
+因為兩者都可能具有位置控制功能，但它們所處理的層級不一定相同。
+
+先看這張圖：
+
+![Image](https://images.openai.com/static-rsc-4/p3ckcjhTy-9qK9ZGjr26txB-1fLxk6NpQXU7U8FlGms8O-d2dwv3oVMHcQceX4dDXZO0eLvqiQjO_kdeE41BfCxc8beQzEwx10L77TvlnFFtfo_5pk53EUewJNLodzByIfO-29ObZNQo56Nc3yI_wD5PiJR4fXC9RJjLVh90ZmGQliIE61XT76Al1DzTawzR?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Rg53n0l9-UAplt6mhFXUa8usgSTCmXcg9nw0Og3ivLFjpN8b9-334Pi9bmLGkDzX1n78pGIemYridLFnSv7zkcRGkRzdl-W2BpB-2q0b13nvBdc6fD3agajQ_Vh9f60Sf51tSagbeuUaQBx9YhvsvEfr5sH9QgAzI-ZJy6FMraoKMe20PGcfVslRqN2cC9up?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/eNE0SQK24UX7E8cHq-t8wfunvXthCgT9sK4N_-jFU47yyYHeBpANB8Jp5zFKyfy9zjD5LKfAgbjK5FeecFTWp4S4C6Ew0-ibkYiwlqwf0N90FqCClG-B9atZFEC1aLQO877QLlQ8tBhiHv_uxgjX4LlJpQ96ejiYdIQQvMKBVk5G3Hu22a0VZCxhZBAjJ6OC?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/gMCWpOsdDCe4emI09DbSzl3DbZU2LN5FuoR8CbCNgEiZz8v4TmymsysFCVvmm9saCA2ke474k1WdLb3ayVHO-we0iyUEUdexO4OZnm7CtztH1l6yPfIv75_MQ1n1HZ6IFBhtmeaQND3rRuVwN6seQJ4RE-LM_odghOF1RGX_MJrBnDwRR6_RwkZAM0yM9RQM?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5YfdWPs2W6s-d_zNowOvHm2nqtHB4DE4te5ivle7TXlXegdho8Tzz4_ROq0CHOb0zHnjy-YEcg-1pgvcGvFfj4sX2O9fnc3oPOKQ8TodWTnyO8-LuOR_dOY3TjPYF258gNSXR9-Z96iagV5sf9wrl6G98EMSh3TsQ1eFFsOvVcBJ3D8NfA-9cXc69rUSlD_o?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/kZKjPJjU1IfPuo8pnbhYqHVAUcjNHhyNRaaHg7yK5yPAvVdjCVOUT84D30hVe6XU-OY_Qy01dVPeVJo7ROES2uVaz3o7I_o8YIStj-5da1bkqZn3jszh8Nstn6QCB-W_j5vHs2C_RaoWdTTEsMZeStoG73HkXH76KlNS0SLzbGO9LBiUWIoYizguIFqJE_cu?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5JYY4_c58DjWNxds9MGo-tNfELNTmfZBhgOBqbP5IXTAisDOQQSnVyxzMdg6AOMFAZe4_lZ5ZBYgdjIqDF8NovExj5chdcJBxd1B20OCmQZ1xOgV3ckYfFNs9Yj4M_RbePugFf4s0p0rryk68_ctCvF-vRgT3ivyYPBdb1CMwmPD5MfwB4-QsT8oMO72DEyQ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/CbxXAKO4YgYGvFpoNJd3Vs49L9vUHQKkbOc4I8NVlQ7yzTYGd0NoXOsh57chybEBjmRF9nT09yHwvct7omM9fNetHSTBBBPkuvaF21JZspv8M6Rf78gIHdLY1uYiz-0Tb__nSZDisQAks7GAiLzVA6zEd6Dvuz3zZqEMSjbxRguqhd5BAioMYv9wwuPG3eoB?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Wb-ea1Of35iw36Rohq8wehuDppKyGzU5nHPbTNu3vKPZ6Y2D2VZaQQdIxJhcNaGOVUACVIcHbraOOPqkGTY9RGA8ak8Cx_5kepi3-qRSrbM47UFYqfxofA5tpm3w8gKkY_76dCFYweNCFDg3E9sHjLEQTjXlqhA3etk1b29sbm9nEDf_LQdBFaA_kqc2lC-U?purpose=fullsize)
+
+伺服系統常見三種控制迴路：
+
+| 控制迴路    | 英文                    | 主要工作        |
+| ------- | --------------------- | ----------- |
+| 位置迴路    | Position Loop         | 控制馬達到達指定位置  |
+| 速度迴路    | Velocity Loop         | 控制馬達達到指定轉速  |
+| 電流／扭力迴路 | Current / Torque Loop | 控制馬達輸出電流及扭力 |
+
+你可以先把它們想成三層工作：
+
+* 位置迴路：要移動到哪裡？
+* 速度迴路：要移動多快？
+* 電流迴路：馬達需要輸出多少力量？
+
+在典型伺服系統中，這些迴路會依照控制架構分配給伺服驅動器、運動控制器，或由兩者共同處理。
+
+### 1. 伺服驅動器內部的位置比較
+
+假設 STM32 下達：
+
+```text
+Target Position = 20000
+```
+
+伺服驅動器從編碼器取得：
+
+```text
+Actual Position = 19000
+```
+
+驅動器內部就可以計算：
+
+```text
+Position Error = 20000 - 19000
+
+Position Error = 1000
+```
+
+接著，位置控制迴路會根據誤差計算所需的速度命令，再由速度及電流控制迴路調整馬達輸出。
+
+所以伺服驅動器可以：
+
+1. 接收目標位置。
+2. 讀取編碼器。
+3. 比較目標位置與實際位置。
+4. 計算誤差。
+5. 調整馬達輸出。
+6. 持續重複上述工作。
+
+這些動作通常在非常短的時間內反覆執行。
+
+OMRON 的伺服技術文件有完整說明這種位置、速度、扭力控制迴路的關係。
+
+### 2. 運動控制器也可以比較位置
+
+那麼運動控制器為什麼也能比較？
+
+因為它也可以取得編碼器回報的位置資訊。
+
+例如：
+
+```text
+運動控制器
+
+目標位置：20000
+實際位置：19000
+位置誤差：1000
+```
+
+運動控制器可以根據這個誤差，計算下一次應該傳送給伺服驅動器的目標位置。
+
+這種情況下，運動控制器負責外部位置控制，伺服驅動器則負責內部速度及電流控制。
+
+**所以，兩者都能比較位置，但不代表兩者一定同時執行相同的位置控制工作。**
+
+這取決於系統設計。
+
+---
+
+# 四、伺服驅動器內部是不是也有 MCU？
+
+答案是：**有，而且這個觀念非常值得你了解。**
+
+![Image](https://images.openai.com/static-rsc-4/xlQCYrmSeSbSp4_AzumnYC0vcR91JL9Y8LQ8Z-GxUsPLG6_EUufDJ5S9IPQ7sayRFyvYxPG4BVPeMi_UNUxx7mPNeHi-5hiCm26Dlpo9zgFi0F_uTQBibrhr8f_Auh-niiEDZbRpUCizcm4-qUyui4OkRKKIRSkE9CXSN8rxDG-PwCMxCF4VZXCRlK2kVC7S?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/wZh7I0lhGB-UOSVtcJWm4c3Vo1QzaYBKCYeIDhdz2Su2iNbhVqDTG0_nrUOEXIiicscGQfeYZxMzq4gzskuIZz4AB0-Iujg-pkOR74AcNQhnvY8G2Rp2C974JS9TthUZBnpUXsn5nPD8wRsTwU0bz32gTrpEA64Asl-PIdWIANW2pUj6uzEEGreCDFHGYXWS?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/14V7Q9FXbcD4nIM9-FKdqQrDnjRpxz1hfuf4N9Xc_hsvhZzhtqD7XQ-AgMT1X6GCSMj3v7u86E7pVy769cweDpnkruG2_Qorg7qgQwqki1iDN2aTwnRNlSTGDVo7rpkEO_ZAs2s-dqX50tNGu6r42BPU5VeqJUqBeB4lKE-UxEMXBtmfi1Ox6FmbQ-Us7F0N?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/wdr3_113HFUpezw37UD3r8-XgDOx9G1GuvZetXVbXeuPlPeTR2LBalfPYFw68ALa5eRbvSbIJ8RjtjCC2rENl6dAJowFd7rHi-ieV4XjofO8Hnktc9NTIwk-bgVKR9PHKxNEwaS51SCYNNTFJ6gyRxYQZwkPTuZU1Vcrf9fzNldg4zf6tPjm7wV5a02k5zaE?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/3UADB5ZDolbhp_fKL6i6icmlGPjQp8cJi6ZB2gg4V7glKtas3i4IySQY-R9-Gc6ID0E0PcSR_j4xr2jmfZJMJnP0hQRlLDuq8eIzHtJpRCst1z0wFiwHWqJJjsCQmD66UTIHtUcYT9aNdnqyWtAhRC3_bLYMPfQztztt_3AB0DNrExG7XI-4UuEKRMtkvLpU?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/RgvJfcKHTdhFeRW5AqQBB8F_C_RUJiShcfSC-cIk1K1mi3swkO9y31i94eGgJqAaxJxDkCGP66zHxi4P_JAAB4Ir2Jd1dvFJ0arui7e98WYcHteVFDdBufOo3F4RqSkGp9XDM6NUBPoY26aL6oVXVqzucb_A3OxPnEgdSP8yyx7uSO-LwMAf21LBqfmt-ur2?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/43cWtNkBA-OuhfxjO1bJumT9H65EuPbm0MW_jxpBEIyzZydmiuPUxeMBkJmf8lIraSKAqhdiLCmuvgJDlc9dC-SNybXUYCLAD7HpU4SC_q58hdc9Y15CI3OlutQhFUh-9QsHF1En3ygXj5Rr89IXMjvZn7Z99yp3jCzzLNR175CqSElhgq-3rrUzaFHGk0PL?purpose=fullsize)
+
+一台伺服驅動器內部通常包含以下幾個部分：
+
+| 內部元件                    | 工作                   |
+| ----------------------- | -------------------- |
+| MCU / DSP               | 執行控制運算               |
+| FPGA / ASIC（部分產品）       | 高速訊號處理、編碼器介面或通訊等     |
+| Encoder Interface       | 接收及解碼編碼器訊號           |
+| Communication Interface | 與 EtherCAT Master 通訊 |
+| Power Circuit           | 提供馬達所需的電力            |
+| PWM Circuit             | 產生控制馬達的 PWM 訊號       |
+| Protection Circuit      | 過電流、過電壓、過溫等保護        |
+
+這裡特別介紹 MCU / DSP。
+
+它們就像你熟悉的 STM32 一樣，可以執行韌體程式。
+
+例如，伺服驅動器內部可能執行：
+
+```text
+1. 初始化硬體
+2. 初始化編碼器介面
+3. 接收目標位置
+4. 讀取編碼器位置
+5. 計算位置誤差
+6. 計算速度命令
+7. 計算馬達電流命令
+8. 產生 PWM
+9. 控制功率電路
+10. 監控馬達狀態
+11. 偵測異常
+12. 重複執行控制迴路
+```
+
+這與 STM32 韌體開發的概念其實非常接近。
+
+差別在於，伺服驅動器的韌體必須在非常嚴格的即時性要求下執行控制運算。
+
+例如，TI 的 EtherCAT 雙軸伺服驅動器參考設計，就使用 R5F 處理器執行 CiA 402 與控制功能，並利用其他處理核心處理編碼器及電流回授。([software-dl.ti.com][1])
+
+因此，你可以把伺服驅動器理解為：
+
+**一台專門為馬達控制而設計的嵌入式系統。**
+
+---
+
+# 五、運動控制器內部是不是也有 MCU？
+
+也是有的。
+
+運動控制器同樣是一台具有處理器及控制軟體的設備。
+
+例如：
+
+![Image](https://images.openai.com/static-rsc-4/LS8m1l36Z7NDAlljc19-WpLugooc4B-TWUAr698wKnIcSZz3_aVDr95jmsaRHgYrjOQ8UefFZDIXLGBItg3hXcbGtSq-wNhUkpazmvOiNbs_h_uuMg1MlGLW8J9nwpJtboRi0lHOc8RWZn-0qy3rpE0RuKRRSRtMey2cgTP2m9UXTQ8a8radcfm6t5CKlS56?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LN6nRdpmsuPdXzYZ9cQIi800-cphLDErUBsxJGiyXPZMzCYKbeMai6yBzGNC4sKS51WLt5_k3SvRZ4g21uim0FVeivOdys2VubY86hcBR0typ3f3AFcDYWKkm_88QvmGPKLwxc6IY-YXBkQAT8RNQeZngKCbIDDWHevrgUDC2xqp1h4jrEt0RUlMncaeO6HW?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/sv7Xah0VO-TunSlouassRkY12MBpq_23bW8D-_ksRam48IRABJeQLpEP39QC-5_NtXUQKP7sBEc-F4qJeVi_m9wMhDg2wM4IcmhAwSlXqkZcdjdmE8ESB1Vws8AomXltQgNJZNUybaHWsK7zVRT1VgPo-CwUysMJk4KA7Fz6TiCJxw9z7rKHzAeLum8co5Xe?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/A3QeSp_IQOkyFZU5RguV0sl3QEbtyd_sjfkiRRS3EIz3tbbdKm-8YXHn1t4tYP5JysziqPgL3aP2W4z4wkH8nCCCCnCJDMOHr6fbVpNZtVTuU_QteTYmu0_nDoillLDr5m665M1lWNZEsZAWSOAWgkmJztyDH3ebrrDwUGZRruEaw6vK9lK54GhqHnzyO_aQ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5J9fdAOWrtwkC1wIMBMzFI8O2dOU7mHftSCPrChI41lFHTe5zWhumFdBT3C_YoQj8mIa151nQxQDK1seWsssk8ZFTip23awE_N_sBp3kZlWPcXnlMaYjWUT6NuSR5IFLPT5V186XVtADlqqRnB_eVz6KnmctGmdGCCKh1S_X1At3ZnhtE72IKAZ_8G6uioPX?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/laxruD6nFfcBeyfHvk8I9zjC3w_YRUvWf9ZKtO1AK9oiFiYSM91OmxxnV3621DSvVKE7KQOgHlX9zJPiiF0CvXp8rwi5QLCCkYgcMDluHSD04Jf4yvc0_puDNqFNko64OLIUbjBViLH0ebrEHQPKUnM00Xt8ACjBvCT283SSNm2QcTMxZIw89JGIsOASOPYt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Pq0tbplwM29_OAdLVMd3BL2zggd4nkbJ0Vf0E5pf9SEHwpYLyCP2ptydRDFa8kcn-gE4mAW5fa1MhuXgczSAi5ymzZxsP6IhNLD3wfOhS8nPlzqcAE7dmVftHsCoP7Y55KQ9DjV55SYnFoJasZ-NdCiJ1Q1cFosB0tc9JFegk48l56nXa7lEr1TKZw17C5uN?purpose=fullsize)
+
+它可能使用：
+
+* ARM 處理器。
+* Intel x86 處理器。
+* DSP。
+* FPGA。
+* 多核心處理器。
+
+內部會執行控制軟體、韌體或即時作業系統（RTOS）。
+
+例如：
+
+```text
+運動控制器內部
+
+CPU / MCU
+   │
+   ▼
+運動控制軟體
+   │
+   ├── 軸控制
+   ├── 位置計算
+   ├── 速度規劃
+   ├── 加速度規劃
+   ├── 多軸同步
+   ├── 位置回授處理
+   └── EtherCAT 通訊
+```
+
+不過，運動控制器不一定直接連接編碼器。
+
+有些架構是：
+
+```text
+Encoder
+   │
+   ▼
+Servo Drive
+   │
+   ▼
+EtherCAT
+   │
+   ▼
+Motion Controller
+```
+
+也有些運動控制器可以直接接收外部線性編碼器訊號。
+
+所以要看實際產品設計。
+
+---
+
+# 六、把這些設備放在一起，你就能看懂完整架構了
+
+現在我們把你熟悉的 STM32、EtherCAT，以及剛才學習的運動控制器、伺服驅動器全部放進來。
+
+## 架構 A：STM32 直接當作運動控制主機
+
+這是一種可能的架構。
+
+```text
+             Qt 上位機
+                 │
+                 ▼
+             STM32 韌體
+                 │
+          運動命令及目標位置
+                 │
+                 ▼
+          EtherCAT Master
+                 │
+                 ▼
+            Servo Drive
+                 │
+           ┌─────┴─────┐
+           │           │
+           ▼           ▼
+        Servo Motor  Encoder
+           │           │
+           └───────────┘
+```
+
+這裡 STM32 負責上層運動命令與設備流程，伺服驅動器負責內部伺服控制。
+
+實際上 STM32 是否也負責軌跡規劃，取決於你的韌體設計。
+
+## 架構 B：使用獨立運動控制器
+
+```text
+             Qt 上位機
+                 │
+                 ▼
+          Motion Controller
+                 │
+                 ▼
+             EtherCAT
+                 │
+                 ▼
+            Servo Drive
+                 │
+                 ▼
+            Servo Motor
+                 ▲
+                 │
+              Encoder
+```
+
+這種架構中，運動控制器負責軌跡及多軸協調，伺服驅動器負責馬達的即時控制。
+
+## 架構 C：運動控制器與伺服驅動器共同執行控制
+
+例如：
+
+```text
+        Motion Controller
+               │
+               │ 目標位置
+               ▼
+          Servo Drive
+               │
+               ├── 位置控制
+               ├── 速度控制
+               └── 電流控制
+                       │
+                       ▼
+                   Servo Motor
+                       ▲
+                       │
+                    Encoder
+```
+
+這是常見的分層控制方式之一。
+
+---
+
+# 七、這與 EtherCAT 的關係是什麼？
+
+你之前接觸過 EtherCAT，所以這裡補充一個很重要的概念。
+
+EtherCAT 本身是通訊技術，不是運動控制演算法。
+
+它負責讓運動控制器與伺服驅動器交換資料。
+
+例如，使用 CiA 402 標準的 EtherCAT 伺服驅動器，可能透過 PDO 傳輸以下資料：
+
+| 資料                    | Index  | 傳輸方向           |
+| --------------------- | ------ | -------------- |
+| Target Position       | 0x607A | Master → Drive |
+| Controlword           | 0x6040 | Master → Drive |
+| Position Actual Value | 0x6064 | Drive → Master |
+| Velocity Actual Value | 0x606C | Drive → Master |
+| Statusword            | 0x6041 | Drive → Master |
+
+也就是：
+
+STM32 可以將目標位置放入 EtherCAT PDO，伺服驅動器收到後執行命令；驅動器再把實際位置放進回傳 PDO，STM32 就能讀取。
+
+這些物件及其資料交換方式由 CiA 402 規範定義，但實際 PDO 配置要看驅動器支援情況。([CAN in Automation][2])
+
+官方參考資料：
+
+* [OMRON 伺服馬達與驅動器技術說明](https://www.ia.omron.com/support/guide/14/introduction.html?utm_source=chatgpt.com)
+* [CAN in Automation：CiA 402 標準](https://www.can-cia.org/can-knowledge/cia-402-series-canopen-device-profile-for-drives-and-motion-control?utm_source=chatgpt.com)
+* [TI EtherCAT 雙軸伺服驅動器參考設計](https://software-dl.ti.com/processor-industrial-sw/esd/motor_control_sdk/am243x/latest/docs/api_guide_am243x/EXAMPLE_TIDEP_01032_REFERENCE_DESIGN.html?utm_source=chatgpt.com)
+
+---
+
+# 八、這裡有一個你未來很可能會遇到的重要名詞：CSP
+
+因為你目前使用 STM32 與 EtherCAT，所以我先介紹一下，但暫時不深入。
+
+CSP 全名：
+
+**Cyclic Synchronous Position Mode（週期同步位置模式）**
+
+假設 EtherCAT Master 每 1 ms 傳送一次位置命令：
+
+| 時間   | 目標位置 |
+| ---- | ---: |
+| 0 ms |    0 |
+| 1 ms |  100 |
+| 2 ms |  250 |
+| 3 ms |  450 |
+| 4 ms |  700 |
+| 5 ms | 1000 |
+
+這些位置數字代表驅動器使用的命令單位。
+
+伺服驅動器會依照週期收到的目標位置，控制馬達追蹤。
+
+這就是為什麼運動控制器需要具備即時運算及通訊能力。
+
+但要注意：CSP 中，運動控制器通常負責週期性產生位置命令，而伺服驅動器通常負責內部位置、速度及電流控制。實際分工仍依驅動器設計而定。
+
+---
+
+# 九、今天的重點整理
+
+我希望你先記住以下五句話：
+
+1. **編碼器是感測元件**：負責測量馬達實際位置。
+2. **伺服驅動器是嵌入式控制設備**：內部有處理器、韌體及功率電路。
+3. **運動控制器負責運動規劃**：例如多軸同步、速度及加速度規劃。
+4. **伺服驅動器通常負責高速馬達控制**：依照回授調整馬達輸出。
+5. **EtherCAT 是通訊方式**：負責傳送目標位置及回報實際位置，不是負責馬達控制的演算法本身。
+
+---
+
+# 十、確認一下你是否真正理解
+
+這次我不考編碼器，改考你剛學習的三種設備。
+
+假設有一台六軸矽光子精密對位設備：
+
+* STM32 負責設備控制程式。
+* EtherCAT 連接六個伺服驅動器。
+* 每個伺服驅動器連接一顆伺服馬達。
+* 每顆伺服馬達都有編碼器。
+* 設備需要六軸同步移動。
+
+請回答三個問題：
+
+**問題 1：**
+
+如果要計算六個軸應該如何同步移動、各軸應該在什麼時間到達目標位置，這主要是哪個設備的工作？
+
+A. 編碼器
+B. 運動控制器
+C. 伺服馬達
+
+**問題 2：**
+
+如果要讀取編碼器、執行高速位置控制並調整馬達輸出，這主要是哪個設備的工作？
+
+A. 伺服驅動器
+B. Qt
+C. 光纖
+
+**問題 3：**
+
+伺服驅動器內部有沒有可能使用 MCU 或 DSP，並且執行自己的韌體程式？
+
+A. 有
+B. 沒有
+
+這三題答對後，我們就進入下一課：**步進馬達、伺服馬達、伺服驅動器的完整認識，以及它們在 GMT 精密滑台中的應用。**
+
+[1]: https://software-dl.ti.com/processor-industrial-sw/esd/motor_control_sdk/am243x/latest/docs/api_guide_am243x/EXAMPLE_TIDEP_01032_REFERENCE_DESIGN.html?utm_source=chatgpt.com "AM243x Motor Control SDK: TIDEP-01032 EtherCAT-Connected Single-Chip Dual-Servo Motor Drive Reference Design"
+[2]: https://www.can-cia.org/can-knowledge/cia-402-series-canopen-device-profile-for-drives-and-motion-control?utm_source=chatgpt.com "CiA 402: CANopen device profile for drives and motion control: CAN in Automation (CiA)"
+
+
+---
+
+三題全部答對！🎯
+
+1. 六軸同步計算與運動協調：**B. Motion Controller（運動控制器）** ✅
+2. 讀取 Encoder、執行高速位置控制：**A. Servo Drive（伺服驅動器）** ✅
+3. Servo Drive 內部可能有 MCU/DSP 並執行韌體：**A. 有** ✅
+
+你的問題非常好，而且正好涉及我們未來要理解 GMT 設備控制架構的核心。
+
+## 一、運動控制器真的比伺服驅動器強大嗎？
+
+不能單純這樣比較。
+
+比較準確的說法是：
+
+**運動控制器負責規劃與協調運動；伺服驅動器負責控制馬達實際運轉。**
+
+兩者的功能不同，不是誰取代誰。
+
+舉個六軸矽光子對位設備的例子：
+
+假設設備需要讓六個平台同時移動：
+
+* X 軸移動 10 mm。
+* Y 軸移動 5 mm。
+* Z 軸移動 2 mm。
+* 其他三軸配合調整角度。
+
+運動控制器需要考慮：
+
+1. 六個軸各自應該移動多少？
+2. 六個軸何時開始移動？
+3. 每個軸的速度和加速度如何安排？
+4. 如何讓六個軸同步到達目標？
+5. 如果其中一個軸發生異常，如何處理？
+
+這些是運動控制器擅長的工作。
+
+伺服驅動器則負責：
+
+1. 接收目標位置或速度命令。
+2. 讀取馬達 Encoder。
+3. 計算控制誤差（依控制架構而定）。
+4. 控制馬達電流與輸出扭力。
+5. 讓馬達按照命令運轉。
+
+所以，運動控制器處理的是比較高層次的運動規劃與協調；伺服驅動器處理的是馬達控制。
+
+---
+
+## 二、運動控制器會取代 STM32H755 嗎？
+
+**不一定。運動控制器不必然取代 STM32H755。**
+
+這裡要先區分兩種架構。
+
+### 架構 A：STM32H755 自己負責運動控制
+
+例如：
+
+```text
+             STM32H755
+       (設備控制 + 運動規劃)
+                 |
+              EtherCAT
+                 |
+       ┌─────────┼─────────┐
+       |         |         |
+    Servo     Servo     Servo
+    Drive     Drive     Drive
+       |         |         |
+    Motor     Motor     Motor
+       |         |         |
+    Encoder   Encoder   Encoder
+```
+
+在這種架構：
+
+* STM32H755：負責設備流程、運動命令、多軸協調及 EtherCAT 通訊。
+* Servo Drive：負責馬達控制及編碼器回授處理。
+* Servo Motor：產生機械動力。
+
+這代表 STM32H755 本身就可能兼任運動控制器的角色。
+
+但要注意：STM32H755 是否真的具備完整的運動規劃及多軸協調能力，要看實際韌體有沒有實作，不能只因為它是 EtherCAT Master 就認定它已經具備這些功能。
+
+### 架構 B：增加一台獨立運動控制器
+
+```text
+          STM32H755
+       (設備流程控制)
+                 |
+          通訊介面
+                 |
+         Motion Controller
+          (運動控制器)
+                 |
+              EtherCAT
+                 |
+       ┌─────────┼─────────┐
+       |         |         |
+    Servo     Servo     Servo
+    Drive     Drive     Drive
+       |         |         |
+    Motor     Motor     Motor
+```
+
+這種架構把工作分開：
+
+* STM32H755：負責整台設備的流程，例如啟動、停止、初始化、感測器處理、錯誤管理。
+* Motion Controller：負責多軸運動規劃、軌跡計算、同步控制。
+* Servo Drive：負責各軸馬達的控制。
+
+因此，**增加 Motion Controller 不代表 STM32H755 就沒有用途，而是把部分運動控制工作交給另一台專用設備。**
+
+---
+
+## 三、為什麼有些設備需要獨立運動控制器？
+
+因為不同設備對運動控制的複雜度不同。
+
+| 設備需求      | 可能的控制架構                                          |
+| --------- | ------------------------------------------------ |
+| 單軸簡單定位    | STM32 + Servo Drive                              |
+| 多軸一般定位    | STM32 或 Motion Controller + Servo Drive          |
+| 六軸同步運動    | 具備多軸協調能力的控制器 + Servo Drive                       |
+| 高精度光學對位   | Motion Controller + Servo Drive，視需求搭配線性編碼器及其他感測器 |
+| 複雜軌跡與高速同步 | 專用 Motion Controller + 多個 Servo Drive            |
+
+這不是絕對規則，而是常見的系統設計方向。
+
+例如，六軸設備不一定非得使用獨立 Motion Controller。如果 STM32H755 的硬體、EtherCAT Master、即時作業能力及韌體設計足以滿足需求，也可以由 STM32H755 負責。
+
+---
+
+## 四、回到你目前的 STM32H755 專案
+
+你目前的系統是：
+
+```text
+STM32H755
+    |
+ EtherCAT
+    |
+ Servo Drive
+    |
+ Servo Motor
+    |
+ Ball Screw
+    |
+ Linear Guide
+    |
+ Linear Stage
+```
+
+從韌體工程師的角度，我希望你先建立這個觀念：
+
+**STM32H755 是設備的控制核心之一；Servo Drive 是馬達的專用控制設備。**
+
+未來我們深入 GMT 精密對位設備時，還會遇到另一個重要問題：
+
+即使馬達 Encoder 回報馬達已經旋轉到正確位置，也不代表滑台一定真的到達精確位置。
+
+這就會牽涉到線性編碼器、全閉迴路控制，以及光學對位精度。
+
+這些都是後續課程的重要內容。
+
+---
+
+## 五、本階段小結
+
+目前你已經理解：
+
+* Encoder：測量馬達或平台的位置。
+* Feedback：將實際位置等資訊回傳給控制系統。
+* Servo Drive：讀取回授並控制馬達。
+* Motion Controller：規劃與協調多軸運動。
+* STM32H755：可以擔任設備控制器，也可能兼任運動控制器的一部分功能。
+* EtherCAT：負責控制設備之間的即時通訊，本身不是運動控制演算法。
+
+**到這裡，我們可以結束目前的「運動控制器與伺服驅動器」基礎課程。**
+
+下一課將進入 **GMT 精密機械元件與滑台的實際整合**，開始把之前學過的螺桿、滑軌、聯軸器、馬達及回授系統串起來，認識一台 GMT 電動滑台實際是如何構成與運作的。
+
+
+---
+
+# 第四單元：GMT 精密滑台與定位平台
+
+## 第一課：一台電動滑台是如何組成的？
+
+前面我們已經學過：
+
+* 滾珠螺桿：將旋轉運動轉換成直線運動。
+* 線性滑軌：支撐平台並限制移動方向。
+* 聯軸器：連接馬達與螺桿，傳遞扭力。
+* 馬達：提供旋轉動力。
+* Encoder：量測馬達或平台的位置。
+* Servo Drive：控制馬達運轉。
+
+今天開始，我們把這些元件組合起來，認識 GMT 真正的產品。
+
+## 一、先看看 GMT 的電動滑台
+
+![Image](https://images.openai.com/static-rsc-4/vqcZZN1IZynaYzZgjf7_iQCl4tJuOkuFtfdzUhmHV-lmcrvW4DBcuurD9TSCEFbv-3dbomXcpKEndUcx5jxyzTBUag9Cb0gTaX3Bl2s472MkSwjWtrVQmjw2uOsbBoZLXPQbiHC_Ew_4aGnm-4tDo8LfbTpgk0mT2_M-3LA7Z67EUWJ8IqkEUkBg8WNYcizN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4ZUlJS_whoEWmRXzvXEvVFzB-woecad6LK_rlgExYRR21s4yNaiOkfPsdQEgh3sXDarYpgkyj-41dBLPgoHTxAKQQUeuTu31msOyThPQcau-zOJR67q9Dk-Y-hlmHjtMdijYbbsfMvUKxeK8EqLCrpco2KzYbM4wW_Zo7WeZ7QdPx1qo5eGeUu1XpurXJPpM?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/OuMIJf_qbzeJ3tFSEDe9S28BAfV_4E2ny7ZwgwqUjRLwYUecpIM9fg6x22h4XaFXiUIv-p8g0OYQFa2iDucYRzN_Nq2xraDEYu_3RqqTJbky2oiAwq72qUJH1tbXV34-yn2ji2s3yjW0R1txSyw2YDl70snqtP7T9Jxr4ralEljbcR8lD8aMNEfSuApZGecW?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/miabZHUOj0Rvr3EVKp2sTiUGVMPcOebwvQW5r5yVtX2zwsg9NmBVwyBdvjpJob3naM5VIVP9QoGTifQNT7d3KoI6Z57yDd5tcbMrf94vrpciM9P1HxUrjnpZbhJC9JW55KaWssXLb8z0862FlVtpLEgtVBZ-TSvfotb9_ZOPvS_eGAzWfmi09Ss2fhI9JA-o?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/0G8qfA9syVBwflCkvLYMo2Y2pojOLB1pz28AdT5nFXhoxUqO9MCtwIU5HUVQ3D9vjKCdqcT452kzrHSNHbUyBaIoQuVl4_lnST3_DRGeiuffdMyHrvQsD0xMNN_E7mSgXglR7SFEqKOesm4-yTsxxV-py4Jqu5ETa7TzOzgtjgjbBmuK4m4YnMUANvpra2XO?purpose=fullsize)
+
+這是 GMT 的 CXS 系列精密電動滑台。
+
+它是一個完整的直線定位模組。你可以把它想像成一個能夠精確移動物體的機械平台。
+
+例如：
+
+* 把 Camera 固定在滑台上。
+* 把光纖固定在滑台上。
+* 把雷射或光學元件固定在滑台上。
+* 透過馬達控制平台移動到指定位置。
+
+在光纖耦合設備中，這類平台可以用來調整光纖與光學元件之間的位置。
+
+---
+
+## 二、一台電動滑台有哪些主要構造？
+
+我們先以之前學過的機械元件為基礎，認識六個部分。
+
+| 編號 | 元件   | 英文            | 主要功能      |
+| -- | ---- | ------------- | --------- |
+| 1  | 基座   | Base          | 支撐整個滑台    |
+| 2  | 移動平台 | Stage / Table | 固定需要移動的物體 |
+| 3  | 線性滑軌 | Linear Guide  | 支撐並引導平台移動 |
+| 4  | 滾珠螺桿 | Ball Screw    | 推動平台前進或後退 |
+| 5  | 馬達   | Motor         | 提供旋轉動力    |
+| 6  | 聯軸器  | Coupling      | 連接馬達與螺桿   |
+
+我們逐一理解它們在實際產品中的角色。
+
+### 1. 基座（Base）
+
+基座是整個滑台的底部結構。
+
+它的工作是：
+
+* 支撐所有機械元件。
+* 固定線性滑軌。
+* 提供穩定的安裝基準。
+* 固定在設備底板或其他平台上。
+
+你可以把它想成房子的地基。
+
+如果基座不夠穩定，即使螺桿和滑軌本身精度很高，整體定位也可能受到影響。
+
+### 2. 移動平台（Stage / Table）
+
+這是你最容易看到、也最重要的部分之一。
+
+它的上方通常有許多螺絲孔，用來固定被定位的物體。
+
+例如：
+
+* Camera
+* 光纖固定座
+* 雷射模組
+* 光學鏡片固定座
+* 其他精密機構
+
+當馬達轉動、螺桿推動時，移動平台就會沿著指定方向前進或後退。
+
+**韌體工程師要注意：移動平台的位置，就是設備真正想控制的位置。**
+
+### 3. 線性滑軌（Linear Guide）
+
+這個元件我們已經學過。
+
+它負責：
+
+* 支撐移動平台。
+* 限制平台只能沿指定方向移動。
+* 降低移動時的摩擦。
+* 抵抗部分側向力量及傾覆力矩。
+
+它本身不是主要的推動來源。
+
+### 4. 滾珠螺桿（Ball Screw）
+
+滾珠螺桿負責將馬達的旋轉轉換成平台的直線移動。
+
+例如：
+
+假設螺桿導程是 1 mm：
+
+| 螺桿旋轉圈數 | 理論直線位移 |
+| -----: | -----: |
+|    1 圈 |   1 mm |
+|    2 圈 |   2 mm |
+|    5 圈 |   5 mm |
+|   10 圈 |  10 mm |
+
+所以，如果希望平台移動 5 mm，理論上螺桿需要旋轉 5 圈。
+
+實際移動量仍會受到螺桿精度、機械間隙及控制方式等因素影響。
+
+### 5. 馬達（Motor）
+
+馬達負責提供旋轉動力。
+
+這裡要特別提醒：
+
+**GMT 電動滑台並不是全部都使用伺服馬達。**
+
+例如 GMT CXS50 精密型產品資料列出的配置是五相步進馬達，而不是我們前面討論的典型伺服馬達架構。([高明鐵 GMT][1])
+
+因此，看到 GMT 的滑台時，不能直接認定它一定有馬達 Encoder 或 Servo Drive。
+
+必須依照具體型號確認。
+
+### 6. 聯軸器（Coupling）
+
+聯軸器連接馬達軸與螺桿軸。
+
+當馬達轉動時：
+
+1. 馬達軸旋轉。
+2. 聯軸器傳遞扭力。
+3. 螺桿跟著旋轉。
+4. 螺帽產生直線移動。
+5. 移動平台跟著移動。
+
+這就是整台滑台的基本運動鏈。
+
+---
+
+## 三、實際案例：GMT CXS50
+
+我們使用 GMT 官方的 CXS50 精密型滑台作為案例。
+
+官方資料列出的規格包括：
+
+| 項目     | CXS50 精密型  |
+| ------ | ---------- |
+| 台面尺寸   | 50 × 50 mm |
+| 移動行程   | 20 / 30 mm |
+| 傳動方式   | Ø8 滾珠螺桿    |
+| 螺桿導程   | 1 mm       |
+| 導引方式   | 線性滾珠導引     |
+| 馬達     | 五相步進馬達     |
+| 重複定位精度 | ±0.5 µm    |
+
+這些是該型號的產品規格，不代表 GMT 所有滑台都採用相同配置。([高明鐵 GMT][1])
+
+官方產品資料：[GMT CXS50 精密型產品頁面](https://www.gmt.tw/tw/cxs50-%E7%B2%BE%E5%AF%86%E5%9E%8B?utm_source=chatgpt.com)
+
+另外，GMT 的產品型錄網站也可以找到精密型電動滑台、手動滑台、傳動元件等資料。[GMT 官方產品型錄](https://www.gmtglobalinc.com/download?utm_source=chatgpt.com)
+
+---
+
+## 四、從韌體工程師的角度，看一次完整的運動流程
+
+假設我們希望 CXS50 平台向右移動 5 mm。
+
+整個流程可以理解成：
+
+```text
+STM32 / 控制器
+       |
+       | 下達移動 5 mm 命令
+       v
+馬達驅動器
+       |
+       | 輸出馬達控制訊號
+       v
+步進馬達
+       |
+       | 旋轉
+       v
+聯軸器
+       |
+       | 傳遞扭力
+       v
+滾珠螺桿
+       |
+       | 螺帽直線移動
+       v
+移動平台
+       |
+       | 沿著線性滑軌移動
+       v
+到達目標位置
+```
+
+這裡有一個很重要的觀念：
+
+**控制器下達 5 mm 命令，不代表平台一定真的移動了 5 mm。**
+
+例如，如果使用沒有位置回授的開迴路步進馬達，控制器主要是依照命令輸出脈波，並不一定能直接確認平台實際位置。
+
+如果發生失步，平台可能沒有到達預期位置。
+
+這也是為什麼我們前面花了不少時間學習 Encoder、Feedback 和閉迴路控制。
+
+---
+
+## 五、今天先做一個理解練習
+
+假設現在有一台電動滑台：
+
+* 馬達正常旋轉。
+* 聯軸器正常傳遞動力。
+* 滾珠螺桿正常旋轉。
+* 但是，移動平台與滾珠螺帽之間的固定連接鬆脫了。
+
+請問：
+
+**馬達繼續旋轉時，最可能發生什麼情況？**
+
+A. 移動平台仍然會正常移動 5 mm。
+
+B. 螺桿仍然旋轉，但移動平台可能無法正常跟著移動。
+
+C. 線性滑軌會自動帶動平台移動。
+
+請先回答這一題。
+
+下一步我們會利用實際滑台結構，進一步理解「基座、螺桿、螺帽、滑軌、移動平台」之間如何組合，以及為什麼精密滑台不能只靠一根螺桿就完成精確定位。
+
+[1]: https://www.gmtglobalinc.com/en/x-axis-3/cxs50-precision?utm_source=chatgpt.com "CXS50 - Precision | X-axis | GMT GLOBAL"
+
+---
+
+答對了！✅ **B 正確。**
+
+因為滾珠螺帽與移動平台之間的固定連接鬆脫，螺桿雖然仍然旋轉，卻無法正常將直線推力傳遞給移動平台。
+
+這也讓我們看到一個重要觀念：**機械元件必須正確組合，才能形成完整的運動鏈。**
+
+接下來我們來學習你提出的規格問題。這個部分非常重要，因為未來你不只要看懂 GMT 的產品型錄，也需要看懂同事提供的設備規格，才能知道韌體應該如何控制。
+
+# 第四單元：GMT 精密滑台規格解讀
+
+今天我們以 GMT 官方的 **CXS50 精密型電動滑台**作為教材。
+
+官方規格：
+[CXS50 精密型－GMT 官方產品頁面](https://www.gmt.tw/tw/cxs50-%E7%B2%BE%E5%AF%86%E5%9E%8B?utm_source=chatgpt.com)
+
+![Image](https://images.openai.com/static-rsc-4/vqcZZN1IZynaYzZgjf7_iQCl4tJuOkuFtfdzUhmHV-lmcrvW4DBcuurD9TSCEFbv-3dbomXcpKEndUcx5jxyzTBUag9Cb0gTaX3Bl2s472MkSwjWtrVQmjw2uOsbBoZLXPQbiHC_Ew_4aGnm-4tDo8LfbTpgk0mT2_M-3LA7Z67EUWJ8IqkEUkBg8WNYcizN?purpose=fullsize)
+
+先看官方列出的規格。
+
+## 一、基本機械規格
+
+| 規格名稱 |             數值 | 意義               |
+| ---- | -------------: | ---------------- |
+| 台面尺寸 |     50 × 50 mm | 移動平台上方的尺寸        |
+| 移動行程 |     20 / 30 mm | 平台可以移動的總距離       |
+| 傳動方式 |        滾珠螺桿 Ø8 | 螺桿直徑為 8 mm       |
+| 螺桿導程 |           1 mm | 螺桿旋轉一圈，理論移動 1 mm |
+| 軌道   |        線性滾珠導引式 | 使用滾珠線性滑軌         |
+| 本體重量 | 0.57 / 0.72 kg | 不同行程版本的重量        |
+| 聯軸器  |  FAMCS11.6-5×5 | 馬達與螺桿之間的連接元件     |
+
+資料來源：GMT CXS50 精密型。([高明鐵 GMT][1])
+
+這些規格大多比較容易理解。
+
+我們特別解釋三個。
+
+### 1. 台面尺寸：50 × 50 mm
+
+這代表移動平台上方的尺寸。
+
+也就是說，如果你要把 Camera 固定在上面，就必須考慮 Camera 固定座是否能安裝在這個平台上。
+
+注意：
+
+**50 × 50 mm 不代表滑台的整體外觀尺寸，而是台面的尺寸。**
+
+### 2. 移動行程：20 / 30 mm
+
+這代表平台能夠移動的總距離。
+
+例如：
+
+* 20 mm 行程：平台總共可以移動 20 mm。
+* 30 mm 行程：平台總共可以移動 30 mm。
+
+假設我們使用 20 mm 行程的滑台，從一端移動到另一端，最大理論移動距離就是 20 mm。
+
+### 3. 螺桿導程：1 mm
+
+這個我們已經學過。
+
+假設：
+
+* 螺桿旋轉 1 圈：平台理論移動 1 mm。
+* 螺桿旋轉 5 圈：平台理論移動 5 mm。
+* 螺桿旋轉 10 圈：平台理論移動 10 mm。
+
+所以，這個數值會直接影響馬達轉動與平台位移之間的換算。
+
+---
+
+# 二、精密度規格：最重要、也最容易混淆的部分
+
+這是今天的重點。
+
+GMT CXS50 精密型有以下規格：
+
+| 規格名稱                            |                     數值 |
+| ------------------------------- | ---------------------: |
+| 解析度（Resolution）                 | 2 µm（Full）/ 1 µm（Half） |
+| 最高速度（Max. Speed）                |              20 mm/sec |
+| 單向定位精度（Positioning Precision）   |                   5 µm |
+| 反復定位精度（Repeatability Precision） |                ±0.5 µm |
+| 荷重（Load Capacity）               |                  6 kgf |
+| 空轉（Missed Step）                 |                   1 µm |
+
+([高明鐵 GMT][1])
+
+我們逐一說明。
+
+## 1. 解析度（Resolution）
+
+規格：2 µm（Full）/ 1 µm（Half）
+
+這個名稱很重要。
+
+它表示控制系統每輸出一個步進脈波，滑台理論上移動多少距離。
+
+在這個型號：
+
+* Full Step：每個脈波對應 2 µm。
+* Half Step：每個脈波對應 1 µm。
+
+先記住：
+
+**解析度代表最小的理論控制移動單位，不代表實際定位精度。**
+
+例如：
+
+如果控制器輸出 100 個 Full Step 脈波：
+
+100 × 2 µm = 200 µm
+
+理論上平台移動 200 µm。
+
+換算：
+
+200 µm = 0.2 mm
+
+這是理論換算，實際移動還會受到機械誤差、負載及步進馬達特性影響。
+
+## 2. 最高速度（Max. Speed）
+
+規格：20 mm/sec
+
+這代表滑台允許的最高移動速度規格。
+
+例如：
+
+如果平台以 20 mm/sec 移動，理論上：
+
+* 1 秒移動 20 mm。
+* 0.5 秒移動 10 mm。
+
+但這裡要注意：
+
+GMT 特別標示 Full Step，代表這個速度規格與全步級控制條件有關。
+
+不能直接認為所有控制方式都能達到相同速度。
+
+## 3. 單向定位精度（Positioning Precision）
+
+規格：5 µm
+
+這個規格描述滑台移動到指定位置時的定位精度。
+
+你可以先把它理解成：
+
+**命令要求平台到達某個位置，實際到達的位置可能與目標位置存在偏差。**
+
+例如目標位置是 10 mm，5 µm 就是這個產品標示的定位精度尺度。
+
+不過，精確的測試條件與允差定義仍應以 GMT 的技術規格或測試文件為準，不應自行把它解讀成所有情況下都保證 ±5 µm。
+
+## 4. 反復定位精度（Repeatability Precision）
+
+規格：±0.5 µm
+
+這個規格非常重要。
+
+假設你讓平台反覆回到同一個目標位置：
+
+第一次：10.0000 mm
+
+第二次：10.0003 mm
+
+第三次：9.9998 mm
+
+第四次：10.0002 mm
+
+這些位置彼此很接近，代表重複定位能力不錯。
+
+**反復定位精度主要看每次回到同一位置時，結果是否一致。**
+
+它與單向定位精度不是同一件事。
+
+請特別記住：
+
+* 定位精度：實際位置與目標位置的接近程度。
+* 重複定位精度：多次回到同一位置時，結果的一致程度。
+
+這兩個數字不能互相取代。
+
+## 5. 荷重（Load Capacity）
+
+規格：6 kgf
+
+意思是滑台在規定的水平安裝條件下，標示的負載能力。
+
+kgf 是公斤力，不是質量單位 kg。
+
+6 kgf 約等於 58.8 N。
+
+例如，假設你把一個 2 kg 的 Camera 固定在平台上，還需要考慮固定座、其他元件的重量，以及負載重心位置。
+
+**不能只看總重量，也要考慮負載位置與力矩。**
+
+## 6. 空轉（Missed Step）
+
+規格：1 µm
+
+這個名稱容易造成誤解。
+
+在這類步進滑台的規格中，它與移動方向反轉時的機械空行程或間隙有關。
+
+例如：
+
+平台原本向右移動，接著改成向左移動，反向初期可能存在一小段機械間隙。
+
+因此，控制器已經發出反向命令，不代表平台會在同一瞬間開始產生等量的實際位移。
+
+這對精密定位很重要。
+
+---
+
+# 三、其他幾個機械精度規格
+
+GMT 另外列出：
+
+| 規格名稱                        |    數值 | 簡單說明              |
+| --------------------------- | ----: | ----------------- |
+| 平行度（Parallelism）            | 20 µm | 相關基準面之間的平行程度      |
+| 運動真直度（Dynamic Straightness） |  2 µm | 平台移動路徑偏離理想直線的程度   |
+| 運動平行度（Dynamic Parallelism）  | 10 µm | 平台移動過程中相對基準面的平行程度 |
+
+這些規格主要描述機械結構與運動軌跡的幾何精度。
+
+對你目前的韌體工作而言，暫時不需要深入計算。
+
+但未來當你接觸 Camera 對位、光纖耦合時，就會發現這些數值非常重要。
+
+因為即使 X 軸位置正確，如果平台移動時產生微小偏擺，光纖與鏡頭之間仍可能發生對位偏差。
+
+---
+
+# 四、從韌體角度看，哪些規格最重要？
+
+我幫你整理成一張表：
+
+| 規格     | 韌體工程師為什麼要知道？   |
+| ------ | -------------- |
+| 移動行程   | 避免命令超出滑台允許範圍   |
+| 螺桿導程   | 計算馬達脈波與移動距離    |
+| 解析度    | 計算每個脈波代表的理論位移  |
+| 最高速度   | 設定合理的運動速度      |
+| 定位精度   | 了解設備的定位能力      |
+| 反復定位精度 | 評估重複對位能力       |
+| 空轉     | 理解反向移動時可能產生的誤差 |
+| 荷重     | 避免負載超出規格       |
+
+另外還有一組電氣規格值得你留意。
+
+CXS50 精密型使用五相步進馬達，官方列有 24V ±10% 電源規格，以及原點與極限感測器。這些會直接影響驅動器接線、GPIO 訊號及韌體初始化流程。([高明鐵 GMT][1])
+
+---
+
+# 五、今天先確認三個觀念
+
+我們先不要一次吸收太多規格。
+
+請回答以下三題：
+
+**問題 1**
+
+CXS50 精密型的解析度為 2 µm（Full Step）。
+
+如果控制器輸出 100 個 Full Step 脈波，平台理論上移動多少？
+
+A. 2 µm
+B. 100 µm
+C. 200 µm
+D. 2 mm
+
+**問題 2**
+
+反復定位精度 ±0.5 µm 代表什麼？
+
+A. 平台每次移動最小只能移動 0.5 µm。
+B. 平台多次返回同一目標位置時，位置結果的一致程度。
+C. 平台最高速度為 0.5 mm/sec。
+
+**問題 3**
+
+如果滑台的移動行程是 20 mm，是否代表平台可以從起點移動 20 mm，再繼續移動另外 20 mm？
+
+A. 可以，總共可以移動 40 mm。
+B. 不可以，20 mm 是整個允許移動範圍的總行程。
+
+答完後，我們再進一步學習 **GMT 滑台的型號編碼**。例如 `CXS5020-S2PN-ND` 裡面的每一段代表什麼，這會讓你以後看到 GMT 型錄時，不必每次都從頭查詢。
+
+[1]: https://www.gmtglobalinc.com/en/x-axis-3/cxs50-precision?utm_source=chatgpt.com "CXS50 - Precision | X-axis | GMT GLOBAL"
+
+
+---
+
+你的問題已經從「認識機械元件」進入真正的設備運動控制了。尤其是加減速，這是 STM32 韌體工程師很需要理解的部分。
+
+另外，你對課程方向的建議是正確的：**我們不學 GMT 自己定義的型號編碼，而是學習精密設備共通的機械結構、組合方式與運作原理，再逐一認識 GMT 不同產品的特殊設計。** 後續照這個方向進行。
+
+先修正上一題的答案，再回答你的問題。
+
+# 一、移動行程 20 / 30 mm，究竟代表什麼？
+
+你上一題選 A，這題正確答案應該是 **B**。
+
+GMT CXS50 精密型有兩種行程版本：
+
+| 產品版本    | 最大移動行程 |
+| ------- | -----: |
+| CXS5020 |  20 mm |
+| CXS5030 |  30 mm |
+
+也就是說，這不是同一台滑台可以移動 20 mm 或 30 mm 後，再繼續移動，而是兩種不同的產品規格。
+
+例如：
+
+* 選擇 20 mm 版本，平台的總移動範圍就是 20 mm。
+* 選擇 30 mm 版本，平台的總移動範圍就是 30 mm。
+
+兩者的螺桿導程都是 1 mm，但機械結構的有效行程不同。([GMT][1])
+
+## 那麼，如何限制最大行程？
+
+這裡有三種不同的保護方式。
+
+![Image](https://images.openai.com/static-rsc-4/1_KjzHMjR9wnqJPvk1wMJhz3UiQXOirggZ5kEqE0luYX-4_RuEM-30G8wID7H551FdbKPtpxdIb1jQvdn-PW2wJuTR2XQ3g1QY0liLRX38lg4ysNFH86r49yQ5UM1yBqNRujQYRi5R8IJnMsCGdjWFagkaC39kD0GMrB8j41STmMErrJuxy4ZC8S5orY20lR?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/W6jOg6n4zAbqhhmfzTS2WZe6zONDvRla6MlMZpGnNi0aaS7xut9rCBmNPHblzg3Q6bt1Zm_Lf8mTkTHoCsFrgb1NyvqR6vhFaEdhKv23zXf-y2yT-em6t_VPVu7PV7XpvR_ZSv-2kV1jDWpUlSo_kDXgXax6M-38exJeIt15KJXbhJIf5cuOYOMGskdB6e7Y?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/s3W1p5YccH8HlSrg0M4zHVruJg306vlRmVTcV0TC-8HSOMseeg92dkqalAq80eecMYumtjBsoUweKMS7A4eY2zLESMaV7E5OmEAHEazyz6p4k2HVRUlKv7osFVnAqwt5ys7SV1L2QZG1cJBW-xZ_Rr0P54rpr-JN_L0oDoqObqsGOq5o6q3EqdsWwR_8FEz3?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/cLwEcJpQs6wmKaGbZ6h16115JeiWW4b3ZGKCj_GpSJGp_ut0m5Dx6ZzV_KBcV-HqSCYNq7M69mWEdrQ5AsLt1s4u9pm1yKiosBHxITattC-DGUWSK_ByXv-B1KTO_dfHzdX99qX6zNunUo6gPaez7dvnWdBWFD-dHXaFvp6h5cLGybRw-CSKG2Zwo4l1PBW6?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LE3QYg9sxXLdedX2DePRoXOYtWl6DITA_8NXv6uBEuDvwo6wv-3ZX_XQAa1MG6rso_INX7U0svN8f2WwrFooT0obhO4fNRnmtYFidA95opU6e8IEzcREDU8fcgJemUUQkGUKJclug1Zy-nWw-0t66drT2AyVo04VLSEgNmVOSQWtCRHvuXM8uVyE7DuXAWXF?purpose=fullsize)
+
+### 1. 原點感測器（Origin Sensor / Home Sensor）
+
+它的作用是告訴控制器：
+
+「平台現在已經到達原點位置。」
+
+例如，平台開機後，控制器不知道平台目前在哪裡，就可以執行回原點（Homing）。
+
+當平台觸發原點感測器，控制器便可以建立座標基準。
+
+例如：
+
+```text
+原點位置 = 0 mm
+```
+
+之後才能以這個位置作為移動座標的參考。
+
+### 2. 極限感測器（Limit Sensor）
+
+它的作用是偵測平台是否到達行程端點附近。
+
+例如：
+
+```text
+         允許移動範圍
+
+     0 mm                 20 mm
+      |---------------------|
+      原點                  極限
+```
+
+如果平台移動到極限感測器的位置，控制器就應該停止繼續往該方向移動。
+
+CXS50 官方規格確實列有原點感測器及行程極限感測器。([GMT][1])
+
+### 3. 機械限位（Mechanical Stop）
+
+這是實體機械結構上的限制。
+
+即使感測器失效，機構也可能透過機械限位阻止平台繼續移動。
+
+不過，不能把機械限位當成正常停止方式。若平台高速撞上限位，可能損壞螺桿、滑軌或其他元件。
+
+### 4. 韌體軟體限位（Software Limit）
+
+這個就跟你最有關係了。
+
+假設原點設為 0 mm，滑台行程為 20 mm。
+
+STM32 韌體可以設定：
+
+```cpp
+#define SOFT_LIMIT_MIN_MM    0.0
+#define SOFT_LIMIT_MAX_MM   20.0
+```
+
+當上位命令要求：
+
+```text
+Move to 25 mm
+```
+
+STM32 就應該拒絕這個命令，因為超出允許行程。
+
+**重要：軟體限位、感測器限位及機械限位是不同層次的保護，不能互相取代。**
+
+---
+
+# 二、最高速度 20 mm/sec，移動 100 mm 都能使用這個速度嗎？
+
+這裡要先分成兩個問題。
+
+### 問題 A：速度是否可以設定為 20 mm/sec？
+
+GMT CXS50 精密型的規格：
+
+最高速度（全步級）＝20 mm/sec。([高明鐵 GMT][2])
+
+這代表它標示的最高速度上限，不代表任何負載、任何加減速條件下都一定能達到。
+
+例如：
+
+| 設定速度      | 是否超過規格上限 |
+| --------- | -------- |
+| 5 mm/sec  | 沒有       |
+| 10 mm/sec | 沒有       |
+| 15 mm/sec | 沒有       |
+| 20 mm/sec | 到達標示上限   |
+| 25 mm/sec | 超過標示上限   |
+
+實際還要考慮馬達扭力、負載、驅動器及加速條件。
+
+### 問題 B：這台滑台能不能移動 100 mm？
+
+不行。
+
+因為 CXS50 最長只有 30 mm 行程。
+
+這裡要區分：
+
+* 速度：每秒移動多少距離。
+* 行程：整個機械結構允許移動的總距離。
+
+例如：
+
+一台行程 30 mm、最高速度 20 mm/sec 的滑台，不代表它可以移動 100 mm。
+
+即使速度只有 1 mm/sec，也不能突破機械行程限制。
+
+我們接下來為了學習加減速，先假設有一台**行程至少 100 mm、最高速度 20 mm/sec 的滑台**，來討論運動控制。
+
+---
+
+# 三、為什麼馬達不能一開始就直接以 20 mm/sec 運轉？
+
+這就是你提出的加減速問題。
+
+假設馬達目前靜止。
+
+如果控制器突然要求：
+
+```text
+速度 = 20 mm/sec
+```
+
+然後立刻輸出對應 20 mm/sec 的步進脈波頻率，會發生什麼事？
+
+對步進馬達而言，這可能造成：
+
+* 馬達無法跟上脈波。
+* 馬達失步。
+* 馬達振動。
+* 負載較大時甚至完全無法啟動。
+
+因此，通常需要加減速控制。
+
+## 1. 加速（Acceleration）
+
+讓馬達從靜止開始，逐漸提高速度。
+
+例如：
+
+|    時間 |      移動速度 |
+| ----: | --------: |
+|   0 秒 |  0 mm/sec |
+| 0.1 秒 |  5 mm/sec |
+| 0.2 秒 | 10 mm/sec |
+| 0.3 秒 | 15 mm/sec |
+| 0.4 秒 | 20 mm/sec |
+
+這就是加速過程。
+
+## 2. 等速（Constant Velocity）
+
+當馬達達到 20 mm/sec 後，就維持這個速度。
+
+例如：
+
+|    時間 |      移動速度 |
+| ----: | --------: |
+| 0.4 秒 | 20 mm/sec |
+| 1.0 秒 | 20 mm/sec |
+| 2.0 秒 | 20 mm/sec |
+| 3.0 秒 | 20 mm/sec |
+
+## 3. 減速（Deceleration）
+
+當平台快到達目標位置，就開始降低速度。
+
+例如：
+
+|    時間 |      移動速度 |
+| ----: | --------: |
+| 3.0 秒 | 20 mm/sec |
+| 3.1 秒 | 15 mm/sec |
+| 3.2 秒 | 10 mm/sec |
+| 3.3 秒 |  5 mm/sec |
+| 3.4 秒 |  0 mm/sec |
+
+最後馬達停止。
+
+這三個階段合在一起，就形成最常見的**梯形速度曲線（Trapezoidal Velocity Profile）**。
+
+![Image](https://images.openai.com/static-rsc-4/QMzm8cHZcVV8iGwmhJbNicIsFVGi39cN_La4_nvnfgtoiMIbVEzVwVdQuR2FeKNKdmA4ce6k9Ggo_t0jvgWJFTnLUzpykgfRJPPib9zjPOUaUEM2c1R3G2F7hCnrfetdcZSQrueOpjpIM5EE6bM3vox3unHJppF7-KKe8n0EY6uS3Y75l9HxCAXTykk3Ur9K?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/wLGM-3WOSUMiNL84-wPbBYX7nTO5OXdFNktijdoh_psBjUZNF831m7dIhVjNftAijaNuyY2WaouTxUzGPNvFGvQPihOy7i8RrlkWKTsV1SApOEo7opisPCKZJC_ekXneb6YkmJvDUDgPiUCtMh87cAJvngDcseZGu5SCgdo-_lHReZaHUpXAR0F8_KT_P_Ft?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/RAa4OE9BKXS7h1gwAlsCpZF7N2LkeTwh-bb8M1Mp26D1XTmqc0pPZsADFP-qxhd3TpA6IcletSBcevWn2hKmbi33X2MQk8XB1Bw-hF_r9VY7dXCHp0tgzjleJVtoe7Iq5Ns4Bl9mESTZXdVKOiBYel5ubOXdWKWpOKj6e9EUwBimTlcnOuv7vtN_F5pKxkdv?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/D5vFtTearjjfKgf1RBIJPKuUMc29furwxFr69dfQ6_xfsKc0Z_5uU3ixkymqjlthukte8SID2mXL3Aj0Ll3S9ogEeteZRpZhrPaT1aAl3sbp61r9TrOBmRvHqndzI85UhIbCQYcoI5aNL6K8nDA0CV482fG5UHylzw4EnmVsYGJXycb8wkwE9hzUZ9hlWMJt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/lTGC16FAgjSlq1mazSgolfVrmlUOu0NilpldgPygLPhI2DzNaMiJDLZPG082uNkRlke_NXKYRZSbqOx4qAwUQO2SFpB7bECSrjboF0yihMRq1Ly1t_HaOxXxurXMsaPaVOb1Axehkn58XGl5e7Ij5ZLk_uRKyb9IewRMd7-IIllbKIl_RFrrTVVDNYVSbVLV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/HPC7WF2Ak7nVchZHJmkRiqIfyLDxVcWQEkJsobqUPch7dHtF8CKQYvZbia23TuflW-ypEd871BlJ7aUydt4_Nx_-st7KxneboJTM1hzQBxymzf4ZQKzyKWt0iGi--VeWcNSo2HF_t3lxrObCx_jdonve-1qmnY-_P0jsjD_UcjnTfWbsRjw29tiHgri2Tg6h?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/fn2fSgdagDS9_yCdmK-Kzgwn93-OBxuMCt6ZI60mIZ78P_WW49VMwxV9pP1E-yP2fFfoAWdFpUmh9tP8s9OvBrJkmaJVBTB_B2YvvwXu1CruV2p5-LZoBOQ6hi5yvs0Vs_2HzH8WguJskJhlUZnkLzC6ekdkD4PePUJiF4NH0zIwscZPoyE-gQPKCJhPzUO6?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/fFXIqpunjZvgM8O0L_-oZOO8Ju9l5jzJTOcKXrRYq0h3L7_akZegAi2ahZ_VTLNLQPY74m8NJ99bdrFkltQtAsD_m2eGt7W3AHcWUg5Jr9ikIaRF4CUZ73RuAaw6ZDlMomF3eJ8IH9wB2GZM_n2dPHO-lusRxDDyP2YKh1aXGAITLhKLrpnWnahAk_v9MMqu?purpose=fullsize)
+
+圖形看起來像梯形：
+
+```text
+速度
+ ^
+ |             ┌─────────┐
+ |            /           \
+ |           /             \
+ |          /               \
+ |_________/_________________\______> 時間
+       加速       等速       減速
+```
+
+這就是我們未來在 STM32 韌體中可能會遇到的運動控制概念。
+
+---
+
+# 四、加減速是 STM32H755 韌體工程師自己設計的嗎？
+
+**不一定，要看系統架構與驅動器功能。**
+
+這點很重要。
+
+以步進馬達為例，通常有兩種常見架構。
+
+### 架構 A：STM32 負責產生加減速脈波
+
+```text
+STM32H755
+   |
+   | STEP / DIR 脈波
+   |
+   v
+步進馬達驅動器
+   |
+   | 控制馬達線圈電流
+   |
+   v
+步進馬達
+   |
+   v
+滾珠螺桿
+   |
+   v
+移動平台
+```
+
+在這個架構：
+
+**STM32 必須負責產生正確的脈波頻率變化。**
+
+例如：
+
+* 開始時，脈波頻率較低。
+* 加速時，逐漸提高脈波頻率。
+* 等速時，維持固定頻率。
+* 減速時，逐漸降低脈波頻率。
+
+驅動器主要負責依照 STEP / DIR 訊號控制馬達。
+
+### 架構 B：驅動器內部具備運動控制功能
+
+```text
+STM32H755
+   |
+   | 下達目標位置、速度
+   |
+   v
+智慧型步進驅動器
+   |
+   | 內部執行加減速
+   |
+   v
+步進馬達
+   |
+   v
+滾珠螺桿
+   |
+   v
+移動平台
+```
+
+在這個架構：
+
+STM32 只需要告訴驅動器：
+
+```text
+目標位置：100 mm
+最高速度：20 mm/sec
+加速度：100 mm/sec²
+```
+
+驅動器內部就可以自行產生加減速曲線。
+
+所以，**不是所有加減速演算法都一定要由 STM32 韌體工程師撰寫。**
+
+必須先確認驅動器是否具備內部定位及加減速功能。
+
+---
+
+# 五、假設移動 100 mm，加減速應該怎麼計算？
+
+我們用一組簡單的數字來理解。
+
+假設：
+
+| 項目   |          設定 |
+| ---- | ----------: |
+| 移動距離 |      100 mm |
+| 最高速度 |   20 mm/sec |
+| 加速度  | 100 mm/sec² |
+| 減速度  | 100 mm/sec² |
+| 起始速度 |    0 mm/sec |
+| 結束速度 |    0 mm/sec |
+
+注意：這是為了教學而假設的數值，不是 GMT CXS50 的廠商設定。
+
+## 1. 計算加速時間
+
+公式：
+
+$$
+t=\frac{V}{a}
+$$
+
+其中：
+
+* \(V\)：最高速度。
+* \(a\)：加速度。
+
+代入：
+
+$$
+t=\frac{20}{100}=0.2\ 秒
+$$
+
+所以從 0 加速到 20 mm/sec，需要 0.2 秒。
+
+## 2. 計算加速距離
+
+公式：
+
+$$
+d=\frac{V^2}{2a}
+$$
+
+代入：
+
+$$
+d=\frac{20^2}{2\times100}
+$$
+
+$$
+d=2\ mm
+$$
+
+因此，加速階段會移動 2 mm。
+
+減速階段也需要 2 mm。
+
+## 3. 計算等速距離
+
+總距離是 100 mm。
+
+扣除加速和減速距離：
+
+$$
+100-2-2=96\ mm
+$$
+
+因此：
+
+| 運動階段 |   移動距離 |
+| ---- | -----: |
+| 加速   |   2 mm |
+| 等速   |  96 mm |
+| 減速   |   2 mm |
+| 合計   | 100 mm |
+
+## 4. 計算總時間
+
+等速階段需要：
+
+$$
+t=\frac{96}{20}=4.8\ 秒
+$$
+
+加速與減速各 0.2 秒。
+
+所以：
+
+$$
+T=0.2+4.8+0.2
+$$
+
+$$
+\boxed{T=5.2\ 秒}
+$$
+
+這代表在這組假設條件下，移動 100 mm 需要約 5.2 秒。
+
+這就是加減速規劃的基本概念。
+
+---
+
+# 六、STM32H755 韌體工程師需要理解到什麼程度？
+
+我希望你能建立以下觀念：
+
+| 工作               | 可能負責的設備             |
+| ---------------- | ------------------- |
+| 接收上位機移動命令        | STM32               |
+| 判斷目標位置是否超出行程     | STM32               |
+| 規劃加速、等速、減速       | STM32 或運動控制器或智慧型驅動器 |
+| 產生 STEP / DIR 脈波 | STM32 或驅動器          |
+| 控制馬達線圈電流         | 步進驅動器               |
+| 偵測原點及極限          | 感測器 + 控制器           |
+| 回報移動狀態           | 驅動器或控制器             |
+
+未來如果你使用 EtherCAT 伺服系統，架構可能又不一樣，因為運動控制器可能透過 EtherCAT 週期性傳送目標位置，而不是輸出 STEP / DIR 脈波。
+
+所以不能把步進馬達的控制方式直接套用到伺服馬達。
+
+---
+
+## 七、今天先確認一個重要觀念
+
+假設有一台行程 100 mm 的步進滑台：
+
+* 最高速度：20 mm/sec。
+* 加速度：100 mm/sec²。
+* 目標位置：100 mm。
+
+現在控制器已經讓平台以 20 mm/sec 等速移動。
+
+請問，當平台距離目標位置只剩下 2 mm 時，應該怎麼做？
+
+A. 繼續維持 20 mm/sec，直到抵達目標位置，再立即停止。
+
+B. 開始減速，讓平台逐漸降低速度，最後在目標位置停止。
+
+C. 立即切斷馬達電源，讓平台自然停止。
+
+這題答完，我們下一步會進入**精密滑台的原點、極限感測器、回原點流程與韌體控制邏輯**。這會直接連結到你目前正在使用的 STM32H755 韌體開發工作。
+
+[1]: https://www.gmt.tw/tw/cxs50-%E7%B2%BE%E5%AF%86%E5%9E%8B?utm_source=chatgpt.com "GMT GLOBAL INC-CXS50 - 精密型"
+[2]: https://www.gmtglobalinc.com/en/x-axis-3/cxs50-precision?utm_source=chatgpt.com "CXS50 - Precision | X-axis | GMT GLOBAL"
+
+---
+
+答對了！✅ **B 正確。**
+
+當平台距離目標位置只剩 2 mm 時，應該依照預先規劃的減速曲線降低速度，讓平台平順地停在目標位置，而不是突然停止。
+
+接下來進入今天的課程。這一課非常重要，因為它會直接連結到你未來撰寫 STM32H755 韌體時會遇到的 GPIO 輸入、感測器判斷、座標初始化及安全保護。
+
+# 第四單元：精密滑台
+
+## 第二課：原點感測器、極限感測器與回原點流程
+
+今天我們要回答四個問題：
+
+1. 滑台開機時，怎麼知道自己目前的位置？
+2. 原點感測器與極限感測器有什麼不同？
+3. 滑台如何執行回原點（Homing）？
+4. STM32 韌體應該如何控制這個流程？
+
+---
+
+# 一、為什麼滑台需要原點感測器？
+
+先想像一個情境。
+
+你有一台電動滑台，行程 20 mm。
+
+滑台的移動範圍：
+
+```text
+       移動平台
+          |
+          v
+  0 mm ---------------- 20 mm
+  原點                    行程終點
+```
+
+現在你關閉設備電源，再重新開機。
+
+請問 STM32 知道平台現在位於哪裡嗎？
+
+**不一定知道。**
+
+因為如果沒有絕對位置回授，STM32 可能只知道上一次下達了多少移動命令，卻不知道平台斷電期間是否被人手動移動過。
+
+例如：
+
+* 關機前平台位於 10 mm。
+* 關機後有人用手推動平台。
+* 重新開機後，平台實際上已經位於 15 mm。
+
+如果 STM32 仍然認為平台在 10 mm，就會產生座標錯誤。
+
+因此，設備通常需要執行：
+
+**回原點（Homing）**
+
+也就是讓平台移動到指定的機械參考位置，重新建立座標基準。
+
+---
+
+# 二、原點感測器（Origin Sensor）
+
+![Image](https://images.openai.com/static-rsc-4/baFqVS4awmIGB55obPoVABz0CNhl1LUhxwGtHxmDaie9NTb_wNfY6BtlgUs_vGX8GBz6GGABNiwD2oNPK2pVgOVQZ79wGiXYq0DJdlMHvRjl79HkV6qUivZ33p7avRo2LR3QA_bZ4HatBmr-cCfmO1UWxI_-I_lTQBtbapJ3WE_qAwUNne_R35t_gnhAhKNL?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/pUlg3uVj-9YSA7LyTfmr9SzLzcV78lf4vpqOJyBk0YWwGGIuRKy0UWedpbcVgOhViE4OAo8ej4aAYXoou1RlnheDd4c-lVz4h88ipNMFqW7BXyHsDUmEzFDiy_tXT3fUbLIt121rx4dWeTltVKz2ejO_zJkP4EBaHZmskr1vJx7wg8Bmk-DvmT5vFOTuwdrj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Wi1wmqcGtu-EY5emHsIMt4CsjiwTxA7FlGMoqaXlJ0NK-Mq4jqXtxL0d8UvvUlQpDZ3Utyv3P5wqlBasX3jU30PQ89CICOK4HuPP6UH7pUVF8wFfsKcwewok927YEaqlzeE2GitGBOZcKXdIkMjDu0frLFplOFZyQkz7oOHZdUgYYs9DMA-cljZvYzlhPX6u?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/tgBADN8Xk92BYBV_4A4ygwjfZnrPM9lFueq4SmCpJFIgsxMOAhchq0ulnVH9mO_AoAhw1ebIDNoKJ7QhaSlrvukKzu2fyg8I2CIkYFHoUsqYYMV-b8r2qt_EvZodQvAPENf-ol5O7PeowjrstZW66uWShzUmy1NYhyCBZ0bDn5IInwf_amX_5cMadn62mLyg?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/h6zE_8I348G4PcWsWUKMcfzPJunAFcw2W9sp5YsT8UZx6ym76DA-DL1adFfYJgzOBSH-jBVTSXiKmscJh_GH3BCXwukhykB7r6LXuSy1S4t7kJIanDOZ0kDnJ0SC9dYvDjejI72loowBGU6KvnV-7BHsW1oTsCz7xc-DnYyS0G3555f07b1qY2iCgu8uM5Le?purpose=fullsize)
+
+原點感測器的工作是：
+
+**偵測移動平台是否到達預先設定的原點位置。**
+
+以 GMT CXS50 精密型為例，官方規格列出：
+
+* 原點感測器：光電感測器（GMT Sensor）。
+* 電源電壓：24V ±10%。
+* 控制輸出：NPN 開放式集電極，24V、8mA 以下。
+
+([GMT][1])
+
+## 光電感測器如何工作？
+
+你可以想像感測器有一個光線通道：
+
+```text
+       光電感測器
+      ┌─────────┐
+      │ 發射端  │
+      │   --->  │ 接收端
+      └─────────┘
+             ^
+             |
+        遮光片經過
+```
+
+當平台移動時，固定在移動部件上的遮光片會經過感測器。
+
+感測器偵測到遮光片，就會改變輸出訊號。
+
+這個訊號傳送給控制器，告訴控制器：
+
+「平台已經到達原點感測區域。」
+
+要注意：感測器偵測到的位置不一定就是最終使用的座標零點。實際系統可以再透過減速接近、位置偏移等方式建立更精確的原點。
+
+---
+
+# 三、極限感測器（Limit Sensor）
+
+![Image](https://images.openai.com/static-rsc-4/4su80fygWQc13YdjZwKmjbuXKZz1Nawe4uj22ZqqJTwPmLRvGWgfBrZpWhxYErP8oIpKLLeI1nExqrcZj3QAsnac6DVZ32yfvsUY44Rde2q1vrygZk8Gqq3TFGkiTZ5VB0rcqFX4kEAOxdW9MGx_Vx-2I10AvvZRe-eyFGHsqy6AOFyq7wzhQFqjR5DpRss_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/W6jOg6n4zAbqhhmfzTS2WZe6zONDvRla6MlMZpGnNi0aaS7xut9rCBmNPHblzg3Q6bt1Zm_Lf8mTkTHoCsFrgb1NyvqR6vhFaEdhKv23zXf-y2yT-em6t_VPVu7PV7XpvR_ZSv-2kV1jDWpUlSo_kDXgXax6M-38exJeIt15KJXbhJIf5cuOYOMGskdB6e7Y?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Sng1gtaFIKPpU0eFpuszy2QVySvDTtRQn8cgrDEuahU1jzyyh2LkIhLJ6o7Oaj5k-QSbrBFuSGH6DrUbxfv99dPxjsxhZpGsCgdUZTvyfUMIlYYr_pItDF6-GIDqeto3DBQqmA7i1O6AKge4SvZMaAU6yUl9GVqrH6R7r-svhJs7bZ4CNas9Xzn6s5BfVI6n?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LE3QYg9sxXLdedX2DePRoXOYtWl6DITA_8NXv6uBEuDvwo6wv-3ZX_XQAa1MG6rso_INX7U0svN8f2WwrFooT0obhO4fNRnmtYFidA95opU6e8IEzcREDU8fcgJemUUQkGUKJclug1Zy-nWw-0t66drT2AyVo04VLSEgNmVOSQWtCRHvuXM8uVyE7DuXAWXF?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2V6ZQKj6QMHJcJ2eoOKnhQt8OtM3OLM9wkx2B4TjkhQSQdCmO8ffLy0XCqyKKfoZXV7VpWim5v0MR2I3dojwHWEAFEZEyeVzNjlxt4eo2n-CzRIG9gHrf7S3MsF1wyowl_F4holsJAUU9QiGFWy17Otb_kkJSsIHolqy_hvv5N9r1ILYJMCZk3C-mAdpUEyS?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/baFqVS4awmIGB55obPoVABz0CNhl1LUhxwGtHxmDaie9NTb_wNfY6BtlgUs_vGX8GBz6GGABNiwD2oNPK2pVgOVQZ79wGiXYq0DJdlMHvRjl79HkV6qUivZ33p7avRo2LR3QA_bZ4HatBmr-cCfmO1UWxI_-I_lTQBtbapJ3WE_qAwUNne_R35t_gnhAhKNL?purpose=fullsize)
+
+極限感測器與原點感測器的用途不同。
+
+原點感測器：
+
+> 告訴控制器平台到達參考位置。
+
+極限感測器：
+
+> 告訴控制器平台已經接近或到達行程邊界，需要阻止它繼續往危險方向移動。
+
+例如：
+
+```text
+負方向                                         正方向
+
+[負極限] -------- [原點] ---------------- [正極限]
+   |                                         |
+   |<----------- 允許移動範圍 -------------->|
+```
+
+假設平台目前正在往正方向移動。
+
+當正極限感測器觸發時，控制器應該：
+
+1. 停止往正方向移動。
+2. 記錄極限異常或狀態。
+3. 禁止繼續向正方向移動。
+4. 視系統設計，允許往反方向退出極限區域。
+
+這裡有一個重要細節：
+
+**觸發正極限，不代表必須禁止所有方向的移動。**
+
+因為有時候必須允許平台往反方向退回安全範圍。
+
+另外，極限感測器不是唯一的安全措施。韌體軟體限位及機械限位也很重要。
+
+---
+
+# 四、原點與極限感測器的差異
+
+整理一下：
+
+| 比較項目     | 原點感測器                       | 極限感測器        |
+| -------- | --------------------------- | ------------ |
+| 英文       | Origin Sensor / Home Sensor | Limit Sensor |
+| 主要用途     | 建立座標參考                      | 防止超出行程       |
+| 觸發時機     | 回原點時                        | 接近行程邊界時      |
+| 主要目的     | 確認位置基準                      | 保護機構         |
+| 是否用於建立零點 | 是                           | 通常不是         |
+
+這兩種感測器可以同時安裝在同一台滑台上。
+
+---
+
+# 五、STM32 如何讀取感測器訊號？
+
+這是今天最重要的韌體知識。
+
+我們先以 GMT CXS50 為例。
+
+官方規格指出：
+
+| 項目    | 規格                 |
+| ----- | ------------------ |
+| 感測器電源 | 24V ±10%           |
+| 輸出方式  | NPN Open Collector |
+| 輸出電流  | 8mA 以下             |
+| 感測時輸出 | 電晶體 OFF（非導通）       |
+
+([GMT][1])
+
+這代表它不是一般直接輸出 3.3V 的 STM32 GPIO 感測器。
+
+**不能把 24V 感測器訊號直接接到 STM32 GPIO！**
+
+必須透過適當的介面電路，例如：
+
+* 光耦合隔離電路。
+* 電壓轉換電路。
+* 適合該感測器輸出的輸入介面。
+
+而且要根據實際接線圖確認訊號的有效電位。
+
+## STM32 韌體看到什麼？
+
+假設已經透過適當介面，把感測器訊號轉換成 STM32 可讀取的 3.3V GPIO 訊號。
+
+韌體就可以讀取：
+
+```cpp
+HAL_GPIO_ReadPin(HOME_GPIO_Port, HOME_Pin);
+```
+
+假設我們把訊號定義成：
+
+```text
+GPIO HIGH = 沒有觸發
+GPIO LOW  = 感測器觸發
+```
+
+注意：這只是教學用的假設邏輯，實際 HIGH/LOW 必須依照電路設計確認。
+
+---
+
+# 六、真正的重點：回原點流程（Homing Sequence）
+
+現在我們把前面學過的東西組合起來。
+
+假設滑台目前不知道自己在哪裡。
+
+STM32 要怎麼讓它找到原點？
+
+常見的回原點流程可以分成以下幾個階段。
+
+![Image](https://images.openai.com/static-rsc-4/rfVvZ9fkurrHpPOJJRlepnOrUI7L0J-EGwe3W7jJbl3NtB5O08tC_O6Vz1hhwWiZFv_42HEsdVRkPmkShEGqIP38NsxZjWo5ArtP0ADQ8PtZAoKHYFYhBMiDgvlS5DQUJZTw2-3HntI6OrPvKhWHDbQLixtN26Wj5hD-R5QdB7Jr4TxFzt7TsenCTm6hEEnn?purpose=fullsize)
+
+### Step 1：確認目前狀態
+
+STM32 先檢查：
+
+* 驅動器是否正常？
+* 馬達是否可以啟動？
+* 極限感測器是否已經觸發？
+* 原點感測器目前是什麼狀態？
+
+如果設備存在異常，就不應該直接開始回原點。
+
+### Step 2：快速尋找原點
+
+STM32 命令馬達朝原點方向移動。
+
+例如：
+
+```text
+速度：10 mm/sec
+方向：負方向
+```
+
+平台持續移動，直到偵測到原點感測器。
+
+### Step 3：減速或停止
+
+當感測器觸發時，控制器依照回原點策略減速或停止。
+
+為什麼不能直接把感測器觸發的位置當作非常精確的零點？
+
+因為感測器有偵測區域，而且觸發位置可能存在誤差。
+
+### Step 4：離開感測區域
+
+平台反方向移動一小段距離，讓感測器解除觸發。
+
+例如：
+
+```text
+反方向移動 0.5 mm
+```
+
+### Step 5：低速重新接近原點
+
+接著以較低速度重新接近感測器。
+
+例如：
+
+```text
+速度：1 mm/sec
+```
+
+這樣可以降低高速移動時的停止誤差，讓原點判定更加穩定。
+
+### Step 6：建立座標零點
+
+當控制器再次偵測到原點位置，就建立座標參考。
+
+例如：
+
+```text
+Home Position = 0 mm
+```
+
+之後，STM32 就能使用這個參考位置進行相對或絕對位置控制。
+
+補充：以上是常見的回原點策略示例，並不是所有 GMT 滑台都必須使用完全相同的流程。實際順序、速度、方向及是否使用兩次接近，取決於驅動器和控制器的設計。
+
+---
+
+# 七、回原點完成後，STM32 如何保護行程？
+
+假設滑台行程是 20 mm。
+
+回原點成功後，STM32 建立：
+
+```cpp
+#define SOFT_LIMIT_MIN_MM  0.0f
+#define SOFT_LIMIT_MAX_MM 20.0f
+```
+
+現在上位機傳送：
+
+```text
+MOVE 15.0
+```
+
+STM32 檢查：
+
+```text
+15.0 是否介於 0 和 20 之間？
+```
+
+是，所以允許移動。
+
+但如果上位機傳送：
+
+```text
+MOVE 25.0
+```
+
+STM32 就應該拒絕。
+
+因為：
+
+```text
+25.0 > 20.0
+```
+
+這就是軟體限位。
+
+實際產品還需要預留安全距離，不能把軟體上限直接設在機械極限的位置。
+
+---
+
+# 八、今天從韌體角度整理整個流程
+
+```text
+           STM32H755
+               |
+               v
+         讀取感測器狀態
+               |
+               v
+          執行回原點
+               |
+               v
+        尋找 Origin Sensor
+               |
+               v
+        確認原點位置
+               |
+               v
+        建立座標零點
+               |
+               v
+          設定軟體限位
+               |
+               v
+          接受移動命令
+               |
+               v
+       持續監控 Limit Sensor
+               |
+               v
+          正常運動控制
+```
+
+你可以看到，原點感測器不只是單純的 GPIO 輸入。
+
+它是整個定位系統建立座標基準的重要元件。
+
+---
+
+# 九、今天的練習
+
+我們先確認三個觀念。
+
+**問題 1**
+
+設備重新開機後，STM32 不知道平台目前的絕對位置。通常應該先執行什麼動作？
+
+A. 直接移動到 10 mm。
+
+B. 執行回原點（Homing）。
+
+C. 直接把目前位置設定成 0 mm。
+
+**問題 2**
+
+假設平台正在往正方向移動，正極限感測器觸發了。正常情況下，控制器應該怎麼處理？
+
+A. 繼續往正方向移動。
+
+B. 停止往正方向移動，並依照安全策略允許往反方向退出。
+
+C. 立即關閉整台設備的所有電源。
+
+**問題 3**
+
+GMT CXS50 的原點感測器輸出為 NPN Open Collector，電源是 24V。STM32H755 的 GPIO 是 3.3V 邏輯。
+
+可以把感測器輸出直接接到 STM32 GPIO 嗎？
+
+A. 可以。
+
+B. 不可以，必須先經過適當的訊號介面電路。
+
+答完後，我們下一課會介紹**精密滑台的多軸組合：XY、XZ、XYZ、旋轉軸及六軸平台**。
+
+這會開始讓你理解，GMT 為什麼有單軸滑台、XY 滑台、XYZ 滑台，以及光纖耦合設備為什麼需要多軸精密定位。
+
+[1]: https://www.gmt.tw/en/cxs50-precision?utm_source=chatgpt.com "GMT GLOBAL INC-CXS50 - Precision"
+
+```
+答案：
+B. 執行回原點（Homing）。
+B. 停止往正方向移動，並依照安全策略允許往反方向退出。
+B. 不可以，必須先經過適當的訊號介面電路。
+```
+
+---
+
+你問的這些問題非常重要，因為這正好連結到我們熟悉的 STM32 韌體：**感測器如何把機械位置轉換成電氣訊號，再讓 STM32 知道滑台目前的位置狀態。**
+
+先確認你前面三題都答對了。現在我們先把感測器的硬體與訊號弄清楚，再進入多軸滑台課程。
+
+# 一、原點感測器與極限感測器，輸出是類比訊號嗎？
+
+一般來說，**不是類比訊號，而是數位開關訊號（Digital Signal）。**
+
+它們主要告訴控制器兩種狀態：
+
+* 尚未感測到目標（OFF）。
+* 已經感測到目標（ON）。
+
+例如：
+
+| 感測器狀態     | 控制器收到的資訊 |
+| --------- | -------- |
+| 滑台尚未到達原點  | 未觸發      |
+| 滑台到達原點位置  | 已觸發      |
+| 滑台尚未到達正極限 | 未觸發      |
+| 滑台到達正極限   | 已觸發      |
+
+它不是告訴 STM32：「目前位置是 3.25 mm」。
+
+它只告訴 STM32：「我現在有沒有偵測到指定的物體或位置」。
+
+所以它通常不需要使用 STM32 的 ADC。
+
+---
+
+# 二、感測器輸出是電壓嗎？有正負電壓嗎？
+
+這裡要先區分兩件事：
+
+1. 感測器的電源。
+2. 感測器的訊號輸出。
+
+以 GMT CXS50 精密型為例，官方規格列出：
+
+| 項目      | 規格                         |
+| ------- | -------------------------- |
+| 感測器類型   | 光電感測器 GMT-sensor           |
+| 電源電壓    | 24V ±10%                   |
+| 輸出形式    | NPN Open Collector         |
+| 輸出電流    | 8mA 以下                     |
+| 感測時輸出狀態 | Output Transistor OFF（非導通） |
+
+資料來源：([高明鐵 GMT][1])
+
+這代表它使用的是 **24V DC 電源**。
+
+不是正負 24V 的雙電源，也不是輸出正負變化的類比訊號。
+
+一般工業感測器的電源概念如下：
+
+* +24V：電源正端。
+* 0V：電源負端，也就是電路參考地。
+* OUT：訊號輸出。
+
+注意：0V 不代表一定要接到大地（Earth），兩者是不同概念。
+
+## NPN Open Collector 是什麼？
+
+這是你需要理解的重點。
+
+NPN Open Collector 可以想成感測器內部有一個電子開關。
+
+![Image](https://images.openai.com/static-rsc-4/r0D7vHr9ljOz7mWLTkqjfL_mi_7fMzWKSxSqd6R-2gllbvabqyWwGAiMKhRSmZluUd0_yiX6NRKLLGD6Bs8l72aWlHS6eDpG8VKvr-9o7xYxx1YliJSe8veqTPopZwQs-PMdyF-yx4FXGbVgqMeEVJDOyKyYpr8yZT2hwGAphsTRsNAEMpgSroNQo5zzXDxw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/TjN4ZaVDFuf5iUxoxMuBH0lFYTzIDKxXgn-4ON4bBI90Al6C56f198o2JMY0umnO04c_KIWN8n8g7e_UKFvvT42ajE6L4LVMZC0MTa5s4xRneBWJ6aGj3D-FPExMJ70VNuGXHbz2UOOvGuNpBWQ9vZgnFc9RGny0O3rd20bne3ius93h1pnPpezYTvxaQrJe?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/sWPCAjbJjHK5vOliI-emLURuWazhTfKhypBefZr-PA-tVxgQ0lhV4R9-wDXO6IQuhqkREz0YIBQIFYD8_qAZ_TCzyHYeMcBT5fna02kipOMnwGgOtVdlzin7xlh4fPnduSkphQs2b3jkVxj8HG7JBo8zA-ilNUvg-pkBjtrl2NGY4Z6LG-fiiUqf2IgaYapq?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/B7dkvc9qCA0HA0xVM26Ez8OB7z0JZfFwfqQJbcX-Z2HycAHXQu3TI0KVS1f3PnQi76nhDY32pg5uDdR4chOFrKlZ0cEBW0H4pPiWuBVnn-ho4jWFD_i8Dhg5ha6Ntvk1fKoYDXz1NRdORirRQzHVRsLNR6ffbDv1GC7dArrK6GioQDOW-ZlsODMYXrZLZuib?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/a38S3xgscMLRkXucVbSdYBmy1wI2sUkngC-PPbt-GyDE2IOFvY0_QLs24QRR1wP8g9YKB3xu-M6kdqHofh9EVgFNp6CfrkXpYcQy5gyYkoU7v2F7tMlf6LHLq29CjcwnZhch3H3lXZPT0sfXUcyz-uJgpmrUwEankTyWPJC-qkSefyaJk8jZ84z7csE7I14T?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/AygRdRJP_eSf3ppmFNCgwDyN6yKLgD0g-W5VOxZ7VPTYUpNiQQkDVaRh_V7mYbRu9fRNow7rvE3Oqz_UYUFiFo4PK3uchfAZkT_UiyqoF6O_XEVXR9TC_QRSGAfVBKqTd07mqtDCaBHLHm29CPEztBef5tsPLdzRqmnac4zwSWsr32uv59Eks506Un5jae9D?purpose=fullsize)
+
+它的輸出不是主動提供固定的 24V，而是透過內部電晶體控制輸出端是否與 0V 導通。
+
+假設外部有適當的上拉電阻：
+
+| 感測器內部電晶體 | OUT 狀態  | 外部讀取結果 |
+| -------- | ------- | ------ |
+| ON（導通）   | 被拉向 0V  | LOW    |
+| OFF（非導通） | 由上拉電阻拉高 | HIGH   |
+
+這裡有一個特別值得注意的地方：
+
+**GMT CXS50 規格指出，感測器進入感測狀態時，輸出電晶體是 OFF（非導通）。**
+
+因此，不能直接套用一般感測器「感測到物體就輸出 LOW」的直覺。實際讀到 HIGH 或 LOW，還要看外部介面電路如何設計。([高明鐵 GMT][1])
+
+---
+
+# 三、感測器有幾條線？
+
+常見的工業感測器有三線式：
+
+![Image](https://images.openai.com/static-rsc-4/TjN4ZaVDFuf5iUxoxMuBH0lFYTzIDKxXgn-4ON4bBI90Al6C56f198o2JMY0umnO04c_KIWN8n8g7e_UKFvvT42ajE6L4LVMZC0MTa5s4xRneBWJ6aGj3D-FPExMJ70VNuGXHbz2UOOvGuNpBWQ9vZgnFc9RGny0O3rd20bne3ius93h1pnPpezYTvxaQrJe?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/jY1FZFOyCX8xGUL7gduby389exjdvcvGscVLKoJ8HToyyO2Vf1HUCv37mGnD3zf7z9mulT17lK9p7fR2dKGnfx4bcQA6NujTldj6TEAulyhpO5akleIlVApjOVnFwCc1nhhwR2K1HOC5P-s9Wda7_9INgPl28jEwGQf2NuuegtV21xOLl_jomrXcOxX3f-8j?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QM_Hbi8YANTXAcgGANiCYIp5r6Yyw0VhBJYbg0PschnYqdVs93kQBYaWh-xKFha7hnJsMH8Sjt9eONRtKwFp6mz4hu-cAFobVxoHqZv2zJlLOTJR-k4qutjHriZ_4l-oyFbAanpxsW8f59QPkUP3zGdH4d5yflKSKCbK7b5ZJ0JDx_b3c79Md89igsmVkjZ-?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/54fGD9ZkLDASBo5Zs07SaffGxKjn8EMf86oxi5lO4Kl-ivZXzLE88n4Nd47H7SOIbKuxZOWCP14UMP1p1LHIkDuTbLyHH6DiBVfuzgd-Gvtfe-shz4X_wuWjFWYeSlyPP2iZKYtnYEb90QLyb-CgD9AgX9-DLKe_3i_Vdl9wxBzqLWzbNPZ27K-MgHxiWjlt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/NTUdy1nNaX50QPJx-iFXCWpZt7GywSjH8iv-o0ak205s2TVeePtEL5ad2Zea0tPjN0pUhy2UFM_jGh_Obhq59Fvwq0YzvNmbD6LKybnE3kg45BOnYStMFg-4J9qMXJ8VWSqMJK2S2pGomVB84fbO5uU-Sf2BH7O0_0hcp3ZDBNnbWuJr5zMkgVVSupIAxeUd?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/OInI28mvbEAnd1KGgP8E9xfM6y7ZzqER1jV68QuWwb1XEAx3bHepRssdiF_rnSjC2RxliEIuM499s2Wi5dcLG25XOSoWZLYLHH0v-etpXwsivbnioVDfJW3eyVJ9GO6V5AfTlh86PmTJaVwNM3z4_9ewJZsShkEGTjJdg4IDzcaHrdd1a07r69KonZ7YVNFV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/GJ3uqE5oOsCBhYoIM3JnE2nFci6ExQiUOkcVlb9_QxDvqZd_tbCjRBYDczJbzaDG3XwqL_pV1BXYHf1l7OMfvryywKtTJvJJoxTdKw2VfNH62mDVuDFJSM3azZer9PPjWWU5N-USRS-t5jn0exnqFnBtfTTxVBg3Wb9N7T23S9JDgYeGa26wZUESAC6aHkHD?purpose=fullsize)
+
+通常是：
+
+| 線色（常見慣例） | 功能       |
+| -------- | -------- |
+| 棕色 Brown | +24V     |
+| 藍色 Blue  | 0V       |
+| 黑色 Black | 訊號輸出 OUT |
+
+這是常見的三線式配置，但**不能因此認定所有 GMT 感測器都採用這三種顏色或相同接腳**。
+
+另外也有：
+
+* 兩線式感測器。
+* 三線式感測器。
+* 四線式感測器（可能同時提供 NO、NC 輸出）。
+* 使用多芯連接器的整合式感測器。
+
+以 CXS50 精密型來說，GMT 官方列出的滑台側接頭是 15-pin D-SUB 或 12-pin HRS。也就是說，滑台可能透過多芯接頭，把馬達及感測器訊號整合在同一個連接器內。不能把它簡化成只有三條外露電線。([高明鐵 GMT][1])
+
+---
+
+# 四、感測器要直接接 STM32H755 ADC 嗎？
+
+**不需要，也不應該直接接到 ADC。**
+
+原因有兩個：
+
+第一，這是數位開關訊號，不是需要 ADC 轉換的類比訊號。
+
+第二，GMT CXS50 使用 24V 感測器，而 STM32H755 GPIO 的邏輯電壓是 3.3V。
+
+如果把 24V 訊號直接接到 STM32 GPIO，可能損壞 MCU。
+
+正確的概念是：
+
+![Image](https://images.openai.com/static-rsc-4/bl38OtJbpaqfkkPcDcgY_uWgCencVpCHkOA6aa8amlK3ipRTPafTo7WcKto1U_IY6k1PqsdJaOJrjsN2rYVg2WXQELQXu6UeMa0dDqODzl83fXi3UbRvgBGYQ603E1ZVAeaMXSccf221lcKvtR4-4kT7iTNuV7HKBe4NXLorEml-X99IybqEi0v2JPc9nzCw?purpose=fullsize)
+
+訊號傳遞流程：
+
+```text
+GMT 原點感測器
+       │
+       │ 24V NPN Open Collector
+       ▼
+訊號介面電路
+       │
+       │ 轉換、隔離或電平匹配
+       ▼
+STM32H755 GPIO
+       │
+       ▼
+韌體讀取 HIGH / LOW
+       │
+       ▼
+判斷是否觸發原點
+```
+
+訊號介面可能使用：
+
+* 光耦合器（Optocoupler）。
+* 電晶體電平轉換電路。
+* 工業數位輸入介面。
+
+實際選擇要考慮 NPN 輸出特性、上拉方式、電流、電壓及隔離需求。
+
+這裡也可以連結到你熟悉的 STM32：
+
+```cpp
+if (HAL_GPIO_ReadPin(HOME_GPIO_Port, HOME_Pin) == GPIO_PIN_SET)
+{
+    // 偵測到某一種輸入狀態
+}
+```
+
+但這段程式還不能直接認定 HIGH 就代表觸發，因為必須先確認硬體介面及訊號有效邏輯。
+
+---
+
+# 五、感測器只有光遮斷型式嗎？
+
+不是。
+
+常見的工業位置感測器有以下幾種：
+
+![Image](https://images.openai.com/static-rsc-4/6o7VrXToGXKPza-Azfh3VxvN_Of3PfPlgmlo1MZv3B5FFl8NxWczPa94qH5kJ39pFIeXwaALqv2CiY1R2tpLjoJlOd82yk4ppIa9IH2kkMSm2c0rllZKRExD_R-dGxs32PLtSPDmTya1LF9amk8ovgOzxLED2_4x5coUbVJWx8BeDPVE4Tz5tpkfHBxegVRs?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/vOiGYdF5ggPWjmjiUJyxbPDHTSBdZLzwp7QhPWYRwZFkl10j_cPJ3uOewVF5NDKeT8ju3Zq2NWYKCrbRDsOd9uv5g2ouiVh-GrkUEnUd_zNALOrWTchrVpCb4VgrHQY9iCATShAf8TtaeiIAXxoUdKkORKFlRjeKK-sCDuVgHArhU28ODYsCv4Nepw3VP4IH?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LJtnAfGxqkNg9cXTtk55hF3MPbVou2wo72Hk8mEaciuSQViSqYqOId4XdEdGXDIciRAhp1peu0CVfcfLsFy0gfscYDBpYTIIDZPTRvvL7AtOwgO7Cx3Pv6CU1VQBtd96g5lwxReKihe7wNSTnANwK4xZYL4j96GTlwMYWCUnpebom77lgahiAT4uSP4Lg0ey?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/VRr3dv243_mNeHDqgeiXZRTOYXPHp68cgsUZv2LfzIqB4v2OWZoT-oqqnAkomWxmCao3jfkMfutZUoWktXDNpMkvk_c9x7AmK1XyW7Y_a9G9j8OJHmXmdUC3DyCHcqhqLag2GL9A6bukXwh11R2mbcJhDhn21XdeyMaiiYHyIyjLECIFlMEqaap4CEtlNwig?purpose=fullsize)
+
+| 類型       | 偵測原理     | 常見用途      |
+| -------- | -------- | --------- |
+| 光電感測器    | 利用光線偵測物體 | 滑台原點、極限位置 |
+| 電感式接近感測器 | 偵測金屬物體   | 金屬滑台的位置偵測 |
+| 機械式限位開關  | 物體碰觸開關   | 行程極限保護    |
+| 磁性感測器    | 偵測磁場     | 氣缸位置偵測    |
+
+不同感測器有不同優缺點。
+
+例如：
+
+* 光電感測器：不一定需要接觸物體，適合精密機構位置偵測。
+* 電感式：可以偵測金屬物體，不需要光線。
+* 機械式：結構簡單，但需要實際接觸，會有機械磨耗。
+* 磁性感測器：常見於氣壓缸，用磁場判斷活塞位置。
+
+GMT CXS50 精密型官方列出的原點與極限感測器則是光電感測器 GMT-sensor。([GMT][2])
+
+---
+
+# 六、光遮斷時，是滑塊遮住光線嗎？
+
+這是你今天最值得理解的機械問題。
+
+答案是：**通常不是滑塊本身，而是由移動平台帶動一個遮光片（遮光板、Flag），讓它進入光電感測器的偵測區域。**
+
+我們看一個常見的光遮斷式結構。
+
+![Image](https://images.openai.com/static-rsc-4/tJjy7-YfZyfA30ixVn7OhQDrHhLL7j2R5-M5efOTG6oZw5XZm2rY3FHKcL5PfUEi5qUuzyek3skwR5d26yWJvUeT1u5vbQDix0tuukN1DdWqfAmb_GT_WzSt1-YjAotZVpCx2cK9vXmy4bma9j2LwXpzQWRFWVGWobV4PVAoMLXwmF2R79T9JwJTwt2FQtYz?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/_cPwh1U2eNl4xZWQBPVVRhKguvyK6KByoJSY-nMkV2hdhUq2ooQZR6pStdbd9JAuJeY3ROWBiDTZQOmP5--NkILh9X0tMILi4DXrkwzJXgAHfOaQxckeFDYDcNvcrU-F2nptlqMsPTrveq5KPhdTd963a4LNRX4NjcmC7gmbkasDr8KkaydyLpGkdjdG--ch?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/1_KjzHMjR9wnqJPvk1wMJhz3UiQXOirggZ5kEqE0luYX-4_RuEM-30G8wID7H551FdbKPtpxdIb1jQvdn-PW2wJuTR2XQ3g1QY0liLRX38lg4ysNFH86r49yQ5UM1yBqNRujQYRi5R8IJnMsCGdjWFagkaC39kD0GMrB8j41STmMErrJuxy4ZC8S5orY20lR?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Mjk_D6sB2_IYZ_UvWahgPJL6Etq9yQwIBtM7whbFRWJBfwfNRnP0feUJUl4NXeZPoRMUm9gHjAMSRA9QSXGc4tOOCNAZbqG0jAczUZ_PKMPssMqYiNyNcgICPvPhLavQxIoWaejfgGZ7Ql2ahPdgzreB_tSjfAF8GFHzb5hJE8EUKXfRu2lxYUkWcVLut3UP?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/MQ7iIZ4IRDqzJ07J8Rw-wpYleU0mtkT-ufzs3GbEE2OQjznbKo7F-aDjxEXDzluskKLkNJWhImDnH7ZiIspuHcHCBByw84AQTO7r__hyItvgfpLHtWxS7aC59iPwIDqLgrzqGQiAP1I441brqlL_oPVupFSUQbE3znJmrQEZ0alndXyIRnSuLQd7bNN5ifjs?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/W6jOg6n4zAbqhhmfzTS2WZe6zONDvRla6MlMZpGnNi0aaS7xut9rCBmNPHblzg3Q6bt1Zm_Lf8mTkTHoCsFrgb1NyvqR6vhFaEdhKv23zXf-y2yT-em6t_VPVu7PV7XpvR_ZSv-2kV1jDWpUlSo_kDXgXax6M-38exJeIt15KJXbhJIf5cuOYOMGskdB6e7Y?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LE3QYg9sxXLdedX2DePRoXOYtWl6DITA_8NXv6uBEuDvwo6wv-3ZX_XQAa1MG6rso_INX7U0svN8f2WwrFooT0obhO4fNRnmtYFidA95opU6e8IEzcREDU8fcgJemUUQkGUKJclug1Zy-nWw-0t66drT2AyVo04VLSEgNmVOSQWtCRHvuXM8uVyE7DuXAWXF?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/K7M_bTb0RH5ICi4vBPYXVxGkgqg_XfNDCqnahUMTUhqEYhGiJgH7syeSf6a9DIxkSjXrA1I_spFDQcJzRCHeaP1Zz58YPhBStW7Y9Rg9U9Y7D2dsNWoTz5EiRQxeLEnvOVrM02o6dCCqq6Ly3Rn2_7dvlZdJfkftJZET5J4PnybV5GBsO2_Cd7msZvI1a5zB?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Sng1gtaFIKPpU0eFpuszy2QVySvDTtRQn8cgrDEuahU1jzyyh2LkIhLJ6o7Oaj5k-QSbrBFuSGH6DrUbxfv99dPxjsxhZpGsCgdUZTvyfUMIlYYr_pItDF6-GIDqeto3DBQqmA7i1O6AKge4SvZMaAU6yUl9GVqrH6R7r-svhJs7bZ4CNas9Xzn6s5BfVI6n?purpose=fullsize)
+
+想像這個結構：
+
+```text
+       光電感測器
+       ┌───────┐
+       │ 發光端 │
+       │       │
+       │ 接收端 │
+       └───┬───┘
+           │
+           │ 光線
+           │
+       ┌───┴───┐
+       │ 遮光片 │  ← 固定在移動平台或其連接支架
+       └───────┘
+           │
+           ▼
+        移動平台
+           │
+          滑塊
+           │
+         滑軌
+```
+
+這只是常見的示意結構，不代表 CXS50 的內部安裝方式一定完全相同。
+
+## 實際運作流程
+
+假設滑台正在往原點方向移動：
+
+**第一階段：尚未到達原點**
+
+遮光片還沒有進入感測器的偵測區域。
+
+光線可以正常通過。
+
+**第二階段：接近原點**
+
+移動平台帶著遮光片進入光電感測器的偵測區域。
+
+**第三階段：遮光片遮斷光線**
+
+感測器偵測到光線狀態改變，輸出訊號跟著改變。
+
+**第四階段：STM32 收到訊號**
+
+STM32 韌體判斷原點感測器已觸發，執行減速、停止或其他 Homing 流程。
+
+這裡有一個重要觀念：
+
+**光線被遮斷的位置，不一定就是最終設定的機械座標零點。**
+
+例如，控制器可能先偵測到遮光片進入感測區，再反向離開，最後低速重新接近，依指定的觸發邊緣建立原點座標。
+
+因此，原點是由機械安裝位置、感測器觸發位置及 Homing 程式共同決定的。
+
+---
+
+# 七、把今天的知識整理成 STM32 韌體工程師的觀念
+
+你可以把整個系統記成以下流程：
+
+```text
+機械移動
+   │
+   ▼
+遮光片進入感測器
+   │
+   ▼
+光電感測器偵測到變化
+   │
+   ▼
+NPN Open Collector 輸出狀態改變
+   │
+   ▼
+24V → 3.3V 訊號介面
+   │
+   ▼
+STM32H755 GPIO
+   │
+   ▼
+HAL_GPIO_ReadPin()
+   │
+   ▼
+Homing / Limit 判斷
+   │
+   ▼
+停止、反向或建立座標
+```
+
+你可以先記住四件事：
+
+1. 原點與極限感測器通常輸出數位訊號，不是類比訊號。
+2. GMT CXS50 精密型使用 24V NPN Open Collector 光電感測器。
+3. 感測器訊號不能直接接 STM32H755 的 3.3V GPIO，需要適當介面電路。
+4. 常見光遮斷結構是移動平台帶動遮光片，遮斷感測器光線，而不是一定由滑塊本身遮光。
+
+**下一步我建議先不要急著進入多軸滑台。** 我們可以先把 CXS50 的原點、正極限、負極限三個感測位置放在同一張機構示意圖中，並且追蹤滑台從開機、回原點到正常運動時，三個感測器分別如何動作。這樣你之後看 GMT 的 XY、XYZ 滑台時，就能直接理解每一軸的感測器配置。
+
+[1]: https://www.gmtglobalinc.com/en/x-axis-3/cxs50-precision?utm_source=chatgpt.com "CXS50 - Precision | X-axis | GMT GLOBAL"
+[2]: https://www.gmt.tw/tw/cxs50-%E7%B2%BE%E5%AF%86%E5%9E%8B?utm_source=chatgpt.com "GMT GLOBAL INC-CXS50 - 精密型"
+
+---
+
+你的理解**基本上正確，但要區分感測器接到哪一個控制設備，以及系統採用哪一種架構**。
+
+原點感測器和極限感測器不一定都直接連接 STM32H755，也可以透過伺服驅動器或遠端 I/O 模組傳遞訊號。
+
+主要有三種架構：
+
+## 1. 感測器直接連接 STM32H755
+
+```text
+原點感測器 ──┐
+             ├── 訊號介面電路 ── STM32H755 GPIO
+極限感測器 ──┘
+```
+
+STM32 韌體直接讀取 GPIO，判斷：
+
+* 是否觸發原點。
+* 是否觸發正極限。
+* 是否觸發負極限。
+
+這種架構下，感測器訊號不需要經過 EtherCAT。
+
+## 2. 感測器連接 Servo Drive
+
+```text
+原點感測器 ──┐
+             ├── Servo Drive
+極限感測器 ──┘       │
+                     │ EtherCAT
+                     ▼
+                STM32H755
+```
+
+這種情況下：
+
+1. 感測器訊號先進入伺服驅動器的數位輸入端（Digital Input）。
+2. Servo Drive 讀取感測器狀態。
+3. Servo Drive 可以透過 EtherCAT PDO 回報狀態。
+4. STM32H755 透過 EtherCAT 讀取相關狀態。
+
+例如，某些 CiA 402 驅動器會透過 Statusword 或其他廠商定義的 PDO 欄位提供數位輸入狀態。
+
+## 3. 感測器連接 EtherCAT Remote I/O
+
+```text
+原點感測器 ──┐
+             ├── EtherCAT Remote I/O
+極限感測器 ──┘          │
+                        │ EtherCAT
+                        ▼
+                   STM32H755
+```
+
+這種架構下，Remote I/O 負責讀取感測器訊號，再透過 EtherCAT 傳送給 STM32H755。
+
+---
+
+## 三種架構比較
+
+| 架構            | 感測器接到哪裡    | STM32 如何取得訊號 |
+| ------------- | ---------- | ------------ |
+| 直接接 MCU       | STM32 GPIO | 直接讀取 GPIO    |
+| 接 Servo Drive | 驅動器 DI     | EtherCAT PDO |
+| 接 Remote I/O  | 遠端 I/O     | EtherCAT PDO |
+
+## 那麼，哪一種比較好？
+
+這要看設備設計。
+
+例如，原點搜尋與極限保護如果由 Servo Drive 內部處理，驅動器可以直接對感測器訊號做反應，不必等待 EtherCAT Master 下一個通訊週期。
+
+這對需要快速反應的保護功能很有幫助。
+
+另外，**極限保護不應只依賴 STM32 經由 EtherCAT 收到訊號後才處理**，還需要依設備安全設計考慮驅動器本地保護、硬體限位或其他獨立安全措施。
+
+---
+
+### 我想特別提醒你一件事
+
+目前我們知道你的 STM32H755 專案使用 EtherCAT 控制設備，但還不能確定你同事的 GMT 滑台感測器實際接在哪裡。
+
+因此，不能直接認定你的專案一定採用第一種架構。
+
+下一步若要確認實際架構，需要查看：
+
+1. Servo Drive 的型號及 Digital Input 接線。
+2. GMT 滑台的感測器接線圖。
+3. EtherCAT PDO Mapping 是否包含數位輸入狀態。
+
+**先記住核心觀念：感測器是產生位置狀態訊號的元件；STM32、Servo Drive 或 Remote I/O 都可能負責接收與處理，不是所有感測器都必須直接接 STM32，也不是所有感測器都必須經過 EtherCAT。**
+
+---
+
+# 第五單元：多軸滑台的組合與運作（第一課）
+
+## 從單軸滑台到 XY、XZ、XYZ 多軸平台
+
+上一單元我們學習了 CXS50 單軸電動滑台，了解它由底座、滑軌、螺桿、螺帽、馬達及移動平台組成。
+
+今天要進一步理解：
+
+**如果一台設備需要讓物體往左右、前後、上下移動，單軸滑台應該怎麼組合？**
+
+這也是理解 GMT 精密對位平台、光纖耦合設備的重要基礎。
+
+---
+
+## 一、先理解 X、Y、Z 三個方向
+
+我們先建立一個空間座標概念。
+
+![Image](https://images.openai.com/static-rsc-4/zO0nRgmXmfHUK3c7JB96pxPjt9OtGxiLbvfWnY32OMH8AjildGFsGwBk19vwl9xjBSe1TddqIjOG-iyK6OGsitA4mYGr3NzXxHmqfbdtg43nll1dwXDUeUa2gMgNEvWuoTJZJ9jff5bmUmOLJ5OGcLv2-5-bQ0ygWFwv4uAvbEJEERZz2Y3GoJxlRY-abqcN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/gNcCla3YSVMdfNJABZysSpcM1re6iAcZ5bBShyMaaBzxXvy_VLI9F9gQ-4NofjZts3bwwjBK5BMTlXxZ_zmISpTStmtYnYLta6_Oi3pcOn1A5kIfKDTOKs0IWtY3NzSUFLQf8OkhZh2doMKE4tOPdcP9-AllK4et-f4mk2y0gyLBN-1MaN7zQEbOjk5MbVZa?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/3VDSmdCUnknb5htT1WoAZY66370HZEyQ_VegLM8vBiODl3I9C9XMfB5LJxcHGiLamXaeXPL6xq9viSU88cJw2-7KPFnBy5_ZKibr-1p5SZOah1rdkMqcZEGaEMinEPq5ErnMGU0-XPHOmVw2ScEZ_YrlHDGv2sELMElTNJvnpFv2K-yMimZhwF11qzuRv_nV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/uBCmJTVjc2OpgAMDe7uMIaB6TV9cJ3kMaUQhjs0qqw4HamR19V9AEmSVFv1zzlpszzbiEtEvjfvx_ooAczzTy_sjjKSsBz1uyGvTNlVLaiNbazqX-iI5-RZ1r8uYXKiTjAah4AiH4FG25mw7BYT6YX-lWwI60UfvuRK6egOMyjlOfLXrB4QWhajS0jKWGW4C?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2ebGASNL3hnk6KygDmIjeqByiNrA6JTWlMfAooEGPepHALmbNG4gk9cP9UtKIKgpCIZV3dtuwv9BWvfcNtABSgDn4yAylH9Bd4XV7FVGf0p-9xe_uRX9dIFLJ5ol5IND-ltYRi4XWBZJQuzz0OO2_eRe1LojJe2RGPNzr0Liqp2bkJ3AmB8aABtnpDubtpzs?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/D--v8N12FQPNtAUKvkq3QgjgWqfMMSRu6XQAX8O1o3fYO7WkF-_uL1DoAdEI7ngBJcpsUoApMWbDgGPo_1ttlahcYw6T2DlqS5_RnLWBa24Ag8lPGYhts6XOrmN-g5K8L9KahBpmcKEWQiFBio3KXcEk7EjdgdxU_X539F4P2G1WOAPUivOfOL4Bn0Y6k8TL?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/q4Fu4z2DCxtY7dX_TZ5OYG7x7jHGFcmDfMC6wz8lpGEWEyDeoJlv1ya7xGQA1X23sF3hkHDX39ul2CTyKUHp-rGU3F4w9c3d4bQWV2TfEMVWxR9L3NjlujdQFNOY4WPm8sQAY2eDjXO-UmDeCwN8XodWOS-LIHrgjpwXujhVAYm4vd3s40V-M9rOaPYYULLP?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/7X5IhKzilPAKVfiXjZa5a2Z3YsB88uGe5fTHw3TUVBAMTwDV4_dmYgRBfCBDIjFOfjYe0VhqGtYMn_KnbbHkbiHof2NbgBstuZIcdJ3m_6Wc9SlBSYp0FgvkDStAhjIWWvYa-1DLKXsPOTzyRmLyzNGCSSmDFxq7IXL1FsR1UKnw2LvcbKNxCHkBHMEcU1Bi?purpose=fullsize)
+
+在精密定位設備中，通常使用：
+
+| 軸向  | 運動方向 | 想像情境     |
+| --- | ---- | -------- |
+| X 軸 | 左右移動 | 把物體往左或右移 |
+| Y 軸 | 前後移動 | 把物體往前或後移 |
+| Z 軸 | 上下移動 | 把物體往上或下移 |
+
+例如，你有一個光纖接頭，需要讓它對準另一個光學元件。
+
+可能需要：
+
+* X 軸：調整左右位置。
+* Y 軸：調整前後位置。
+* Z 軸：調整上下位置。
+
+這樣就需要三個方向的移動能力。
+
+注意：X、Y、Z 是設備設計者定義的座標方向，實際設備的擺放方向可能不同。
+
+---
+
+# 二、XY 雙軸滑台是怎麼組合的？
+
+我們先看最常見的 XY 組合。
+
+![Image](https://images.openai.com/static-rsc-4/BR9aurL9YbdQpKkCG58xy7Odfn9S_Xuw5MCqfpubVK0zuYd0ORfFd0_Tt6xDerjHXUzMWDB31ZtY8S5Ait3t9D4_xLYQhlrQktZPr3h173EvBX8G-KfmqIp6yUkfqjQAtw3OReCwV_WNwQga8okB5TUCnguv54sF_WIGdg0mC_T3XaH3KgJ-rzThhZn4KVVc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/RrV1NsyDtEWpa-c9PJ4O0fnXlQTr8JvL8Yeh_W0sKo7P52lYg78Jv2IULbXjV8Y3xq40e8utj8D5j4EG5Wt8MnLl5iHpGoUk8TajtUFLl3DCVKzLRDImT66eMOS04E0Auju40cbZkWRINiGh1q1SflFF_2nRZehvBuS9_CpbONq9zcO9Gj509nvFOJD0qSKy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/7gtijK1efX2w4dHcBeruZMhg-bOmv5S66Aay7P3jrxdP-HRPUePLXBdn8avKZf5nVH5sfX2RQDRFKBftGpDy93r3Rb3d1ffhYh0WVEjPWqVe4APnMXjgSPxfaVYF_pvgN_LDooCxBX3WIxw3XJotmqpwZ-J6Ct9SRpJBygJ8-VOqd1guyb0qjdzFRBXL3enR?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/e5tWrm5x00YfbTVfcsDbsmIVyCQ-gfY0jHv_kxVGa8GP5onbzOtwfJFp1HM4-a24hoBEMykNXHECS0k-jmkRqjbgHiJHGh8n0rwm4fLoctzw_vIt4c6_v7ewXzng84kc7QJ9SNW3ri64UELs0h3GCighVixFmyx0fhldPUq_rDdCNFNkdHyQc69fo6dRSN4G?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/NGCCWbcPCedtBwcaVORw-_ymX7Bg32yv3FebNkv1REbD1TwBAO2mMACt660zQK_35sGpIu6Y1stuiyeB4-8sEVFewxP3LR497kPZHRUDYgIVRbJMLBwnmLieV05c-V5RiGV3zSEnFC24cYFw6tMfs1jOp34UuJ-kCoRox3Eahw_r0jqzvlukSeU-qVqZqHE_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/WOL4TOlj2t6a5EbSLhkrWsRMW4k_avo2nMKgkYPzg9g3Sbku9Ol7MPuGFzygPXvZXz9kJgvl3znnNddOt6wcm57JiUYzjq-smkHA9fiUUJNcc5D6DkqXOTmcSrE4tAXzTqKrw1Lylg3hsupFE3hrO9BDuR4DEBe7XkAVzi_x6P_y_waJfPgfDSyzd9TFEoda?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Ha2_Bspiu_SC83ybDm2sR-20UsIKU9iDw5X9pH3Pn2jvQ400RN2t0UnSV-qoJJIcElVklXvD3-F0Tj4KCq3XWghvQXG5ot6vwVO97p3ViTW-EsVGh7ln_8WnWCrkGcm1e5lLROPHz6GhW475GSgj3k0Xy68WjEL9acDgbC_6eDh__ES1IWF--3a7PDGEWuJk?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/gQXRw6NBGvSPFPGAc3VnkVGH8xTUDDYCEBZgS4yyGcJIDp3jxAnzE-XVa4ow1vvxNbYT8m71Reo75s1-4zqIpJOHPjna-O0G5NG3ekLQ-ObzELEEJUskuD6RoX94DDQl0q130uBHk83nY5D4IQdCbUkSdLIq17ov7-_Zfwxaoov9P9RBLALcJ9RVBU2r2V2k?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/TsQFThgKMsXF6ULO31d1AS-uUCWDu_RNmXLMdDQu5nqpxMPQqRDZagzBlTQiVXUF7RuYreEwn5ZUnOWG-rswia1WFvplRrfK3QOmBq8mXk5LBDkXFDxh25Pc44jkXhUv_6HQDN_ZrgSVGW4sSHOwbsA9StjfBJaoRRbJq3YkkGK6dashYiSY17ZV_iE--wtg?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/W1ALp8IrSi8XxTWvGqq39SB60tw4YKDq-AiTGgvd6GkCN7nOPDwbGcBlTeF0wv75HoTZvMBh19uPRdGsqAThJJAzoYGLuEXX9Uj6QOExPw1MjkPFc2B9jF1IboC8nvN0q5YiH4wuzXD4MNa5J5-6UUhfQ7F7TXe3w2oE_GBRCTqnRUi-64-WV8wFrMSW3kUW?purpose=fullsize)
+
+它的基本概念是：
+
+**將一個 X 軸滑台安裝在另一個 Y 軸滑台的移動平台上。**
+
+例如：
+
+```text
+             被定位物體
+                 │
+          ┌────────────┐
+          │  X軸移動平台 │
+          └────────────┘
+                 │
+          ┌────────────┐
+          │   X軸滑台   │
+          └────────────┘
+                 │
+          ┌────────────┐
+          │  Y軸移動平台 │
+          └────────────┘
+                 │
+          ┌────────────┐
+          │   Y軸滑台   │
+          └────────────┘
+                 │
+               底座
+```
+
+這是一種常見的上下堆疊方式，實際設計也可能採用其他配置。
+
+### 1. 當 Y 軸移動時
+
+整個 X 軸滑台會跟著移動。
+
+因為 X 軸滑台安裝在 Y 軸的移動平台上。
+
+### 2. 當 X 軸移動時
+
+只有 X 軸自己的移動平台移動。
+
+因此，兩個軸可以分別控制。
+
+### 3. 當 X、Y 同時移動時
+
+物體就可以在平面上進行二維定位。
+
+例如：
+
+```text
+       Y
+       ↑
+       │        ● 目標位置
+       │       /
+       │      /
+       │     /
+       │    /
+       └────────────→ X
+```
+
+假設：
+
+* X 軸移動 10 mm。
+* Y 軸移動 5 mm。
+
+那麼物體就可以從原本的位置移動到新的平面座標。
+
+這就是 XY 雙軸平台的基本原理。
+
+### 4. XY 軸的機械組成
+
+這裡有一個很重要的觀念：
+
+XY 平台並不是一個特殊的單一馬達機構。
+
+它通常是兩組單軸機構組合而成。
+
+每一軸仍然可能具有：
+
+* Base（底座）
+* Linear Guide（線性滑軌）
+* Ball Screw（滾珠螺桿）
+* Motor（馬達）
+* Coupling（聯軸器）
+* Stage/Table（移動平台）
+
+也就是說，前面學習的單軸機械原理仍然適用。
+
+---
+
+# 三、為什麼 XY 軸的上下順序很重要？
+
+這是機械組合時非常重要的觀念。
+
+假設有兩種組合：
+
+**組合 A：X 軸在下，Y 軸在上**
+
+```text
+        被定位物體
+             │
+          Y 軸滑台
+             │
+          X 軸滑台
+             │
+            底座
+```
+
+**組合 B：Y 軸在下，X 軸在上**
+
+```text
+        被定位物體
+             │
+          X 軸滑台
+             │
+          Y 軸滑台
+             │
+            底座
+```
+
+兩者都能實現 XY 平面運動，但機械特性不一定相同。
+
+主要差異包括：
+
+1. 整體高度。
+2. 負載分布。
+3. 移動質量。
+4. 結構剛性。
+5. 線材配置。
+6. 定位精度與動態性能。
+
+### 特別注意：移動質量
+
+假設 X 軸安裝在 Y 軸上。
+
+當 Y 軸移動時，它不只要移動被定位物體，還必須帶動整組 X 軸機構。
+
+因此，Y 軸承受的移動負載會增加。
+
+這會影響：
+
+* 馬達需要提供的推力。
+* 加速與減速能力。
+* 滑軌承受的負載及力矩。
+* 機構振動。
+
+這也是為什麼不能只把兩個單軸滑台疊起來，就認定一定能得到相同的運動性能。
+
+---
+
+# 四、XZ 雙軸滑台又有什麼不同？
+
+XY 是平面運動。
+
+XZ 則是讓物體可以左右移動及上下移動。
+
+![Image](https://images.openai.com/static-rsc-4/9cbSPnfg3GJUz_oC9lWIjv1uOSaCCp9Dqha4Wdo43Veas4iOdXB2CSyi5dOegeVU9VYBN_IRqbKAkd9lSgArKD6vKL3amic2VTtIeKosBSx2ktseb_MkA_i_7zn_XFCImcenrjpTfSI6Wo7lbtrvXa2vD61RYqGk-jph6NmQW6AUVGu-cXc5e_tcjoutIiOB?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/maDdXJu-jKjVkjND9WbaOguTgj5-NuXZBQSARCflw9GGIipIXQu4-dAPGQ02w3cgEbebw_UJ329iF_-Zc0eOHI1weN5f-uiTJeGUmo9MTwEokF9hrxmZom07C2AlCBk8Y_d9gcpoeC_6bSZtg7FOFYPI8tYxixA1Ye1GXM5x7yrikJKUfT14K2KIPchDt6Be?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/3VDSmdCUnknb5htT1WoAZY66370HZEyQ_VegLM8vBiODl3I9C9XMfB5LJxcHGiLamXaeXPL6xq9viSU88cJw2-7KPFnBy5_ZKibr-1p5SZOah1rdkMqcZEGaEMinEPq5ErnMGU0-XPHOmVw2ScEZ_YrlHDGv2sELMElTNJvnpFv2K-yMimZhwF11qzuRv_nV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/WOL4TOlj2t6a5EbSLhkrWsRMW4k_avo2nMKgkYPzg9g3Sbku9Ol7MPuGFzygPXvZXz9kJgvl3znnNddOt6wcm57JiUYzjq-smkHA9fiUUJNcc5D6DkqXOTmcSrE4tAXzTqKrw1Lylg3hsupFE3hrO9BDuR4DEBe7XkAVzi_x6P_y_waJfPgfDSyzd9TFEoda?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/c1_zWvAjCJ96I_ma6UJXckpJ8_eM5FvX1Y1reYnsznOXYTSL_HAkgNhCmOnQvTq1ezsU10HZrDSxQziFGJDNXLqqgpCtx5J7nrvuXzIDX2cWJT5NwpoqYG71jIhQYHMYsKap6j6WymH79HMkL9TI4J9xM22OYHWECzveqry0FiH2I4UpRigZT8dkijY9rV2N?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Jghc8ui6yB31KU0ArFIoKTnrw111af69bZZO4jxBgBNOKLD2WNxfEetMClc-7-ieHJgeO2-jSmJb9a0NofoTg6qQs-mMOz2wDyOS0j3rm-maNPUew0ulinNLBEcgtFBghHTM-X_qiJ8uxyGj4skN5gqioq33YNKts2lZOoYrzRXbMYVZP0IU9lxDDBqiz6dt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/qdG1JeqfxEmPC1_5dnUYcC3lGOq2JXAImHHHur4-Z8oT9SzlnztM5wq0DLNM6c4zlp858TC7giEcSq8sXZ9hfCYUuuApOsLhLFOCt-ztPrXR2WIVco8SCCkrO6_07HKYkJ66-HmnYen8diEXffq116J1mYfbME6aYAKX1llDxzFH_euvoXkD4c0U7SQsoEEW?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/GZohbyak_ImeERX6A7koFROovaRQmk_Bs5DWQl8YiFaacGxpny799W8bda_NrPovjSpVWmIlKM3CJ29rZYXHoVq1B3FNmYDqj-m5uLusJEA-H_IbBEQSmOBtujOjB2JvQdv6u_DTTpby5OnkrZVnk28CQlmYYu8Or97EJyZZ2eDPgeusJD7RxUG12g4sFhjl?purpose=fullsize)
+
+例如：
+
+```text
+       Z
+       ↑
+       │
+       │     ┌─────────┐
+       │     │ 定位物體 │
+       │     └─────────┘
+       │          │
+       │        Z軸滑台
+       │          │
+       └──────────┼────────→ X
+                  │
+                X軸滑台
+                  │
+                 底座
+```
+
+XZ 軸常見於：
+
+* 相機高度調整。
+* 雷射頭高度調整。
+* 光學元件上下定位。
+* 工件取放。
+* 不同高度的設備對位。
+
+## Z 軸有一個特別需要注意的問題：重力
+
+X 軸或 Y 軸通常是水平移動。
+
+但是 Z 軸可能需要垂直上下移動。
+
+當 Z 軸承載物體時：
+
+* 馬達往上移動，需要克服重力。
+* 馬達往下移動，需要控制重力造成的下墜。
+* 如果突然斷電，某些機構可能因重力而滑落。
+
+因此，Z 軸可能需要：
+
+* 馬達煞車（Brake）。
+* 配重機構。
+* 氣壓平衡機構。
+* 特殊自鎖或防墜設計。
+
+這些不是每一台 Z 軸都一定具備，而是依負載、結構及安全需求決定。
+
+**對 STM32 韌體工程師而言，Z 軸尤其需要注意斷電、驅動器故障及煞車控制的時序。**
+
+例如，不能不考慮機構狀態就直接解除煞車，否則負載可能下墜。
+
+---
+
+# 五、XYZ 三軸平台如何組合？
+
+當設備需要左右、前後、上下三個方向移動，就會使用 XYZ 三軸組合。
+
+![Image](https://images.openai.com/static-rsc-4/jqzYqP6f8LeS8wSg3NnF7sqH94xyis7p3lb4DQJ8W1rYYEW0UvEw7s6VqEghAH_jTtJwOGcafuxDhl_sjUHPlkjYMaiAuuh493pVHaKM2zY7MyFfcWqxTE6O3enEvhFYHoQH1EIW8SMnhg5McEWpE4KODEmP_hg0BOzakThnLrGS40K53ErS_ZD97wbSNDk8?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/gNcCla3YSVMdfNJABZysSpcM1re6iAcZ5bBShyMaaBzxXvy_VLI9F9gQ-4NofjZts3bwwjBK5BMTlXxZ_zmISpTStmtYnYLta6_Oi3pcOn1A5kIfKDTOKs0IWtY3NzSUFLQf8OkhZh2doMKE4tOPdcP9-AllK4et-f4mk2y0gyLBN-1MaN7zQEbOjk5MbVZa?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/43Ewls4s_oQGz-pk2JxMwJAiL8yj_ih7YIm7jq7ThM45S3PCTG5BlTdCdpfC5ySTfACDZVDlx6W37RT2Qrk5YVRWmm28MLmJbTULan2krM4WgSH0i1ZlXlA_RRAoEVZH3aXlypwqVtTM62aL6sGqW7nrOA0IPGaM21FmIS4XBU9QW-IgI2__zE6xU1w5gzg5?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/3VDSmdCUnknb5htT1WoAZY66370HZEyQ_VegLM8vBiODl3I9C9XMfB5LJxcHGiLamXaeXPL6xq9viSU88cJw2-7KPFnBy5_ZKibr-1p5SZOah1rdkMqcZEGaEMinEPq5ErnMGU0-XPHOmVw2ScEZ_YrlHDGv2sELMElTNJvnpFv2K-yMimZhwF11qzuRv_nV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/cD35AWc_GX2tflokI3jpwJAs21azwTk3pBuMOny5Zz19UdvISVdsgzt9XKpjuFjeg2eTOwinL70-raSbpNvGn8Jlal6u3KIYZY4rWsC662EbH1KqEQT5TvlHRbdy9YNO8JJDW7OKCXaDTUQNhvfesGlMmX8xTPHWKmzba0ogwiNERcZuWtMZzCGVlgi7Cc8t?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/hIrCkc25LYga_Ov5pkKJMn6JpWMHXoguZSqkNGVx6E6vO-qtbc5VHUcbj_kQ8SV1gm_nEB1RQ5K3b4lb3Fa2unCyA0XdjwaYveom-8r2a6qGT71FRPbIo2_QOakJnogTTYDCZqFncdfH8tAy8xjnNVbr23pNBNNNw59jclimMU3ZCCPAKS-2arfQhNoCK3Ky?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/uBCmJTVjc2OpgAMDe7uMIaB6TV9cJ3kMaUQhjs0qqw4HamR19V9AEmSVFv1zzlpszzbiEtEvjfvx_ooAczzTy_sjjKSsBz1uyGvTNlVLaiNbazqX-iI5-RZ1r8uYXKiTjAah4AiH4FG25mw7BYT6YX-lWwI60UfvuRK6egOMyjlOfLXrB4QWhajS0jKWGW4C?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/rbb0lQwYyGpGlTvgHlMDr5nXZoqchNPXftcDsW5ZkmmTy4FX0Hx7eeE8697o0BJBzQHQh7Ov6OD6QQV7BsOGlC012k-6g_ZAI9GlUktods-2Stl4RfxwmPC2wFZq3btwmoQp4ayweCmgnAVouYTx2wJMfHFU203fo98tnT7Ti5yBzoOKxTAxhicANH18ylFy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Ha2_Bspiu_SC83ybDm2sR-20UsIKU9iDw5X9pH3Pn2jvQ400RN2t0UnSV-qoJJIcElVklXvD3-F0Tj4KCq3XWghvQXG5ot6vwVO97p3ViTW-EsVGh7ln_8WnWCrkGcm1e5lLROPHz6GhW475GSgj3k0Xy68WjEL9acDgbC_6eDh__ES1IWF--3a7PDGEWuJk?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/M8OJ_y3FMbd-MZKuEVg7-C40sY84_cgn0dWzLqqIESOx_-l5OvW6SwVbRMaxLttWyocNxQB6rQQ18KCSJvrl5VJGyL2jJPWnbiILvhb6RzpBaBvb1QrVXWt6JIJ_npd4LyOSE_J_wkPc-c_46v3TqGNto5nMsnvI_LI9IuYP0mtBsX-9CFEd0kS0Yp0gt6vl?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/OyyP-hE8wHyAiycwE8vikB76cmbYu_VwjxVqHmgcr1Gm7M159SXuqWOgKIDg21F2Si-zVVpn7b6Dewc9Z_g_rD_o3DU686sogzui3dIGsRion3YypSaRzt0vG8TwZYlth71TvrBK7hQI0ZlZDif4Lxwl0YLEoinUWVlkATmWntCh95wHffgDJ37vNdwm0zDy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2LwxvAbO_KIH2OHgio7yQnwys_8ev4yYbuqPIEXI_8UCS-skrbPiM9akDZGTVq5Jk8Gocn-UcGxc05X1kZDlnHqkZwjyb0-0x309nm99ndaPgUaIeeVoV338P94upXk8mqgDr-aOxGtkqgS4v4T2AyoaMSX5gDQi7oolAo-s3oU2fQh4pe3ifDi1DD-rPlhg?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/c01FCY_orn8wDnep5eKJn7uhCPIMyAZ_qhg9AKwsPOoAziwbTwFcbnSW21-dAP1dNhMKVS3AhAOtNeas_ehCPZq9-o4wtVGufPVp3fV2418uiszCvcJstyC-BcBrv8eQtiKTdhiQM7k7oCoB5JpNZpVTuy_TApzXYk8XEeh7iyEPr9rlPD43zkC1lV8wIuyq?purpose=fullsize)
+
+最常見的概念是三個單軸滑台組合：
+
+```text
+           被定位物體
+                │
+           ┌─────────┐
+           │ X軸平台  │
+           └─────────┘
+                │
+             X軸滑台
+                │
+           ┌─────────┐
+           │ Y軸平台  │
+           └─────────┘
+                │
+             Y軸滑台
+                │
+           ┌─────────┐
+           │ Z軸平台  │
+           └─────────┘
+                │
+             Z軸滑台
+                │
+               底座
+```
+
+這只是示意圖，實際 XYZ 組合的排列順序及方向要依設備需求決定。
+
+XYZ 平台可以讓物體在三維空間內定位。
+
+例如：
+
+一個光纖接頭需要對準光學晶片上的光耦合位置。
+
+可能需要：
+
+1. X 軸調整左右位置。
+2. Y 軸調整前後位置。
+3. Z 軸調整高度。
+
+這就是三軸定位的基本用途。
+
+---
+
+# 六、除了 XYZ，還有旋轉軸 θ
+
+到這裡，你已經理解三個直線移動方向。
+
+但是有些精密對位設備，光靠 XYZ 還不夠。
+
+因為物體除了位置需要正確，角度也可能需要正確。
+
+例如：
+
+一個光纖接頭的位置已經對準，但它的角度稍微偏斜，仍可能造成耦合效率下降。
+
+這時就需要旋轉軸。
+
+![Image](https://images.openai.com/static-rsc-4/1Auqog4wYLud09dnU6DEh9qf6j9uqCnIoGoK3K0RI94Z1Xn5cqC3vaYkRQAUOrqtn5bq1Igu6KhL82hxj5dk9Ri-NeFCXNWLXrpRjjhSQJY4Kh2-Zsdd2K27-7dF8hNeaoPhtPMrYZvbZJ4bMRPUAR5JqyX6LLDwA8Vg0NOi0LZSkq7AmEuRFY-Em3aJ-ZEn?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/uO9csXeu8_tLa_RsJ_FITeN5wFNUk1-FD69XmauYHxBpgnLk8PxjcEYB56nDpAA14_yjsaD_fzmr8_dexE8PQ8u4GZ7AxuyA5_ZStoWZBiQirZjDg50xG4Z3qAeJKP0h-gLUWMfCrSM5XogaFkbnCyJrBLO1-i4UGHoNeWoc2a5A_gJOkNCctRrE1zRvBb2F?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Ve1DwLW8CKJjZK7QDdtQDvSaq2LkRbRjf6g7OAFovuEnen9rHiXalEahUgM3PpUBfRSdbATY7EujUAPHrr-ySLP3fOlTM__iZDa4ajtSgKmzYogG06IAuq1QnIf7q_btoyKKgvBL6LJ1mQuo-1uWZFrEGTcru34wXauv6RUrJ-CX_kbPCN1IBj1RIj0bfLf0?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/RTYwEkxXMqY7Q_BveB_4eDgk--rC4SBPYes3-ViZzNF7_ySygEqz7zSGQgyPxh50RFFgjHUiLLHh4uwon_vlPYE8AErM2mzq4IP4Hyc4a623pnhUw47rdJ4b6UXifVT8NKC3LXL_5cWAwHhSH6ys9kAONIQYJgUdPkbf6VOz2JxwfxlzGpQEMfVaz77IkcjB?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ZbqpU1mYIImGkWuqjkSvFoY3SLXUsVjRoIErOgn5HNaNExbVeT_7o5lUbfcnZb50zAisU18Qstvl_A6Iy9Zt-Qfy9TZnMO46DytX348UKfp2MCzsfDI1dYTFXgHjSRxy82PUDk5fd_2VriFliNnHCv0EMYfuKG-q4Enu6c7hnyVay-r4MTuHGP_kKL6z46fe?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ARo1xfJhQoNNZyb_Vs4DYFgr0Va2XfMWSGKQTIXpDCel42tzfnLqdFUx64L8eUm0ewHkBvBf8HzDt2WEx8w3MKyvmbvxstSujUSz5iXkEeDDTQXG_bW9SvROYpK_LooGuWwXWxc3Q_CVmA1m3TpR4kOmuwfNBoV1Rs9WwjgTMU1yebVif__ah9vKyH1Uqo-y?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/blc8MPcfvkDRwh6Ir7hAeftv7Ij6B5xLNo2f8jFQYZdzip9MNZBZgX5H3pwTWdOtU3h7VeJ2vkALTZPwC4yQE93SFdI99uzeJcxrY_X2QUdO9eAns6cDNEco13snOxIIfdTsjO_WrhQXTgKghWFblmSmry3uuXlPlauzAWl1fCqkIxHbVaWwrjZ0DhV8690_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/IiCENJ0ppKa5QokKsaGvkDYNhnMIwUMxJGcxwe3Y48446wBVWi4ZvfCFDGS7DPWJHsSdElsXDlMkmoSc9XfBuJVG2Bv1VPaDjXZj9WAAU7dVAnPDArhgeoAjS-ChPSNdi3LPAtqXTjWDvpzDLVz87cwJSHOKPXKRUDKSJ2rUBkE5QEABaGnQwW6XIUMKaLk6?purpose=fullsize)
+
+常見符號：
+
+| 軸向 | 動作     |
+| -- | ------ |
+| X  | 左右直線移動 |
+| Y  | 前後直線移動 |
+| Z  | 上下直線移動 |
+| θ  | 平面旋轉   |
+
+例如 GMT 的 AXYR60 精密多軸平台，就包含 X、Y 直線移動及 θ 旋轉軸。官方資料列出 X、Y 行程各 ±7.5 mm，θ 軸行程 ±8.5°。([高明鐵 GMT][1])
+
+這裡可以看到一個重要觀念：
+
+**多軸平台不一定全部都是直線滑台，也可能結合旋轉機構。**
+
+---
+
+# 七、GMT 產品中有哪些這類組合？
+
+我們可以從 GMT 官方產品分類看到，確實有不同的組合形式：
+
+| 類型     | 機構組合       |
+| ------ | ---------- |
+| X 軸    | 單軸直線移動     |
+| XY 軸   | 兩個方向直線移動   |
+| XZ 軸   | 水平與垂直移動    |
+| XYZ 軸  | 三個方向直線移動   |
+| XYθ 軸  | 平面移動加旋轉    |
+| 多軸對位平台 | 多個直線與旋轉軸整合 |
+
+GMT 官方產品分類也包含手動 XY、XZ、XYZ、多軸滑台及旋轉平台。([高明鐵 GMT][2])
+
+另外，GMT 的多軸精密電動平台說明，這類設備可以由兩個以上的單軸電動滑台堆疊或連接，透過控制實現多軸聯動。([高明鐵 GMT][3])
+
+你可以參考：
+
+* [GMT 手動滑台產品分類](https://www.gmtglobalinc.com/en/manual-stage?utm_source=chatgpt.com)
+* [GMT 多軸精密電動平台](https://www.gmtglobalinc.com/en/multi-axis-precision-coupled-electric-stage?utm_source=chatgpt.com)
+* [GMT XYθ 精密平台 AXYR60](https://www.gmtglobalinc.com/en/multi-axis-precision-motorized-stage/axyr60-precision?utm_source=chatgpt.com)
+
+---
+
+# 八、從 STM32 韌體角度看多軸平台
+
+現在把機械結構連結到你熟悉的韌體。
+
+假設設備有 X、Y、Z 三個伺服軸。
+
+STM32 可能透過 EtherCAT Master 控制三個 Servo Drive。
+
+```text
+                 STM32H755
+                     │
+                 EtherCAT
+                     │
+          ┌──────────┼──────────┐
+          │          │          │
+          ▼          ▼          ▼
+       X軸Drive   Y軸Drive   Z軸Drive
+          │          │          │
+          ▼          ▼          ▼
+       X軸馬達    Y軸馬達    Z軸馬達
+          │          │          │
+          ▼          ▼          ▼
+       X軸滑台    Y軸滑台    Z軸滑台
+```
+
+假設 STM32 要求物體移動到：
+
+```text
+X = 10 mm
+Y = 20 mm
+Z =  5 mm
+```
+
+STM32 就需要將目標位置傳送給對應的軸。
+
+每個軸有自己的：
+
+* 目標位置（Target Position）。
+* 實際位置（Actual Position）。
+* 目標速度。
+* 狀態及錯誤資訊。
+* 原點及極限狀態。
+
+如果使用 EtherCAT CiA 402，可能會使用前面學過的 PDO，例如 Target Position `0x607A` 和 Position Actual Value `0x6064`。
+
+不過，三軸能各自移動，不代表它們已經具備完整的多軸協調功能。
+
+例如，若要求 XYZ 三軸同時走一條直線，就還需要軌跡規劃及多軸同步控制。
+
+這是之後我們要深入學習的內容。
+
+---
+
+# 九、本課小結
+
+今天先建立五個重要觀念：
+
+1. XY：兩個單軸滑台組合，實現平面定位。
+2. XZ：水平與垂直方向定位，Z 軸要特別考慮重力。
+3. XYZ：三個方向定位，實現三維空間移動。
+4. θ：旋轉軸，可以調整物體角度。
+5. 多軸控制：每個軸可以獨立運動，也可以透過運動控制系統協調運動。
+
+## 課後練習
+
+請依照目前學到的知識回答三題，我會逐題批改。
+
+**第 1 題：**
+
+XY 雙軸滑台中，假設 X 軸安裝在 Y 軸的移動平台上。
+
+當 Y 軸移動時，會發生什麼事？
+
+A. 只有 Y 軸平台移動，X 軸保持不動。
+
+B. X 軸整組機構會跟著 Y 軸一起移動。
+
+C. X 軸馬達會自動停止供電。
+
+**第 2 題：**
+
+為什麼 Z 軸滑台通常比水平 X 軸更需要考慮煞車或防墜設計？
+
+A. 因為 Z 軸使用的馬達一定比較大。
+
+B. 因為 Z 軸需要克服重力，斷電時負載可能下墜。
+
+C. 因為 Z 軸不需要使用滑軌。
+
+**第 3 題：**
+
+假設一個光纖接頭需要調整左右、前後、上下位置，還需要調整平面角度，至少需要哪幾個運動方向？
+
+A. X、Y、Z。
+
+B. X、Y、θ。
+
+C. X、Y、Z、θ。
+
+答完這三題，我們下一步會進一步學習**多軸平台的負載、剛性、移動質量及安裝順序**，理解為什麼看起來相同的 XY 或 XYZ 組合，實際定位性能可能有很大差異。
+
+[1]: https://www.gmtglobalinc.com/en/multi-axis-precision-motorized-stage/axyr60-precision?utm_source=chatgpt.com "AXYR60 - Precision | Multi Axis Stage | GMT GLOBAL"
+[2]: https://www.gmtglobalinc.com/en/manual-stage?utm_source=chatgpt.com "Precision Manual Linear Stages Manufacturer | GMT GLOBAL"
+[3]: https://www.gmtglobalinc.com/en/multi-axis-precision-coupled-electric-stage?utm_source=chatgpt.com "Multi-axis Precision Coupled Stage | XYZ Stage Motorized | GMT GLOBAL"
+
+
+---
+
+可以，而且我認為你需要先看懂機械透視圖，再繼續學習多軸平台。
+
+你提出的疑問是對的：**X 軸不一定要放在下層，Y 軸也不一定要放在上層。兩者可以交換位置。**
+
+我先用實際機械圖來說明。
+
+# 一、先看真正的 XY 滑台機械圖
+
+下面這張是 XY 電動滑台的工程圖，包含俯視圖、側視圖及 3D 等角透視圖。
+
+![Image](https://images.openai.com/static-rsc-4/V3LYnADDU2KVuZ_3GVcK6s-Ts_v1AJFwZTgAj51E9uW2YLJGf89mU5qJMaIU4UHksYeljXB0l4WUQTWmFzAHLl438kasV9moABUdLDoaoEqi1HA4xPi4lQf5LLIJPfBrLqMebyRe25W8v2qrvys4Hu9a_gWRz-J3yjr7QB43MV1r9qvM2tbXLPH1txzLScdB?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QOa9B7sZN-Zq-9gJeZEPzf2hyQhQUPeUDJ-Xv0sMVxI79xtF5skLIBwEYGI6Ov3WKWaqfKWAsbm812Sl9g7-CHCzV3LnJE-d-EcYfv1DBUNZgH3xrT0Z1dHc-pe_ZouznHyQUB_7zAVumvdOA4donT-ET3dk90V3avih9lBSedsi9o_ouUPfpHL-hZBbrNFY?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2DbHDNfBwF3GMA0CgeofYy6y9kTsq926C42QRM1Qs7_L_EEyL72BPTX5_pFJNadjEG5xnTGSpHVJzYWUKyFdV33Hh1wYLXtOcLJ6yHKYsMRJMs9ibJ83gLDE8iMc5XprDh1oKXuaFoZChFUNFrdyCDe1Yjd-SSUuaWSTOkVfcZlKyuXLEzpsrNS0Z-gH4yl5?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/J5HKcGSKLQH1Oed39U3ee_56ZLSb70Rr_Zv3ryqcH2ae35eQLpCR5Y-kcQYoYVfsZ2btqz8-EIykXQEav8Oui_lrSmd1Ltg6nIeS87jyEOKB6xuOoEiyS8VvRuMds8abV7AozHkE6XONn6SwNIZrOr8uTlNpx8wAWneHZH6m2qR09aU-U-WRMIc8GPHFkJ4m?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/iVam1qi4ozEExR_avzRsMtbotuWAab0S0a15hroKe6KiWU5e-rI1EgwVWxYGMfbtWF9pczIGBDnvFpAR8NR3yxnJo6I39dzRzuyTAwOPatdw58g9617DOW5QZ7Yd_eF8qQoy13cUqhgTO1lhgI5m8YZ1bjLMn0lubwOUmXBS4YtmXjlN73YJuV3OVsbtceGq?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/KEfYN-dgODaaJLOQ-_KgLaAgq7ThIkIi449LMQGqoih6hJjEwc8mM6HEZmlw4tJhmFYzdSvrY3FC3zBrp7K0DiRU8pnFYaGVKb_RN3N_OCSpz4zua1YLYJxcWeiJGMOMVEf1wYEe0uS8jmR7hA4XNnDDwR3o_ITr2-o6L666rHvOdYKmltEQHrbZJd5lxY4p?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QxH-PI7Sx_mRLBD4mANo_04UcGE21Y2WC3EdQ2XufciQ3Rht4XopdTmNqIiHSypWmLf26MR5kGRfWGwBLxRIvyvz5JSpR5j-fiuyj44a8Euhg-PAwUlESUvJOTbiYDHTb8oIOPUXlJah4N8mQsq8rGQIeuML4p7CMi_oirrQBplzF8H0vS6k8G1ITrNnhceN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/lFTOccpm066sUpaF-UiRoUa3T-VMKvNBhuYQqp9cIwU-gPgDK1TqMgDa0ru4fGlkzfZ3rs2GA4tll6FdvYtB4Y1kdBo-R8pTImvdCBjk8fLmai_vHuciYzZLDs-8Vw7abwTrMu18_U0keHKempHHELxKLvFi1g_qdImlfC_FhqCmf0folaVnmeGN2kCorKKg?purpose=fullsize)
+
+先不要急著看尺寸，請注意這幾個地方：
+
+1. 最下面有一個固定底座。
+2. 底座上有一組直線滑台。
+3. 第一組滑台的移動平台上，又固定了另一組滑台。
+4. 最上面有一個工作平台，可以放置相機、光學元件或工件。
+
+這就是我們所說的**上下堆疊式（Stacked XY Stage）**。
+
+---
+
+# 二、你問的「疊加」是不是這個意思？
+
+答案是：**是的，就是把兩組單軸滑台上下安裝在一起。**
+
+我們把它拆開來看。
+
+## 第一層：只有 X 軸
+
+![Image](https://images.openai.com/static-rsc-4/S_mGaCq3PzEcdO7gYcXFH69cYl_rA9wZep0-suyKbL5mR7T8M_F-uGiv05frn_Aad9MxvjAJVxOPIkn8UE_ewnuFwtT_n4337_fSz0ldZwUWS5iyVH-l65P_mmPSPBkN8JNMWcu0p7jtvUJcpawa9sro27ZOH4YL2a2Tz1X831UnsncMKgcqRxNuyAP-Atbq?purpose=fullsize)
+
+先有一個 X 軸滑台：
+
+* 底座固定在設備機架上。
+* X 軸移動平台沿 X 方向移動。
+
+這時候只能左右移動（假設 X 定義為左右）。
+
+## 第二層：把 Y 軸裝上去
+
+現在把另一組 Y 軸滑台的底座，固定在 X 軸的移動平台上。
+
+![Image](https://images.openai.com/static-rsc-4/iTeZE_EYfOhXHfsUxMbudDuwDILb9oBnUYw5h6JWupLUIjnCTWRgWuPt4JuDaYmkkAs3xGorWmR4Ls6c8g2tfUvVJaV_beCaXP9-9P_VDMAR8okXb5aJTFeOa5nWOojn0evxWH5RJnAjs0qVRm1YDJq-48Mc_2Gfdc-pVJp7Kth6qOitAcl140yY6TkZ5ywi?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/v2wYvXNiWboO2Vn22BmcM8Es1FQQzuAegB-I8Mt6joxgRZKu0j2zH2GfIaDNhnAfjqN8Kkpt7esJrcCSEicobIiNAMvolO24npAiXlA6KO07W3yUv5pqbJxQY8dRZ4D5cnjlBsdzg_mJVlUHKR0nG5JQVS0dv_XhssK_J5q1NYU-dZWpBF_VR6uES9UlPfCG?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/XzgVHfa4VluPf7Z9Kf-UFyt2ywPBT6luHfZqlvW0a8fQOueyYIH1OfGOVi1IA1zr5tXuT09k_DTBY8jvt4SdIfmjw2oI98d8fCHooEwMZJ9Fx3lGwspSZVWuNiMG8pJnGQ9fBpS2JQFZhubRbl88nghU8p95UNOTg9ix0oOfHlUkg-Tlmb2xMGBHZYxWXylC?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/BR9aurL9YbdQpKkCG58xy7Odfn9S_Xuw5MCqfpubVK0zuYd0ORfFd0_Tt6xDerjHXUzMWDB31ZtY8S5Ait3t9D4_xLYQhlrQktZPr3h173EvBX8G-KfmqIp6yUkfqjQAtw3OReCwV_WNwQga8okB5TUCnguv54sF_WIGdg0mC_T3XaH3KgJ-rzThhZn4KVVc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/frHR75FXnj5Ag5vQWnHCBERbB0JNm93ZKb1l9wcWUTZnnCyCAriZsOscbWpDxsZD7r8YKQ-iUHFLrFdSuHZp6g4--Lk0TP1kLX4Nb55kd1872tbgG3-1OyTISeh963l_eqOclHIZZErYreR9ceOhEtZEU6ZNeEn-UgQyz7lAHio4k_IG3gzTMh6EL2Qza6bZ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2DbHDNfBwF3GMA0CgeofYy6y9kTsq926C42QRM1Qs7_L_EEyL72BPTX5_pFJNadjEG5xnTGSpHVJzYWUKyFdV33Hh1wYLXtOcLJ6yHKYsMRJMs9ibJ83gLDE8iMc5XprDh1oKXuaFoZChFUNFrdyCDe1Yjd-SSUuaWSTOkVfcZlKyuXLEzpsrNS0Z-gH4yl5?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/rO8OPYYEeaJpJE6ODEfHPiD_19P-ho1jo3ngOx29FAiNWzpRa6NOEc9AsAkiMW_83CrVrX56RcVPy9XZ6G0f079cV8F4CKbGlffUMy4pfe18P05GNsEwkrpRc457JHRRIjN_05vAeDE2oClfzcV2N-e-M2P868JgbppIOeTYShwW6Szg2IwB-qygNTHRi1-Y?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QxH-PI7Sx_mRLBD4mANo_04UcGE21Y2WC3EdQ2XufciQ3Rht4XopdTmNqIiHSypWmLf26MR5kGRfWGwBLxRIvyvz5JSpR5j-fiuyj44a8Euhg-PAwUlESUvJOTbiYDHTb8oIOPUXlJah4N8mQsq8rGQIeuML4p7CMi_oirrQBplzF8H0vS6k8G1ITrNnhceN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QOa9B7sZN-Zq-9gJeZEPzf2hyQhQUPeUDJ-Xv0sMVxI79xtF5skLIBwEYGI6Ov3WKWaqfKWAsbm812Sl9g7-CHCzV3LnJE-d-EcYfv1DBUNZgH3xrT0Z1dHc-pe_ZouznHyQUB_7zAVumvdOA4donT-ET3dk90V3avih9lBSedsi9o_ouUPfpHL-hZBbrNFY?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/X1RFDlzlwCKaF5R6fwjcu7F9ND34FfP-uZEIAf00zzkzybKaUXCE5_igBFoEWHrs42hF3hGWBtD5CnPDe5SJ9SPISlCSCG-OQXTeM8zJ5CEB7RXKbrQAJ2oZi0QX1zOmmIyNAd6QyLkyx4S7E2qkROvwr8Mz6zQAyhz1CUOiXN76QGdeIx3I9L9wTv_9fL1P?purpose=fullsize)
+
+組合關係如下：
+
+```text
+           最上方工作平台
+                  │
+             Y 軸移動平台
+                  │
+             Y 軸滑台本體
+                  │
+        ──────────┴──────────
+          固定在 X 軸移動平台
+                  │
+             X 軸移動平台
+                  │
+             X 軸滑台本體
+                  │
+               設備底座
+```
+
+這裡有一個非常重要的機械關係：
+
+**Y 軸滑台的底座，固定在 X 軸的移動平台上。**
+
+因此：
+
+* X 軸移動：整組 Y 軸滑台跟著移動。
+* Y 軸移動：只有 Y 軸自己的移動平台移動。
+
+這就是兩軸可以分別控制的原因。
+
+Parker 的精密定位技術手冊也有說明這種 Compound XY 組合：上層軸的底座固定在下層軸的移動滑座上。([Parker Hannifin Corporation][1])
+
+---
+
+# 三、你提出的另一種排列也可以！
+
+你問：
+
+> 有可能變成 Y 軸放在 X 軸滑台上面嗎？
+
+完全可以。
+
+例如：
+
+### 配置 A：X 軸在下，Y 軸在上
+
+```text
+          工作平台
+              │
+          Y 軸滑台
+              │
+          X 軸移動平台
+              │
+          X 軸滑台
+              │
+            底座
+```
+
+### 配置 B：Y 軸在下，X 軸在上
+
+```text
+          工作平台
+              │
+          X 軸滑台
+              │
+          Y 軸移動平台
+              │
+          Y 軸滑台
+              │
+            底座
+```
+
+兩種配置都可以實現 XY 平面定位。
+
+差別在於：
+
+| 項目    | 配置 A       | 配置 B       |
+| ----- | ---------- | ---------- |
+| 下層軸   | X          | Y          |
+| 上層軸   | Y          | X          |
+| 下層移動時 | 整組 Y 軸移動   | 整組 X 軸移動   |
+| 上層移動時 | 工作平台沿 Y 移動 | 工作平台沿 X 移動 |
+
+所以你提出的想法完全正確。
+
+實際採用哪一種，要考慮馬達位置、設備空間、負載、線材走向及精度需求。
+
+---
+
+# 四、還有一個重要觀念：X、Y 是方向，不是兩個平面
+
+你剛才說：
+
+> X 軸或是 Y 軸都是平面，擺放位置不同，前後或是左右可能就不同。
+
+這裡我幫你修正一個觀念。
+
+**X 和 Y 不是平面，而是兩個互相垂直的運動方向。**
+
+例如：
+
+![Image](https://images.openai.com/static-rsc-4/kN0llYRlN2UdogvVRJxrCNL9_J7ixq0uB1Dhsc2m4Sm9qJw8MIiUJK6uzdupyIacDl7wj2vPliNPgKoKQUT18tN_R15SF4H2FXH4jsT97oKuonWxd9VyUnuoe2RviYh19gAWp5JOsJwN0R-rOxCodL6lNbi2ixxBVGOrQW0OvWsaJco1I6jv6N7cs-9PpSBM?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/MxpGESFZpl4hLQTYbyT-ZlEG3nWYpCxCCqT9PrkIT14k4OSnu7aMvm8hk9_a4IAATwixYqxv4nsdzQVbZOrbL8O7NkmojGhwUNDe1NkPO3_D4mM-q7gyQ88vaFHDhCtRa10MzDmNhkTCbeLeeCFCaqShVe4I_X5U9Cr9L6P0lvwevggSrR0VfqLsxQinkGKO?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/wVsBw7FuwGjs6gQT7z1wZnh_tPdMb2gmF5zszR1e8CQ5-Y4qyYcykmsWPGxGyeqtYGSait4laemA5IVXLItgvCeE697TKV-TcSz3CCEBhsj9KJ8JFTuKhQ3CME_4LF-I7FTvaH57PMas_8I4n4EA6-vYSLC2uJPcWA8U0uLQccM53CjpijIHg5iXpzzKNxkj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8_qa6mgl8qmvDNcHVIpQK__vdsCnWQXuN1L1-YDsTLCpEObztefl-OmWNcpPZ9GADUv2cXH3aBVPaggOZAIhYGyRHwMg5DWgGQsCHpJA_OEy14F5X52_38ZcLoO_HYmvz1VRTzNiPqZDCb6ykkeuUaTaHGvBBOBlhksIkTpxtSgc1wZEvcM3cByCB2NwU-pk?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/xyFddf_HOLj4Kx0bmDXn1NQeFJb7nTMdFZJutFiO_-XPbKuECo4HlfIZOS5FLfbrtaFZaICLZkR3X3ulzuqI138YzRfP4lUnfOSVe5KGP3jtmACh6PgBiMiPICbSVE9PWBcIXKE4W2D9jmk3THLBoegMiwzngINHC2xKo5At6Jm48o2F523mIk9RkIaKWWju?purpose=fullsize)
+
+假設我們從設備上方往下看：
+
+* X 軸：左右方向。
+* Y 軸：前後方向。
+
+X 和 Y 兩個方向共同構成一個平面，這個平面就叫做 XY 平面。
+
+也就是：
+
+| 名稱    | 意義             |
+| ----- | -------------- |
+| X 軸   | 一個運動方向         |
+| Y 軸   | 與 X 垂直的另一個運動方向 |
+| XY 平面 | X、Y 兩個方向所構成的平面 |
+| Z 軸   | 垂直於 XY 平面的方向   |
+
+因此，不管 X 軸放在上面還是下面，只要整個設備的座標定義一致，仍然可以稱為 XY 平台。
+
+---
+
+# 五、還有其他組合方式嗎？不一定都要堆疊！
+
+這一點也很重要。
+
+除了上下堆疊，精密設備還有其他機械設計方式。
+
+![Image](https://images.openai.com/static-rsc-4/9X1gaVV2jW1x0V6MF9oucg-AecoA9ODATviOrp7D2daSrc_EhWDEYUJnepqBXfNJYSgs6vJdYrJXkYn-Lp1fYWWmJgxNYbHidLV8tBhmFuINO4zHhZKjDCw75pI05_wDOEAa-xcoFkFAM2a6tuChU-_5M-6eTFcjQYicHmWImMO_KBbBJfSgQhytUrqAtQ5k?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/iTeZE_EYfOhXHfsUxMbudDuwDILb9oBnUYw5h6JWupLUIjnCTWRgWuPt4JuDaYmkkAs3xGorWmR4Ls6c8g2tfUvVJaV_beCaXP9-9P_VDMAR8okXb5aJTFeOa5nWOojn0evxWH5RJnAjs0qVRm1YDJq-48Mc_2Gfdc-pVJp7Kth6qOitAcl140yY6TkZ5ywi?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8ECkmtwgYBghq8qMLM4C2t0J7-RqW42KVRu9R0wa2GJqe2kOxwhiPwndnhG8fIxv12QX0EdmfmiM5bt4FxWzQ6o2GRdazMKYyfpOmYiPilEckzXOYw3cVRfzH37xxDf7xqFJkIFXECeQZ2JdC-0REohiw6NVd-GqZfY88bXaj5FPI3IDXnKD26kcyDUPLRL4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/sD9wAIytS9RdwlblmQjNQ_usefLlfW_ZBX9TRaXPanDvXuXILPU3HvvEmIC08fNhCnHbwYbJ4HoK32a_K44wLRTWlWEFZO5yL5jqB9B--BR9dn68WnH4pbz9b2HqM1_0-7V5CDu6X4USqnyGPSisPLKiGvqOECu6wVWm3fN3XnC-fLrtUZgzgxeh2n9MYBWe?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/TL-uYhgu8DxvQoNyVfEkJfb4r8JjSe3PSjVgO-ochdRdz__pOTankhbgvuI8tt65M5owWKdIVc-wdI73HbZnsf13OB9-P7-ZZ7_lLwwIJANmQkKEeqsvZbyDUZJFsfIAw4ZhcpCyu983zxA_XUvdWwjxyZmhxoSVVa6uKf5FDnD_R65VLoHcfP3KgPRSwmFk?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/hrLOvKQtTNGit0Ry0wDxwEZznWzvFN-UZdQhED4K6y7o_CMqo3vRYYpx8w9iIBvI_c39z98BGcymTOSAqHyvAp5_nLp_uYBGw_jMlwJHMOWyUvMrjHPVB6MRn6D_Fi8BWHqcQeqdcvJ9OKASVMme8z87QdlMW1ymNOEAdszHrEBZU354u_tHHuNA4cRhCdBq?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/bGxHHtip3fDtnPOOZDHRlzbyrpwW6u1DMu0tgnKYRAXWd4K4HppsO2-Mc-KPtfPkmOys3YmSj3v5V3JCcAMRXPkaGEb6ThkW8XLb0HDQI4dc9mU5XNaVxeajeEfZnaUFO_pkzAByf6Q3tGoaNxxQzw7Eyl49m-Blf8BoC1ty6J-K6JTM170rDjtrd6EpryIl?purpose=fullsize)
+
+主要可以先認識三種：
+
+| 結構            | 機械特徵              |
+| ------------- | ----------------- |
+| Stacked XY    | 兩組單軸滑台上下堆疊        |
+| Integrated XY | 將兩軸整合在同一套機械結構中    |
+| Gantry XY     | 使用龍門架構，滑台沿橫樑及底座移動 |
+
+例如：
+
+**Stacked XY：** 結構容易理解，也方便使用標準單軸滑台組合。
+
+**Integrated XY：** 兩軸機構整合，可能降低整體高度，並改善部分結構剛性。
+
+**Gantry XY：** 常見於大型設備，例如雷射加工、檢測設備及自動化設備。
+
+這些都是不同的 XY 運動架構，不應把所有 XY 平台都想成兩個滑台上下堆疊。
+
+---
+
+# 六、回到 GMT 的產品
+
+GMT 官方產品中也有 XY 軸滑台，例如：
+
+![Image](https://images.openai.com/static-rsc-4/sqgeyLJKrLt2a3TUws8mB_4_eP5JyHcxCMnBhoo40iC26uPAq39_12e2WLuZf57lN8w8DCQnhWVHa8QzGU3wzU8qFhAuz6zzBsL2v5Fukwxf7LbEWfdqmmwcxDP7qsejdGMf22bIExMLX1Ii3rtZPPAXlFaqD_3Qub9k2YpPqaWkWplOxVoTiJOhLEkvrWk9?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/6jnfdikX9k05yqlxsZdkY8aHmu7JKPPsN-968Pk72P_lSAaAiEioL5bBLuSVnxnyipnlHLhapKRJuWLzxmbKqzLHS9AJiFkhtUuHlmcI-V8_QZ6bYgxMyPxsXZjB0r7R5xBO00aAmyKbW5kzfLqCQuc15urIgVRsWvJmn649r6-_9vfz5rmurZ8v4CdVb8cU?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/xfq3wuQG_ZgIQLE9llGUdLZj8IH38ZiGt9NUZuH_wprLthyboM7n2rnZpX48h3VrlDdfIXRbEVKCE9r1poKFr2wBvIqnA7bfVgMAlkxrVqJJB6ovcGnUDPp1bLNSPeG5mSY0MJluyzL8IETDN3HYXzV8Fnb7YCP_-hkjHn5hX8hb4cdvajQB5TbEJocyX_FH?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-SIPRBtK2tb7v_kzZf8fPdikxiOFyp7AQmlgswyMiAL7TrOrxyrP19sMYH2Q6k1gemNUkTAsluNeiAMj9sh2T0PKht8JbVjgvPsxwlpocQ5tQPxBVpwkKlSTn7UbWLrV0bhAnFyAkfMAWaiRIfMAkn0EOraJYrZxqBaZAkhp9PhuuxWDLzq0oRTuWWp3Fx2v?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2ID6YGUcOomY4tDh_tKxrRssjqjFSelmEfFweU43fB5IYXi-IbnS-xH9hx49gpZEgnPNfUCw9J-qML7UvTuaUn_0PvhypcNBrtkWf8Fh_Fk4xboxzeE6w1RPSFlAIXuH-3KF4uULya5CGnHCQ-d5hiaKqtq-4XVlr82tsK3MLSLufmrKISv7KEdmFXbNMPZQ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4-tYU3eCvTXQPm2Bh9dAbkXjfYZ1MeurVJo7Qdr_giOB2bTMP23KBzNWWunoe6ZXRYG7krBbK5vLmJSnL1M5v6jWC2WdJgv1ObiiEPKXod9Q-jVujI7ynclZx45CUufaiDTdSmnpOWNGbBL_-yRiTttqnAYdguA9JlY9544ck7rQnUYTk5XcGRlpvAhyF8vt?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/gQXRw6NBGvSPFPGAc3VnkVGH8xTUDDYCEBZgS4yyGcJIDp3jxAnzE-XVa4ow1vvxNbYT8m71Reo75s1-4zqIpJOHPjna-O0G5NG3ekLQ-ObzELEEJUskuD6RoX94DDQl0q130uBHk83nY5D4IQdCbUkSdLIq17ov7-_Zfwxaoov9P9RBLALcJ9RVBU2r2V2k?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8hkpy3jB69x7yr0C1OncMl_QWMULdJci6NtSs_mmIUAk_8OfPNrU1kYoz8sShMzdIq48uA7vgCt28sLkXBla_DinxhJF20z4Eb2cOix3dN_brhJKXBxqeWaw82bMGuIYj-DZmatzSM28qfw47LosuB75JUpdZoUGugcv7ipx-Pv3g-0b1LlUq11OUZU_ooFo?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2LwxvAbO_KIH2OHgio7yQnwys_8ev4yYbuqPIEXI_8UCS-skrbPiM9akDZGTVq5Jk8Gocn-UcGxc05X1kZDlnHqkZwjyb0-0x309nm99ndaPgUaIeeVoV338P94upXk8mqgDr-aOxGtkqgS4v4T2AyoaMSX5gDQi7oolAo-s3oU2fQh4pe3ifDi1DD-rPlhg?purpose=fullsize)
+
+可以參考：
+
+* [GMT CYS50 精密型 XY 滑台](https://www.gmtglobalinc.com/en/xy-axis-3/cys50-precision?utm_source=chatgpt.com)
+* [GMT AY120 精密型 XY 滑台](https://www.gmtglobalinc.com/en/xy-axis-3/ay120-precision-type?utm_source=chatgpt.com)
+
+這些產品頁面包含產品外觀、系統配置及技術資料。要注意，產品外觀照片不一定能完整顯示內部的固定方式；若要確認特定型號的安裝結構，仍需看該型號的技術圖面。
+
+---
+
+## 七、今天先確認你真正理解了沒有
+
+我們先不急著進入 XYZ。
+
+請你想像：
+
+現在有兩組單軸滑台：
+
+* 第一組：X 軸。
+* 第二組：Y 軸。
+
+Y 軸的底座固定在 X 軸的移動平台上。
+
+假設：
+
+1. X 軸向右移動 10 mm。
+2. Y 軸維持不動。
+
+請問：
+
+**問題 1：** Y 軸的馬達、底座、滑軌及移動平台，會不會跟著 X 軸一起向右移動？
+
+**問題 2：** 如果 X 軸維持不動，只有 Y 軸移動 5 mm，X 軸的底座會不會跟著移動？
+
+這兩題答對，就代表你已經理解上下堆疊式 XY 滑台最重要的機械組合原理。
+
+[1]: https://www.parker.com/content/dam/Parker-com/Literature/Electromechanical-Europe/Literature/192_591011_Precision-Technology.pdf "N3"
+
+
+---
+
+你的兩題都答對了！而且你現在開始注意到一個很重要的問題：**為什麼我們學習時看到的滑台有明顯的滑軌、螺桿，但 GMT 的實際產品照片卻像一個密封的金屬方塊？**
+
+這不是因為導程太短，而是因為產品採用了緊湊式機械結構，許多零件被包在底座與移動平台之間。
+
+我們用 GMT 的實際產品來看。
+
+# 一、先看 GMT CYS50 XY 精密滑台
+
+![Image](https://images.openai.com/static-rsc-4/jt89w9JShKQg5Mj8Vu-JYywBJWxK3sGQfxlzJX4lwn7m-_TnqVxHVfKKMDROSqp7HZjrxLeqKKDp87tXM30mYtLl9HV22VKH3cr_i2kIvpRIta4Y231hy9KHKwjGLJ-89JSPIA20bExuATwOpusWRAxFwLNoGOW86LHhYq8yDmQ9_pGm_j0TXW50IMrFkZjL?purpose=fullsize)
+
+GMT 官方產品資料列出的機械結構是：
+
+| 零件   | CYS50 精密型規格 |
+| ---- | ----------- |
+| 傳動機構 | 滾珠螺桿        |
+| 螺桿直徑 | Ø8 mm       |
+| 螺桿導程 | 1 mm        |
+| 導引機構 | 線性滾珠滑軌      |
+| 台面尺寸 | 50 × 50 mm  |
+| 移動行程 | 20 或 30 mm  |
+
+資料來源：[GMT CYS50 精密型官方產品頁](https://www.gmtglobalinc.com/en/xy-axis-3/cys50-precision?utm_source=chatgpt.com)
+
+你可以看到，**它確實有滾珠螺桿及線性滾珠滑軌，只是從產品外觀不容易看到。**
+
+---
+
+# 二、為什麼看不到滑軌？
+
+我們先把滑台想像成三層：
+
+![Image](https://images.openai.com/static-rsc-4/IkfMBqoakNOnehhD0XR9Q4FXs3y9Zrz7IvlZUgG5FO1pqEwcraFAdD9mkN4NuQYg75N7CxhMvYglDBO612YJWvARK-Ee4AMX2G8S7GzhMEQy6pI23ovZT7Bju8c0NS_xJBg4XSJ8kmt8LroIgngHNypaOA3Orvp2vFImBndpnhlkGoggFjZbZZ0EeK-MhNfv?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Cb0-4FBQFXdnwDnf52EheeLR0jByfT2Gy09cYoGoMDioUe2ftpaHu32Ziuwt_M50Nel4A7U8Q7HU8ml8VlGOZ6FmkwhUdZ0XhkLPnQqjI3dyCdidbPEWlOK0VKbWXxDkg3BOdoFdjKf3_LDfFQnQqNnwHs1r6esOJSeDttDVE2SiaqW4wtA2ugPkEXC3MYLA?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/J9dIzoeXWJr18N0ZnZo-_RzSvFp_T8kg8HVSyfKX09D8peKPHcHZrQApvUFFGLOvm4ddJRz_6xOxKjmUqZasiWE-lY3IjT7c2zEv_3SrMv7F0_Gl4s_szNUpxBONQFDLw0hvV7sTDDRmYHcRxNc9FKiNR4g1dTsR1HHfbUIvwWI1DtC3_XjakbdfhCTc_3Gq?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ZaOnw3nKJ1oFKZ76o9ap4jJIiI3AwWNVF5ejDFgGAtKlFLfp1-SJExhBpcM76zYX05dxNJ06y2YvnLRq166j7Ho8t4Gs5ONxpeztKSjduOGHVHkBx94v3lObaNgeo92Lexuc6dTo2iPhHMRvyBl0x1601WJqVae0AeWaqit2gnAwOKneEhMdWfyt57mF5bLP?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/SHFjumwhqHtZaU8oICN7C1ia0a66_3H2h2RWHq_JSkzlfD3JnD2u-Jwt1Y8gMfkEvGqwvifAJ7sL-GoELli4qYiMgVjFeYpFnc33oOq0nC_AoTd2-bflB5ldvhenEczmh_Hx7tdU3gfw8aneop0FEk-qwKs1f8jsW9itaUOldSI73_Fz-htaDT8KbUd1HCqH?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/r59oJVuhMvCY-m4qJXC_ZYE-KpGtXSlFLC_rdizUReR7bo9fmBlJoTwEwBmIIpNksunFDEmv3ihYV4dcL94oLYWkaTprr3U6lCTm9Fm6aXMvtlVQEH_ZjJuYQkCbdwn6rPZ7oDK55zrapi_xxexSbDazyJHoIzhuEvr8dhxvVK0cO_SqTHCjmOrBUZqgQ4vT?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/tM1lQEgFXi4vMT4HfQeM-hN8KH3NUqZjEXqfqCcN8yR_-B7keb1zgHq7OmVKTquaj7uanmmZLOURsJUICK3CFfaTAZ1Ti_BBYUOzN3zykZVKltclPzllUueOB-IByK_1F1qe-ni5Ym1lHz8jGvvIGsQtH7iY4Vf5ayqyfloDK7xu5Y_3QFfqCVQMaE88Upkb?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/TRJvhoWdWfMT5yK0bt7jyJ0UryDmPnWZJzEhwBmU0ll_Aq2V0GjNY4KmPONJDYMLP62TW2Jx91Knw6wFMKkqokj4wTKp_yaOHwP35f08QHsf5_Ex6BbJGQGz2QD-9qZ6PHO-RkUw6b4nIC25FJa_d0Y_TU_1LQ8SRyH43aS1CMjYwPcTO35J6zJhyL49S2eA?purpose=fullsize)
+
+由上往下看：
+
+```text
+       第一層：移動平台（Table）
+       ┌─────────────────┐
+       │                 │
+       │    工作台面      │
+       └─────────────────┘
+                 │
+       第二層：內部機構
+       ┌─────────────────┐
+       │  滑軌       滑軌 │
+       │                 │
+       │     滾珠螺桿    │
+       │                 │
+       └─────────────────┘
+                 │
+       第三層：固定底座（Base）
+       ┌─────────────────┐
+       │                 │
+       │    固定底座      │
+       └─────────────────┘
+```
+
+這是簡化的剖面示意，不是 CYS50 的實際尺寸圖。
+
+重點是：
+
+* 滑軌通常藏在移動平台與底座之間。
+* 滑塊也被移動平台遮住。
+* 滾珠螺桿通常安裝在機構內部。
+* 螺帽與移動平台連接，因此外面不一定看得到。
+
+所以你從產品正面看，只會看到一個金屬外殼和移動平台。
+
+這種設計有幾個好處：
+
+1. 節省空間。
+2. 保護內部精密機構。
+3. 降低灰塵或異物進入的機會。
+4. 讓整體機構更加緊湊。
+
+---
+
+# 三、你提到導程太短，這裡要釐清一個概念
+
+你把「導程」和「螺桿的長度」聯想在一起了。
+
+其實兩者不同。
+
+以 CYS50 為例：
+
+* 螺桿直徑：8 mm。
+* 導程：1 mm。
+* 移動行程：20 或 30 mm。
+
+**導程 1 mm 的意思是螺桿旋轉一圈，螺帽理論上移動 1 mm。**
+
+它不是說螺桿只有 1 mm 長。
+
+例如：
+
+| 螺桿旋轉圈數 | 理論移動距離 |
+| ------ | -----: |
+| 1 圈    |   1 mm |
+| 5 圈    |   5 mm |
+| 10 圈   |  10 mm |
+| 20 圈   |  20 mm |
+
+螺桿實際長度需要足以配合滑台的行程、螺帽及兩端支撐結構。
+
+因此，**你看不到螺桿，主要是因為它藏在機構內部，而不是因為導程只有 1 mm。**
+
+---
+
+# 四、還有一個有趣的地方：不是所有 GMT XY 滑台都有滾珠螺桿
+
+這點值得你注意。
+
+例如 GMT 的 MY100-SC 手動 XY 滑台：
+
+![Image](https://images.openai.com/static-rsc-4/Tz8c14usQtVhVH4Lcld1qw6-F5V0QF-gXrDLSFjV-3o36m4_sDDXDOe77lMeeMbkZBlaq2bAunGs3xaKxGw2rlBy1M-oVv4Zq725cY-U9PM0JhLNeJhjTS2Ht7lB8Nj2k9N9KIqY710YYWSVFwEASCYkjWc13nXEhhHDMnwfgaOE4ZzoyjYFutSSU3bXx3wy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/p6jZmUg8Q-CDmC8XDP8i4bYuqW6FJ6lOcCLU-iMvL51jvOw3b0zINvHbtztyNTLCaoKhJPSsiLxlvIN6mT25-pxZDed3bYB1fKO1WyxMGMAVjzHaWo-fxjz1N7X9QtvyGEhNYEw2cdbXYcaGpDr3R_5rEURCzo-XLTqa40GwpcOHb9Aa7uKDsQAzoRCj_l66?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/7O76rw7DEhcdYAWRWbqWc2lmznb4XHQvr7jC-9CmUML64Ik19gkkjMwKnm6EWOf-MiWIaK2EXarAcfJvludAopJsUTjT6Yik54W9VQ7bZMj3TMhu6EKwlt58CTntACnSdKAfGICPEdDJsFzlsKvyQl-5gs7bwEV4NtgdxN8kRDl6-NPvpylcI1xrsbMP7hvN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-SIPRBtK2tb7v_kzZf8fPdikxiOFyp7AQmlgswyMiAL7TrOrxyrP19sMYH2Q6k1gemNUkTAsluNeiAMj9sh2T0PKht8JbVjgvPsxwlpocQ5tQPxBVpwkKlSTn7UbWLrV0bhAnFyAkfMAWaiRIfMAkn0EOraJYrZxqBaZAkhp9PhuuxWDLzq0oRTuWWp3Fx2v?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/n347Fyk6Kw8nVSEeCb-5YDQr7zijLowmwykf9ipv-Ln0DerD169JmFBrwVU7A_iVE3qK6AhiSHCH9Xfrn-ljKsNJhxdmUkJ5V0ZfisNRPevBKhQ9cB40dW9lkNbpWVvUTknsumkNh6oQP5NSaoFFSwmtuNAVdEsjPE0Fd047jRw89HJVBWWTL8dQFrntl08u?purpose=fullsize)
+
+官方資料列出：
+
+* 導引：線性滾珠軸承。
+* 傳動：測微頭（Micrometer Head）。
+* 不是滾珠螺桿電動驅動架構。
+
+資料來源：[GMT SUS Stage XY 軸產品資料](https://www.gmt.tw/en/linear-ball-stage-sus-stage-xy-axis?utm_source=chatgpt.com)
+
+這代表：
+
+即使都是 XY 滑台，內部機械結構也可能不同。
+
+我們目前學到的滾珠螺桿式電動滑台，只是其中一種。
+
+---
+
+# 五、我找到 GMT 官方的 XY 機械圖面資料
+
+這份資料值得你留著：
+
+**[GMT 官方 XY 軸產品型錄 PDF](https://www.gmtglobalinc.com/Images/uploaded/Catalogue/EN/11-XY-TABLE-EN.pdf?utm_source=chatgpt.com)**
+
+裡面有工程圖、產品尺寸及安裝注意事項，可以看到比一般產品照片更多的機械資訊。
+
+另外，GMT 的 CYS50 官方產品頁也有 Image Download 區域，可以進一步查找產品圖面。
+
+---
+
+## 六、今天請你記住這三件事
+
+1. XY 滑台內部仍然可能有滑軌、滑塊、滾珠螺桿及螺帽，只是被外殼和移動平台遮住。
+2. 導程是螺桿每旋轉一圈所產生的理論直線位移，不是螺桿長度。
+3. GMT 的 XY 滑台不一定全部採用相同傳動方式，電動型與手動型可能有不同機械結構。
+
+**我建議下一步直接拿 GMT CYS50 的工程圖，練習辨識底座、移動平台、滑軌、螺桿和馬達的位置。** 這比繼續看抽象的方塊圖更有幫助。
+
+
+---
+
+很好，我建議把這部分分成**兩個階段**，而且不只是看產品照片，而是要學會從工程圖判斷機構是怎麼組合、哪個零件會動、哪個零件固定。
+
+我們會以 GMT 的實際產品為主，再搭配必要的機械剖面示意圖。你不需要先具備機械工程背景，我會從「看得懂零件、看得懂運動」開始教。
+
+# 課程安排：從 XYZ 到六軸定位平台
+
+| 階段   | 學習內容                  | 主要目的                        |
+| ---- | --------------------- | --------------------------- |
+| 第一階段 | CYS50 XY 工程圖、XYZ 三軸組合 | 看懂底座、移動平台、滑軌、螺桿、馬達，以及三軸如何堆疊 |
+| 第二階段 | RX、RY、RZ 三個旋轉自由度      | 看懂旋轉軸、傾斜軸，以及六軸平台如何實現精密對位    |
+
+先提醒一個重要觀念：
+
+**XYZ 是三個直線移動方向；RX、RY、RZ 是繞著 X、Y、Z 軸旋轉。**
+
+這六個自由度合起來，就是常說的 6-DOF（Six Degrees of Freedom，六自由度）。
+
+---
+
+# 第一階段：先從 GMT CYS50 XY 工程圖開始
+
+## 1. 先看實際產品外觀
+
+![Image](https://images.openai.com/static-rsc-4/jt89w9JShKQg5Mj8Vu-JYywBJWxK3sGQfxlzJX4lwn7m-_TnqVxHVfKKMDROSqp7HZjrxLeqKKDp87tXM30mYtLl9HV22VKH3cr_i2kIvpRIta4Y231hy9KHKwjGLJ-89JSPIA20bExuATwOpusWRAxFwLNoGOW86LHhYq8yDmQ9_pGm_j0TXW50IMrFkZjL?purpose=fullsize)
+
+這是我們要研究的 GMT CYS50 精密型 XY 滑台。
+
+官方資料確認它使用：
+
+* 線性滾珠導引（Linear Ball Guide）
+* Ø8 mm 滾珠螺桿，導程 1 mm
+* 兩個互相垂直的直線運動軸
+* 50 × 50 mm 台面
+* 20 mm 或 30 mm 行程版本
+* 五相步進馬達
+
+以上資料來自 GMT 官方產品頁。([高明鐵 GMT][1])
+
+官方產品頁：[GMT CYS50 精密型](https://www.gmtglobalinc.com/en/xy-axis-3/cys50-precision?utm_source=chatgpt.com)
+
+## 2. 先理解工程圖的三種視角
+
+看機械工程圖時，最常遇到三種視角：
+
+![Image](https://images.openai.com/static-rsc-4/Ha2_Bspiu_SC83ybDm2sR-20UsIKU9iDw5X9pH3Pn2jvQ400RN2t0UnSV-qoJJIcElVklXvD3-F0Tj4KCq3XWghvQXG5ot6vwVO97p3ViTW-EsVGh7ln_8WnWCrkGcm1e5lLROPHz6GhW475GSgj3k0Xy68WjEL9acDgbC_6eDh__ES1IWF--3a7PDGEWuJk?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/j5XjD_VTqj2Wr965SkWROQiIrSQQzRYFDPQHyzAGTkMFfJaGNjMWgnf-cKTLlY7KZUR7gxXt5L-UVTeDIMxBRMmXQoFdVmN43N7FpCBwyd1wvPlTSCdiqhno7yvNaO2dSoIv436Fz_vPMEJYAsle4M6GKk5XK5L4HY2Oq279Vw94htNZjTQxQgZoxEFdYHZV?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-HRXayU8Zbiw4AHb0IeRZVd7vnQ7yZXS0mx_BXm2pPDLSV8bsc5cy-lXiYUmz5QEPVRQUP3YXL7gg4YSW73XHZk3k7FmAFOIopTRAIm1L56JdreY-UdJG84W_itBdFkVqFIP5DoXnEzYRrrXZLq9wSkndFj9VN_YDEj1Trp1fsjOzR9z39m4318itP1X08Is?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/XBY_XFtnEkFE1dW6S5ID0f94g4csjwvZRJESLGrYLk5ws2WObfQJRItK6WN2J_6-TxJjUYCs093o_NCrDS4noqwHg0Yfrb_YUyC8wGhdxqQzuEGpr4oc-5n7RSRYaZBFBqSlcrWkSBdHxrp0u4rx_V0XVbE2mNJkYGMDNKcC24-1G0FKq-iTk3A_VNS3L4ns?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2DbHDNfBwF3GMA0CgeofYy6y9kTsq926C42QRM1Qs7_L_EEyL72BPTX5_pFJNadjEG5xnTGSpHVJzYWUKyFdV33Hh1wYLXtOcLJ6yHKYsMRJMs9ibJ83gLDE8iMc5XprDh1oKXuaFoZChFUNFrdyCDe1Yjd-SSUuaWSTOkVfcZlKyuXLEzpsrNS0Z-gH4yl5?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/SHFjumwhqHtZaU8oICN7C1ia0a66_3H2h2RWHq_JSkzlfD3JnD2u-Jwt1Y8gMfkEvGqwvifAJ7sL-GoELli4qYiMgVjFeYpFnc33oOq0nC_AoTd2-bflB5ldvhenEczmh_Hx7tdU3gfw8aneop0FEk-qwKs1f8jsW9itaUOldSI73_Fz-htaDT8KbUd1HCqH?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/VjGMy45rVskKoiPIXxW8y0OlhsQ2s-dSsyn0BYC_IuBtE-ujSeGRiSuY8F7XfinOPxc4te3i9JPuHqsTqHpUYoxlt9eTlFDetieHYgYyymPWJ_ZmzAk63pv8lgGcvpmGynxHnLKqXOZBORsPYBK2uAYCMMd6pmjYtkGZd9P51ZbuuYqGT7zz6ZdUDZNqLTwo?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5KeEsS-_QvMLw8FqYIXEt1rFvE2icFWW6lgPKjUSulBGHmj61FteLkcGXZZbA51xg6ns__rRs0LrKBUd7_foaO6Sw7Hc_drlzVdFHEdRZ1HzJWFwpKgUQcD-qwPgqP9-7yuTkmCSlKgsR0rZFEtsPlcqHFAyBkkoFc04pKVl5JmRgNw1FcsWJAUXDPPOn4_f?purpose=fullsize)
+
+| 視角                    | 主要用途  | 我們要看什麼          |
+| --------------------- | ----- | --------------- |
+| 俯視圖（Top View）         | 從上往下看 | 台面形狀、螺絲孔、X/Y 方向 |
+| 側視圖（Side View）        | 從側面看  | 底座厚度、平台高度、馬達位置  |
+| 等角透視圖（Isometric View） | 立體角度看 | 零件如何組合、上下層關係    |
+
+另外還有一種非常重要的圖：
+
+**剖面圖（Section View）**。
+
+它就像把滑台切開一部分，讓我們看見外殼裡面的螺桿、螺帽、滑軌和滑塊。
+
+CYS50 的外觀照片不會把所有內部零件都展示出來，因此我們會把官方尺寸圖與機械原理剖面示意圖搭配使用，不會把示意圖誤當成 GMT 的實際內部結構。
+
+## 3. 我們要在 CYS50 上辨認的五個主要部分
+
+接下來先建立辨識目標。
+
+### A. 底座（Base）
+
+底座是整個滑台的固定基礎。
+
+它通常固定在設備的機架、光學平台或另一個滑台上。
+
+你可以把它理解成整個機構的地基。
+
+### B. 移動平台（Moving Table / Stage）
+
+這是上方可以承載相機、光學元件、光纖夾具等物品的部分。
+
+當螺桿推動螺帽時，螺帽帶動移動平台，平台就沿著滑軌移動。
+
+### C. 線性滑軌（Linear Guide Rail）
+
+滑軌負責支撐和導引平台。
+
+它的工作不是主動推動平台，而是讓平台只能沿著指定方向平順移動，並承受負載。
+
+### D. 滑塊（Linear Guide Block）
+
+滑塊與移動平台連接，沿著滑軌移動。
+
+它與滾珠螺帽是兩種不同零件：
+
+* 滑塊：支撐、導引平台。
+* 滾珠螺帽：接受螺桿的旋轉運動，轉換成直線推力。
+
+### E. 滾珠螺桿與馬達
+
+這兩個零件負責提供運動：
+
+* 馬達：產生旋轉動力。
+* 聯軸器：連接馬達軸與螺桿。
+* 滾珠螺桿：把旋轉轉成直線運動。
+* 滾珠螺帽：將推力傳遞給移動平台。
+
+這五個部分就是我們要從 CYS50 工程圖中找出來的重點。
+
+---
+
+# 4. 從 XY 延伸到 XYZ 三軸
+
+先看三軸組合的概念：
+
+![Image](https://images.openai.com/static-rsc-4/vufQ_LbV5_GjFPKQWTlCwnOJJfgXsBdf8QHYs20vGTN9KXCbMgKe717WFF38yzhDBtDH5L8VkjaM8-586iRusu2mxGNZ2F3DnivikZJkXxKOmCmfVOhlcMCBF5CzZvjl-yVnmnadAaiODre0Zh3H4xkiG-K0vgprsHOhs6xZonaKLGSKugH8xd1WJbqtGERf?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/yACzXO-cgGAZKeuv-RLTtvJ1rs5QSzjRooRlM3zkoLlhPM7kyReGsQDoNf_KNjeQgqQKjVOQGmpGBc-Za6pnixD2tHgtn-Eksk_tlqkPGe8Nn54csh18MRdIp-98PnncMPnrQrJFfWeRq0cFT_m3rdcskf7gUr-cqlpsWhLccUsBpgB_an2OugJDr5OYp63h?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/gNcCla3YSVMdfNJABZysSpcM1re6iAcZ5bBShyMaaBzxXvy_VLI9F9gQ-4NofjZts3bwwjBK5BMTlXxZ_zmISpTStmtYnYLta6_Oi3pcOn1A5kIfKDTOKs0IWtY3NzSUFLQf8OkhZh2doMKE4tOPdcP9-AllK4et-f4mk2y0gyLBN-1MaN7zQEbOjk5MbVZa?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/iTeZE_EYfOhXHfsUxMbudDuwDILb9oBnUYw5h6JWupLUIjnCTWRgWuPt4JuDaYmkkAs3xGorWmR4Ls6c8g2tfUvVJaV_beCaXP9-9P_VDMAR8okXb5aJTFeOa5nWOojn0evxWH5RJnAjs0qVRm1YDJq-48Mc_2Gfdc-pVJp7Kth6qOitAcl140yY6TkZ5ywi?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LCY42MQT7JlqB6bQDUrCDIg8EeLJjC3ICxG-JII1XgmUBbsVyv4u20vPo2hfWciIAVbXvSQA3xu1taTvoeT1rLLiLAnd1mDkv2u1v204p8kpCsu0Z-RVxgmzDo5vCgvLTBZK0tSB4Z4oOTeHeF5woOC9CRZxOhQjx2Hbv5WdfHAkVJXOYwyIWQw_mtVp8gbU?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Tmf4QDAymxywb_CKdpbuLhzd93TEVPB0eZ2mgYvUlcngv9Kb7vu08ZzdGiGjBmi7ypC_nGQNw2j9T9v59ATIqznejO78wZs27lBxns5eYGrlfsESUU8zr3baX8J2tE3c-sipplkmOrM5L4aaCUXDDOQZBl72KV0QJaVcPazKtqICjojLZqUC0ZoNFs_Jjap8?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/3U3SG5O--FGiaKW4Xpne_acP3G-facns0CHvTrHLOuh9qHZQw7JDlA1fv_Fg-B2XYND0N8w1uL7GFuH-HTK6FNIowi4qCEIAn6DRt9KyKW8VVwYe4tFMvTQP6-1xU3DBqYEOp8eyvQW7SOAry0w9RXKp-NmSW7yKxqBQUY7TwzDWNysKgDqOU6F2pGkkzKne?purpose=fullsize)
+
+XYZ 三軸通常可以想成：
+
+1. X 軸：提供一個水平方向的移動。
+2. Y 軸：提供另一個水平方向的移動。
+3. Z 軸：提供垂直方向的升降。
+
+其中，常見的堆疊方式是：
+
+* Y 軸底座固定在 X 軸移動平台上。
+* Z 軸底座固定在 Y 軸移動平台上。
+
+因此：
+
+* X 軸移動時，Y 軸與 Z 軸整組跟著移動。
+* Y 軸移動時，Z 軸跟著移動。
+* Z 軸移動時，只有 Z 軸的移動平台及其負載移動。
+
+這個觀念對你之後理解 STM32 控制多軸非常重要。
+
+例如 STM32 同時要求 X、Y、Z 移動，實際上就是三個不同的機構，各自執行指定方向的運動。
+
+不過，如果要求末端沿著一條斜線移動，就不能只是讓三軸各自隨意移動，還必須讓控制器協調三軸的運動時間與速度。
+
+---
+
+# 第二階段預告：RX、RY、RZ 三個旋轉軸
+
+這部分會是我們進入光纖耦合、矽光子對位前非常重要的基礎。
+
+![Image](https://images.openai.com/static-rsc-4/2wP9Lq9XiOfDxyxTfHIytraLvwPwUSj6soMKGMczdIsCowZjc43nybNIWVdYXtPGX04yrDKripoT241l7RcIbgULV3m2ngj4q3rYGqYjc0BJwNyRZLamlROQLFWpl4isqQgdkMesvbq8-a3QSvlTMIbj1MsLgw5HNM_2xEBnKuWQUp5JAIpnZOiPUsYUm19r?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/TfWq7L8Hfo1NtxDDTPd6kL3ypwFgG1JzdghNRMo0S96JVYovfM9yXoQEHVIGynCRcLVaaehCj8JKcntmBkp35xvl45HSLIB5o9Kuxsj44FQIj6j8hk8DZzRs_XRlcxM5MwMXQvA_J07I3-OF6_QOcnJYu5HXqW8S3MmTagj4QSi2nzGSByNRloibYK-nMuW4?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/vIRr1iWOOgqVawqimbhLFrkhT7irpwp2n-1_2X_49LDPF5sLfLUH-OZafGPtImllRgusPNBKEIlv6KTVmw83eNw4e9euYheHY2XXyN7ebyA-_tilI0ESfB1DC1PHUCt2X6Mbn9t0hfeLGtfWo3UWJmO5x_JlTrpii_aetZ2DnsFWL9h_QYiZIkR1k1ljLJd9?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/VoDtkGa0Cycxu9HKS74vkaP_XO2EY7xJvnvAei20U9YHePIcvOeertNxFgFmO696YM-B-40Uh6elllAfcNf4YGfSR79CNAJSiMV0p7X_Cb5EycSyrj2MPUyKVkdH-1kqkb6PfAIhNi93_UXkVfI_M9Y2nOK_s4Pa7nfpIKzTHavz7Ach_1CD0MoXUn7B30Cq?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/W_2vBJ7o5vxzq_iFwvR_wPCROdvz_GgHiZniHLyCRXijbkTXbaqW_DlP1KeS29EJxcUiEFJp11ihvoYZ5BZ9oi9UoeJ_XAUikMyhpbgGwqk-K3YkS4bQMjVREPoRSqm6fAK3gZlWosExyNsH60iD8i0APvNv4ISKshogv0Dy_arKt9zVIQLSa5StIgnfNJxd?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/q2U4MclHn5yVMCQaPCqzAdq4EmRzdfP_oY8SZtpedQSW3XqKSs820iJMLZkB5IES1acNp7MPB1_FpUluPDsBal5SK2SotgWBUmvqfOkCxkUvw9TLouomQ4jRl2_2G1ELehmFb9mzfZEh1u2MkRcN0ExzIiSdrynZsSK3gVySRUY3Nqp7LuEpSJvfJSBh6wJZ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/qi4BMXFjm1nW9hA-BI2DqHwOtztRPY2TIoTkiHZRz8nIazIq6gIPyL1vCO3cwaQwd5F1gW4dPMv7mY4blihvcndJGQg_4llJrFjCLyo62qOnv4zRXjWYhDheDPZ6HwmCoOzPYZMrNzfcpkC1feyGWGjXh7Nv-3_bZ6LjadAomcZ0VBVCwyFPQH8CRuMQhqRO?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/kxHH7N7KPnzIEoSXz0Oyje6k5GODfec5jc5yE1wEegJkdVRbjVqIARxnQ9L55uXRcbUE-GS5GN7CQ2rADjzzykT6_nJFvOTWAC3l5mmXafM9MRrGPLpTxd14SWoisLqOHqEaw3rsQVNydTio7fDqPgbG4DTbVg1cTPpeCxPZlrp1B2jlnlmsovoYGmVLxpSG?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/nbciy4c39TespXjxBepEQ0lr9xLoLAkI_qKxf1BvIWEcMKmkuJ49CU98Cm4QoZ79svgT8ZgZ6AjH5eChnigzg1FvJW1DkqMil3KteT-EVwgIt8L41dcp6ElaxUVYQUvWccQpoD1aHTemIMBzEBz87sxz0GXwiWDAZ8w5XLGTUKWM0dMFlQqoEyFouQV6XlVk?purpose=fullsize)
+
+六自由度可以這樣理解：
+
+| 軸  | 運動方式    | 簡單理解    |
+| -- | ------- | ------- |
+| X  | 左右直線移動  | 左右調整    |
+| Y  | 前後直線移動  | 前後調整    |
+| Z  | 上下直線移動  | 高度調整    |
+| RX | 繞 X 軸旋轉 | 繞 X 軸傾斜 |
+| RY | 繞 Y 軸旋轉 | 繞 Y 軸傾斜 |
+| RZ | 繞 Z 軸旋轉 | 水平面內旋轉  |
+
+這裡還有一個值得注意的 GMT 特點：
+
+GMT 官方軸向定義中，直線運動使用 X、Y、Z；繞 X、Y、Z 的旋轉則分別使用 α、β、θ。也就是說，我們在一般六自由度資料中看到的 RX、RY、RZ，與 GMT 的 α、β、θ 是對應的旋轉概念。([高明鐵 GMT][2])
+
+六軸平台有不同的機械架構。其中一種是 **Hexapod（六足並聯平台）**，它不是把六個單軸滑台簡單疊在一起，而是透過六支可改變長度的支柱共同控制上平台的位置和姿態。
+
+這種架構很適合用來理解六自由度精密對位。
+
+---
+
+## 我們接下來正式開始的方式
+
+我建議先不要急著一次把六軸全部學完。
+
+**第一堂先專心看懂 CYS50 XY 工程圖。**
+
+我會帶你依序辨認：
+
+1. 哪個是固定底座？
+2. 哪個是移動平台？
+3. 哪裡是 X 軸的滑軌？
+4. 哪裡是 Y 軸的滑軌？
+5. 滾珠螺桿藏在哪裡？
+6. 馬達和聯軸器在哪個位置？
+7. X 軸移動時，Y 軸的哪些零件會跟著移動？
+
+我會以 GMT 官方工程圖為依據，並在必要時用剖面示意圖補充看不到的內部構造。
+
+**這堂課最重要的目標不是背零件名稱，而是你看到一張滑台照片或工程圖時，能夠在腦中想像它內部的機構，以及馬達轉動後究竟是哪個零件在移動。**
+
+[1]: https://www.gmtglobalinc.com/en/xy-axis-3/cys50-precision?utm_source=chatgpt.com "CYS50 - Precision | XY-axis | GMT GLOBAL"
+[2]: https://www.gmtglobalinc.com/en/xy-axis-3/cys50-precision "CYS50 - Precision | XY-axis | GMT GLOBAL"
+
+
+---
+
+這個問題問得很好，而且你已經開始從「機械結構」進入「三維空間定位」的概念了。
+
+你注意到一個很重要的現象：
+
+**X 軸在最底層，Y、Z 軸都安裝在 X 軸上面。因此 X 軸移動時，Y、Z 整組也會跟著移動。那麼，控制器怎麼知道最後的工具或平台會到達三維空間中的哪一個點？**
+
+答案是：**控制器不是分別考慮每個滑台的外觀位置，而是利用三個軸的座標值，計算末端平台在共同座標系中的位置。**
+
+我們一步一步看。
+
+# 一、先理解 XYZ 三軸的堆疊關係
+
+假設機構是：
+
+* X 軸在最底層。
+* Y 軸固定在 X 軸的移動平台上。
+* Z 軸固定在 Y 軸的移動平台上。
+* 最上方的 Z 軸平台承載相機或光學元件。
+
+![Image](https://images.openai.com/static-rsc-4/K6GwSHGHF9h4NIKXPhRSiWkptSPS7PzemOROuQ_su6LYucQ-5qox9D0FneIKLtiaMUlYBujH-wvC7O4GanvxYoHULIl5d1JcnVbNgmjCflQlaq4SjkXWPFKEaKyFYx9PDpVNXtCN3ieE3wvu7HGLYQHlPxW90xUyo3Yqh4BoITVRSObGYJZAbOxOtgOi-F53?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/gNcCla3YSVMdfNJABZysSpcM1re6iAcZ5bBShyMaaBzxXvy_VLI9F9gQ-4NofjZts3bwwjBK5BMTlXxZ_zmISpTStmtYnYLta6_Oi3pcOn1A5kIfKDTOKs0IWtY3NzSUFLQf8OkhZh2doMKE4tOPdcP9-AllK4et-f4mk2y0gyLBN-1MaN7zQEbOjk5MbVZa?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2ebGASNL3hnk6KygDmIjeqByiNrA6JTWlMfAooEGPepHALmbNG4gk9cP9UtKIKgpCIZV3dtuwv9BWvfcNtABSgDn4yAylH9Bd4XV7FVGf0p-9xe_uRX9dIFLJ5ol5IND-ltYRi4XWBZJQuzz0OO2_eRe1LojJe2RGPNzr0Liqp2bkJ3AmB8aABtnpDubtpzs?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/IgecYj_A0NA2W0nkTbPewKASJJnDK6r2H8qeBxX0FaeqN6-BsisZh0io9brw4TEFZFDdgJJoS-efcCAnkJuljB9XMYnpwYOnTytm2ke0A4eDL4HeHTszwowPUxtkIc1-qxvMAVG9897XXlQifcm_weFeDJIDWP_-0zJ2-5IuyR5GjMTK8r0agdnea_2yatJ0?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5KeEsS-_QvMLw8FqYIXEt1rFvE2icFWW6lgPKjUSulBGHmj61FteLkcGXZZbA51xg6ns__rRs0LrKBUd7_foaO6Sw7Hc_drlzVdFHEdRZ1HzJWFwpKgUQcD-qwPgqP9-7yuTkmCSlKgsR0rZFEtsPlcqHFAyBkkoFc04pKVl5JmRgNw1FcsWJAUXDPPOn4_f?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/y9RYTUb-sgBZYJ9sxPJ-NA_zTVwh7jvb0FSuZOX9IWH8UT1_DYJjyMtiZeIAeMTbxQhqUW0F31R6YQHYpQoXT6UZZ3ZXOfRUQKPJWbvbO-xYelyA1YnNB9dfRlQfvSxVfoWRUOqzUJF6OJL8DFldhUXe8d6MAtI6g3WOOs7HpNc9nRESv3tSo9Li4ps_DZz0?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/CKr4cGKxnltNSAHaPdVzWjfKAw7vByhcDvPxsvfXpidY8xX768tKfVNatqan4UXWCC7LbUSQNQk8IuOT8uwSm4wA0vpvGtxQK5RXgwS7-IfkenARhvNElg62qBtVC_aD9K_K8lIUX_7tdCmDNXOo27bQ5fmDCZ-xnB5qHBFQyMkaQ0Hg_lLjYrqQKVtIf1cI?purpose=fullsize)
+
+你可以這樣想：
+
+當 X 軸移動 10 mm：
+
+* X 軸自己的平台移動 10 mm。
+* Y 軸整組跟著移動 10 mm。
+* Z 軸整組也跟著移動 10 mm。
+* 最上方的負載也跟著移動 10 mm。
+
+所以，X 軸雖然只直接推動自己的平台，但它會間接帶動上面所有機構。
+
+同樣地：
+
+當 Y 軸移動 5 mm：
+
+* Y 軸平台移動 5 mm。
+* Z 軸整組跟著移動 5 mm。
+* X 軸不動。
+
+當 Z 軸移動 3 mm：
+
+* 只有 Z 軸平台和負載移動 3 mm。
+* X、Y 軸不動。
+
+# 二、三軸如何對準三維空間中的一個點？
+
+我們假設設備有一個共同的座標原點：
+
+**O = (0, 0, 0)**
+
+這個原點是控制系統定義的參考位置。
+
+例如，現在希望最上方的相機移動到：
+
+**目標位置 P = (20, 15, 8) mm**
+
+代表：
+
+| 軸 |  目標位置 | 意義              |
+| - | ----: | --------------- |
+| X | 20 mm | 向 X 正方向移動 20 mm |
+| Y | 15 mm | 向 Y 正方向移動 15 mm |
+| Z |  8 mm | 向 Z 正方向移動 8 mm  |
+
+控制器會讓三個軸分別到達：
+
+* X = 20 mm
+* Y = 15 mm
+* Z = 8 mm
+
+最後，相機就會位於共同座標系中的目標位置。
+
+![Image](https://images.openai.com/static-rsc-4/33nlnO03qODD5oVex5VLprNBRhDk0oodF72WvpOSeqckRf81Cag9XxynPBypc_sf6F3yT-1Js_45Dy-0NSHpc6ZQbfxN_1lsVus82BL9CQSzxLCF4CgLiO9ml0o13KH4wm-9xkvTVJXzTv5C0uC0YNs1lfj46MGOaX7FtcIDkA-KL5LPacCicaN4Tuxt47jm?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/UjB3E09U69HENCBePdyD46l1xYxIhsRdsLH05lT8Vq1bi_9cazDu0IbxaeAf5nUOsT-wr1TMoVDJki-ZMbfark3fZZuxYyW_I6oZUYsmLwJqpDK8qC6hhdyhK1tll2f2eJYFr1AO3kMVt7u28U1X_tbbzxDDaQT5Un7cdb0htE_1W6qocB61PjzcNRLLdDUr?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/RM0OAmhjxbQU43xLsFql1tIftgs4fvR5NdWRxyfMRa2LMGd8KVTzD4MBmroVWsGhWDFHTjxpl9_fw1MhFufU455Os1emEl3CbRcnz1nQKh3J-SELJd3BMlo_mOI-tx30l9UYi3_0moVzY0VwOCuT-x-J-NefhS140jpuf--3XjW_GGJaPxvsThzWnw62lJiW?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/NVaJDnYmXmlQ8l5Au_7rTSqI4ulWJNuEO39ubXRem_R2A4TkDyJ6eAbTKO607HqF5LWHFjl4rjFqgzHOZe534eXV7VcG2YnrFvHZ2po2ck5tT-8--HkpV1zPtaqIX_UCVLjkf5T88QPnJ36kpBBdZ42Iifsa65OL_VRDI0cd8o9Ia3pIdRVwJgR9YPgQs5DS?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/9hyt9mnGQ4ZJMMb73i9C9INFUGBVw7RYUepDNJB7qqgVQn3kgoS4QXWnqEZop9mpODIYZQdEL6gGC_QYvc-PgbIooI8OHyCOv9CIGYWF2Jqmgt0bUY7sbLCpwSFZuCmoezd7CzG--PvG7-nDuIuujWsx6hKBhslY9trVFHqZKuSlHh3GFxfa7BOh8ffBUxXz?purpose=fullsize)
+
+注意：這裡的 X、Y、Z 數值，是以共同的機械座標系定義的，不是三個滑台各自隨意選擇的座標。
+
+# 三、為什麼 X 軸移動，Y 和 Z 的座標不需要跟著改變？
+
+這是最重要的地方。
+
+假設目前位置：
+
+```text
+X = 0 mm
+Y = 0 mm
+Z = 0 mm
+```
+
+現在只命令 X 軸移動 20 mm：
+
+```text
+X = 20 mm
+Y = 0 mm
+Z = 0 mm
+```
+
+雖然 Y、Z 軸整組機構跟著 X 軸移動了 20 mm，但是 Y、Z 軸自己的移動量仍然是 0 mm。
+
+為什麼？
+
+因為控制器定義的座標是相對於整台設備的共同座標系。
+
+換句話說：
+
+* X 軸負責整組機構的 X 方向位置。
+* Y 軸負責在 X 軸所帶動的基礎上，再增加 Y 方向的位置。
+* Z 軸負責在 X、Y 軸所帶動的基礎上，再增加 Z 方向的位置。
+
+因此，三個軸的位移可以直接組合成最上方負載的三維位置。
+
+這也是為什麼我們稱它為 Cartesian XYZ Stage（直角座標平台）。
+
+# 四、實際上 STM32 如何控制？
+
+現在把這件事連回你的 STM32H755 和 EtherCAT 架構。
+
+假設 STM32 要求相機移動到：
+
+```text
+Target Position:
+X = 20 mm
+Y = 15 mm
+Z = 8 mm
+```
+
+控制流程可以是：
+
+1. STM32 設定三軸目標位置。
+2. STM32 透過 EtherCAT 傳送 X、Y、Z 的目標位置。
+3. 三個伺服驅動器分別控制自己的馬達。
+4. 馬達帶動各自的螺桿。
+5. 三個滑台依照命令移動。
+6. 驅動器回報各軸實際位置。
+7. STM32 讀取回授，確認三軸是否到達目標。
+
+這裡要特別注意：如果設備要求相機沿著一條斜線移動，而不是三軸先後到位，就需要運動控制器或 STM32 的運動控制程式協調三軸的速度和時間。
+
+---
+
+# 五、確認你是否真正理解
+
+我們做一個小練習。
+
+目前三軸的位置是：
+
+```text
+X = 10 mm
+Y = 20 mm
+Z = 5 mm
+```
+
+現在 STM32 只下達一個命令：
+
+```text
+X 軸再移動 +5 mm
+```
+
+請問移動完成後：
+
+A. X = 15、Y = 25、Z = 10
+
+B. X = 15、Y = 20、Z = 5
+
+C. X = 10、Y = 20、Z = 5
+
+**你認為是哪一個？**
+
+這題如果理解了，我們下一步就可以進一步學習一個很重要的概念：**機械座標系（Machine Coordinate System）與工作座標系（Work Coordinate System）**。這會直接連接到你未來要理解的光纖、Camera、雷射與矽光子精密對位。
+
+---
+
+```
+B. X = 15、Y = 20、Z = 5  我有個問題，你說的這句話我不懂：如果設備要求相機沿著一條斜線移動，而不是三軸先後到位，就需要運動控制器或 STM32 的運動控制程式協調三軸的速度和時間。  
+```
+
+你的答案 **B 完全正確！**
+
+X 軸再移動 5 mm，只有 X 軸的座標改變，Y、Z 軸維持原來的位置。
+
+接下來解釋你不理解的那句話。這個概念很重要，因為它涉及多軸同步運動，也是 STM32 運動控制程式需要處理的事情。
+
+# 一、先想像一個實際情況
+
+假設相機目前位於：
+
+```text
+起點 A：
+X = 0 mm
+Y = 0 mm
+Z = 0 mm
+```
+
+我們希望相機移動到：
+
+```text
+終點 B：
+X = 20 mm
+Y = 20 mm
+Z = 0 mm
+```
+
+也就是：
+
+* X 軸移動 20 mm。
+* Y 軸移動 20 mm。
+* Z 軸不動。
+
+從三維空間來看，相機應該從 A 點移動到 B 點。
+
+![Image](https://images.openai.com/static-rsc-4/HMWxoNYgBfWfkv4ThoHuniUrvai3SlvtWvqL-kMVHIYiNqW5Id3DNSFmrgzT71Ced6lLIXFL8RjjbCpthPBhu-NN8lyy6FC2YHWXU7FLFJel4H1ZVQxdXSoTJFEUp3iijpwvA3VaeX4HYQKfI9qa4efg8kPRr1WSuD17baPzQwLns0BMXdp1RPzCtmu8B-OV?purpose=fullsize)
+
+這裡有兩種不同的移動方式。
+
+# 二、方式一：X 軸先移動，Y 軸再移動
+
+假設控制器這樣下命令：
+
+**第一步：X 軸移動 20 mm**
+
+```text
+X = 20
+Y = 0
+Z = 0
+```
+
+相機從 A 點移動到 C 點。
+
+**第二步：Y 軸移動 20 mm**
+
+```text
+X = 20
+Y = 20
+Z = 0
+```
+
+相機從 C 點移動到 B 點。
+
+實際路徑會是：
+
+```text
+A (0,0)
+    |
+    |
+    |
+    C (20,0) ───────── B (20,20)
+```
+
+這樣雖然最後也到達 B 點，但是相機不是沿著斜線移動，而是先沿 X 方向，再沿 Y 方向移動。
+
+這就是我說的「三軸先後到位」。
+
+# 三、方式二：X 軸與 Y 軸同時移動
+
+現在換一種方式。
+
+我們讓 X 軸與 Y 軸同時開始移動：
+
+* X 軸從 0 移動到 20 mm。
+* Y 軸從 0 移動到 20 mm。
+* 兩個軸同時開始、同時結束。
+
+這樣相機就會沿著 A 到 B 的斜線移動。
+
+例如：
+
+| 經過時間   | X 軸位置 | Y 軸位置 |
+| ------ | ----: | ----: |
+| 0 秒    |  0 mm |  0 mm |
+| 0.25 秒 |  5 mm |  5 mm |
+| 0.50 秒 | 10 mm | 10 mm |
+| 0.75 秒 | 15 mm | 15 mm |
+| 1.00 秒 | 20 mm | 20 mm |
+
+你可以看到：
+
+每當 X 軸移動 5 mm，Y 軸也移動 5 mm。
+
+因此，相機會沿著同一條斜線前進。
+
+**這就是多軸同步運動（Multi-axis Coordinated Motion）。**
+
+# 四、為什麼不能只讓兩個馬達同時轉動？
+
+這是最容易誤解的地方。
+
+假設：
+
+* X 軸需要移動 20 mm。
+* Y 軸需要移動 20 mm。
+
+如果兩個馬達同時啟動，但是：
+
+* X 軸速度是 20 mm/s。
+* Y 軸速度是 10 mm/s。
+
+那麼 X 軸 1 秒就到達終點，但 Y 軸還需要 2 秒。
+
+結果就是：
+
+1. 一開始兩軸一起移動。
+2. X 軸先到達目標。
+3. Y 軸繼續移動。
+4. 最後才完成整個動作。
+
+相機就不會沿著預定的直線移動。
+
+所以，**多軸同步不只是同時啟動馬達，還必須協調每個軸的速度、加速度與停止時間。**
+
+# 五、STM32 在這裡扮演什麼角色？
+
+連回你的 STM32H755 + EtherCAT 架構。
+
+假設 STM32 每 1 ms 傳送一次 EtherCAT PDO。
+
+如果要讓相機走直線，運動控制程式就必須計算每個時間點的目標位置。
+
+例如：
+
+| 時間      | X 目標位置 | Y 目標位置 |
+| ------- | -----: | -----: |
+| 0 ms    |   0 mm |   0 mm |
+| 250 ms  |   5 mm |   5 mm |
+| 500 ms  |  10 mm |  10 mm |
+| 750 ms  |  15 mm |  15 mm |
+| 1000 ms |  20 mm |  20 mm |
+
+STM32 依照運動規劃結果，週期性傳送兩軸的目標位置。
+
+X、Y 軸的 Servo Drive 接收命令，控制各自的馬達追蹤目標位置。
+
+這裡要區分兩件事：
+
+* **運動軌跡規劃：** 決定每個時間點 X、Y 應該移動到哪裡。
+* **伺服控制：** 驅動器控制馬達，使實際位置追蹤目標位置。
+
+實際設備也可能由獨立 Motion Controller 負責第一件事，而 STM32 負責設備流程及通訊。
+
+---
+
+# 六、我想確認你是否理解這個差異
+
+假設相機要從：
+
+```text
+A = (0, 0, 0)
+```
+
+移動到：
+
+```text
+B = (30, 10, 0)
+```
+
+如果希望相機沿著 A 到 B 的直線移動，那麼在移動過程中：
+
+**X 軸與 Y 軸應該如何配合？**
+
+A. X 軸先移動 30 mm，完成後 Y 軸再移動 10 mm。
+
+B. X 軸與 Y 軸同時移動，但兩軸速度可以完全不管。
+
+C. X 軸與 Y 軸依照規劃好的比例，同步改變位置，讓相機沿著直線移動。
+
+這題理解之後，我們就能進一步認識運動控制中很重要的概念：**直線插補（Linear Interpolation）**。它正是 CNC、精密定位平台及多軸自動化設備常用的技術。
+
+
+---
+
+完全正確！你已經掌握多軸運動的核心概念了。
+
+你的理解可以再整理成一句話：
+
+**同樣的起點和終點，可以透過不同的運動方式到達，但移動過程中的路徑可能完全不同。**
+
+而你接著問的問題非常好：
+
+> 既然最後都能到達定位，為什麼還要在意移動軌跡？
+
+答案是：**因為精密設備不只要求最後的位置正確，也可能要求移動過程安全、平順、穩定，而且不能碰撞或破壞正在處理的物件。**
+
+我們用 GMT 精密對位設備的情境來理解。
+
+# 一、同樣的終點，不同的移動路徑
+
+假設相機要從 A 點移動到 B 點：
+
+* A = (0, 0, 0)
+* B = (30, 20, 10)
+
+這裡有三種移動方式。
+
+### 方式 A：XYZ 依序移動
+
+1. X 軸先移動 30 mm。
+2. Y 軸再移動 20 mm。
+3. Z 軸最後移動 10 mm。
+
+![Image](https://images.openai.com/static-rsc-4/pv7Rbls_lHjQIkaYAjadWYr_lel8KRw7acOd9raVBUoY7oSQlRYTygrM9vDD0VsN6pIdTUmiATN9ki2CtfyESD7UWIrJUdOEZHgvnQc2sz4s_LWf2iZh-BFfN98XdcTm_mhzHs0Q28NO9d64es4oSdv9PTbN8Oa8IVNo1DmVX4YqB6R22SKIuBZ9LaIR7IDL?purpose=fullsize)
+
+這種方式比較容易理解，也比較容易控制。
+
+但是移動距離比較長，完成時間可能比較久。
+
+### 方式 B：XY 同時移動，Z 最後移動
+
+1. X、Y 同時移動到指定位置。
+2. Z 軸再移動到指定高度。
+
+![Image](https://images.openai.com/static-rsc-4/CIv0nRdwGBmNvfG5FOHRx10wCkLcEvoO8wwyb8ZuZL8Ni0sKB1M4aYO7nCIH3tBxbefb3-7H1pvY0N8vzMbNCvai2RIqFAKeoWhPwx6DMibEXnDBPLe3Qbtkej_3fDTier4k6jIe62hL8zX7bgQPQv9o05W12MJ2vGXcQY_j9SYM_k8oNZh33f8n_HIXwYhx?purpose=fullsize)
+
+這種方式可以減少部分移動時間。
+
+例如相機先在水平面移動到目標上方，再下降到指定高度。
+
+### 方式 C：XYZ 三軸同步移動
+
+1. X 軸移動 30 mm。
+2. Y 軸同時移動 20 mm。
+3. Z 軸也同時移動 10 mm。
+
+三個軸依照規劃好的比例一起改變位置，讓相機沿著三維空間中的直線移動。
+
+![Image](https://images.openai.com/static-rsc-4/HMWxoNYgBfWfkv4ThoHuniUrvai3SlvtWvqL-kMVHIYiNqW5Id3DNSFmrgzT71Ced6lLIXFL8RjjbCpthPBhu-NN8lyy6FC2YHWXU7FLFJel4H1ZVQxdXSoTJFEUp3iijpwvA3VaeX4HYQKfI9qa4efg8kPRr1WSuD17baPzQwLns0BMXdp1RPzCtmu8B-OV?purpose=fullsize)
+
+這就是三軸直線插補（3D Linear Interpolation）。
+
+---
+
+# 二、為什麼要在意移動軌跡？五個重要原因
+
+## 1. 避免機械碰撞
+
+假設相機要移動到一個光學元件旁邊。
+
+中間有一個固定支架。
+
+如果直接走直線，可能撞到支架。
+
+但是如果先往上移動，再水平移動，最後下降，就可以避開障礙物。
+
+![Image](https://images.openai.com/static-rsc-4/b4aprEZwajstCvki9-HyjAs8VLOt1jtYaGGInPD1ztePUHArktI1yiiEO4jbi0UftvKRh5L9yi5_j-gAFuDI793SxGHcWY7NqtsB4EXBds7pJJhzJl7FcEcAQ4Spaezh1UaJhz2HR5kP1ajGnlVLndcmmhR41iL6ArUUdPZpYkBz0p5SjObruSfTG-bybG3Z?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/vOycSglF50PF8sbJx3hp36oUA4d_idKeJtjkeFmrymWB-FZfZ-UQmhNWmjUgeK184crE__GLeudw7tEAR7jDvo_0hINXe0rAtSNADstxRcpYwg2wV-WYGFqmlKJBClmwLaEygWZU-SuuhC-ag2kMz3DwB3xJ3lyPu2jaL02-ZYyu7nZG_-HsLxVf-xZfanCj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/FPNvhegscnK79d37Aq5X-IHvJIELAetQ8YzuPpljZ-Oqaxjd2gKyEYsZlM4TfzLAk0aiRDowapTDJ-HZ2E36rU78SSpsr28U8OkE788C7iET7jluHwDxeMoqPyREL3VlH9rTDmi1FtO1i1r3sdtIeFxhJ9DcC17c7GMJYdyjqcD6y3citaaO-iH2D83x3hJc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/n-7F_yhEaidUwUUGTjbiCkya41cM_IAZPFiPJvym-_2RqcNNbt8EZ7-_D4A1jUOXDBVE-H0-ePXDcGNem9_AF4UD5a4PjZdaLeUv5b-j5nFfMzChZFpzS2XxgJD7uZSRsBiwzBi3cFnV2yae_4wBjSFrz5WyO15z9gbMKoTbB1-bUGG3mLP5vAx7YJqWXvOP?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/sHz0781Z-_OKdcHa4qXESU2gt4IXtur1GAeyGGhNC6wIsx91j42-1t6Pd9cH7nKBf1DSo5UiMU0Ct0wI1cTHFCAc-w3x2np-NYLWE_906fkNHQX054NhmnzQlhT3JEkAkNlnui5_oJ9PeMFQ8683tj24EP11CxEV5dIUTmtEkwVOWmqZKQV6dV3fkfVwJf56?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/FxewPRPHx1duZWFsKFgD6PJ3kw26G4WrRSnXyX2SqOiu67O-wTTkdT7Lj5dzZr-BzbjbosVxEfjBiKvb4tfMOWrpV3dyjbs1Kabr6ZOIHTBvPCmqawZMZQ8C7kzO3ndeUEhQ3ub6fUGYQuyfZ2IaAUXTBM7Kh7N3Hh71dA6N5zQ8oFRISmNRKHL7Y659kE_h?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/LAzneMVtvlPb6tPU7tSCt5D0JThB6VlehyYHh3i-8IRzhWMih4HvppKm0mMFluCxQ64njVHEUyZuBeM9YteZbHEV6nXgY4NowxUGbHYLW4xNae9QvCjpCM8-AgRpwj4OTydHG6MNhfLxkl53c5VO9pSQ7zJuMrtTGitQgRfJRAqHGqZ23eK7cHsv6rK68Exe?purpose=fullsize)
+
+所以有時候：
+
+**直線路徑不一定是最安全的路徑。**
+
+這也是自動化設備需要考慮移動路徑的原因。
+
+## 2. 避免損壞精密光學元件
+
+這個例子和 GMT 的應用非常接近。
+
+假設相機正在接近一個光纖接頭。
+
+如果 Z 軸下降時，X、Y 軸還在快速移動，可能造成：
+
+* 光纖接頭偏移。
+* 接觸位置不正確。
+* 光纖受到側向力量。
+* 精密元件受到撞擊。
+
+因此，設備可能採用：
+
+1. 先完成 X、Y 定位。
+2. 確認位置正確。
+3. 再讓 Z 軸緩慢接近。
+
+這種方式不一定最快，但可能更安全。
+
+## 3. 控制移動過程中的速度與加速度
+
+精密設備不希望馬達突然啟動或突然停止。
+
+因為加速度太大，可能造成：
+
+* 機械震動。
+* 平台晃動。
+* 光學元件偏移。
+* 到位後需要更長時間等待穩定。
+
+因此，控制器除了規劃位置，也要規劃速度與加速度。
+
+這就是我們前面學過的梯形速度曲線，以及後續會學到的 S 曲線（S-curve）。
+
+## 4. 確保多軸之間的相對位置
+
+例如相機需要沿著斜線掃描一個光學元件。
+
+如果 X 軸移動速度和 Y 軸移動速度沒有依照比例配合，相機就會偏離預定路徑。
+
+即使最後到達終點，中間的掃描資料也可能不正確。
+
+所以有些設備不只在意終點，更在意每個時間點的位置。
+
+## 5. 提升設備效率
+
+如果每次都讓 X、Y、Z 依序移動，可能需要等待每個軸完成後才能執行下一個動作。
+
+如果允許安全地同步運動，就可以縮短整體動作時間。
+
+但要注意：
+
+**同步運動不代表一定比較快。**
+
+還是要考慮各軸的速度、加速度、負載、行程和機械限制。
+
+---
+
+# 三、連回你熟悉的 STM32 + EtherCAT
+
+這部分是你未來看韌體時很重要的觀念。
+
+假設 STM32 要讓 XYZ 三軸從：
+
+```text
+起點：
+X = 0
+Y = 0
+Z = 0
+```
+
+移動到：
+
+```text
+終點：
+X = 30
+Y = 20
+Z = 10
+```
+
+STM32 可能有兩種控制策略。
+
+| 控制策略   | STM32 的工作                     |
+| ------ | ----------------------------- |
+| 各軸依序定位 | 分別命令 X、Y、Z 到目標位置              |
+| 三軸同步插補 | 計算每個時間點 X、Y、Z 的目標位置，週期性傳送給驅動器 |
+
+第二種方式需要運動軌跡規劃。
+
+例如你的 STM32H755 每 1 ms 透過 EtherCAT 傳送 PDO，就可能每 1 ms 更新三軸的目標位置。
+
+不過，這裡要記住：
+
+* STM32 可以負責計算三軸的運動軌跡。
+* Motion Controller 也可以負責計算。
+* Servo Drive 負責追蹤收到的目標位置，執行馬達控制。
+
+實際分工要看設備架構，不能只因為使用 EtherCAT 就認定 STM32 已經具備完整的多軸插補功能。
+
+---
+
+# 四、這裡還有一個重要觀念：不是所有設備都需要直線插補
+
+例如：
+
+| 設備工作      | 可能採用的運動方式        |
+| --------- | ---------------- |
+| 相機移動到拍照位置 | XYZ 依序或同步移動      |
+| 光纖接頭精密接近  | 先 XY 定位，再低速 Z 接近 |
+| 雷射掃描      | 依照掃描路徑進行多軸同步     |
+| 工件搬運      | 先升高避障，再水平移動，最後下降 |
+| 多軸精密對位    | XYZ 與旋轉軸協調運動     |
+
+所以，運動軌跡不是越複雜越好，而是要符合設備的工作目的。
+
+---
+
+# 五、今天的小結
+
+你現在已經理解三個重要概念：
+
+1. **單軸定位：** 一個軸移動到指定位置。
+2. **多軸同步：** 多個軸依照規劃同時運動。
+3. **直線插補：** 多個軸按照指定比例改變位置，使末端沿著直線移動。
+
+我想再帶你往 GMT 的實際應用靠近一步：
+
+假設我們要把光纖接頭對準另一個光學元件，接近時必須避免碰撞，而且最後要非常精準。
+
+你認為比較合理的流程是哪一個？
+
+A. XYZ 三軸全速同時移動，一到目標位置就停止。
+
+B. 先移動 XYZ 到接近目標的位置，再降低速度，進行最後的精密對位。
+
+C. 只移動 X 軸，因為 XY 和 Z 軸會互相影響。
+
+這個問題會引導我們進入下一個重要主題：**粗定位（Coarse Positioning）與精密定位（Fine Positioning）**。這是光纖耦合、矽光子對位及 Camera Alignment 非常重要的概念。
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
