@@ -25799,25 +25799,2501 @@ C. 一個需要編碼器，一個完全不需要編碼器
 
 ---
 
+# 第 5 單元（三）：壓電模組（Piezo Stage）
+
+今天開始認識一種非常重要的精密定位技術：**壓電（Piezoelectric）**。
+
+這項技術與你未來要學習的光纖耦合、矽光子晶片對位有很大的關係。
+
+先問你一個問題：
+
+之前我們學過：
+
+* 滾珠螺桿：透過旋轉轉換成直線運動。
+* 音圈馬達：透過電磁力直接產生直線推力。
+
+那麼，有沒有一種元件，不需要馬達旋轉，也不需要線圈產生電磁推力，就能讓平台移動幾個奈米？
+
+**有，就是壓電致動器（Piezo Actuator）。**
+
+---
+
+## 一、壓電是什麼？
+
+先看一下壓電元件的外觀與內部結構。
+
+![Image](https://images.openai.com/static-rsc-4/TS8xNz3dmoo0SbXAW0s0Y9i-mEP--Yuw5mrgF2qOouTQJ9XojxzV9ZjtK7hZHjemKsQtnuZfYmWV3Su1TtXQEEbhFeQP74FXdtHSXEwb6L2n-Joc3MHmp_ZqV8Bewwz0a-6u5nj_tdHL_nhcMWEcp-xFLosoVe8bT0WtCuzmqoNdQkgmPeBkR6WdIwVCgFAC?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/P83oGeCGUUQJrkCxCQCS39BfIU-ujZF2fsu8Z4ojTmKDRLHLymB0dKmkH7Nchw3FrKTU-j6qOFj_wTUlkrp2kob1FpFoRoa7farciyWsvhuXml5Xp7LgNvsmtStA9FL135UryzwAFPhBvo4_iobF-1lY5RpsfymgtA00sic59skOgOTPOFXspXUIY_0FUtbw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-X4_5h_1Q5Rj0DIGIWVrGCK23N3rKRLRCNoRG9hf1iZP5xr71r0_3S5ya-atGHjNdVRhQiSQ6Jw3maaaSE_9swICn9OC5gr3tso7NfhbbEpqiU2L5tHvb5S85u9nENcBdc2852X_vbDU6eHELgFcJW0beVelB8mlE4XyH_WGcN3enMe2x2X6jkxhtZkqGQ2K?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/aE2IxLsLZZgIIqe7m5hW3rHR3pqRK1zCAMLdcPkEbDcx2xYhqm5JlnzPU6w9caqYGOUNzaSIGach7yV_pD-Nw8ONq8ypAkMIUiHBiU1wLc7nuhYSL2lvmeqtr7Sx8bneshFL9a4zH3w1NVF-FFklWgaPrwnQQ98-njASgKvRlkRSs_9FqqT9OizHHlYCVqoD?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/UcZrLOAFR3PV8LLxw_AnbhZO5OvogZXzgVw5ZRXPqUgifA_FQhcwW9v2vnff6HbQY7GXX-ycIt1wZBbwyMxlEn87oDOT24KeR0zJtjkVxMTRIBIOu3VyLGHnUuGfb9aID4jx2Pe0BKwfkEGUD1urRzrdk5up8ES1SrIxEC2HTfCoGPLXVN0KdVziHIWeR_Kn?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/WEBlxjkElM51F_8mj9HPPNLkCE0k2VEAU739mZXMj1TGNML-IyUtZrgknEYLl6GrjRBk7ldqZucGPY2dpVNvGhdo6hbkqtDelKJVDBCEWztzBnDrL2bTNNOpJw8POR-S9wgktUEQgX0rG4TpAgPJH0I_PVoRRch84NmPaI5c4REKp6TpZvI6YqBO529x0NOJ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/OnHLnqE0uy0HDfi6-DpSsRXJ7ZLkE7sbCQXR1VURTsepCQlbwuvarNiQi3tBor3UE1q9Fg5q8t_If9neBvk1bBabgaXQO3lzG9P9lyJ4MuezN5I-NeR7tqVQM818XfC5DCOAbqCE3uROBkg6AODhZaO9W22sDbQ7JCorwtKLMMEF7sP3slCLZoD8v6SkI9T7?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/SLJeeel3MZy2SvN2Jzmav5sf11Nj1FIaK5sibwpu7zoIurAS0LFBmtpMw76jQGGgShALVkkOVZedC43lb005b6fTb0HCSkNmuBmGdJuvvvIIE7A6J8O1gT1aWLszYs76Y3PkB3CBY-cVYD4Y-DO9Fjj5kZ38WwNcCieSGgRmmpKX4YdQDPJLMzwy0zI5YySh?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/xITCO8nKHNXcU4Uwd8uhSEXqffy5saAk8WWwBvJ1qY8ojKPx0inIrt4O8nxPZHxo2zJcIVGFvRbrJ_6EstQKlyQgxI54EnjPm1CtUPRgUKxTyZiKUIdIBWD672e--5imfQIKQ1Twx-sd0hytlMLY97zjPmNfw71ba4biEEIMi_LdylLb6Te3DmZot-i3CkEr?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/9lX0VFYNE3TcGkG9N5LRNdVR0Tr5zS8gtiYb39govUsFQ3YQIwf7k3RxnzhLfcBFumToEpIq8LSk8BhL_B7BzHmOF4sBnooNQBDhMmjN-cTVq4haIfy0At5hDC1p97nio6IdB8IW5xLNKc4yIW_9NljUkNiOel2S3cAPgtBYUesNkzcAXcOZ3w1QAhe_KHWl?purpose=fullsize)
+
+壓電材料有一個特殊性質：
+
+**當對壓電材料施加電壓時，材料會產生非常微小的形變。**
+
+這個現象稱為「逆壓電效應」（Inverse Piezoelectric Effect）。
+
+我們先不需要深入材料物理，只要記住：
+
+電壓改變
+↓
+壓電材料形變
+↓
+產生微小位移
+↓
+帶動平台移動
+
+這就是壓電模組的基本工作原理。
+
+### 生活中的理解
+
+想像一個很小的陶瓷材料。
+
+原本長度是 10 mm。
+
+當施加電壓後，它可能稍微伸長，例如：
+
+10.000 mm → 10.001 mm
+
+這裡只是示意數字，不是實際產品規格。
+
+雖然只伸長了 0.001 mm，也就是 1 µm，但對精密定位設備而言，這已經是有意義的位移。
+
+---
+
+## 二、壓電元件內部是什麼樣子？
+
+精密壓電平台常使用多層壓電堆疊元件（Piezo Stack）。
+
+![Image](https://images.openai.com/static-rsc-4/P83oGeCGUUQJrkCxCQCS39BfIU-ujZF2fsu8Z4ojTmKDRLHLymB0dKmkH7Nchw3FrKTU-j6qOFj_wTUlkrp2kob1FpFoRoa7farciyWsvhuXml5Xp7LgNvsmtStA9FL135UryzwAFPhBvo4_iobF-1lY5RpsfymgtA00sic59skOgOTPOFXspXUIY_0FUtbw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/q1BkA8p4LXUZWrxKXfTfSCZvmvaSsrv-4kaU67cr6YP5s96oOCtT1SVLhmeQIzhU-RPfqypNsAYHaKuA540o6mrdId08Om7cTP_v_SV4gvoLuN-ZcQMjzs9yu-Saw4YjcTnO7PbXiey4hWA53-6WGS62I4YWrOkIY4C3RjsQl2g1LVpKrp6yHfmqM_lXQkga?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/OnHLnqE0uy0HDfi6-DpSsRXJ7ZLkE7sbCQXR1VURTsepCQlbwuvarNiQi3tBor3UE1q9Fg5q8t_If9neBvk1bBabgaXQO3lzG9P9lyJ4MuezN5I-NeR7tqVQM818XfC5DCOAbqCE3uROBkg6AODhZaO9W22sDbQ7JCorwtKLMMEF7sP3slCLZoD8v6SkI9T7?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/TS8xNz3dmoo0SbXAW0s0Y9i-mEP--Yuw5mrgF2qOouTQJ9XojxzV9ZjtK7hZHjemKsQtnuZfYmWV3Su1TtXQEEbhFeQP74FXdtHSXEwb6L2n-Joc3MHmp_ZqV8Bewwz0a-6u5nj_tdHL_nhcMWEcp-xFLosoVe8bT0WtCuzmqoNdQkgmPeBkR6WdIwVCgFAC?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/cYieIFNlWqTzZGB4LcVBblszZ0vcRWw5g8_0Boy3DF51lL2ovtLVO-sdnMC1fSIuMrZi3wtPN3_hBWon2ObFp_vdsp4Ay18JwOVS7nMHhxHRdJwaMsy6tL2-AW4KfvM1zcnPpRZUiOzmLZCR2WL5Gls_vnE0yGUX0xv8KmhSYpWrpzQjbxEh1PRjXhEXYX5n?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/g-F4kM0ae9nhTpmhhBdLIKxTbJVxuhvXP_snkFQhuLxV43VdEjVMXKHrRwwsDpTYrwWPvezq0aYJ-mFKJ26DQ4VLoVrjj7iLNb7A9wOeneD7xAH4aQXx-6tXa4NQYWEOBNjtxWycLLxoxUUS7ffpQg1DFUbtXzTAkR5BstzGHc4II-22cqb0FIv9xkmTdef-?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QomSllmmHssXhfJCpC1bPAGIxVESqvOmmv_WuLYRNkteBl__aJxRqVWX0dYM3QhG3NCteP4nxR8YT4Z7yeh2qan2KYOqFArpHgu1gbji6RiUGPDwSl_xIj4kCGvZ9tOBM__uPcuN5_UGXnLEXPsLRDDSWTLAKwkFskx915lKvAn5l-w72QZeGImJcHA3a3vz?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/vjAtq5SVdIINovFs3GSAHdBOZNCKybfgk3G7yPQtQqlZ2fCkS1P-GNc7z4FfLKrPq8QvvUM3n4fmRHqo_1vF0sok_0GX6HJvcpJ_S5sr-gghZhwf71RAaRaZsdkbFWZ09S4LlQ8x-RT3i8D746c3ybePTA0wYRM9GLFsB4uiDFTzD-Fsb9r40Eq95QhwU9_3?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/sXj8RQzxw6BYIUEIPVwtTevMidY4sAbExkh0rKPJZGwB3sFwdcIEoEhzlcktgfDn-ngNMje29upscEIbYgk4NZQDwxeaJY6VsWjuNHP0y8eKbO2OvpWkp7QKVK_6B3gzcJMXA0vXXQk-g6lb9IGagucsnL_DpLsWBBXMLbepag_WKNm448BiFTbVcoGDoVde?purpose=fullsize)
+
+你可以把它想像成很多層非常薄的壓電陶瓷堆疊在一起。
+
+主要包含：
+
+| 元件    | 功能         |
+| ----- | ---------- |
+| 壓電陶瓷層 | 受到電壓後產生形變  |
+| 電極    | 將電壓施加到壓電陶瓷 |
+| 外殼    | 保護與支撐內部元件  |
+| 接觸端   | 將形變傳遞給外部機構 |
+
+當電壓增加時，各層產生微小形變，累積起來就能得到較明顯的總位移。
+
+例如，每一層只產生非常微小的形變，但很多層堆疊後，就能產生更大的總伸長量。
+
+**因此，壓電堆疊不是靠馬達旋轉，而是靠材料本身的形變來移動。**
+
+---
+
+## 三、壓電模組如何帶動平台？
+
+現在把壓電元件放進精密定位平台。
+
+![Image](https://images.openai.com/static-rsc-4/0GkVusV_BgjDROTSPExWQO5NnYvsw2jLOLwZqnEiyT-sAwg2yL4oh88La5tHzSo58mz8sI_DyNFgRm-RR03amoRAkAhDR55rlGGRVAC-OWrbd4vD8xQDCyb_RT7lK3aAE_RFMH8RcdEYMbOerq_zYvaAXVmdDJ2vMlzIyWDZrciFqPG5ix39IaPpGLKfDRU_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/xITCO8nKHNXcU4Uwd8uhSEXqffy5saAk8WWwBvJ1qY8ojKPx0inIrt4O8nxPZHxo2zJcIVGFvRbrJ_6EstQKlyQgxI54EnjPm1CtUPRgUKxTyZiKUIdIBWD672e--5imfQIKQ1Twx-sd0hytlMLY97zjPmNfw71ba4biEEIMi_LdylLb6Te3DmZot-i3CkEr?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/NOHJLXXg-tB8sAaQR1EdgA85Gtw6yU_HLAgEyiFnZOy0c8p4Drn8Pz2bTMHA0Q2w5PDW3JeMfJEF_iAcOD-J_oJO1BbiIHOtyE10q9icQfhShh1Aov6cmOUFoh6ezRAi68VneZoagEy6UE69W75JWgbGVdlDnp8eymkKnCciKDcgFixKRXPR_JZElbms7bwJ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/8gz7kth9HIYdwKQNnRXZcP0jraOMcxPHSm3SWovSuUYLstDLexr9T95jUtJy36IGwzoSwK6S02kGUHnRcPaS0UfxhpB26SERLP4E4biorHgIijK-BeoasMtWn3h7aXAxRvxNHXepgSJfFLMYgtOqtPoq0Rl7C_83uvL5ummUG6-Iox5BwIX4FFjYrlvVQdl2?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Zaogo7UupwSCHqkBUk8yLBCo1W-11rs9xIf4fsXrl5IRFKF1u90750HDQ8SvR1qAiR0QbYlscv1iBQ1U0k6VrCv5oRQE2YYpeRGXnK7KHDKP-FAl77-gLMJ7ddCpNnXAGer2fL9xueydhqEycg-Ya7eOCSVUCzNKUGMzMcgPbWFT2jlhUaIWBHaI9BFS30NH?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/yjxoJIK-MONAoUzIMNN0IFT-Xz0Zk-Y1Yqe_MW5Ttvgpp-92yqKkcDY8YnRufXsZD4AyOzHq7ncPrVnqlobEY-kYenKxTV-T5gSKPSEuRvBBgjZt3EOc4oEy-THc1b0o6QWaSdk-mEZZ1fEEg64SpABxCquPgPHqRLc_83Kccn73BkuwOkVZSBSqwyzGj0Nz?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ko2a0sEdD5n8KM4MM_fWuC8afIoYpTPvzqWW_scAsqvtOK4vaRxYLL8S2RegjV_Sry-hkT94dQTd7mVlzSz_esL2RR0LKKOwcQykh0JtfPpRg3sBLgkPoj0DqNa9X7f2CBNgaeuUXkp16G9FuuWL7deyjKgLZ3Ime7FqHz1WSARwfsIH2tVAAdg_FHMawHjL?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/n1_L2ic0qUeWjTdUYJXMXI0KDJEKd2LZ7U26uxeVe5qgYnaS6HpZ0azm1yxlHFjImukGswvB7rScC1DtATgXPTXkZAL4uvvimZyzbcJEf5SnWckc_oeCkpPSRKbv_1hXuHSPuOj48Zk4jrwHTlJ0WW0Rr7mhzYM5YOQH9P7UCueSIYFsCaWi7eSkEqRDYep6?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/GgYGFtmcmyeuuibkgxgS_hXthKLXgNIs6oSeD6p_Ogt6QSb-ewvWwzf8_eyTIQCgwQOHYvSLNiVBt2GcIJFHrnqhuRqh65WigaZO8LIVHczxMLIWbHkIVwsuHeHkfz007Fdkz2bkZgnV3DJFDanZsRVLx--dl7FhXfU8LtBWKUivUaAA3fFVvNaEQYoH9DXu?purpose=fullsize)
+
+一般壓電平台可能包含：
+
+1. 底座（Base）
+2. 移動平台（Stage）
+3. 壓電致動器（Piezo Actuator）
+4. 柔性導引機構（Flexure）
+5. 位置感測器（Position Sensor）
+
+這裡要認識一個新元件：
+
+### 柔性導引機構（Flexure）
+
+你之前學過線性滑軌。
+
+線性滑軌透過滑塊與滑軌之間的滾動接觸，讓平台移動。
+
+但壓電平台有時會使用柔性導引機構。
+
+它的概念是：
+
+**利用金屬材料的彈性變形，讓平台產生非常微小的移動。**
+
+![Image](https://images.openai.com/static-rsc-4/0GkVusV_BgjDROTSPExWQO5NnYvsw2jLOLwZqnEiyT-sAwg2yL4oh88La5tHzSo58mz8sI_DyNFgRm-RR03amoRAkAhDR55rlGGRVAC-OWrbd4vD8xQDCyb_RT7lK3aAE_RFMH8RcdEYMbOerq_zYvaAXVmdDJ2vMlzIyWDZrciFqPG5ix39IaPpGLKfDRU_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Zaogo7UupwSCHqkBUk8yLBCo1W-11rs9xIf4fsXrl5IRFKF1u90750HDQ8SvR1qAiR0QbYlscv1iBQ1U0k6VrCv5oRQE2YYpeRGXnK7KHDKP-FAl77-gLMJ7ddCpNnXAGer2fL9xueydhqEycg-Ya7eOCSVUCzNKUGMzMcgPbWFT2jlhUaIWBHaI9BFS30NH?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/NOHJLXXg-tB8sAaQR1EdgA85Gtw6yU_HLAgEyiFnZOy0c8p4Drn8Pz2bTMHA0Q2w5PDW3JeMfJEF_iAcOD-J_oJO1BbiIHOtyE10q9icQfhShh1Aov6cmOUFoh6ezRAi68VneZoagEy6UE69W75JWgbGVdlDnp8eymkKnCciKDcgFixKRXPR_JZElbms7bwJ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Bt4OGklEw6lJcmT1_95Ut_NPzWlh1ekgcCqRiGWhDggpNzvCBcsWXPLIcBOhAI-ewz611Um4Uepyrto89_3thsFB_pGD7ceDKgMfoNJYGp-aLhZbBR_G0xOSUA0UUL4TH4W1a3x3S9Lgn5ugM4KdGb9mP40r6WauIueggW--fw-jiX0_YLvRv4igCeJ12ufZ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/J71siUpFm4CoJM_AGdXy2vgpHixi7y1DNnLD1SUdbulmbcIASEyMjR-A6g0vABDGY0-VX-6qqEzow8fOcd73MOspUcEQiKynPbH-xG-B_4JAU6_LDGQpelFhUiWVRDS6NuNt181hSeNT6gK2wUn8df0v9R2JTmhHxduVqd6kZaxv5zxw0-rwEuI2eDSGZ0Zj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/7SC8PuCjw_TXINUoKlx_hmtz0u-_B_lfTa1jQTxLsz9O0Se22lIWAYVGYbVCJX1yY6ASrrAOK6ekpA3_h3ExzmK1KwY3UJ2I0z8OTl1kYeUOssIkT8SHCOKulCByAHU2W1Z6zCsZBDZxaMvJcfsfk7OiOhYDoGBqnmMwFOIgpCnsp9QO4XXt4kpSgBll4tnb?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/hNGhZxiqcpyLjDxn9J952X0xS5f9hhEvGt08DMWRgA7vMyMgePzllFMKOOxy7XgWnU_clUSA-y4UmSsgBLT_fhN07edWe09eUmE_QqN8HO6F5N_KUtvz-9REVUbqhDa8dcV5QtkFVCcA1a8xAxh1KSaki99CI_j5WUqb_S6Gk2LqDBXfJhyzrDdd-jA4jIOB?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/1FyUmm0w7HNsUrD-b03pX2WGucOQlUoRqe-z_O28sIk4pCp__7V8Ia3-R5hlBEd0Q47yZj5b5nhraOzu6FYhhemmpZZEVWlmWKnqemlV_z-7lIE-wB7gFdhU-6sh11YqTZCHl7tc-2BXDA6cRxS8_XWrSh6uUVlUWRqO1arEXTik3VczAUflDQqERcUh1bug?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/AmH3LHcfSwag-Q0S8GVrSAeNY9sPllKpWLha3NhVhSn0Um8rpv1nDwlqBPPT9ntNmS2DDQIuC4Z-d1yAMqXye2PcWBom1-1dNKViHdtXv22IPRnM3o4EyECiHn93MB4YtqwcCevC-hqlp9j2qPSrxHtigL4-9qtG2_Gu4OSNcr3YPskOc7UFks1kAVlgg8Lr?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/tjRAp_Kv_RhlFluB2Z2KX9fFdRU303ixth2SFzabTb2POVTZGtCwXxYD1LqJH3oKVd55FUZF0Xy8Xq_EbjRptPzSgM-9Hf5tqLBqRXAxnTHcRhswl7LUBLkT6SoNJpqmTTJcAeWyGRM41M6ENaZIswOjHXVIpnzH2FN8THS_qzT5-zya9iFyDsXD_UqQiO4T?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5eDJytqd5DSGEYceHrBR-g3taXip0IVACd2ZolUJ1MsKPX8hDdhcK9nkwLnzkEzumf0sJ6tr0v0OMrUsRchTwLizvUjl9o6-6qhaBidFnwiEOgTHn9el1L3IcnBv2Kj53KBM-6bVoY9xd2gqIqQeKpLks5LBQyRUGgHSY8__zfCyTrsplMMD-MPNLYQ-PLKb?purpose=fullsize)
+
+例如：
+
+壓電元件伸長
+↓
+推動柔性機構
+↓
+柔性機構產生微小彈性變形
+↓
+移動平台產生位移
+
+為什麼不直接使用一般滑軌？
+
+因為在極小位移的應用中，傳統滑動或滾動接觸可能帶來摩擦、間隙及微小運動誤差。
+
+柔性導引機構沒有傳統滑塊與滑軌之間的相對滑動接觸，因此很適合高精度、短行程定位。
+
+不過，它的移動範圍通常有限，而且柔性結構本身也有負載與變形限制。
+
+---
+
+## 四、壓電模組與音圈馬達有什麼不同？
+
+這是今天最重要的比較。
+
+![Image](https://images.openai.com/static-rsc-4/4mOYJsq-2Fo5kIOPWtREtyHnsMvLDki9lmm-NVWncUKlggljMkVaSZ2PmghrH3V_Lwva_NYzoro1pyBkexsv6AIx9JNFMKzFpZKCA-HQjxI8iB19ZsalnS6v2SM7weUsoyVDJeHKKUiHqN6CeUp8BZhKCTE5mpvd-JNOfDDkAHyx-xJf39DEw0_U3owDfU6E?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Vtn6yQgqtX-V4cpWnAV9ac4GI5Q0VFrAKF43CZFXphRFVQHcndO8NyAdJLV2hO6FRp2QZC_sD4kMBDOUwvrfT83kSl9TikilvyOoh7mJFDu7SuTIv3t11IZptN1ccon-8G-IpFNZiCSyKv5oFKq2b_3Vpg9-OxUBxPOGwqTHbouK0k_VCJY3e9bsmzfIERIU?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/mhKHyOz3cYI75h2IeRrUW6N04RFBs_SvtBvHNV_r-ZY9_SEYfEzK7L5ictDJY3voqTyzb_wOAwF0XW3tbBio7wVkZWb4g2XHIQEF46xp40hFLWBQ2SE-5tJLD_zFLZOEvhEu1RjrA-iTCfsmnhTBu4-kS7FP0VxXxa6an66YDiTAoD8qwlCHHLstbav98lXQ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/oOmumGeewSWM9z0aP61WBLQTtaUCGYxfTaHgOjHSWHA_2BBCqPsNhElZ47It6Ff1T1tljp837G8FRF4TY1-BKuEfiupKXi6fCSlMtWuwHAJ1ctglPE6xEsUfrv-DEHkc6fpA8dfw9Epj1vwJEZomBrEuiu-ydoKXhtk-DeABtJhCK4v7xzUM6kEh5OomPVI0?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/bn8dtwGaY6EsQlfmriGaiEBJtV5RmDHzuYWMYkN8-iGnUjZeKYWXXH62xEov0_hi5yY2L0Zhmg9QzKIvhb9TcuCpxhbzlLz15kmF_PD1us2nZ95zgCYwpLFtyYBJ1i29aO6josbMSkcY_3ue20kUn8L000bboS16c3j5ECb9yWCU1A9jreIym4HzGqFXSmK3?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/9lX0VFYNE3TcGkG9N5LRNdVR0Tr5zS8gtiYb39govUsFQ3YQIwf7k3RxnzhLfcBFumToEpIq8LSk8BhL_B7BzHmOF4sBnooNQBDhMmjN-cTVq4haIfy0At5hDC1p97nio6IdB8IW5xLNKc4yIW_9NljUkNiOel2S3cAPgtBYUesNkzcAXcOZ3w1QAhe_KHWl?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/FVQM6gDCD6AktWvsX0yYF4hbS8o7Ftj8-RqwP9qXiT6eabH6OJGSksIPEuxWw_BVdhMCYL8P2-aYmxL0-zOXgbiQ_SWJl150TKA0eWcp29NVLkjeZosX28aOiIXdeNHGwM6HUEatl9bk79wtdPrgBvi06-CYT7GDT3HQ9ejuX59RuTC3Vh4xJAQppy5vDYev?purpose=fullsize)
+
+| 比較項目   | 音圈馬達        | 壓電模組        |
+| ------ | ----------- | ----------- |
+| 動力原理   | 電磁作用力       | 壓電材料形變      |
+| 是否需要旋轉 | 不需要         | 不需要         |
+| 是否使用線圈 | 使用          | 不需要         |
+| 是否使用磁鐵 | 通常使用        | 不需要靠磁鐵產生致動力 |
+| 位移方式   | 電磁推力        | 材料微小伸縮      |
+| 定位能力   | 可做精密定位      | 可達奈米級定位     |
+| 移動行程   | 依設計可較大      | 通常較短        |
+| 常見用途   | 精密短行程、高動態運動 | 超精密微小位移     |
+
+簡單記住：
+
+* 音圈馬達：利用電磁力推動平台。
+* 壓電模組：利用材料形變推動平台。
+
+兩者都可以不使用滾珠螺桿，但原理完全不同。
+
+---
+
+## 五、壓電模組如何控制位置？
+
+這部分與你的 STM32 韌體工作有關。
+
+假設我們要讓壓電平台移動 0.5 µm。
+
+控制架構可以概念化為：
+
+![Image](https://images.openai.com/static-rsc-4/3aUt57E9iP3tjKPNdmg3cYYMOrPSD-2u9Jk1nl1JmkVptyMcqeKIiIPwqYCHydX9vg__RG1IM8qf8yPrgqby6Al0O0C_t6VHjQ14NdCPagl1tll_sf_iRBaXk-phkXmSG93O_s3DXg0323pp6lhYyPXwBiaZX6cpDLTKIYlxiObo8mXH3JLe3IZ6JLYjWLR9?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/RbTqwlJKSFbSlK-wKaHJoITmyZbX4r4eKjvTBTrWJrUpyIk2uGIrXD-iN50v8jglRfvOM05-0iEx66g5sqWFHos5bDEkFG6GUX99EFmTeC_kqvKVOGDBZRmHGqe02yZ_GfCrWlux90Acl61wHEbwfRJuZ-ETx-z9WeFKzbVADQNNtPVM6AVXk3wlDek1XAfL?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/bxWhVW3WyMAtMS267IpWA4wWCmWlv6xyw-QDEjFCSqlw_UPhKN_thb7UuemV8E-ip7pEhAie9d0xiqA5nTdudRLXZ0NI1p17h7pJFzVpexdUe3r8eYD719qP0LarXYV41qQTmK-tlAPCOIT608zz2Xq-HHvRcYu70b52J4bBzvdxWd1sLKf_3t4LpdN_U9QX?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/svjesyhiMzFSKmX7IjY6EDv-tj6Xv2N_XaIbm3j-8PlHh73V9XU_ApiBO_X6evkMQT4qGGRC0be4ja2rIcmaV0ch7BitrEVuJDOj7YrcL_isiHe0ysNN4f2HozD6h9GoLItxYFyPR-TzH7aM9Ze4BqHM7Z9daIOn5Vkuydyi6velZrx1WIh3e7Flc1rKoVf2?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/pUyd-2Ok3Wc0l4sv9seQczcgzuUV4BHw22UT_zBzfsWuPXL5Pv2XFydRtnHlIDmCLi_UYSixb6ZHfLdRlo_Cj8vwGSlZXR0AnoaY-hKPRsIxaD7b9VF3pS1uzrIe9aUgJ4cMbu7sHmvkSpQxMrkppsO6IqSthZmkMVZREJqkjJe9YNCSTR0cZzABZyXe0PGL?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/HZvBTs35uGpzD2YzZOlAn97cGKPWut1Nc5hgHHlgOlbF3465tNJ1FU2xroGGPdpaAodhsVOwCGj3x13pqvHgPfF0pAv6YwVNZoAAEiTnR01e_ldpldsDEm1LjYvJoTNccY0-9Pm1MUwnGrhy5n0fnfvB1ns3qaCMbXx7_zm_Kkno6ShNiJe0BYOfuTBWygis?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/THFBk9QgRgmxNUquoN7G7fhil-aHzUsGN0UYy20l5l8mRIKHuFiHh9E-vR9gn5X4KrfnJ_LKeQwZ2nKsGRx82G0GtBHb8DwHVD8PStFR_RhhM7Hvl0AbcPCxrRyHbCTikxQG2JXzpSPv_ZFGtOco_X2wGzmgiselH9Fw_lumflKe7UBSxYC3sj0FeUdw55jP?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/iXPjoKyzfdMd3HqMys0fnQxXIgJPNKpi5v_WREHy0XDUoMI36EzO96yRteGvVEPs2ErqNTqZGhDz-61qOKcKTAQwJwUBBEJUd6p3LCO2-bapxvjUFVUq3wVs2zziGJ1urPyCjv13rwD4HBAiWChR6tOXIROut76dNtpsLAolSeYQID7nAznZCSd4knt_n8xW?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ABg7kWeqaPM45AU1Fcb3ty69_lsA5xD3iqf90Nzc1rfPwHxKtCwoHJH_Q1FZzrJ45oPZ9E2ag-_waQc4ZO2nCGWcH_oXwlMpGn957VuQDCLqfgdMmhpvBB8htlVW8qNCXkZMUtqjjPIbwM-PbAYn5cn5ntCIcuGaV10gp2bTpOLRtadbRRNNJPAoy_varp88?purpose=fullsize)
+
+控制流程：
+
+1. STM32 或上層運動控制器設定目標位置。
+2. 壓電控制器（Piezo Controller）接收目標命令。
+3. 控制器內部的高壓放大器（High Voltage Amplifier）輸出適當電壓。
+4. 壓電元件依照電壓產生形變。
+5. 平台移動。
+6. 位置感測器量測實際位置。
+7. 控制器比較目標位置與實際位置，修正輸出電壓。
+
+這裡有一個與之前 Encoder 課程不同的地方：
+
+壓電平台常使用電容式位置感測器（Capacitive Position Sensor）直接量測非常微小的位移。
+
+它不是旋轉編碼器，而是直接測量平台位置。
+
+另外，壓電元件通常需要專用驅動器，不能直接將 STM32 的 3.3V GPIO 接到壓電元件上。
+
+---
+
+## 六、壓電模組有什麼缺點？
+
+壓電雖然可以做到非常精密的定位，但也有一些限制。
+
+### 1. 行程短
+
+壓電材料本身的形變非常微小，因此一般壓電堆疊平台的行程通常比一般電動滑台短得多。
+
+### 2. 需要較高驅動電壓
+
+部分壓電元件需要數十伏特甚至上百伏特的驅動電壓，實際數值依產品設計而定。
+
+### 3. 非線性（Nonlinearity）
+
+施加電壓與實際位移之間不一定是完全線性的。
+
+### 4. 遲滯（Hysteresis）
+
+即使電壓回到相同數值，平台位置也可能因為之前的運動歷史而略有不同。
+
+### 5. 蠕變（Creep）
+
+電壓固定後，平台位置仍可能隨時間產生微小變化。
+
+因此，高精度壓電平台通常會使用位置感測器與閉迴路控制來改善定位表現。
+
+---
+
+## 七、GMT 的壓電產品
+
+回到 GMT 官方產品。
+
+![Image](https://images.openai.com/static-rsc-4/ro2EBtcrNsd0cbUBt8Apuo8tQQ80Xy7DphGHHECg0jP0aFcbuoy1K_V0-nchiIFDQU_v8Lb5Yei232evXfIcB5f0G0-msXRqaPLbZobJFz0-vqQIQTcaosXfCzsSvdUXp227V5Co1we0f9XLoW_e2Oq4V0LnuzmahNWqaMIZnhWlrDwkIzUyE5K-KtDeLahN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Ml8HdFfBQh-m8JExRd1F-ezBmsCVpHqPBszDDETWIbl-XxmEpw6fgUTnAfsAFxcqs6c4mf4NylOPQQ0gvVRCZ6vjbeYW9MhtU9g7FQ4OP8OSuUpy4CCVAruwifwA3nx7FMTQtIq05tA5JidBmOjgqNX_3_cprQt0iT0ZgLUhsBYyRScZeW9UWeqi3J5KOkXh?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/EV2uL7QIjgtfXkZr6bN2Dtwy2TgfR3DVD87JW7NjPU_mQ3sMGlRNI94zbitRD8sTp_yKume08ASRG9kc_Ms37e7U9gN1noWXfWdbmY2pB1pUoP1MOr-MhvZ7wYocGuxwIVDk1rayhanXIUHJ3bIk8r-9Bb2ZstLSS0mbJCHQUIY0y2KjNXBUnJ62aERLwScd?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/GEtJq4k9fJDnzL0qYHoHr-LbQtOn7Vn_EaGdOd7D_-ePjOFc_yNtylZkd6cPaXw6B_3E3AhMjPXX3KjoHZSfcoa-h9IGwN3ESZUiuLHMAURRd1u9mKnn2d9L2GdCQ9kgIf0Xnd9PeNM3I0tiV-gGeu8HF0KbB8_oaTd5C2xWotut5sSWlnoClJEB9hkLnYlB?purpose=fullsize)
+
+GMT 官方壓電模組系列目前列出：
+
+* GPZ-LS35x.Lab
+* GPZ-LS35z.Lab
+* GPZ-S100.XYZ
+* GPZ-Free6D.3-2.150
+
+官方頁面指出，這些壓電平台利用施加電壓使壓電材料形變，實現精密定位，並強調奈米級定位性能與緊湊結構。不同產品的自由度、行程及負載能力不能混為一談，必須依個別型錄確認。([高明鐵 GMT][1])
+
+官方資料：
+
+* [GMT 壓電模組系列](https://www.gmtglobalinc.com/%E5%A3%93%E9%9B%BB%E6%A8%A1%E7%B5%84%E7%B3%BB%E5%88%97?utm_source=chatgpt.com)
+* [GMT 產品型錄](https://www.gmt.tw/tw/%E7%94%A2%E5%93%81%E5%9E%8B%E9%8C%84?utm_source=chatgpt.com)
+
+---
+
+# 八、今天的重點整理
+
+請先記住這五件事：
+
+1. 壓電材料施加電壓後會產生形變。
+2. 壓電元件利用這種形變推動平台。
+3. 壓電平台可以使用柔性導引機構，而不一定使用傳統線性滑軌。
+4. 壓電平台行程通常較短，但能達到非常高的定位解析度。
+5. 壓電控制器通常搭配高壓放大器與位置感測器，進行閉迴路控制。
+
+## 九、本課練習
+
+請回答以下四題：
+
+**問題 1**
+
+壓電元件為什麼能讓平台移動？
+
+A. 馬達旋轉帶動螺桿
+B. 電壓使壓電材料產生形變
+C. 線圈在磁場中產生電磁力
+
+**問題 2**
+
+壓電平台為什麼常使用柔性導引機構（Flexure）？
+
+A. 讓平台可以高速旋轉
+B. 利用材料彈性變形，實現精密微小位移
+C. 增加滾珠螺桿導程
+
+**問題 3**
+
+壓電平台與一般電動滑台相比，通常有什麼特性？
+
+A. 行程較長，精度較低
+B. 行程較短，但可以達到奈米級定位
+C. 不需要任何電源
+
+**問題 4**
+
+如果壓電平台需要精確維持在 0.5 µm 的目標位置，為什麼需要位置感測器？
+
+A. 讓壓電材料產生磁場
+B. 量測平台實際位置，讓控制器修正誤差
+C. 增加壓電材料的厚度
+
+---
+
+你先回答這四題。下一個小節我們會進入**自動化模組（Automation Modules）**，認識電缸、電動夾爪與中空旋轉平台，並了解這些機構如何整合到 GMT 的自動化設備中。
+
+[1]: https://www.gmtglobalinc.com/%E5%A3%93%E9%9B%BB%E6%A8%A1%E7%B5%84%E7%B3%BB%E5%88%97 "壓電模組系列 | 高明鐵企業股份有限公司"
+
+
+---
+
+四題全部正確！🎯
+
+你已經掌握壓電模組的四個核心概念：
+
+1. **壓電效應**：施加電壓，壓電材料產生微小形變。
+2. **Flexure 柔性導引**：利用材料彈性變形，讓平台精密移動。
+3. **行程與精度**：行程通常較短，但可以達到奈米級定位。
+4. **位置回授**：感測器量測實際位置，控制器依照誤差修正。
+
+### 到目前為止，第 5 單元進度
+
+| 主題                | 進度   |
+| ----------------- | ---- |
+| 直驅馬達 Direct Drive | 完成   |
+| 音圈馬達 VCM          | 完成   |
+| 阻尼器 Damper        | 完成   |
+| 減速機構 Reducer      | 完成   |
+| 壓電模組 Piezo Stage  | 完成   |
+| 自動化模組             | 尚未開始 |
+
+接下來進入第 5 單元最後一個主題：
+
+**自動化模組（Automation Modules）**
+
+我們會認識：
+
+* 電動缸（Electric Cylinder）
+* 電動夾爪（Electric Gripper）
+* 中空旋轉平台（Hollow Rotary Stage）
+* 直線模組與多軸自動化組合
+
+重點放在它們的機械構造、運動方式，以及 STM32／EtherCAT 如何控制這些設備，不會深入機械設計數學。
+
+這個主題完成後，就可以正式進入第 6 單元：**光學元件、雷射與 Camera**。
+
+---
+
+五題全部答對！而且你這次提出的問題非常重要，因為你已經開始從「認識零件」進入「理解為什麼設備設計師要選擇這種機構」的階段了。
+
+你的觀察其實有一部分完全正確：
+
+**電缸和滾珠螺桿滑台，內部確實可能使用相同的傳動原理。尤其是滑台型電缸，從運動原理來看，和電動滑台非常接近。**
+
+但兩者主要差異在於：**它們設計出來要完成的工作不同。**
+
+## 一、先從最重要的差異開始
+
+我們把兩種機構放在一起比較。
+
+### 1. 電動滑台：讓平台移動
+
+想像你要在平台上安裝一台 Camera。
+
+你希望 Camera 能夠沿著 X 軸移動，精確停在不同位置。
+
+這時候，電動滑台非常適合。
+
+![Image](https://images.openai.com/static-rsc-4/RHPCLEcMZTeR5Satad8pdSTEQBhfM5s3Bc8RbPHnA0_3lxF_6FbTdxFIxLxxD14SmcfZJ4hpEFWaZLuYCe_wIPTlbEiDG7O5RPT-urTVrT5JQdvnMJ57pmmnWaBHDtJOJBH8WmxCikzfHR1olR7Pv8LhAOXI-zdIqh31RF2TvOTF6LDE11tFC-cW2e3Td2bu?purpose=fullsize)
+
+它的工作方式：
+
+馬達旋轉 → 滾珠螺桿 → 螺帽 → 移動平台
+
+Camera 固定在移動平台上，滑軌負責支撐與導引。
+
+這種機構的主要任務是：
+
+**承載物品，讓物品沿著指定路徑精確移動。**
+
+### 2. 推桿型電缸：推動或拉動物體
+
+現在換一個情境。
+
+假設你要把一根金屬插銷壓入工件。
+
+你不需要一個平台承載 Camera，也不需要讓整個工件沿著滑軌移動。
+
+你真正需要的是：
+
+**一根推桿，沿著固定方向伸出，把插銷壓進工件。**
+
+![Image](https://images.openai.com/static-rsc-4/40n_jzD6DvW5Er1cyafiYTHaY-k9p65DljIogWPrc6RonNJsFNiNlcXkUoF0LNIE-1_bshtfUisAr5ZyxZnodCiqgiOztIUl96pXLi5denCe5pHCgFRbyzCFFK4lpEv-oCRzSDd011vyhpW0s2tUjPHr5CwT7csiT7BuzMGip2tSHv6aGf4_VhP2sZQPw7R_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/IUQAmmCZ8ux1lDHRXLPi11eHJqXp-uThUp0jkkeOrYJwoKz48xLYDgx6rYIGAlLb-pUrY53XVc36E3PaguCXHh2H2mj7zNJiFT9p1F4jdG9XEEH-WPO8vTYiJkER4crxgxQtJ3K94S30G4_42Ni81fueYLF1R3onzciV_fG_teTpCoCBOZThVeAI5Fae0e5j?purpose=fullsize)
+
+這時候，推桿型電缸就很適合。
+
+典型運作方式：
+
+馬達旋轉
+↓
+滾珠螺桿旋轉
+↓
+螺帽移動
+↓
+推桿伸出
+↓
+推動插銷進入工件
+
+這就是電缸與一般電動滑台最值得注意的差異。
+
+| 比較     | 電動滑台           | 推桿型電缸           |
+| ------ | -------------- | --------------- |
+| 主要輸出   | 移動平台           | 推桿              |
+| 主要任務   | 承載物品並定位        | 推、拉、壓、頂升        |
+| 負載安裝方式 | 固定在移動平台        | 通常連接在推桿末端       |
+| 導引方式   | 通常有內建滑軌        | 依產品設計，必要時搭配外部導引 |
+| 典型用途   | Camera 定位、工件移動 | 插入、壓合、頂升、推送     |
+
+要特別注意：推桿主要是承受軸向推力，不適合任意承受側向力量。如果被推動的物品還需要沿著某個方向穩定移動，通常必須另外設計導引機構。
+
+---
+
+## 二、那麼，電缸具體用在哪裡？
+
+我們看四個實際的工業應用。
+
+### 應用 1：零件壓入（Press Fitting）
+
+例如汽車零件組裝，需要把軸承壓入金屬零件。
+
+電缸向下推動壓頭，將軸承壓入指定深度。
+
+這裡有兩項很重要的控制需求：
+
+1. 壓頭必須到達指定位置。
+2. 壓入過程不能施加過大的力量，以免損壞零件。
+
+若搭配適當的力量感測器與伺服控制器，還能監控壓入過程中的力量變化。
+
+這是電動壓裝設備的典型應用。([Bosch Rexroth Canada][1])
+
+### 應用 2：工件頂升（Lifting）
+
+例如輸送帶上的工件需要被頂起，讓另一個機構從下方通過。
+
+電缸向上伸出，將工件頂升到指定高度。
+
+如果工件需要不同高度：
+
+* 第一次頂升 10 mm。
+* 第二次頂升 25 mm。
+* 第三次頂升 40 mm。
+
+電動控制系統可以依照工作流程設定不同的位置。
+
+這也是電缸適合的地方。([en.tt-net.tsubakimoto.co.jp][2])
+
+### 應用 3：輸送帶擋料（Stopper）
+
+例如輸送帶上有很多工件，你需要讓工件停在指定位置。
+
+電缸伸出推桿，形成一道阻擋機構。
+
+工件到達後被擋住，接著由其他機構進行加工或檢測。
+
+加工完成後，電缸縮回，讓工件繼續移動。
+
+### 應用 4：開關與推送機構
+
+例如設備需要自動開啟或關閉一個閘門。
+
+電缸可以：
+
+* 伸出，關閉閘門。
+* 縮回，開啟閘門。
+* 停在指定位置，調整閘門開啟程度。
+
+這類應用不一定需要一個精密的移動平台，只需要穩定的直線推拉動作。
+
+---
+
+## 三、最關鍵的問題：為什麼不直接使用氣缸？
+
+這才是理解電缸價值的重要部分。
+
+傳統氣缸和電缸都能產生直線運動。
+
+但兩者的控制方式不同。
+
+| 比較       | 氣缸       | 電缸        |
+| -------- | -------- | --------- |
+| 動力來源     | 壓縮空氣     | 電動馬達      |
+| 主要傳動     | 氣壓推動活塞   | 馬達帶動螺桿    |
+| 兩端位置控制   | 容易實現     | 容易實現      |
+| 中途任意位置停止 | 一般系統較不容易 | 可透過控制器設定  |
+| 速度控制     | 透過氣流控制   | 可透過馬達控制   |
+| 加減速控制    | 一般系統較受限制 | 可程式化控制    |
+| 推力控制     | 透過氣壓調整   | 可依驅動器功能控制 |
+
+例如，一般氣缸通常只需要完成：
+
+縮回 → 伸出 → 縮回。
+
+如果只是這種簡單工作，氣缸可能就足夠了。
+
+但假設我們需要：
+
+1. 伸出 10 mm，停下。
+2. 再伸出 5 mm，降低速度。
+3. 接觸工件後，以限制力量的方式繼續壓入。
+4. 完成後縮回。
+
+這時候，電缸搭配適當的伺服驅動器與感測器，就能提供更靈活的控制能力。
+
+電動致動器可以對位置、速度、加減速及輸出力量進行程式化控制；一般氣壓系統若要做到類似的中途定位，通常需要額外的控制設備與複雜設計。([Tolomatic][3])
+
+---
+
+## 四、是否有「非使用電缸不可」的情況？
+
+這裡我想特別修正一個觀念：
+
+**實際工業設計中，幾乎沒有某種直線推動工作只能使用電缸、完全沒有其他替代方案。**
+
+同一個工作可能使用：
+
+* 電缸
+* 氣缸
+* 液壓缸
+* 滾珠螺桿滑台
+* 其他機械傳動機構
+
+差別在於哪一種方案比較符合設備要求。
+
+我們用三種場景比較：
+
+| 設備需求                  | 比較適合考慮的機構 | 原因              |
+| --------------------- | --------- | --------------- |
+| 只需要快速伸出、縮回            | 氣缸        | 結構簡單，控制需求較低     |
+| 需要精確控制推進位置、速度與力量      | 電缸        | 馬達控制彈性較高        |
+| 需要 Camera 在長距離移動中精確定位 | 電動滑台      | 有移動平台及導引機構      |
+| 需要非常大的推力              | 電缸或液壓缸等   | 必須依推力、速度與工作條件選型 |
+
+因此，並不是電缸一定比氣缸或滑台好，而是各自的工作定位不同。
+
+---
+
+## 五、回到 GMT：為什麼它同時提供滑台型、推桿型、滑塊型？
+
+這也能解釋你看到 GMT 產品時的疑問。
+
+GMT 官方電缸系列確實提供這三種輸出形式：
+
+* 滑台型
+* 推桿型
+* 滑塊型
+
+也就是說，GMT 並不是只把一種滑台包起來，而是提供不同的直線運動輸出形式。([高明鐵 GMT][4])
+
+其中，推桿型還可以搭配外部導軌設計，讓推桿機構負責提供動力，外部導引機構負責支撐平台移動。GMT 官方資料也有提到這種應用。([gmt.tw][5])
+
+所以你可以這樣記：
+
+**電動滑台：我要讓一個平台移動。**
+
+**推桿型電缸：我要推動或拉動某個機構。**
+
+**滑塊型電缸：我要讓一個滑塊沿著本體移動。**
+
+---
+
+## 六、從 STM32 韌體角度來看
+
+假設我們有一個壓裝設備，使用電缸將插銷壓入工件。
+
+STM32 發送命令：
+
+```text
+目標位置：15 mm
+移動速度：5 mm/s
+最大允許推力：設定值
+```
+
+驅動器控制馬達，讓推桿向下移動。
+
+過程中，控制系統可能取得：
+
+```text
+實際位置：12 mm
+目前力量：設定範圍內
+動作狀態：Moving
+```
+
+完成後：
+
+```text
+實際位置：15 mm
+動作狀態：Done
+```
+
+如果力量超過限制，控制系統可以依照設備安全策略停止動作。
+
+當然，是否能直接設定力量限制，以及能取得哪些回授資料，必須看實際電缸、驅動器與感測器的功能。
+
+---
+
+### 最後確認你是否真的理解了
+
+假設有一台自動化設備，需要把一個金屬銷釘壓入塑膠零件。
+
+要求是：
+
+1. 推桿向下移動。
+2. 接觸銷釘後，必須控制壓入力量。
+3. 壓入指定深度後停止。
+4. 然後推桿縮回。
+
+請問：
+
+**這個應用為什麼比較適合考慮推桿型電缸，而不是直接使用一般電動滑台？**
+
+你不需要使用專業術語，只要用自己的理解說明兩者的差異即可。
+
+[1]: https://dc-mkt-prod.cloud.bosch.tech/us/en/c/electromechanical-cylinders-emc/?utm_source=chatgpt.com "Electromechanical cylinders EMC"
+[2]: https://en.tt-net.tsubakimoto.co.jp/tecs/pdct/sad/pdct_sad_1slp.asp "Power Cylinder (Electric Cylinder) Product Info | TSUBAKI Power Transmission Products Information Site"
+[3]: https://www.tolomatic.com/info-center/resource-details/a-technical-comparison-performance-of-pneumatic-cylinders-and-electric-rod-actuators/ "A technical comparison: Performance of pneumatic cylinders and electric rod actuators - Tolomatic"
+[4]: https://www.gmtglobalinc.com/%E9%9B%BB%E7%BC%B8%E7%B3%BB%E5%88%97?utm_source=chatgpt.com "電缸系列｜高精度小型電動氣缸｜高明鐵 GMT"
+[5]: https://www.gmt.tw/tw/%E8%87%AA%E5%8B%95%E5%8C%96-%E5%85%83%E4%BB%B6-%E8%A8%AD%E5%82%99?pagenumber=3&utm_source=chatgpt.com "GMT GLOBAL INC-螺桿,線性導軌"
+
+
+---
+
+是的，**GMT 的推桿型和滑塊型電缸，動力來源也都是電動馬達**。它們與滑台型一樣，主要利用「馬達旋轉 → 滾珠螺桿 → 直線運動」的原理。
+
+真正的差異不是動力來源，而是：**馬達帶動螺桿後，最後是讓哪一個零件移動，以及如何把力量傳遞給外部設備。**
+
+我們分別看這兩種。
+
+# 一、推桿型電缸：讓一根推桿伸出、縮回
+
+先看 GMT 推桿型的外觀：
+
+![Image](https://images.openai.com/static-rsc-4/bcVSNuFXV4OaFpX7SsrMiC2SEnnA2pdb1OyJSuUAbtW2MWjXwSX03AYiNdrK_1ocs_HquMtJxQuCEpa0cBQiG9IL2clQFJRbhv0XGRJgf2ThWn8OU_AVlrLc1Uvz7UFgGjXewbPw-H9ZQvvJtlkimdiA_Uo8BwlIcBPaKGvSpB6vScfKVA96G52o5r5CKg__?purpose=fullsize)
+
+它的外觀看起來像一個長方形金屬外殼，前端有一根可以伸縮的金屬推桿。
+
+## 1. 內部如何運作？
+
+它的運動方式可以這樣理解：
+
+```text
+        電動馬達
+            │
+            ▼
+       滾珠螺桿旋轉
+            │
+            ▼
+       滾珠螺帽移動
+            │
+            ▼
+       帶動推桿移動
+            │
+       ┌────┴────┐
+       ▼         ▼
+     推桿伸出   推桿縮回
+```
+
+這裡有個關鍵：
+
+**滾珠螺帽不是直接帶動一個平台，而是與內部推桿機構連接。**
+
+當馬達讓螺桿正向旋轉，螺帽沿著螺桿前進，推桿就伸出。
+
+當馬達反向旋轉，螺帽往相反方向移動，推桿就縮回。
+
+### 2. 推桿怎麼保持直線移動？
+
+你可能會想到一個問題：
+
+螺帽沿著螺桿移動時，如何避免推桿跟著螺桿一起旋轉？
+
+GMT 的 GECX 推桿型使用了特殊的自潤滑套導引結構。
+
+它的作用是：
+
+* 引導推桿做直線運動。
+* 限制推桿不隨螺桿旋轉。
+* 支撐適當的徑向負荷。
+* 減少摩擦與磨耗。
+
+因此，推桿可以直接從電缸前端伸出，不需要像一般滑台那樣，另外設置一個外露的移動平台。([高明鐵 GMT][1])
+
+## 3. 推桿型適合什麼工作？
+
+例如：
+
+* 把銷釘推入工件。
+* 將工件頂起。
+* 推動閘門。
+* 將零件推入治具。
+* 進行定深度插入。
+
+這種機構的特色是：**我只需要一個固定方向的推拉動作，不需要一個平台承載物品移動。**
+
+---
+
+# 二、滑塊型電缸：讓一個滑塊沿著本體移動
+
+接下來看 GMT 的 GERC 系列。
+
+這種外觀就比較接近長型電動滑台。
+
+它有一個長方形本體，上面有一個可以移動的滑塊。
+
+## 1. 內部如何運作？
+
+它的結構與你之前學過的滾珠螺桿滑台非常接近。
+
+```text
+       電動馬達
+           │
+           ▼
+      滾珠螺桿旋轉
+           │
+           ▼
+      滾珠螺帽移動
+           │
+           ▼
+      帶動外部滑塊
+           │
+           ▼
+      滑塊沿線性滑軌移動
+```
+
+它與推桿型最大的不同是：
+
+**滾珠螺帽連接的是一個滑塊，而不是一根伸縮推桿。**
+
+滑塊安裝在本體的線性滾珠導引上，因此能沿著長條形本體移動。
+
+這裡有兩個重要元件：
+
+| 元件   | 功能            |
+| ---- | ------------- |
+| 滾珠螺桿 | 提供直線移動所需的推動力量 |
+| 線性滑軌 | 支撐滑塊，限制移動方向   |
+
+這與我們之前學過的滑台原理完全連得起來。
+
+GMT 的 GERC60 就使用 Ø10 滾珠螺桿及循環式線性滾珠導引。([高明鐵 GMT][2])
+
+## 2. 滑塊型適合什麼工作？
+
+例如：
+
+* 讓 Camera 沿著一條長軸移動。
+* 將工件送到不同加工位置。
+* 讓檢測設備沿著輸送方向移動。
+* 將大型夾具或其他機構安裝在滑塊上移動。
+
+它的優點是可以讓使用者直接將外部負載固定在滑塊上，不必另外設計推桿與外部導引機構。
+
+---
+
+# 三、你問到的重點：電缸是否有行程較長的優勢？
+
+這個問題很值得研究。
+
+答案是：**某些電缸確實可以做到比小型精密滑台更長的行程，但不是所有電缸都比較長。**
+
+我們直接看 GMT 的實際產品資料。
+
+### 1. 推桿型：GECX 系列
+
+GMT 型錄列出的行程：
+
+| 型號     | 行程           |
+| ------ | ------------ |
+| GECX35 | 50、75、100 mm |
+| GECX40 | 50～150 mm    |
+| GECX60 | 50～200 mm    |
+
+以 GECX35 為例，官方規格也列出最高速度 40、80、120 mm/s，分別對應不同螺桿導程配置。不是同一組配置能同時達到所有速度。([GMT Global Inc.][3])
+
+### 2. 滑塊型：GERC60
+
+GMT 官方列出的 GERC60：
+
+| 項目   |        規格 |
+| ---- | --------: |
+| 最小行程 |    100 mm |
+| 最大行程 |    600 mm |
+| 滾珠螺桿 |       Ø10 |
+| 導引方式 | 循環式線性滾珠導引 |
+
+它的行程可以達到 600 mm，也就是 60 公分。([高明鐵 GMT][2])
+
+這就比我們之前學習的 CXS50 精密滑台 20／30 mm 行程長很多。
+
+所以你可以看到：
+
+**滑塊型電缸可以設計成長行程的直線運動模組。**
+
+---
+
+# 四、電缸的移動速度是否比較快？
+
+也不一定，要看設計。
+
+例如，GMT GERC60 的官方規格頁列出了不同馬達、驅動器配置的速度資料，其中伺服配置最高可達 500 mm/s；但行程 600 mm 時，頁面也特別提醒安全速度限制為 450 mm/s，超過可能產生嚴重共振。([高明鐵 GMT][2])
+
+為什麼行程越長，有時候速度反而要限制？
+
+因為滾珠螺桿越長，高速旋轉時越需要考慮：
+
+* 螺桿振動。
+* 機構共振。
+* 螺桿支撐能力。
+* 移動負載的慣性。
+* 馬達與驅動器的能力。
+
+所以不是馬達轉得越快，整個滑塊就一定能無限制地加速。
+
+### 還有一個重要觀念：螺桿導程
+
+我們之前學過導程。
+
+假設：
+
+| 導程    | 螺桿轉一圈，平台移動 |
+| ----- | ---------: |
+| 2 mm  |       2 mm |
+| 5 mm  |       5 mm |
+| 10 mm |      10 mm |
+
+假設馬達每分鐘轉 600 圈：
+
+* 導程 2 mm：每分鐘移動 1200 mm。
+* 導程 10 mm：每分鐘移動 6000 mm。
+
+因此，導程較大的螺桿，在相同轉速下可以產生較高的直線速度。
+
+但是，這通常伴隨推力與定位特性的取捨。相同馬達扭力下，導程越大，能提供的軸向推力通常越小。
+
+這就是電缸選型時需要考慮的事情。
+
+---
+
+# 五、三種電缸，現在可以這樣理解
+
+| 比較     | 滑台型   | 推桿型    | 滑塊型     |
+| ------ | ----- | ------ | ------- |
+| 動力來源   | 電動馬達  | 電動馬達   | 電動馬達    |
+| 傳動方式   | 滾珠螺桿  | 滾珠螺桿   | 滾珠螺桿    |
+| 主要移動部件 | 移動平台  | 伸縮推桿   | 滑塊      |
+| 導引方式   | 線性滑軌  | 自潤滑套導引 | 線性滑軌    |
+| 主要用途   | 承載與定位 | 推、拉、頂升 | 長距離直線移動 |
+| 行程特色   | 依產品而定 | 常見較短   | 可設計較長   |
+
+## 六、最後幫你建立一個觀念
+
+你原本認為電缸只是把滾珠滑台包裝起來，這並沒有完全錯。
+
+因為它們確實可以使用相同的傳動技術。
+
+但電缸真正的價值是：**把馬達、滾珠螺桿、導引機構、外部輸出結構及相關感測元件整合成符合特定自動化用途的直線致動模組。**
+
+這樣設備設計者就不需要每次都自行設計：
+
+* 馬達如何固定？
+* 螺桿如何支撐？
+* 螺帽如何連接推桿？
+* 推桿如何保持直線？
+* 滑塊如何安裝？
+* 感測器如何配置？
+
+直接選擇適合的模組即可。
+
+---
+
+### 給你一個思考題
+
+假設你要設計一台設備：
+
+需要讓一台 Camera 沿著直線移動 **500 mm**，並且在沿途不同位置拍攝影像。
+
+你會選擇：
+
+A. 推桿型電缸
+B. 滑塊型電缸
+C. 音圈馬達
+
+請說明你的選擇，以及為什麼另外兩種不適合。
+
+這題可以幫助你確認是否真正理解三種機構的用途。
+
+[1]: https://www.gmtglobalinc.com/%E6%8E%A8%E6%A1%BF%E5%9E%8B/GECX35-%E9%9B%BB%E7%BC%B8-%E6%8E%A8%E6%A1%BF%E5%9E%8B "GECX35 電缸 - 推桿型 | 自動化模組 | 高明鐵 GMT"
+[2]: https://www.gmtglobalinc.com/%E6%BB%91%E5%A1%8A%E5%9E%8B/GERC60-%E9%9B%BB%E7%BC%B8-%E6%BB%91%E5%A1%8A%E5%9E%8B "GERC60 電缸 - 滑塊型 | 自動化模組 | 高明鐵 GMT"
+[3]: https://www.gmt.tw/en/gecx35-electric-cylinder?utm_source=chatgpt.com "GMT GLOBAL INC-GECX35 Electric Cylinder"
+
+
+---
+
+你的答案 **B. 滑塊型電缸** 正確！因為 Camera 必須固定在移動部件上，沿著 500 mm 的直線行程移動，滑塊型的結構比較適合。
+
+接著你的問題也問得很好：
+
+**是的，史都華平台（Stewart Platform，也就是六足平台）可以使用六支電缸作為六條可伸縮的支腿。這也是常見的實現方式之一。**
+
+而且，這能把我們前面學過的電缸與六足平台串聯起來。
+
+# 一、六支電缸如何組成史都華平台？
+
+先看這張結構圖：
+
+![Image](https://images.openai.com/static-rsc-4/9Fzhn7rGHD29h8AgqPCyqFIP87T8NSSRlLRdZ-gzRS0yFtW557fa4KynrS0KoVC2NTMAq6vGn_xzI7hNj625-8ry35fUIN2pM42Hh4tPu_K32oJrg7GbSY6Pk57qeRFFvgcQq5M4Y1H6qu3RiOXmr12lDU4aC9hz-NzymrMt-YhAGUwJ6l5ItPI9zjIgtmgG?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/1QbSa7yKVlF85EB9M_r74tDNDRiYjjr1f602ZtWdJ_isb5TMl_s07u7DynUH5iEvLjyJJCCsqEdjjT8S7Wzb8zeh1WHCdWjHhnWgoWDfWz6eJuRWcn7-CBnTmW-TqkGoxC2ONuydJkAOkXZ95IaRBoqrUML-GJi7MM27tsWKJJfp-ta76XA2qY_qYe_By5jN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ETD0wAY933Nt7pXTJuIyrkxUgo5fYR2Wlul094V526TgdVmIQNHKIoH85Qyr8S5fTHZNtCMQTpsCBx4hP6x1MEi3FSvaYfv0Wy5pCNCtTc6A_Xtw7jHaIoCulxSVjgImGJqSOxe6sF5ZmodHwnYM8qM5nkkeBzOWMMzD_KiG1YOFF2OwWs0fpKRo-XzIVgf9?purpose=fullsize)
+
+圖中可以看到：
+
+* 下方藍色平台：固定底座（Base）。
+* 上方紅色或黃色平台：移動平台（Moving Platform）。
+* 中間六支可伸縮的機構：六條支腿（Legs）。
+* 支腿兩端的關節：允許支腿隨著平台姿態改變角度。
+
+這六支支腿如果採用電動致動器，就可以使用電動馬達帶動內部螺桿，讓每一支支腿獨立伸長或縮短。
+
+例如：
+
+```text
+             上平台
+          ┌─────────┐
+           ● ● ● ● ● ●
+           ╲ ╲ ╲ ╱ ╱ ╱
+            六支電缸
+           ╱ ╱ ╱ ╲ ╲ ╲
+          ● ● ● ● ● ●
+          └─────────┘
+             固定底座
+```
+
+這種設計不是將六個普通電動滑台堆疊起來，而是把六支可變長度的致動器，分別連接在固定底座與移動平台之間。
+
+學術文獻中的電動史都華平台，也有採用六支伺服馬達驅動的電動缸作為六條支腿的實例。([MDPI][1])
+
+# 二、六支電缸如何讓平台產生六個自由度？
+
+這是最重要的部分。
+
+你之前已經學過：
+
+* X：左右平移
+* Y：前後平移
+* Z：上下平移
+* θX：繞 X 軸旋轉
+* θY：繞 Y 軸旋轉
+* θZ：繞 Z 軸旋轉
+
+現在要理解的是：**六支電缸並不是一支負責一個方向，而是六支共同協調運動。**
+
+舉三個例子。
+
+### 情況 1：讓上平台升高
+
+六支電缸按照適當的比例伸長，讓上平台升高。
+
+注意：實際上，即使只是純粹向 Z 軸移動，各支電缸的伸長量也不一定完全相同，這取決於它們的安裝角度與幾何位置。
+
+### 情況 2：讓上平台向前傾斜
+
+前方的幾支電缸縮短，後方的幾支電缸伸長，讓上平台產生傾斜。
+
+實際哪些支腿伸長或縮短，則取決於平台的安裝方向。
+
+### 情況 3：讓上平台向右平移
+
+六支電缸依照幾何位置，分別進行不同程度的伸長或縮短，使上平台整體往右移動，同時維持需要的姿態。
+
+所以，控制器必須同時計算六支電缸各自應該移動多少。
+
+這就是之前提過的**逆向運動學（Inverse Kinematics）**。這裡只要理解概念即可，不需要深入數學計算。
+
+# 三、六支電缸不能直接隨便安裝
+
+這裡有一個重要的機械差異。
+
+一般電缸通常是設計成沿著自己的軸線伸縮。
+
+但史都華平台在移動時，六支支腿的角度也會改變。
+
+因此，支腿兩端必須使用能夠允許角度變化的關節，例如：
+
+* 球面關節（Spherical Joint）
+* 萬向接頭（Universal Joint）
+
+這些關節讓電缸伸縮時，不會因為上平台傾斜而受到不應有的側向擠壓。
+
+另外，電缸本身還必須符合負載、剛性、行程、精度及速度要求。
+
+所以，不能直接拿六支一般用途的電缸安裝上去，就認為一定能組成精密六足平台。
+
+# 四、回到 GMT 的 GSS-100-D
+
+GMT 的 GSS-100-D 就是我們之前學過的六自由度史都華平台。
+
+官方目前列出的規格包括：
+
+| 項目      |    GSS-100-D |
+| ------- | -----------: |
+| 控制自由度   |          6 軸 |
+| X 軸行程   |       ±16 mm |
+| Y 軸行程   |       ±16 mm |
+| Z 軸行程   |      ±6.5 mm |
+| θX 旋轉範圍 |         ±10° |
+| θY 旋轉範圍 |         ±10° |
+| θZ 旋轉範圍 |         ±20° |
+| 控制方式    | EtherCAT 全閉環 |
+
+它適用於矽光子（SiPh）、FAU 主動對位、影像伺服及精密組裝。([高明鐵 GMT][2])
+
+不過要特別區分：GMT 官方公開資料確認了它的六自由度並聯架構及控制規格，但不能只憑產品頁面就斷定它內部使用的是哪一款通用電缸，或一定採用我們前面討論的某一種電缸結構。
+
+官方產品資料：[GMT GSS-100-D 六自由度精密史都華平台](https://www.gmtglobalinc.com/%E5%8F%B2%E9%83%BD%E8%8F%AF%E5%B9%B3%E5%8F%B0/gmt-gss100d-high-precision-hexapod-platform)
+
+---
+
+## 五、把今天學到的東西連起來
+
+現在你可以建立這個概念：
+
+**電缸是一種產生直線伸縮運動的致動器；史都華平台則是將六支致動器組合成一個可以產生六自由度運動的並聯機構。**
+
+單支電缸只能沿著自己的軸線伸縮，但六支電缸經過適當的機械組合與協調控制，就能讓上平台完成 XYZ 平移以及 RX、RY、RZ 旋轉。
+
+這就是兩者之間的關係。
+
+接下來有一個小問題確認你是否理解：
+
+**假設六足平台需要讓上平台向前傾斜，為什麼不能只讓其中一支電缸伸長，而必須讓多支電缸配合伸縮？**
+
+用自己的理解回答就可以。
+
+[1]: https://www.mdpi.com/2075-1702/10/8/711?utm_source=chatgpt.com "Stewart Platform Motion Control Automation with Industrial Resources to Perform Cycloidal and Oceanic Wave Trajectories"
+[2]: https://www.gmtglobalinc.com/%E5%8F%B2%E9%83%BD%E8%8F%AF%E5%B9%B3%E5%8F%B0/gmt-gss100d-high-precision-hexapod-platform "GSS-100-D 六自由度精密史都華平台 | 高明鐵企業股份有限公司"
+
+
+---
+
+完全正確！你的理解已經掌握史都華平台最重要的原理。
+
+**單支電缸只能提供一個方向的伸縮運動，無法獨立控制整個平台的六自由度。**
+
+六支致動器連接固定底座與移動平台，透過各自不同的伸縮量互相配合，才能控制平台的：
+
+* 三個平移方向：X、Y、Z。
+* 三個旋轉方向：RX、RY、RZ。
+
+再補充一個重要觀念：**六支電缸並不是各自負責一個自由度，而是六支共同決定平台的位置與姿態。**
+
+例如要讓平台向前傾斜，控制器必須計算六支致動器各自應該伸長或縮短多少，而不是單獨控制其中一支。
+
+這部分你已經理解，不需要再深入數學計算。
+
+---
+
+### 第 5 單元正式完成！
+
+我們已經學過：
+
+1. 精密機械基礎元件。
+2. 傳動機構。
+3. 馬達、驅動器與控制。
+4. GMT 電動滑台及多軸平台。
+5. 直驅、音圈、壓電及自動化模組。
+
+**下一個單元進入第 6 單元：光學元件、雷射與 Camera。**
+
+這個單元會開始接觸光學設備的實際工作原理，為後續學習矽光子、光纖耦合及精密光學對位做準備。
+
+
+---
+
+# 第 6 單元：光學元件、雷射與 Camera
+
+這個單元會開始接觸 GMT 精密設備非常重要的應用領域。
+
+前面五個單元，我們主要學習的是機械如何移動、如何定位，以及控制器如何驅動馬達。
+
+從這個單元開始，我們要進一步了解：
+
+**光是如何傳播的？鏡頭如何聚焦？Camera 如何取得影像？雷射如何傳輸？又如何讓光線精準地進入光纖或矽光子晶片？**
+
+這些知識最後都會連結到 GMT 的光纖耦合與精密對位設備。
+
+GMT 官方的應用領域包括光收發模組、CPO、矽光子、雷射光源及光學元件組裝等。([高明鐵 GMT][1])
+
+## 第 1 課：先認識光學系統的基本結構
+
+今天先不急著研究雷射，也不深入 Camera 的電子規格。
+
+我們先建立一個最基本的概念：
+
+**一套光學系統，是由光源、光學元件、被觀察物體，以及接收光線的感測元件組合而成。**
+
+### 一、先看實際的光學設備
+
+![Image](https://images.openai.com/static-rsc-4/Pcf8yM7leS_PuCN42qR7zbeJbWbYXyE5LsnWc0DcjT5XTaDVkubqFPZtUVD2HXs89j9YhOw6ojpQ0OiBEcVBP2JXSHPXbEbtoOC2Z3P-uYrgnV20HaIn8qFNuypzVDJnWe6ehAr8FLxJX5QRzWJILU0bVUvDV2eq4LHHgQobqb7RwZkWvzRsYAYT45AOwkcy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/MvJ5nhhEXGnh4o6tv69_FEKVDwpt-EBYXdf6G6NKQnfpeGtGQIFR3Po30MsDYL--FOb1vpHwLVArfqze-UwrjOZqxtnP4XAcbIKefDysvUU2uOhYqqd-qZJ4XREvRv2J_re-js3mZPYFQxa4DB2xHnpR5dJQdVB9LgYWbG_6DBI5-SToOgDfBaEMfQfkejNj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/GHvTQOuzMYt-HeM4OUAk60Fgze1tsFSKSVlDdnYkQo9SgSD0bT4nD8yipt1hewpF0aQHS4fpJJ3BsRP9QTsYiM_VBsG1IbCtD_h_HqKHQRobGmjA0p9cBHT0wuWmMChr8urY8laq8ZbBrVoJSRj6509C75nmMNsXW5pLNtYSMbbulotmQPwHB87tlnAgNq7Q?purpose=fullsize)
+
+這幾張圖片值得仔細看。
+
+第一張是光學平台（Optical Breadboard），上面安裝了許多光學元件，例如透鏡、反射鏡及固定座。
+
+第二張是實際的雷射光路配置，可以看到雷射光經過不同的光學元件後，沿著指定方向傳播。
+
+第三張則是機器視覺使用的同軸照明結構，光源透過特殊光學元件，與 Camera 共用同一條光軸。
+
+你可以發現，光學設備不像一般機械設備只需要考慮零件的位置。
+
+它還必須考慮：
+
+* 光線從哪裡發出？
+* 光線往哪個方向傳播？
+* 光線是否需要聚焦？
+* 光線是否需要反射或改變方向？
+* 最後是否能正確進入 Camera 或光學元件？
+
+這就是光學系統的基本工作。
+
+---
+
+### 二、光學系統最基本的三個元件
+
+我們先認識三個最常見的元件。
+
+#### 1. 光源（Light Source）
+
+光源負責提供光線。
+
+常見的光源有：
+
+| 光源        | 主要用途           |
+| --------- | -------------- |
+| LED       | 物體照明、影像檢測      |
+| 雷射（Laser） | 精準光束傳輸、光學耦合、加工 |
+| 紅外線光源（IR） | 特定紅外線感測或檢測     |
+
+這裡先區分兩個概念：
+
+**LED 通常是拿來照亮物體，讓 Camera 看得清楚。**
+
+**雷射則常用來提供方向性較強、發散角較小的光束，進行精準傳輸或光學耦合。**
+
+兩者都是光源，但用途不完全相同。
+
+後面我們會專門花一課介紹雷射。
+
+#### 2. 透鏡（Lens）
+
+![Image](https://images.openai.com/static-rsc-4/Pcf8yM7leS_PuCN42qR7zbeJbWbYXyE5LsnWc0DcjT5XTaDVkubqFPZtUVD2HXs89j9YhOw6ojpQ0OiBEcVBP2JXSHPXbEbtoOC2Z3P-uYrgnV20HaIn8qFNuypzVDJnWe6ehAr8FLxJX5QRzWJILU0bVUvDV2eq4LHHgQobqb7RwZkWvzRsYAYT45AOwkcy?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/bcvkQuh39lAYZaXdeGWsEP6nR7SpUobkOuWFYd9B29zazKTFMaAV-blmdPVhFOl5aAPzUFMdyX6s41BbHvq9lBRvZ2mBev8Pp__lf1ljE7GtD75_e6Orpx3Un0V-1EZMv1-2Bsf2m6CsKfJziuMg8RUEGfskbKU8U5OeI_dkhwpn7kptyLOnFDg7YYAq4uFN?purpose=fullsize)
+
+透鏡是光學設備中非常重要的元件。
+
+它主要利用折射改變光線方向，讓光線：
+
+* 聚焦。
+* 發散。
+* 改變成像大小。
+* 調整成像位置。
+
+舉個例子：
+
+假設我們要用 Camera 拍攝一個只有 0.5 mm 大小的微小零件。
+
+如果直接使用一般 Camera，可能無法清楚看見零件的細節。
+
+這時候就需要透過鏡頭，把物體的影像適當放大並聚焦到感光元件上。
+
+你可以先記住：
+
+**透鏡負責控制光線，讓 Camera 能夠取得清楚、適合分析的影像。**
+
+後面我們會深入學習焦距、放大倍率、視野及景深。
+
+#### 3. Camera（相機）
+
+![Image](https://images.openai.com/static-rsc-4/bcvkQuh39lAYZaXdeGWsEP6nR7SpUobkOuWFYd9B29zazKTFMaAV-blmdPVhFOl5aAPzUFMdyX6s41BbHvq9lBRvZ2mBev8Pp__lf1ljE7GtD75_e6Orpx3Un0V-1EZMv1-2Bsf2m6CsKfJziuMg8RUEGfskbKU8U5OeI_dkhwpn7kptyLOnFDg7YYAq4uFN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Jcs9wcEWTyk0NPNWoTIqFruFefeEV17lmtGGtHajUMlJMM69KcfE2t85OUpecnE5lYBVqkRynihHgfsBsvEGrFSXgTZLtu9JipOLFulqBrNJI8_mtteuwG8oGpB4lvCJk6J9lBYDv3-kzjO6rLLpQHEg-H_M6KSDlpOONK2RzvoaCpn_HVFuuI27DYdS5gva?purpose=fullsize)
+
+Camera 在光學設備中負責接收光線並產生影像。
+
+它的內部有一個非常重要的元件：
+
+**Image Sensor（影像感測器）。**
+
+常見的影像感測器有：
+
+* CCD
+* CMOS
+
+光線進入 Camera 後，經過鏡頭到達感光元件，感光元件將接收到的光轉換成電訊號，再由相機處理成數位影像。
+
+簡單理解：
+
+```text
+物體反射的光
+      │
+      ▼
+    透鏡
+      │
+      ▼
+  Image Sensor
+      │
+      ▼
+    數位影像
+      │
+      ▼
+ PC / Vision System
+      │
+      ▼
+ 影像辨識與位置計算
+```
+
+例如，Camera 拍到一個零件後，影像處理軟體可以辨識：
+
+* 零件中心在哪裡？
+* 零件是否歪斜？
+* 零件目前旋轉多少角度？
+* 零件是否有刮傷？
+
+注意：Camera 本身主要是取得影像，後續的辨識與位置計算通常由 PC、Vision Controller 或其他影像處理系統完成。
+
+---
+
+### 三、最重要的差異：Camera 檢測與雷射耦合是兩種不同工作
+
+這一點與你未來要學習的矽光子非常有關係。
+
+我們先比較兩種情況。
+
+#### 情況 A：使用 Camera 檢查工件
+
+例如要檢查一個金屬零件的外觀。
+
+光線的路徑：
+
+```text
+LED 光源
+   │
+   ▼
+照亮金屬零件
+   │
+   ▼
+零件反射光線
+   │
+   ▼
+Camera 鏡頭
+   │
+   ▼
+Camera 感光元件
+   │
+   ▼
+取得影像
+```
+
+這個工作最重要的是：
+
+**讓 Camera 取得清楚的影像，方便辨識物體。**
+
+#### 情況 B：讓雷射光進入光纖
+
+現在換成另一個情況。
+
+我們要把雷射光送進一根非常細的光纖。
+
+![Image](https://images.openai.com/static-rsc-4/MvJ5nhhEXGnh4o6tv69_FEKVDwpt-EBYXdf6G6NKQnfpeGtGQIFR3Po30MsDYL--FOb1vpHwLVArfqze-UwrjOZqxtnP4XAcbIKefDysvUU2uOhYqqd-qZJ4XREvRv2J_re-js3mZPYFQxa4DB2xHnpR5dJQdVB9LgYWbG_6DBI5-SToOgDfBaEMfQfkejNj?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Pcf8yM7leS_PuCN42qR7zbeJbWbYXyE5LsnWc0DcjT5XTaDVkubqFPZtUVD2HXs89j9YhOw6ojpQ0OiBEcVBP2JXSHPXbEbtoOC2Z3P-uYrgnV20HaIn8qFNuypzVDJnWe6ehAr8FLxJX5QRzWJILU0bVUvDV2eq4LHHgQobqb7RwZkWvzRsYAYT45AOwkcy?purpose=fullsize)
+
+光線的路徑：
+
+```text
+Laser
+  │
+  ▼
+透鏡 / 光學元件
+  │
+  ▼
+聚焦或調整光束
+  │
+  ▼
+光纖端面
+  │
+  ▼
+光纖內部傳輸
+```
+
+這時候最重要的不是 Camera 有沒有拍到光纖。
+
+而是：
+
+**雷射光是否真正進入光纖，而且能夠有效率地傳輸？**
+
+這個工作稱為光學耦合（Optical Coupling）。
+
+GMT 官方的雷射應用資料也說明，透過透鏡耦合技術，可以將雷射泵浦光聚焦到增益介質，提高耦合效率。([高明鐵 GMT][2])
+
+所以，兩種工作的目的不同：
+
+| 比較   | Camera 檢測     | 雷射耦合       |
+| ---- | ------------- | ---------- |
+| 主要目的 | 取得清楚影像        | 讓光進入指定光學元件 |
+| 主要光源 | LED 等照明光源     | 雷射         |
+| 主要元件 | 透鏡、Camera     | 雷射、透鏡、光纖等  |
+| 成功判斷 | 影像是否清楚、辨識是否正確 | 光是否有效耦合    |
+| 主要回饋 | 影像資訊          | 光功率等量測結果   |
+
+這裡先記住一個重要觀念：
+
+**Camera 看見光纖的位置，不代表雷射光已經成功進入光纖。**
+
+光纖耦合設備通常還需要光功率量測，確認耦合效果。
+
+---
+
+### 四、這與我們之前學過的 GMT 精密平台有什麼關係？
+
+現在把機械與光學結合起來。
+
+假設我們要將一束雷射光精準送入光纖。
+
+光纖固定在一個精密平台上。
+
+透鏡也固定在另一個平台上。
+
+平台可以透過 XYZ 或多自由度機構調整位置。
+
+```text
+雷射光源
+    │
+    ▼
+  透鏡
+    │
+    ▼
+  光纖端面
+    ▲
+    │
+精密定位平台
+```
+
+當光纖位置稍微偏移時，耦合效率可能下降。
+
+這時候設備便需要：
+
+1. 使用精密平台調整光纖位置。
+2. 使用 Camera 觀察光纖端面或對位位置。
+3. 使用光功率感測器量測耦合結果。
+4. 控制器根據量測結果繼續微調。
+
+這就是為什麼 GMT 的精密滑台、六足平台、壓電平台等機構會應用在光纖耦合設備中。
+
+GMT 官方也將光收發模組、CPO 及矽光子列為精密對位與自動化組裝的應用領域。([高明鐵 GMT][1])
+
+---
+
+## 五、今天先記住這五件事
+
+| 元件     | 作用                |
+| ------ | ----------------- |
+| 光源     | 提供光線              |
+| 透鏡     | 控制光線、聚焦或成像        |
+| 反射鏡    | 改變光線傳播方向          |
+| Camera | 接收光線並取得影像         |
+| 光功率感測器 | 量測光能量，評估光學輸出或耦合效果 |
+
+今天我們先掌握光學系統的基本架構，不急著深入各種鏡片的設計。
+
+接下來會逐步介紹鏡頭、Camera 感光元件、不同照明方式、雷射，以及光學元件的組合。
+
+---
+
+## 六、今天的小練習
+
+請回答三題即可：
+
+**問題 1**
+
+如果要讓 Camera 清楚拍攝一個非常小的零件，最重要的光學元件之一是什麼？
+
+A. 透鏡
+B. 電動夾爪
+C. 滾珠螺桿
+
+**問題 2**
+
+Camera 內部的 Image Sensor 主要負責什麼？
+
+A. 產生雷射光
+B. 接收光線並轉換成電訊號
+C. 控制滑台移動
+
+**問題 3**
+
+如果要確認雷射光是否有效進入光纖，只使用 Camera 拍攝光纖位置就足夠了嗎？
+
+A. 足夠，只要位置看起來正確就代表耦合成功
+B. 不足夠，還需要量測光功率等資訊確認耦合效果
+
+你先回答這三題。下一課我們就來專門認識**透鏡（Lens）**，包括焦距、放大倍率、工作距離，以及為什麼精密設備需要使用特殊鏡頭。
+
+[1]: https://www.gmtglobalinc.com/en/application/optical-communication "Optical Communication: Optical Transceiver, CPO & Silicon Photonics | GMT GLOBAL"
+[2]: https://www.gmtglobalinc.com/en/application/laser-industry?utm_source=chatgpt.com "Laser Industry Alignment & Coupling Solutions | GMT GLOBAL"
+
+---
+
+三題全部答對！特別是第 3 題，你已經掌握一個非常重要的觀念：**Camera 能看到光纖的位置，不代表光線已經成功耦合進光纖。**
+
+另外，你提出的影像辨識需求，我會納入 Camera 課程。到時候不只介紹 Camera 的硬體，也會從頭教你影像如何轉換成可供電腦分析的資料，以及如何利用影像完成對位。
+
+例如：
+
+1. Camera 拍攝工件。
+2. 影像處理程式找出工件的位置。
+3. 辨識工件中心及旋轉角度。
+4. 將影像座標轉換成設備座標。
+5. STM32 或 Motion Controller 根據計算結果控制平台移動。
+6. 再次拍攝，確認是否對位成功。
+
+這一部分會是 Camera 課程的重要內容。
+
+---
+
+# 第 6 單元・第 2 課：透鏡（Lens）
+
+今天我們要了解透鏡如何控制光線，以及為什麼 Camera 需要透鏡才能取得清楚的影像。
+
+## 一、透鏡是什麼？
+
+透鏡是一種利用光線折射來改變光線傳播方向的光學元件。
+
+你平常看到的眼鏡、放大鏡、相機鏡頭、顯微鏡，都會使用透鏡。
+
+最基本的透鏡分成兩種：
+
+### 1. 凸透鏡（Convex Lens）
+
+![Image](https://images.openai.com/static-rsc-4/m6O5ouq6PSl3KNYjjLbqeswqrlocq9iHw5O-HdFwTFTe2ukJL6To8x1_6uO0jyrO_SVv9eVTpSwJ2EEwOfW0bAtrNPwx1ABdGZaxB5ZfBqCIypVT5pbgE8ppHpiAxX-uTDg5_jfDjG8TsdaQ62pK5zifsEr5ylnoilsNGvQ8Vlx1uG43FLqQIz6eBxoWAeGN?purpose=fullsize)
+
+外觀特徵：
+
+* 中間比較厚。
+* 邊緣比較薄。
+* 能讓平行光線經過折射後逐漸會聚。
+
+例如：
+
+陽光照射凸透鏡，透過適當調整距離，可以讓光線集中在一個小範圍。
+
+這個位置稱為**焦點（Focal Point）**。
+
+想像一下：
+
+```text
+平行光線
+───────────→
+───────────→
+             )( 
+───────────→  )(  ──────●
+             )(        焦點
+```
+
+這裡要記住：
+
+**凸透鏡具有會聚光線的作用。**
+
+這也是 Camera 鏡頭成像的重要基礎。
+
+### 2. 凹透鏡（Concave Lens）
+
+凹透鏡的外觀與凸透鏡相反：
+
+* 中間比較薄。
+* 邊緣比較厚。
+* 能讓平行光線經過折射後向外發散。
+
+![Image](https://images.openai.com/static-rsc-4/5Bj22znJ-r1QHyGjc8DwgA61OBo0EuMAFwGiOdLL3ZxcNkKRK0NOpFXni-0sfn2lBa2-u8URdRmZyFXENR0r1LUU9flsySVVcbktDHjILYVWXfegRuAPbg_3cXcO2FY9VQwmSMr-YKM7NZ8i1e5wl3hEAnn1-kQRud1yMRSv37-C5lyKFHas8llU5u2Heq8u?purpose=fullsize)
+
+例如：
+
+當平行光線通過凹透鏡後，光線會往不同方向散開。
+
+因此：
+
+**凸透鏡主要讓光線會聚，凹透鏡主要讓光線發散。**
+
+這是兩者最重要的差異。
+
+---
+
+## 二、Camera 為什麼需要凸透鏡？
+
+這是今天最重要的部分。
+
+假設桌面上放著一個小型金屬零件。
+
+Camera 要拍攝它，光線必須先從物體進入鏡頭，再到達 Camera 內部的 Image Sensor。
+
+如果沒有適當的透鏡，就無法正常形成清晰的影像。
+
+我們看一下光線的路徑：
+
+![Image](https://images.openai.com/static-rsc-4/m6O5ouq6PSl3KNYjjLbqeswqrlocq9iHw5O-HdFwTFTe2ukJL6To8x1_6uO0jyrO_SVv9eVTpSwJ2EEwOfW0bAtrNPwx1ABdGZaxB5ZfBqCIypVT5pbgE8ppHpiAxX-uTDg5_jfDjG8TsdaQ62pK5zifsEr5ylnoilsNGvQ8Vlx1uG43FLqQIz6eBxoWAeGN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/yp4t0NnoL-MjHo3iFrdX5ZJniM8rNQbRRrRcxmMEQp1EiqxDudg1V9eLwcfEZRqJ8gX-0UrCPNh6VVH9wQp4U2DZQFABt2v_POw9DqQN0tYrvZ_29jqOgPJ0OWysmz3F8ssBzwJzEy4P7NI0FbPO_LmIV7UaH8v8Q4IMLq4O11naUExl9SI7_k49hpK-Fc7O?purpose=fullsize)
+
+實際過程：
+
+```text
+金屬零件
+    │
+    │ 反射光線
+    ▼
+  Camera Lens
+    │
+    │ 折射、聚焦
+    ▼
+ Image Sensor
+    │
+    ▼
+  數位影像
+```
+
+透鏡的工作就是：
+
+1. 接收物體反射的光線。
+2. 透過折射改變光線方向。
+3. 將光線聚焦到 Image Sensor。
+4. 形成清楚的影像。
+
+補充一點：實際的工業 Camera 鏡頭通常不是一片單獨的凸透鏡，而是由多片不同形狀的透鏡組合而成。
+
+這樣可以改善成像品質，降低像差、失真等問題。
+
+---
+
+# 三、什麼是焦距（Focal Length）？
+
+這是你以後選擇 Camera 鏡頭時，一定會看到的規格。
+
+例如：
+
+* 8 mm
+* 12 mm
+* 16 mm
+* 25 mm
+* 50 mm
+
+這些數字就是鏡頭常見的焦距規格。
+
+焦距可以理解成描述鏡頭會聚光線能力的重要參數。
+
+對於簡單的薄凸透鏡，當遠處物體的光線近似平行時，透鏡到成像焦平面的距離就是焦距。
+
+實際多片式 Camera 鏡頭的焦距是相對於光學主平面定義，不一定等於鏡頭外殼到感光元件的實際距離。([edmundoptics.com][1])
+
+### 焦距長短有什麼差別？
+
+假設使用同一台 Camera、同一個拍攝距離：
+
+**8 mm 鏡頭：**
+
+* 能看到比較大的範圍。
+* 適合拍攝較大範圍。
+* 物體在影像中通常比較小。
+
+**16 mm 鏡頭：**
+
+* 能看到比較小的範圍。
+* 適合觀察局部細節。
+* 物體在影像中通常比較大。
+
+![Image](https://images.openai.com/static-rsc-4/eVYdPMHyLVmETczEQxt3443e-OtjBIkkcjkUziU-zWMdqDahfEWHQr2u4-XtwI_-j8LlBUTc0RSIxp7-7OF63tJRXCRTIxANRSiADaED3cp9_dN1peqm8dWpTiT9Sdmwb94Yjirun3jjnMF-Y70miDt5lu4kxuPiScJv0c6L2K68UZuRtfFRqZa8jxaa7yIk?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/x6xb1WbMsOKThunD_kMGMoXBLPazt4HGdDoruEXYM8ted_7VuaPpthGD07GkoZ_NA-zeHC771bDwmCIxxKuDfBve0F2nFEAARlAi13gclt1n1-oobmbNPu3Uxy7fpnRUiiQHlbYRFGW1A8xO0yi_xVXm0bA0SDlqUI6QTE2LXOv6R_TjF0kOEKaIN3wvc4DI?purpose=fullsize)
+
+你可以這樣記：
+
+**在感光元件尺寸與拍攝距離相同的條件下，焦距越短，視野通常越大；焦距越長，視野通常越小。** ([edmundoptics.com][1])
+
+---
+
+# 四、什麼是視野（Field of View，FOV）？
+
+這個觀念與精密對位非常有關係。
+
+FOV 就是 Camera 能夠拍攝到的實際範圍。
+
+例如：
+
+假設一台 Camera 拍攝桌面上的金屬零件。
+
+情況 A：FOV = 100 × 100 mm
+
+代表 Camera 可以拍攝約 100 mm × 100 mm 的區域。
+
+情況 B：FOV = 20 × 20 mm
+
+代表 Camera 只能拍攝約 20 mm × 20 mm 的區域。
+
+我們比較一下：
+
+| 項目   | FOV 100 × 100 mm | FOV 20 × 20 mm |
+| ---- | ---------------- | -------------- |
+| 拍攝範圍 | 大                | 小              |
+| 觀察範圍 | 整個工件             | 工件局部           |
+| 細節觀察 | 相對較少             | 通常較多           |
+| 常見用途 | 整體定位             | 精密細節檢查         |
+
+這裡有一個很重要的問題：
+
+假設你要辨識一個只有 0.1 mm 的微小缺陷。
+
+如果 Camera 拍攝的範圍太大，這個缺陷可能只佔影像中很少的 Pixel，導致辨識困難。
+
+所以有時候需要縮小 FOV，讓 Camera 專注在局部細節。
+
+這也是精密光學設備需要選擇合適鏡頭的原因。
+
+---
+
+# 五、什麼是工作距離（Working Distance，WD）？
+
+工作距離就是鏡頭與被拍攝物體之間的距離。
+
+例如：
+
+```text
+Camera
+   │
+   │
+   │  200 mm
+   │
+   ▼
+金屬工件
+```
+
+這個例子中，工作距離是 200 mm。
+
+實際規格通常以鏡頭前方的基準位置到物體表面計算。
+
+工作距離會影響：
+
+* Camera 可以看到多大的範圍。
+* 鏡頭是否能正確對焦。
+* 設備需要預留多少安裝空間。
+* 照明是否容易配置。
+
+當焦距與 Camera 感光元件不變時，鏡頭離物體越遠，通常可以看到越大的區域。([edmundoptics.com][1])
+
+---
+
+# 六、將三個重要觀念連起來
+
+這三個名詞以後你會經常在工業 Camera 規格表看到。
+
+| 名稱   | 英文               | 意義              |
+| ---- | ---------------- | --------------- |
+| 焦距   | Focal Length     | 鏡頭的重要光學參數       |
+| 視野   | Field of View    | Camera 能拍攝的實際範圍 |
+| 工作距離 | Working Distance | 鏡頭與物體之間的距離      |
+
+它們彼此有關係。
+
+例如：
+
+假設你要用 Camera 檢查一個大型金屬工件，但是只需要檢查其中一個小孔。
+
+你可能會選擇：
+
+* 適當的工作距離，避免鏡頭與工件碰撞。
+* 較長焦距的鏡頭，縮小拍攝範圍。
+* 適當的感光元件尺寸及解析度，確保小孔能被清楚拍攝。
+
+不過實際選鏡頭還必須考慮感光元件尺寸、鏡頭解析度、景深、畸變及照明等因素，不能只看焦距。([edmundoptics.com][2])
+
+---
+
+## 七、今天的小練習
+
+今天先回答四題：
+
+**問題 1**
+
+凸透鏡的主要作用是什麼？
+
+A. 讓光線會聚
+B. 讓光線發散
+C. 阻擋光線
+
+**問題 2**
+
+在 Camera 感光元件尺寸及拍攝距離相同的條件下，8 mm 與 25 mm 鏡頭相比，哪一個通常能看到較大的範圍？
+
+A. 25 mm
+B. 8 mm
+
+**問題 3**
+
+FOV 代表什麼？
+
+A. 鏡頭與物體的距離
+B. 鏡頭的焦距
+C. Camera 能夠拍攝到的實際範圍
+
+**問題 4**
+
+假設要檢查一個很小的金屬孔洞，希望 Camera 能看清楚孔洞的細節，通常應該怎麼調整拍攝範圍？
+
+A. 將 FOV 擴大到整個工作台
+B. 將 FOV 縮小，讓孔洞佔據影像中較大的範圍
+C. 不需要透鏡
+
+你先回答這四題。
+
+下一課我們會繼續介紹**鏡頭的種類**，特別是工業 Camera 常用的定焦鏡頭、變焦鏡頭，以及精密對位設備非常重要的遠心鏡頭（Telecentric Lens）。這個遠心鏡頭，未來在學習光纖及矽光子精密對位時會再次用到。
+
+[1]: https://www.edmundoptics.com/knowledge-center/application-notes/imaging/understanding-focal-length-and-field-of-view "Understanding Focal Length and Field of View | Edmund Optics"
+[2]: https://www.edmundoptics.com/knowledge-center/application-notes/imaging/6-fundamental-parameters-of-an-imaging-system/?utm_source=chatgpt.com "Imaging Fundamentals | Edmund Optics"
+
+
+---
+
+四題全部答對！你已經掌握凸透鏡、焦距和視野的基本概念。
+
+今天繼續第 6 單元，介紹三種在工業 Camera 系統中很重要的鏡頭：
+
+1. 定焦鏡頭（Fixed Focal Length Lens）
+2. 變焦鏡頭（Zoom Lens）
+3. 遠心鏡頭（Telecentric Lens）
+
+其中，第三種遠心鏡頭特別重要，因為它與精密尺寸量測、半導體檢測及光學對位有密切關係。
+
+# 第 6 單元・第 3 課：工業 Camera 的三種鏡頭
+
+## 一、定焦鏡頭（Fixed Focal Length Lens）
+
+![Image](https://images.openai.com/static-rsc-4/vYHcXJcQt8G6JghEthIL034I82NbZGvJ3y3frbp2jVeOjV6dQ8Bk10lHa6TX3dyXJhX847FS3hhHzEKwDe_2rrCqGbgIT88g952QQe4BadbrIW2vXA0Z4nBav4qfudCZrIP-x19n1lX6c6lTdjMTl0sBVRQyitTVVJNwBs4umNPBygWcZkWfBHAoOk-TIV4p?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/GvIZBPy1rh18lN55MqhD_tEBb5neqE3DDE2BpQsVs94vXbt70AmZ8em1TbrRAPysBjfRE9_2WF-88oprtYFyw7hogFXYYDyB1Kscz26hu3MvJcr-XcZk3FRcvHQqyFrQG_M8AQqkdrlfgzxOWZzR_lh1Hb6bka4GnhNiicLLJ0R-kJv09Q1auKoaN9UWke-F?purpose=fullsize)
+
+先看圖片。這是工業 Camera 常見的鏡頭外觀。
+
+你可能會看到鏡頭上標示：
+
+* 8 mm
+* 12 mm
+* 16 mm
+* 25 mm
+
+這些數字代表鏡頭的焦距。
+
+### 1. 定焦鏡頭是什麼？
+
+定焦鏡頭的意思是：
+
+**鏡頭的焦距固定，不能透過變焦機構改變焦距。**
+
+例如，購買一顆 16 mm 定焦鏡頭，它的焦距就是 16 mm。
+
+不過，這裡有一個容易混淆的地方：
+
+**定焦不代表不能調整對焦。**
+
+定焦鏡頭通常仍然可以調整 Focus（對焦），讓不同工作距離的物體形成清晰影像，只是焦距本身不會像變焦鏡頭那樣改變。([Edmund Optics][1])
+
+### 2. 定焦鏡頭適合什麼情況？
+
+假設一台設備需要檢查 PCB 電路板上的電子元件。
+
+Camera 固定在設備上方，電路板也會固定在指定位置。
+
+設備每次都在相同距離拍攝。
+
+這時候只需要選擇適當焦距的鏡頭，設定好對焦與視野，就可以持續拍攝。
+
+它很適合：
+
+* 電路板檢測。
+* 零件外觀檢查。
+* 條碼辨識。
+* 工件位置辨識。
+* 固定位置的影像檢測。
+
+定焦鏡頭是工業視覺中很常見的選擇。([Edmund Optics][1])
+
+---
+
+## 二、變焦鏡頭（Zoom Lens）
+
+![Image](https://images.openai.com/static-rsc-4/4NDDpDqVEioIY2ar2JpYlbwE-Fu0gmUKwgMYdpMBMFurJwFW1w1Vepr8ufbg0JHvq6blC9jV_Iv_nIbcRP2VUf4-hcYhgh2PPRWnVTTOFifGXAh-AEKpM8aBzWWTwSw_Fqq5Wrds7EguG3lzKZ1inPBMUBr_kK0jjaSq4eHJNKonDy1FEkWNrhNgXrJ7MHGF?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/WNuOml8j5oC_35xxE_wgmlbIo5RNBc8BSAaBJPuK8MBnHM9JeXu-y2hSzfqBhZAI7BAu7Bu19cgaBM2T5DBNpFoolR8k_pJ2zVXaZAdzUfOXsahmhEJSHp2nkwVEBVHcWWcLXp7n67NEYUxPuYY7o44-oEjMJ6W9h5ZfnsvR7GYCyKy03yzUWApCBP5wEcQk?purpose=fullsize)
+
+你應該對這種鏡頭不陌生。
+
+一般相機拍照時，會使用 Zoom 放大或縮小拍攝範圍。
+
+工業 Camera 也有類似的鏡頭。
+
+### 1. 變焦鏡頭是什麼？
+
+變焦鏡頭可以改變焦距，進而改變拍攝視野。
+
+例如某顆鏡頭的焦距範圍為：
+
+8～48 mm
+
+這代表它可以在 8 mm 到 48 mm 之間改變焦距。
+
+假設：
+
+* 8 mm：視野比較大，可以看到較大的區域。
+* 48 mm：視野比較小，可以觀察局部細節。
+
+這顆鏡頭的變焦倍率為：
+
+48 ÷ 8 = 6 倍。
+
+也就是常見的 6X Zoom。
+
+### 2. 工業設備為什麼需要變焦？
+
+假設一台設備需要檢查不同尺寸的產品。
+
+產品 A 比較大，需要看到整個產品。
+
+產品 B 比較小，需要觀察表面上的微小細節。
+
+如果使用變焦鏡頭，就可以依照檢測需求改變拍攝範圍，而不一定需要更換整顆鏡頭。
+
+有些工業變焦鏡頭還可以使用步進馬達控制變焦，讓設備透過程式切換不同倍率。([Edmund Optics][1])
+
+但要注意：
+
+**變焦鏡頭並不代表影像品質一定比定焦鏡頭好。**
+
+它的光學結構比較複雜，價格及解析度表現也需要個別比較。若設備不需要在工作中改變視野，通常沒有必要為了變焦功能增加複雜度。
+
+---
+
+## 三、遠心鏡頭（Telecentric Lens）
+
+這是今天最重要的部分。
+
+![Image](https://images.openai.com/static-rsc-4/GFo_-3ZueMtRKo4Q9jJzfMK-McDetABbwONhP4QbmxnFEUpQtNK7rygiixgc_xobWcs6DE-WwQU2CDuCI2TZmYI3QQn9H-qk5lDC-20HzBgH8nG2xS53GBbxU-diouabl9MYJTBOCpfK1DB0-AUP0imYubZ1aNKG9RDjQ38VZ1o2uRkxpiSwLmg0kjsRonkR?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/1SIUgqSeHP8w098y0U7IHdIkYpJBb96x3g62v9pU_MpqXFg5ELW8y1jTRR8E-P8uV6_4LsjBep3P5pTa82lHxTqjj3kgOuawN4XrHswrOTnbX3dRrQ3RGf6PEIghpGytmLdj511OAV_JoXiogGAbzAxEtCfFsGnZgUGR1dmy8C9RPIg1In9y1a1XQeWPQ4zo?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/T4H6Dh0E7sAAh04WeZfFx2Ve53-1tCGPIz8x78I0k3zNXsq1jHn7d6WUCNuMuhxpPtEVgv5ChJDWtEZHgAzTMmLUNiiC-Ci0ckm3HfYC5t5GszJF8cGfz4YVLu6is8yjw1E9XR5U9ZFBiZnPLPYMCGl435Xy27PBvjuakaAPShZNsYsTtB3dc8n8jSezTHT0?purpose=fullsize)
+
+你可以先觀察第一張照片：
+
+遠心鏡頭通常比一般工業鏡頭大很多，前端鏡片也可能非常寬。
+
+它不是為了讓 Camera 拍得更遠，而是為了改善一個精密量測問題：
+
+**當物體與鏡頭之間的距離稍微改變時，影像中的物體尺寸不應該跟著明顯改變。**
+
+### 1. 一般鏡頭會遇到什麼問題？
+
+假設有一個直徑 10 mm 的金屬圓形工件。
+
+Camera 要量測它的直徑。
+
+現在發生一件事情：工件因為機構高度差，稍微靠近鏡頭。
+
+一般鏡頭會產生透視效果：
+
+* 工件靠近鏡頭，影像看起來比較大。
+* 工件遠離鏡頭，影像看起來比較小。
+
+即使實際工件尺寸完全沒有改變，Camera 取得的影像尺寸也可能不同。
+
+這對一般外觀檢測可能沒有太大影響，但對精密尺寸量測就可能造成誤差。
+
+### 2. 遠心鏡頭如何解決？
+
+遠心鏡頭的設計，使物體側的主光線接近平行於光軸。
+
+結果就是：
+
+在鏡頭規定的工作距離與景深範圍內，物體稍微靠近或遠離鏡頭時，影像放大倍率仍能維持相對穩定。
+
+簡單比較：
+
+| 狀況     | 一般鏡頭   | 遠心鏡頭    |
+| ------ | ------ | ------- |
+| 工件靠近鏡頭 | 影像通常變大 | 影像尺寸較穩定 |
+| 工件遠離鏡頭 | 影像通常變小 | 影像尺寸較穩定 |
+| 透視誤差   | 可能明顯   | 大幅降低    |
+| 精密尺寸量測 | 需謹慎評估  | 特別適合    |
+
+這就是遠心鏡頭的重要價值。([Edmund Optics][2])
+
+### 3. 遠心鏡頭應用在哪裡？
+
+例如：
+
+**PCB 電子元件尺寸量測**
+
+要量測電子元件的長度、寬度與間距。
+
+**金屬零件尺寸檢測**
+
+要確認零件外徑、孔徑及輪廓是否符合規格。
+
+**半導體元件檢查**
+
+需要精確量測晶片、微小元件或光學結構的位置與尺寸。
+
+**精密對位**
+
+當設備需要根據影像判斷元件的位置，並希望降低高度變化造成的透視誤差時，可以考慮遠心鏡頭。
+
+不過，遠心鏡頭仍然需要正確對焦，也有它自己的景深範圍，並不是任何高度變化都能保持清晰影像。([Edmund Optics][2])
+
+---
+
+## 四、三種鏡頭如何選擇？
+
+我們把三種鏡頭放在一起。
+
+| 比較   | 定焦鏡頭   | 變焦鏡頭   | 遠心鏡頭   |
+| ---- | ------ | ------ | ------ |
+| 焦距   | 固定     | 可改變    | 通常固定倍率 |
+| 拍攝視野 | 固定配置   | 可調整    | 固定設計視野 |
+| 對焦   | 通常可以調整 | 通常可以調整 | 依產品設計  |
+| 透視誤差 | 有      | 有      | 大幅降低   |
+| 常見用途 | 外觀檢測   | 多倍率觀察  | 精密尺寸量測 |
+
+請記住：
+
+* 一般產品檢查：可考慮定焦鏡頭。
+* 需要改變拍攝倍率：可考慮變焦鏡頭。
+* 要求精密尺寸量測：可考慮遠心鏡頭。
+
+這是選擇方向，不代表其他鏡頭不能用於相關工作。實際還要看精度、視野、工作距離、感光元件及照明條件。
+
+---
+
+## 五、與 GMT 精密設備的關係
+
+現在把今天學習的內容與前面學過的機械結合。
+
+假設我們要檢查一個矽光子晶片上的微小光學結構。
+
+設備可能包含：
+
+* Camera：拍攝晶片。
+* 鏡頭：將晶片上的結構清楚成像。
+* LED 照明：提供適當光線。
+* XY 平台：調整晶片的位置。
+* Z 軸平台：調整高度。
+* θ 軸：調整晶片角度。
+* Motion Controller：控制各軸定位。
+
+這時候鏡頭的選擇很重要。
+
+因為 Camera 拍到的影像，將成為後續影像辨識與對位的依據。
+
+假設鏡頭產生明顯透視誤差，影像軟體就可能把物體的位置或尺寸判斷錯誤。
+
+所以，**光學系統取得的影像品質，是後續影像辨識能否正確工作的基礎。**
+
+這也是為什麼我們不能只購買高解析度 Camera，卻忽略鏡頭。
+
+鏡頭、Camera、照明及影像處理軟體必須一起考慮。([Opto Engineering][3])
+
+---
+
+# 六、本課練習
+
+請回答四題：
+
+**問題 1**
+
+定焦鏡頭的「定焦」代表什麼？
+
+A. 完全不能調整對焦
+B. 焦距固定，但通常仍可調整對焦
+C. 可以任意改變焦距
+
+**問題 2**
+
+假設一台設備需要依照不同產品，自動切換不同拍攝倍率，哪種鏡頭比較適合？
+
+A. 定焦鏡頭
+B. 變焦鏡頭
+C. 遠心鏡頭
+
+**問題 3**
+
+為什麼精密尺寸量測會考慮使用遠心鏡頭？
+
+A. 可以讓 Camera 不需要 Image Sensor
+B. 可以讓鏡頭完全不需要對焦
+C. 可以降低物體高度變化造成的影像倍率及透視誤差
+
+**問題 4**
+
+假設工件的實際尺寸是 10 mm，但工件在輸送帶上有些微高度變化。使用一般鏡頭拍攝時，可能出現什麼情況？
+
+A. 工件在影像中的大小可能隨距離改變
+B. 工件的實際尺寸跟著改變
+C. Camera 一定無法取得影像
+
+你先回答這四題。
+
+下一課我們會介紹另一個非常重要的部分：**Camera 的照明方式（Lighting）**。包括背光、環形光、同軸光及穹頂光，讓你了解為什麼同一個零件，使用不同照明方式拍攝，會得到完全不同的影像。
+
+[1]: https://www.edmundoptics.com/knowledge-center/application-notes/imaging/imaging-lens-selection-guide/ "Types of Machine Vision Lenses | Edmund Optics"
+[2]: https://www.edmundoptics.com/knowledge-center/application-notes/imaging/telecentric-design-topics "Telecentric Design Topics | Edmund Optics"
+[3]: https://www.opto-e.com/en/news/lenses-industrial-cameras-telecentric-fixed-focal-length-360 "Lenses for industrial cameras | Opto Engineering"
+
+---
+
+四題全部答對！你已經掌握定焦、變焦與遠心鏡頭的基本差異。
+
+今天進入下一個主題。這一課非常重要，因為它會直接影響我們未來學習的 **Camera 影像辨識與精密對位**。
+
+# 第 6 單元・第 4 課：工業 Camera 的照明方式（Machine Vision Lighting）
+
+## 一、為什麼 Camera 需要特殊照明？
+
+先想像一個情況：
+
+桌上有一個金屬零件，我們希望 Camera 檢查它表面有沒有刮傷。
+
+使用一般室內燈光拍攝，可能會出現：
+
+* 金屬表面反光，部分區域變成一片白色。
+* 零件底下產生陰影。
+* 刮痕不明顯。
+* 每次拍攝的亮度不同。
+
+這會造成一個問題：
+
+**即使零件完全沒有改變，Camera 每次取得的影像也可能不同。**
+
+而影像辨識系統是根據影像中的亮度、顏色、邊緣及形狀等資訊進行判斷。如果影像品質不穩定，辨識結果就可能出錯。
+
+因此，工業視覺系統通常會使用專門設計的 LED 光源，讓每次拍攝的照明條件盡量一致。
+
+KEYENCE 的機器視覺技術資料也特別指出，照明方式會影響影像對比，是穩定影像辨識的重要條件。([Keyence][1])
+
+## 二、四種最常見的照明方式
+
+先看這張圖，認識不同光源的外觀。
+
+![Image](https://images.openai.com/static-rsc-4/sNfjlGJGjzmazJooSyWDgRJlemFByLTf85Ew8N3v88JEwjTXWouAgW3eIEHdZ-DwpzMzPcOisVdAX5maoE2ifUKUW6k2fNg8WZbPwbEZyjPOSMYJCdVI9W9l8AWu33sSMbug2FUGe9MZXuqmV0HqSRmdm2PLTK_0X7Jd6wMv9h2h9KkqWTlbZen767_pikNX?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/Ww5QxgZn_FlbYHLLQTR_HXTleF4iwwuC1iKrDQDdw8TSIg8SXhfVwLWpFA2E5eX1pTFG3g0ljz6qEW97AtkLwNiFY6OcDJptD3B9jsKQiy15SkHGSFYgDlq1aoSOJM5VStNK5ilIEyHKZIlZrvch4CxZ3zYp_iOhb63Qj__DIb9RfRhs3j9Cr8-YHTr48Kw6?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/hagrWoqpgUEtkPUpUbMttSc7k6J7vgFUVGmpJgYDE3ih6HiJ7_tvMdZECmeOosAJ1IetmbbtZvvOhcdGwkZ1DjoBVmLlsEplzPiiqsqUed69mhl7IW8UPnnXgT32dc_QBPZ8x4Ei3ajTcYzgNnTvInEn090crdmDYBOb_VoSy1XH72YGfxMtrYnZygxrFjY5?purpose=fullsize)
+
+今天先學習四種：
+
+1. 背光（Backlight）
+2. 環形光（Ring Light）
+3. 同軸光（Coaxial Light）
+4. 穹頂光（Dome Light）
+
+---
+
+## 1. 背光（Backlight）
+
+背光的配置非常容易理解：
+
+**光源放在工件後面，Camera 放在工件前面。**
+
+![Image](https://images.openai.com/static-rsc-4/Ww5QxgZn_FlbYHLLQTR_HXTleF4iwwuC1iKrDQDdw8TSIg8SXhfVwLWpFA2E5eX1pTFG3g0ljz6qEW97AtkLwNiFY6OcDJptD3B9jsKQiy15SkHGSFYgDlq1aoSOJM5VStNK5ilIEyHKZIlZrvch4CxZ3zYp_iOhb63Qj__DIb9RfRhs3j9Cr8-YHTr48Kw6?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/jG90ZhMbGieqm9oX-bO2RKa_upE8iHF29Etz3w0sE0W54U9FYsKcJSzF_FzeizQxn9J_9CfeO0J4u_TmRmTaHVosY9pTFPfwCkmziFw4gHG-A-FL2o9NaptfUlYCBZLyElMGuxR5zSdDz1aaI4g7QawtDpLxURZc9Q9pykmUuiuICgOSvrwO-tmKn1VoGPkE?purpose=fullsize)
+
+例如：
+
+```text
+       Camera
+          │
+          ▼
+       金屬零件
+          │
+          ▼
+       LED 光源
+```
+
+光線從工件後方穿過來，Camera 從另一側拍攝。
+
+如果工件是不透明的金屬，Camera 就會看到：
+
+* 背景：明亮。
+* 工件：黑色或較暗的輪廓。
+
+這種影像稱為輪廓影像（Silhouette Image）。
+
+### 背光有什麼用途？
+
+假設要量測一個金屬零件的外形：
+
+* 外徑是多少？
+* 零件有多長？
+* 中間的孔有多大？
+* 零件邊緣是否有缺角？
+
+使用背光，可以讓工件輪廓和背景形成明顯的亮度差異，方便影像系統找出邊緣。
+
+例如：
+
+一個圓形金屬零件，在一般照明下可能因為表面反光而難以判斷邊緣。
+
+但使用背光後，整個圓形輪廓會變得非常清楚。
+
+**背光最適合：輪廓、外形、孔洞、尺寸量測。**
+
+KEYENCE 也將背光列為輪廓檢查、孔洞檢測及尺寸量測的常見方式。([Keyence][1])
+
+---
+
+## 2. 環形光（Ring Light）
+
+環形光就是將許多 LED 排列成圓環，安裝在 Camera 鏡頭周圍。
+
+![Image](https://images.openai.com/static-rsc-4/sNfjlGJGjzmazJooSyWDgRJlemFByLTf85Ew8N3v88JEwjTXWouAgW3eIEHdZ-DwpzMzPcOisVdAX5maoE2ifUKUW6k2fNg8WZbPwbEZyjPOSMYJCdVI9W9l8AWu33sSMbug2FUGe9MZXuqmV0HqSRmdm2PLTK_0X7Jd6wMv9h2h9KkqWTlbZen767_pikNX?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/5NO19O4bY_y_l6z65vlGEE1L6rp-dcbkEgW2u-YUoIgNjPe-jCPJhD-rvb6-PHM6f0Npg-UWpyWiUIRvsLQGYvAP7LO6nyFVxOL26e3OGSr6QYNVx1CM9hJmOsySJA-gJGaGEv3wnT-0ayT1lMUtKtjh0bgNfh5egmJavFMJK3Y2Gg0e4GjuKX0UrapKwUFV?purpose=fullsize)
+
+配置方式：
+
+```text
+       Camera
+          │
+     ┌────┴────┐
+     │ 環形 LED │
+     └────┬────┘
+          ▼
+        工件
+```
+
+環形光從鏡頭周圍照亮工件。
+
+由於光線從多個方向照射，可以幫助照亮工件表面。
+
+### 環形光有什麼用途？
+
+例如要檢查 PCB 電路板：
+
+* 電子元件是否存在？
+* 電子元件是否放歪？
+* 零件表面有沒有標記？
+* 焊點周圍是否有異常？
+
+環形光可以提供比較直接的照明，讓 Camera 觀察工件表面。
+
+不過，環形光不是完全沒有缺點。
+
+例如金屬零件表面非常光滑時，可能產生強烈反光，導致某些區域過亮。
+
+因此，還是要依照工件表面特性調整光源角度、亮度及距離。
+
+**環形光最適合：一般工件表面照明、位置辨識、文字及外觀檢查。**
+
+---
+
+## 3. 同軸光（Coaxial Light）
+
+這是精密機器視覺非常值得認識的一種照明方式。
+
+同軸的意思是：
+
+**照明光線的方向，與 Camera 鏡頭的光軸相同或非常接近。**
+
+它通常利用一片半透半反鏡（Beam Splitter），將光源導向工件。
+
+![Image](https://images.openai.com/static-rsc-4/I6RkGoIv4xU_I9l52Jns2Qmbg8NAd7ebEuHZid9sH1L_PtolsSmnI0dXn2wjoYERzSOyoHSe4o_WyXQ11_GOro8WLyj5f7IzhSK0loWfacR2E0c8tLPry8lEXfUUmDdeOqyEiI4nxI2mZllQyzfv6xZPpHTdkN31t0xS_UJ2P1oWviE6grNeh3A-qwkOUEd9?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/sNfjlGJGjzmazJooSyWDgRJlemFByLTf85Ew8N3v88JEwjTXWouAgW3eIEHdZ-DwpzMzPcOisVdAX5maoE2ifUKUW6k2fNg8WZbPwbEZyjPOSMYJCdVI9W9l8AWu33sSMbug2FUGe9MZXuqmV0HqSRmdm2PLTK_0X7Jd6wMv9h2h9KkqWTlbZen767_pikNX?purpose=fullsize)
+
+它的光線路徑比較特別：
+
+```text
+        Camera
+           │
+           │
+       半透半反鏡 ◄── LED 光源
+           │
+           ▼
+          工件
+```
+
+LED 發出的光經過半透半反鏡，改變方向後向下照射工件。
+
+工件反射的光再沿著接近相同的光路回到 Camera。
+
+### 同軸光有什麼用途？
+
+想像一個非常平坦、表面光滑的金屬零件。
+
+使用一般環形光時，可能產生不均勻的反光。
+
+同軸光可以讓光線沿著鏡頭光軸照射工件，對某些平坦的反光表面提供均勻照明。
+
+適合的應用包括：
+
+* 平坦金屬表面檢查。
+* 晶片表面檢測。
+* PCB 表面檢測。
+* 雷射刻字辨識。
+* 某些精密光學元件的外觀檢查。
+
+但要注意：同軸光並不是任何反光物體都適用。曲面或不規則表面可能把光線反射到 Camera 以外，反而看起來比較暗。
+
+**同軸光最適合：平坦、光滑、具有反射性的表面。** ([Keyence][1])
+
+---
+
+## 4. 穹頂光（Dome Light）
+
+穹頂光的外觀通常像一個半球形的罩子，內部配置 LED 或反射照明結構。
+
+![Image](https://images.openai.com/static-rsc-4/hagrWoqpgUEtkPUpUbMttSc7k6J7vgFUVGmpJgYDE3ih6HiJ7_tvMdZECmeOosAJ1IetmbbtZvvOhcdGwkZ1DjoBVmLlsEplzPiiqsqUed69mhl7IW8UPnnXgT32dc_QBPZ8x4Ei3ajTcYzgNnTvInEn090crdmDYBOb_VoSy1XH72YGfxMtrYnZygxrFjY5?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/A0KOlNLHKIM6C_LMOGuMGZBBSggQzPbqTAVwunIhHS1MmkNxIrSWM2ZHY7bcSPLwMo8XswMadV5BLWPTwGEO5QNwJg2Qlf__6JdXN8Qj44AIy9y9wWPoFGhM4zzlQDkt97s5KoAlbipYXe-Bzfr3o5Awq3i85yaldM54JB4DF5yUG9tI4IEpWXx3WcbzKnn3?purpose=fullsize)
+
+Camera 位於穹頂上方，工件放在穹頂下方。
+
+它的主要特色是：
+
+**光線經過穹頂內部的漫射結構後，從多個方向均勻照射工件。**
+
+### 為什麼需要穹頂光？
+
+假設你要檢查一個表面彎曲的金屬零件。
+
+使用一般單方向照明時，可能出現：
+
+* 某些區域特別亮。
+* 某些區域非常暗。
+* 表面反射出 LED 的形狀。
+* 不同位置的亮度差異太大。
+
+穹頂光可以讓光線從較多方向照射，降低局部強烈反光及陰影。
+
+適合：
+
+* 曲面金屬零件。
+* 反光塑膠。
+* 不規則形狀工件。
+* 表面外觀檢測。
+
+但是，穹頂光也有缺點：光線太均勻時，某些細微凹凸或表面紋理反而不容易看出來。
+
+**穹頂光最適合：曲面、反光、不規則表面的均勻照明。** ([Tavoron][2])
+
+---
+
+# 三、四種照明方式比較
+
+這張表請特別留意，因為未來選擇光源時會經常用到。
+
+| 照明方式 | 光源位置       | 最主要用途       |
+| ---- | ---------- | ----------- |
+| 背光   | 工件後方       | 輪廓、孔洞、尺寸    |
+| 環形光  | 鏡頭周圍       | 一般表面照明、位置辨識 |
+| 同軸光  | 沿鏡頭光軸照射    | 平坦反光表面      |
+| 穹頂光  | 工件周圍形成漫射照明 | 曲面、反光、不規則表面 |
+
+這裡還要記住一個觀念：
+
+**照明方式沒有絕對的好壞，必須配合工件的材質、形狀以及要辨識的特徵。**
+
+同一個工件，可能使用背光時最容易量測外形，但使用穹頂光時最容易檢查表面刮痕。
+
+---
+
+# 四、照明方式如何影響影像辨識？
+
+這是今天最重要的延伸觀念，也與你之前要求的 Camera 影像辨識課程有關。
+
+假設我們要讓 Camera 辨識一個金屬零件的中心位置。
+
+影像辨識程式會分析影像中的 Pixel（像素）。
+
+例如，程式可能根據亮度差異找出：
+
+* 零件的左邊界。
+* 零件的右邊界。
+* 零件的上邊界。
+* 零件的下邊界。
+
+再計算出中心位置。
+
+但如果照明不佳，可能產生以下問題：
+
+| 照明問題  | 對影像辨識的影響     |
+| ----- | ------------ |
+| 太暗    | 零件輪廓不清楚      |
+| 太亮    | 局部過曝，細節消失    |
+| 反光    | 可能把反光誤認成零件特徵 |
+| 陰影    | 可能讓零件邊緣判斷錯誤  |
+| 亮度不穩定 | 每次辨識結果可能不同   |
+
+所以實際的工業視覺設備，通常不只是購買一台高解析度 Camera 就結束。
+
+它還需要搭配：
+
+* 合適的鏡頭。
+* 合適的照明方式。
+* 固定的照明位置。
+* 穩定的亮度與曝光設定。
+* 影像辨識軟體。
+
+照明與鏡頭、Camera 必須一起考慮，才能建立穩定的影像系統。([ni.com][3])
+
+---
+
+# 五、與 GMT 精密對位設備的關係
+
+假設我們要讓光纖與矽光子晶片對位。
+
+Camera 必須先看清楚：
+
+* 光纖端面的位置。
+* 晶片上的波導位置。
+* 光纖與晶片之間的相對位置。
+
+這時候可能會使用適當的同軸照明、環形照明或其他專用光源，改善影像的清晰度與對比。
+
+接下來由影像辨識系統計算兩者的位置差異，再交給運動控制器調整 XYZ 或其他自由度。
+
+因此，完整流程是：
+
+**照明 → Camera 拍攝 → 影像辨識 → 計算位置差異 → 精密平台移動 → 再次拍攝確認。**
+
+請注意，這只代表影像對位。最後是否真正完成光纖耦合，仍需要光功率量測確認，不能只靠 Camera 判斷。
+
+---
+
+# 六、本課練習
+
+今天先回答四題：
+
+**問題 1**
+
+假設要量測一個金屬零件的外徑與中間孔洞尺寸，哪一種照明方式通常最適合？
+
+A. 背光
+B. 環形光
+C. 穹頂光
+
+**問題 2**
+
+如果要檢查一個平坦、表面光滑而且會反光的金屬零件，可以優先考慮哪種照明？
+
+A. 背光
+B. 同軸光
+C. 穹頂光
+
+**問題 3**
+
+如果一個工件表面彎曲，而且使用一般照明時經常出現局部強烈反光，可以考慮哪一種照明？
+
+A. 穹頂光
+B. 背光
+C. 單點光源
+
+**問題 4**
+
+為什麼工業 Camera 需要穩定且適當的照明？
+
+A. 讓 Camera 的馬達轉速增加
+B. 讓影像辨識系統取得較清楚、穩定的影像特徵
+C. 讓滑台不需要編碼器
+
+---
+
+你先回答這四題。
+
+下一課我們會介紹**雷射（Laser）的基本原理**，包括雷射與 LED 有什麼不同、雷射為什麼能形成方向性很好的光束，以及雷射在光纖通訊與矽光子設備中扮演什麼角色。
+
+[1]: https://www.keyence.com/products/vision/resources/vision-resources/basics-of-lighting-selection.jsp?utm_source=chatgpt.com "Machine Vision Lighting Selection Guide | KEYENCE America"
+[2]: https://jhfoster.com/sensorsincorporated/wp-content/uploads/sites/3/2022/06/a-practical-guide-to-machine-vision-lighting-v-4-generic-2.pdf?utm_source=chatgpt.com "A Practical Guide to Machine Vision Lighting"
+[3]: https://www.ni.com/en/shop/choosing-the-right-hardware-for-your-vision-applications/a-practical-guide-to-machine-vision-lighting.html?utm_source=chatgpt.com "A Practical Guide to Machine Vision Lighting - NI"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+----
 
 
 
