@@ -28295,7 +28295,833 @@ C. 讓滑台不需要編碼器
 
 ----
 
+四題全部答對！你已經了解不同照明方式的用途，也知道照明會直接影響影像辨識結果。
 
+今天開始一個新的重要主題：**雷射（Laser）**。
+
+這個主題與我們未來要學習的光纖耦合、矽光子及光通訊有直接關係。
+
+# 第 6 單元・第 5 課：雷射（Laser）基本原理
+
+## 一、雷射是什麼？
+
+先看一個問題：
+
+我們之前學過 LED，它可以發出光線。
+
+那麼，為什麼光通訊設備、光纖耦合設備及矽光子晶片，經常使用雷射，而不是一般 LED？
+
+原因是：**雷射具有一般 LED 不容易達到的特殊光學特性，特別適合將光能集中、控制並傳輸。**
+
+雷射英文是 LASER，全名為：
+
+Light Amplification by Stimulated Emission of Radiation
+
+中文稱為「受激輻射光放大」。
+
+先不用記住這個英文名稱背後的物理細節，我們先理解它的工作原理。
+
+## 二、雷射與 LED 有什麼不同？
+
+我們先看兩種光源發出的光有什麼差異。
+
+![Image](https://images.openai.com/static-rsc-4/7hx7HoFs945oi_CAeuDiBR6_IyEQeW_XFYjY3alsCq542ZxM9H5zC6dgiPU7zU2FFmovxEFVQQXEsj8JcqWSGfXhkOkdyspZ6UnO49_187-2eR2lLDQArucCiduxo97Y0r2FeXcT38gCR8sJeuLvMjvSPymbd9FDurPEdotZVV2Dz008cfGpubCBbqu_HhXn?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/MvJ5nhhEXGnh4o6tv69_FEKVDwpt-EBYXdf6G6NKQnfpeGtGQIFR3Po30MsDYL--FOb1vpHwLVArfqze-UwrjOZqxtnP4XAcbIKefDysvUU2uOhYqqd-qZJ4XREvRv2J_re-js3mZPYFQxa4DB2xHnpR5dJQdVB9LgYWbG_6DBI5-SToOgDfBaEMfQfkejNj?purpose=fullsize)
+
+上面的示意圖可以幫助你理解雷射光束與光學元件的關係。第二張則是實際光學平台，可以看到雷射光經過透鏡、分光鏡及反射鏡等元件後，沿著指定路徑傳播。
+
+### 1. LED 發光
+
+LED 發出的光通常具有以下特性：
+
+* 光線向較廣的方向散開。
+* 通常包含一定範圍的波長。
+* 光波之間沒有像雷射那樣高度的相干性。
+
+例如一般白光 LED，會包含多種可見光波長。
+
+### 2. 雷射發光
+
+雷射則有三個非常重要的特性。
+
+**特性 A：單色性（Monochromaticity）**
+
+雷射的光通常集中在非常窄的波長範圍。
+
+例如：
+
+* 紅色雷射：約 650 nm。
+* 紅外線雷射：約 1310 nm。
+* 紅外線雷射：約 1550 nm。
+
+注意：後面兩種是光通訊中常見的波長，肉眼看不到。
+
+**特性 B：方向性（Directionality）**
+
+雷射光束通常具有較小的發散角。
+
+也就是說，光線不會像一般燈泡一樣往四面八方散開，而是集中在一個方向傳播。
+
+這對光纖傳輸非常重要。
+
+**特性 C：相干性（Coherence）**
+
+這是比較特殊的物理特性。
+
+你可以把普通 LED 的光波想成一群沒有整齊步調的隊伍。
+
+雷射光波則比較像一群步調協調的隊伍，彼此之間具有穩定的相位關係。
+
+這種特性讓雷射能夠產生穩定的干涉現象，也有助於將光束聚焦及進行精密光學控制。
+
+上述三項是雷射的典型特性；實際雷射仍有有限的頻譜寬度與光束發散角，並不是完全只有一種波長或絕對平行。([法蘭霍夫機構ILT][1])
+
+### 3. LED 與雷射比較
+
+| 比較   | LED    | 雷射             |
+| ---- | ------ | -------------- |
+| 光線方向 | 較廣泛散開  | 較集中            |
+| 波長分布 | 通常較寬   | 通常較窄           |
+| 相干性  | 低      | 高              |
+| 光束發散 | 通常較大   | 通常較小           |
+| 常見用途 | 照明、指示燈 | 光纖通訊、光學耦合、雷射加工 |
+
+這裡先記住：
+
+**LED 適合一般照明；雷射適合需要精確控制光束的應用。**
+
+---
+
+## 三、雷射內部如何產生光？
+
+這裡稍微介紹一下雷射的內部結構。
+
+典型雷射系統主要包含三個部分：
+
+1. 增益介質（Gain Medium）
+2. 能量激發來源（Pumping）
+3. 光學共振腔（Optical Resonator）
+
+先看示意概念：
+
+![Image](https://images.openai.com/static-rsc-4/stg7ydGWK6Q8HJlj2zbMgILx1jJmALdpSKBVtbIjOap1LtXiJfV5hw7hRGm45OU64eH5laHcYVr6u6oHHSQ_DsFrvoubZy5VN23Y80INXgLgrFH00Pg-ArXF0MZWvHz4doRcuZZazZoqrY3Q0_7rbZN4ENyvNBPiLKc9z1fZnrMh64vGxKwv-VxbpmnEyc3o?purpose=fullsize)
+
+這張圖是雷射模組的組成示意，包含雷射二極體及後續的光束整形鏡片。要注意，這是模組的光學結構示意，不是所有雷射的內部產生原理。
+
+### 1. 增益介質
+
+這是產生雷射的核心材料。
+
+不同雷射可能使用：
+
+* 半導體材料。
+* 固態晶體。
+* 特殊氣體。
+* 光纖中的摻雜材料。
+
+它們利用不同物理機制產生雷射光。
+
+### 2. 能量激發來源
+
+必須提供能量，讓增益介質中的粒子進入適合產生受激輻射的狀態。
+
+例如：
+
+半導體雷射通常透過電流驅動。
+
+固態雷射則可能透過其他光源提供激發能量。
+
+### 3. 光學共振腔
+
+通常利用兩側的反射結構，讓光在增益介質內反覆通過。
+
+當光經過增益介質，受激輻射會使光得到放大。
+
+最後，部分光從輸出端射出，形成雷射光束。([法蘭霍夫機構ILT][1])
+
+你現在不需要深入學習原子能階或量子力學，只要理解：
+
+**提供能量 → 增益介質產生光學放大 → 輸出雷射光。**
+
+---
+
+# 四、光通訊為什麼使用雷射？
+
+這一段與你未來要學習的矽光子最有關係。
+
+我們先看一個簡單的光纖通訊架構。
+
+![Image](https://images.openai.com/static-rsc-4/yp4t0NnoL-MjHo3iFrdX5ZJniM8rNQbRRrRcxmMEQp1EiqxDudg1V9eLwcfEZRqJ8gX-0UrCPNh6VVH9wQp4U2DZQFABt2v_POw9DqQN0tYrvZ_29jqOgPJ0OWysmz3F8ssBzwJzEy4P7NI0FbPO_LmIV7UaH8v8Q4IMLq4O11naUExl9SI7_k49hpK-Fc7O?purpose=fullsize)
+
+光纖通訊系統基本上包含三個部分：
+
+| 元件                | 功能         |
+| ----------------- | ---------- |
+| Laser Transmitter | 將電訊號轉換成光訊號 |
+| Optical Fiber     | 傳輸光訊號      |
+| Optical Receiver  | 將光訊號轉換回電訊號 |
+
+例如：
+
+你從電腦傳送一筆資料給遠端設備。
+
+傳送端的雷射光源會受到驅動電路控制，將資料編碼到光訊號中。
+
+光訊號經過光纖傳輸。
+
+接收端再利用光偵測器將光訊號轉換成電訊號，還原資料。
+
+這就是光通訊的基本架構。([IEEE Technology Navigator][2])
+
+### 為什麼不用 LED？
+
+LED 也能用於光通訊，但它的光譜通常比較寬，光束也比較發散。
+
+對於需要高速傳輸及單模光纖耦合的系統，雷射通常更適合。
+
+因為雷射可以提供較窄的光譜及較集中的光束，讓光能更有效地進入光纖。([The Open University][3])
+
+---
+
+# 五、雷射如何進入光纖？
+
+這部分非常重要，因為下一個階段我們會深入學習光纖耦合。
+
+假設現在有一個雷射二極體（Laser Diode），我們要把它發出的光送進一根光纖。
+
+基本結構如下：
+
+```text
+     Laser Diode
+          │
+          ▼
+       雷射光
+          │
+          ▼
+        透鏡
+          │
+          ▼
+       聚焦光束
+          │
+          ▼
+       光纖端面
+          │
+          ▼
+       光纖內傳輸
+```
+
+這裡的透鏡扮演非常重要的角色。
+
+雷射二極體發出的光，雖然具有較好的方向性，但仍然會發散，而且光束尺寸不一定符合光纖的要求。
+
+因此，需要透過適當的光學透鏡：
+
+1. 調整光束大小。
+2. 控制光束方向。
+3. 將光線聚焦在光纖端面附近。
+4. 讓光進入光纖的可接受範圍。
+
+這就是光學耦合的一種基本形式。
+
+但要注意，光纖耦合不只要讓光點落在光纖中心，還必須考慮光束角度、光斑大小及光纖的數值孔徑（Numerical Aperture，NA）等條件。
+
+例如單模光纖，對光束的位置及角度通常有非常嚴格的要求。
+
+這也是為什麼 GMT 會使用精密 XYZ、θ 軸及六自由度平台進行光學對位。
+
+---
+
+# 六、雷射與 STM32 / 韌體有什麼關係？
+
+這裡先讓你建立控制架構的概念。
+
+假設設備使用一個雷射二極體模組。
+
+可能的控制架構如下：
+
+```text
+       STM32H755
+            │
+            ▼
+       控制介面
+            │
+            ▼
+      Laser Driver
+            │
+            ▼
+       Laser Diode
+            │
+            ▼
+          雷射光
+```
+
+各部分工作：
+
+| 元件            | 工作             |
+| ------------- | -------------- |
+| STM32         | 發送控制命令、設備流程管理  |
+| Laser Driver  | 控制雷射二極體的驅動電流   |
+| Laser Diode   | 將電能轉換成雷射光      |
+| Power Monitor | 監測光輸出功率（依設備配置） |
+
+例如 STM32 要求開啟雷射：
+
+```text
+STM32：
+    Laser Enable = ON
+
+Laser Driver：
+    啟動雷射二極體
+
+Laser Diode：
+    輸出雷射光
+```
+
+實際上，雷射二極體通常需要專用驅動器及電流控制，不能直接將 STM32 的 3.3V GPIO 接到雷射二極體上。
+
+另外，雷射有不同安全等級。特別要注意紅外線雷射可能肉眼完全看不到，但仍然可能對眼睛造成傷害。不可直接觀看雷射出光口，也要防範鏡面反射；實際設備必須依雷射等級與安全規範設置防護。([blink.ucsd.edu][4])
+
+---
+
+# 七、今天先記住這五個重點
+
+| 名稱               | 意義           |
+| ---------------- | ------------ |
+| Laser            | 利用受激輻射產生光的裝置 |
+| Wavelength       | 雷射光的波長       |
+| Monochromaticity | 光譜集中在較窄範圍    |
+| Directionality   | 光束發散角較小、方向性好 |
+| Coherence        | 光波具有穩定的相位關係  |
+
+另外，未來我們會經常遇到兩個波長：
+
+* 1310 nm
+* 1550 nm
+
+它們是光纖通訊領域的重要波長，後續在矽光子課程中會再詳細介紹。
+
+---
+
+# 八、本課練習
+
+今天回答四題：
+
+**問題 1**
+
+雷射與一般 LED 最大的光學特性差異之一是什麼？
+
+A. 雷射的光束通常具有較好的方向性及較窄的光譜
+B. LED 一定不能用於光通訊
+C. 雷射不需要電力或其他能量來源
+
+**問題 2**
+
+雷射內部的增益介質主要負責什麼？
+
+A. 支撐雷射外殼
+B. 讓光透過受激輻射得到放大
+C. 將光轉換成電訊號
+
+**問題 3**
+
+為什麼光纖通訊通常使用雷射二極體，而不是一般 LED？
+
+A. 雷射光通常較容易有效耦合進單模光纖，且適合高速光通訊
+B. 雷射一定比 LED 省電
+C. LED 完全無法發出紅外線
+
+**問題 4**
+
+假設要把雷射光送進一根非常細的單模光纖，為什麼不能只讓雷射光大致朝向光纖？
+
+A. 因為還必須控制光束的位置、角度及聚焦條件
+B. 因為光纖不允許光線進入
+C. 因為雷射光只能在空氣中傳播
+
+你先回答這四題。
+
+下一課我們會繼續學習**雷射的種類與波長**，特別是半導體雷射（Laser Diode）、光纖雷射（Fiber Laser）及光通訊常用的 1310 nm、1550 nm 雷射。
+
+這會是進入矽光子與光纖耦合之前非常重要的基礎。
+
+[1]: https://www.ilt.fraunhofer.de/en/glossary/laser-fundamentals.html?utm_source=chatgpt.com "Laser Fundamentals - Fraunhofer ILT"
+[2]: https://technav.ieee.org/topic/optical-transmitters/?utm_source=chatgpt.com "Optical transmitters | IEEE Technology Navigator"
+[3]: https://www.open.edu/openlearn/mod/oucontent/view.php?id=3435&section=2.1&utm_source=chatgpt.com "Digital communications: 2.1 Light sources and detectors | OpenLearn - Open University"
+[4]: https://blink.ucsd.edu/safety/radiation/lasers/fundamentals.html?utm_source=chatgpt.com "Laser Safety Program: Laser Fundamentals"
+
+---
+
+四題全部答對！你已經掌握雷射的基本特性，以及為什麼光纖耦合需要精確控制光束的位置、角度與聚焦條件。
+
+今天我們繼續第 6 單元，開始認識不同種類的雷射，以及光通訊為什麼特別常見 **850 nm、1310 nm、1550 nm** 這幾個波長。
+
+# 第 6 單元・第 6 課：雷射種類與光通訊波長
+
+## 一、首先認識三種常見雷射
+
+雷射可以依照「增益介質」來分類。
+
+還記得上一課介紹的增益介質嗎？它是讓光透過受激輻射得到放大的材料。
+
+不同材料，就可以形成不同種類的雷射。
+
+### 1. 半導體雷射（Semiconductor Laser / Laser Diode）
+
+這是我們最需要認識的一種，因為它與光纖通訊、矽光子及光纖耦合有直接關係。
+
+![Image](https://images.openai.com/static-rsc-4/a4lqXIDrkSqJ8ASRmWBeMDGNZDKj8oumjy1lnzZZMY0FCT_wDmp7dqix1lEfCdyfb36L5KqzNYaHvEpzTkt4UcD3T6PEc0PBgsSwLBtIDJFy1xN4m2jKge1ed7EJAohOE1wd8Vlrut775UV0stFLpI7hZhG67nAl8WepRoDxUMgQM_8-yjOvUy7PndfwSjJM?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/jvIG09LSw9RhGqx3H0JpXeedMLL5btpty-x3GNwXp9bfl76dZKD2Kt37nEBSg5TwBwb6IOBgKa1cbHszUIuSSt25WFFSZD5kOr-SCaMxPKWf7wfz1Zom4zgeoWbvknP-BWHPz57mTWIlD1aJWw12zuKzz2SEkNJ0PrQHZtdae-74Q2Dfo7xYZ88ZgS_K3diR?purpose=fullsize)
+
+它的核心是一個半導體雷射晶片，通常利用電流驅動。
+
+簡化的工作方式：
+
+```text
+       電源
+         │
+         ▼
+    雷射驅動器
+         │
+         ▼
+    半導體雷射晶片
+         │
+         ▼
+       雷射光
+         │
+         ▼
+       透鏡
+         │
+         ▼
+       光纖
+```
+
+這裡有幾個重要觀念：
+
+* 雷射晶片使用半導體材料製作。
+* 電流通過晶片後產生雷射光。
+* 雷射光經過光學元件調整後，可以耦合進光纖。
+* 可以製作成很小的光源模組。
+
+半導體雷射是電流驅動的雷射，常見形式包括 FP、DFB、VCSEL 等。([rp-photonics.com][1])
+
+#### 三種常見形式
+
+| 名稱     | 英文                                     | 特點                |
+| ------ | -------------------------------------- | ----------------- |
+| FP 雷射  | Fabry–Pérot Laser                      | 結構較簡單，常見於部分通訊光源   |
+| DFB 雷射 | Distributed Feedback Laser             | 波長穩定、頻譜較窄，常用於光通訊  |
+| VCSEL  | Vertical-Cavity Surface-Emitting Laser | 從晶片表面出光，常見於短距離光通訊 |
+
+這三種都屬於半導體雷射，但內部光學結構不同。
+
+特別記住 DFB 和 VCSEL：
+
+**DFB：** 常見於 1310 nm、1550 nm 等單模光纖通訊應用。
+
+**VCSEL：** 常見於 850 nm 短距離多模光纖通訊，例如資料中心內部的光連接。([rp-photonics.com][2])
+
+---
+
+### 2. 光纖雷射（Fiber Laser）
+
+這個名稱很容易讓人誤會。
+
+你可能會想：
+
+「光纖雷射不就是把雷射光接到光纖裡面嗎？」
+
+其實不是。
+
+**光纖雷射是直接利用特殊的光纖作為增益介質，在光纖內部產生雷射光。**
+
+先看它的結構：
+
+![Image](https://images.openai.com/static-rsc-4/bOW6fOOHefCoSmFCv2deHC2hSBs9Iey7xowGi_EsPfcUWoUm8l8LqRt51t4lbIrjuE1EY3QNx-MZhnBAxc8S6jKxSglm-W3cMdyHmTZirI_Gpm91egFa7rizF-dWM1SBjGQXm7_sp9mSCCU1pbN2FGJBg_1uJmo-ptJtDK-n5RN7lERclHUfqP2ID8wFSJsP?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/cpgNrY_6zXNKbj8JGb8jsQgxYMvu6htJVfzdSVsmZHW3hmfVTOYmWWHflnEFw9mj1JQcXKcqpxgz4wX29JPDr0c72hrX0hWtCSYh1hI3LTWE8A1fJ-vP6m004B8vFuqhbV2zuIacDprQfrM1yqijVmVLUjVNWbyAXw-wBpZx44Vl6lEQBz-E8tuKEwZgE6Op?purpose=fullsize)
+
+這裡可以看到幾個部分：
+
+1. Pump Laser Diode：提供泵浦光的雷射二極體。
+2. Active Fiber：摻雜特殊稀土元素的光纖，作為增益介質。
+3. Fiber Grating：光纖光柵，協助形成光學共振腔。
+4. Output Fiber：傳輸輸出的雷射光。
+
+它的工作過程：
+
+```text
+泵浦雷射二極體
+       │
+       ▼
+   泵浦光進入光纖
+       │
+       ▼
+   特殊摻雜光纖
+       │
+       ▼
+   光在光纖內得到放大
+       │
+       ▼
+   輸出雷射光
+```
+
+光纖內部可能摻雜：
+
+* 鐿（Ytterbium，Yb）
+* 鉺（Erbium，Er）
+* 銩（Thulium，Tm）
+
+這些元素能讓光纖具有雷射增益能力。([IEEE Technology Navigator][3])
+
+#### 光纖雷射主要用在哪裡？
+
+例如工業加工：
+
+* 金屬切割。
+* 金屬焊接。
+* 雷射打標。
+* 精密微加工。
+
+因為光纖雷射可以設計成具有高功率及良好光束品質的雷射系統。([rp-photonics.com][4])
+
+---
+
+### 3. 固態雷射（Solid-State Laser）
+
+這種雷射使用固體材料作為增益介質，例如特殊晶體。
+
+一個常見例子是 Nd:YAG 雷射。
+
+它使用摻釹晶體作為增益介質，常見輸出波長為 1064 nm，也可以經過倍頻等光學處理產生其他波長。
+
+常見應用包括：
+
+* 雷射加工。
+* 雷射打標。
+* 精密加工。
+* 科學研究。
+
+這裡不需要深入晶體結構，只要理解它和前面兩種的差別：
+
+| 雷射種類  | 主要增益介質    |
+| ----- | --------- |
+| 半導體雷射 | 半導體材料     |
+| 光纖雷射  | 摻雜特殊元素的光纖 |
+| 固態雷射  | 固體晶體或玻璃   |
+
+---
+
+## 二、一個很重要的觀念：光纖雷射與光纖耦合雷射不是同一種東西
+
+這個觀念特別值得記住。
+
+假設有一個半導體雷射模組，外面接著一條光纖。
+
+它可能長這樣：
+
+```text
+半導體雷射模組
+       │
+       ▼
+      光纖
+       │
+       ▼
+      輸出光
+```
+
+這是**光纖耦合的半導體雷射（Fiber-coupled Laser Diode）**。
+
+它的增益介質仍然是半導體晶片。
+
+而光纖雷射則是：
+
+```text
+泵浦雷射二極體
+       │
+       ▼
+特殊摻雜光纖
+       │
+       ▼
+光纖內部產生雷射
+       │
+       ▼
+輸出雷射
+```
+
+兩者差異如下：
+
+| 比較     | 光纖耦合雷射二極體 | 光纖雷射       |
+| ------ | --------- | ---------- |
+| 增益介質   | 半導體晶片     | 摻雜光纖       |
+| 雷射產生位置 | 半導體晶片內    | 特殊光纖內      |
+| 光纖用途   | 傳輸輸出光     | 同時作為增益介質   |
+| 常見用途   | 光纖通訊、光學測試 | 金屬切割、焊接、打標 |
+
+這是很重要的區別。光纖雷射本身通常也使用雷射二極體作為泵浦光源。([IEEE Technology Navigator][3])
+
+---
+
+# 三、什麼是雷射波長（Wavelength）？
+
+接下來進入光通訊的核心知識。
+
+上一課我們提到：
+
+* 1310 nm
+* 1550 nm
+
+為什麼光通訊設備會經常看到這些數字？
+
+先認識什麼是波長。
+
+波長英文是 Wavelength，單位通常是 nm（nanometer，奈米）。
+
+1 nm = 0.000000001 公尺。
+
+波長描述的是光波週期性變化的空間距離。
+
+例如：
+
+* 紅色可見光大約在 620～750 nm。
+* 850 nm 是近紅外線。
+* 1310 nm 是紅外線。
+* 1550 nm 也是紅外線。
+
+**1310 nm 和 1550 nm 都是肉眼看不到的光。**
+
+下面的圖可以幫助你建立波長概念。
+
+![Image](https://images.openai.com/static-rsc-4/m0TGP0jykYSy0FJtl8VzrQ9ofqNPTyQzJBY1rSkkDO-ffuUaDSL2AZXHv9Tw5UuOzSICeGE8Ro44zdDIKBxBEIwAyc5T8EVFlvLodFKAsogIWKiNXSLRzEQ3ieQt8OWU-7UY7LU2nItGLf5hIeM1p4c7z99i64kC8Lf_H6HYE7Pcmo1n6Sh6qSD6U3UTjiA_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/qddew41zgACsMuCTWQw30UqyBh4uxJ886rSg1tAyNcq15H_l7t5aL9BKLf1BooL4hYJkK5hyKxHsKKCdLQKaED-3UuFroWej2TzqgO_xBGmNmFdwp0gsoDBJE_m4dzfT2EaoQA6OJTV8jNHbendxZnp9Ci0oV_6UFyKSoxI29x6oJ30i7rwX4Xik1vw71l4N?purpose=fullsize)
+
+其中可以看到光通訊常見的 850 nm、1310 nm、1550 nm。
+
+## 四、為什麼光通訊常用 850、1310、1550 nm？
+
+這三個波長在光纖通訊中都很重要，但應用不完全相同。
+
+### 1. 850 nm：短距離光通訊
+
+850 nm 常見於 VCSEL 雷射。
+
+例如：
+
+* 資料中心。
+* 機房內部高速資料傳輸。
+* 短距離多模光纖連接。
+
+多模光纖的纖芯相對較大，光纖耦合的機械對位容差通常較寬鬆。
+
+因此，適合用於許多短距離連接。([rp-photonics.com][2])
+
+### 2. 1310 nm：光纖通訊的重要波長
+
+1310 nm 常見於單模光纖通訊。
+
+這裡有一個重要原因：
+
+一般標準單模光纖（ITU-T G.652），其零色散波長大約在 1310 nm 附近。
+
+什麼是色散？
+
+先不用深入物理細節。
+
+你可以先想像：
+
+一個數位光訊號原本是一個很清楚的脈衝，經過長距離光纖傳輸後，脈衝可能逐漸展寬。
+
+如果展寬太多，可能影響接收端判斷訊號。
+
+這種脈衝展寬現象與色散有關。
+
+在 1310 nm 附近，標準單模光纖的色散接近零，因此這個波段非常重要。([ITU][5])
+
+### 3. 1550 nm：長距離光通訊的重要波長
+
+1550 nm 也是非常重要的光通訊波長。
+
+它的特點是：
+
+**在標準單模光纖中，1550 nm 波段具有較低的光傳輸損耗。**
+
+例如，ITU-T G.652.D 對 1530～1565 nm 波段列出的最大衰減係數為 0.30 dB/km，而 1310～1625 nm 範圍列出的最大值為 0.40 dB/km。這是標準規格的上限，不代表每一條實際光纖都剛好達到這些數字。([ITU][5])
+
+因此，1550 nm 很適合用在長距離光纖通訊系統。
+
+不過，1310 nm 與 1550 nm 的選擇還會受到色散、雷射種類、接收器及放大器等因素影響，不能簡單認為 1550 nm 一定比較好。
+
+---
+
+## 五、三種常見波長比較
+
+先把這張表記起來：
+
+| 波長      | 常見雷射   | 常見光纖 | 典型用途      |
+| ------- | ------ | ---- | --------- |
+| 850 nm  | VCSEL  | 多模光纖 | 短距離資料中心連接 |
+| 1310 nm | FP、DFB | 單模光纖 | 光通訊       |
+| 1550 nm | DFB 等  | 單模光纖 | 長距離光通訊    |
+
+這裡再補充兩個名稱：
+
+**O-band（Original Band）：** 約 1260～1360 nm，涵蓋 1310 nm 附近。
+
+**C-band（Conventional Band）：** 約 1530～1565 nm，涵蓋 1550 nm 附近。
+
+這兩個名稱未來在矽光子、CPO 及光收發模組課程中還會不斷出現。
+
+---
+
+# 六、這與 GMT 精密光學設備有什麼關係？
+
+現在把今天學到的知識與前面機械課程連起來。
+
+假設我們需要測試一個 1310 nm 的半導體雷射模組。
+
+設備需要：
+
+1. 將雷射模組固定在治具上。
+2. 使用 XYZ 平台調整光纖位置。
+3. 使用透鏡調整光束。
+4. 讓雷射光進入光纖。
+5. 使用光功率計量測輸出功率。
+6. 微調位置，找出最佳耦合位置。
+
+這時候你之前學過的機械元件全部派上用場：
+
+| 元件       | 工作         |
+| -------- | ---------- |
+| XYZ 精密滑台 | 調整位置       |
+| θ 旋轉軸    | 調整角度       |
+| 壓電平台     | 進行微小位移     |
+| Camera   | 觀察光纖與元件的位置 |
+| 透鏡       | 控制光束及聚焦    |
+| 光功率計     | 量測耦合結果     |
+
+你會發現，這就是 GMT 精密對位設備的核心應用之一。
+
+但要特別注意：1310 nm 和 1550 nm 都是不可見光，因此不能靠肉眼觀察光纖端面是否有光，也不能把肉眼看不到當成沒有雷射輸出。應使用適當的光功率計或專用檢測設備。絕對不要直接觀看可能正在輸出雷射的光纖端面。([support.hpe.com][6])
+
+---
+
+# 七、與 STM32H755 韌體的關係
+
+再補充一個韌體角度的概念。
+
+假設設備使用半導體雷射模組：
+
+```text
+       STM32H755
+            │
+            ▼
+       控制介面
+            │
+            ▼
+       Laser Driver
+            │
+            ▼
+       Laser Diode
+            │
+            ▼
+          雷射光
+```
+
+STM32 可能負責：
+
+* 開啟或關閉雷射。
+* 設定輸出功率或電流目標（視驅動器功能）。
+* 讀取雷射模組的工作狀態。
+* 讀取溫度或監測光功率等資訊（視模組功能）。
+* 發生異常時停止雷射。
+
+但雷射二極體所需的精密電流控制與溫度穩定，通常由專用 Laser Driver 或控制電路負責。
+
+STM32 不應直接用 GPIO 驅動雷射二極體。
+
+這和我們之前學過的 Servo Drive 有點類似：上層控制器負責命令與流程，專用驅動器負責底層控制。
+
+---
+
+# 八、今天的重點整理
+
+今天最重要的是建立以下三組觀念：
+
+**第一：雷射種類**
+
+* 半導體雷射：光纖通訊及矽光子相關光源的重要類型。
+* 光纖雷射：利用摻雜光纖作為增益介質，常用於工業加工。
+* 固態雷射：利用晶體或玻璃作為增益介質。
+
+**第二：光纖雷射與光纖耦合雷射不同。**
+
+不要因為雷射模組接了一條光纖，就認為它是光纖雷射。
+
+**第三：光通訊常見波長。**
+
+* 850 nm：短距離、多模光纖。
+* 1310 nm：標準單模光纖零色散波長附近。
+* 1550 nm：標準單模光纖低損耗波段。
+
+---
+
+# 九、本課練習
+
+今天回答五題：
+
+**問題 1**
+
+如果一個光通訊模組使用半導體晶片產生雷射光，再透過光纖輸出，它屬於哪一種雷射？
+
+A. 光纖雷射
+B. 半導體雷射
+C. 固態晶體雷射
+
+**問題 2**
+
+光纖雷射的增益介質是什麼？
+
+A. 一般玻璃鏡片
+B. 半導體 Camera Sensor
+C. 摻雜特殊元素的光纖
+
+**問題 3**
+
+如果資料中心使用短距離多模光纖連接，常見的雷射波長是哪一個？
+
+A. 850 nm
+B. 1310 nm
+C. 1550 nm
+
+**問題 4**
+
+為什麼 1310 nm 對標準單模光纖很重要？
+
+A. 因為這個波長一定是可見紅光
+B. 因為標準單模光纖的零色散波長大約在這個區域
+C. 因為這個波長不會產生任何光損耗
+
+**問題 5**
+
+假設一個設備使用 1550 nm 雷射，操作人員看不到光纖端面有光，是否代表雷射沒有輸出？
+
+A. 是，看不到就代表沒有輸出
+B. 不一定，1550 nm 是不可見紅外線，應使用適當儀器檢測
+
+你先回答這五題。
+
+下一課我們將進一步學習**光纖（Optical Fiber）的結構與種類**，包括單模光纖、多模光纖、纖芯、包層，以及為什麼光可以在光纖內部傳輸。
+
+這一課完成後，我們就能逐漸進入你最想學習的光纖耦合與矽光子領域。
+
+[1]: https://www.rp-photonics.com/laser_diodes.html?utm_source=chatgpt.com "Laser Diodes – semiconductor, gain, index guiding, high power"
+[2]: https://www.rp-photonics.com/telecom_transmitters.html?p=8&tour=The_Latest_Encyclopedia_Articles&utm_source=chatgpt.com "Telecom Transmitters – modules, PICs, fiber-optic networks, datacom, monitoring, modulation formats, test and measurement"
+[3]: https://technav.ieee.org/topic/fiber-laser/?utm_source=chatgpt.com "Fiber Laser | IEEE Technology Navigator"
+[4]: https://www.rp-photonics.com/lasers_for_material_processing.html?utm_source=chatgpt.com "Lasers for Material Processing – industrial lasers, ultrafast, cutting, drilling, marking, welding, soldering, hardening, cleaning"
+[5]: https://www.itu.int/epublications/publication/itu-t-g-652-2024-08-characteristics-of-a-single-mode-optical-fibre-and-cable?utm_source=chatgpt.com "Recommendation ITU-T G.652 (08/2024) - Characteristics of a single-mode optical fibre and cable"
+[6]: https://support.hpe.com/hpesc/public/docDisplay?docId=a00113942en_us&docLocale=en_US&page=Laser_Safety.html&utm_source=chatgpt.com "Laser Safety | ESD and Safety Guidelines H-0016 Rev I"
 
 
 
